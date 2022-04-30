@@ -1,313 +1,635 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;">
+<html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="keywords"
-    content="hirusha,python,java,adobe,photoshop,photos,photography,css,html,programming,coding,security">
-  <meta name="description" content="">
-  <meta name="page_type" content="np-template-header-footer-from-plugin">
-  <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords"
+        content="hirusha,python,java,adobe,photoshop,photos,photography,css,html,programming,coding,security">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
 
-  <!-- Primary Meta Tags -->
-  <title>Hirusha Adikari</title>
-  <meta name="title" content="Hirusha Adikari">
-  <meta name="description"
-    content="Hi, I am Hirusha. I code. I take photos. This is my personal website with all my projects displayed with a small description.">
+    <!-- Primary Meta Tags -->
+    <title>Hirusha Adikari</title>
+    <meta name="title" content="Hirusha Adikari">
+    <meta name="description"
+        content="Hi, I am Hirusha. I code. I take photos. This is my personal website with all my projects displayed with a small description.">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://hirusha.xyz/">
-  <meta property="og:title" content="Hirusha Adikari">
-  <meta property="og:description"
-    content="Hi, I am Hirusha. I code. I take photos. This is my personal website with all my projects displayed with a small description.">
-  <meta property="og:image"
-    content="https://cdn.discordapp.com/attachments/877836565320187914/917609265475256390/teahub.io-rick-and-morty-wallpaper-558458.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hirusha.xyz/">
+    <meta property="og:title" content="Hirusha Adikari">
+    <meta property="og:description"
+        content="Hi, I am Hirusha. I code. I take photos. This is my personal website with all my projects displayed with a small description.">
+    <meta property="og:image"
+        content="https://cdn.discordapp.com/attachments/877836565320187914/917609265475256390/teahub.io-rick-and-morty-wallpaper-558458.png">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="http://hirusha.xyz/">
-  <meta property="twitter:title" content="Hirusha Adikari">
-  <meta property="twitter:description"
-    content="Hi, I am Hirusha. I code. I take photos. This is my personal website with all my projects displayed with a small description.">
-  <meta property="twitter:image"
-    content="https://cdn.discordapp.com/attachments/877836565320187914/917609265475256390/teahub.io-rick-and-morty-wallpaper-558458.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hirusha.xyz/">
+    <meta property="twitter:title" content="Hirusha Adikari">
+    <meta property="twitter:description"
+        content="Hi, I am Hirusha. I code. I take photos. This is my personal website with all my projects displayed with a small description.">
+    <meta property="twitter:image"
+        content="https://cdn.discordapp.com/attachments/877836565320187914/917609265475256390/teahub.io-rick-and-morty-wallpaper-558458.png">
 
-  <link rel="stylesheet" href="./css/hirusha.css" media="screen">
-  <link rel="stylesheet" href="./css/Home.css" media="screen">
-  <script class="u-script" type="text/javascript" src="./js/jquery-1.9.1.min.js" defer=""></script>
-  <script class="u-script" type="text/javascript" src="./js/hirusha.js" defer=""></script>
-  <link id="u-theme-google-font" rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-  <link id="u-page-google-font" rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+    <script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
+    <script>
+        if (WURFL.is_mobile === true) {
+            window.location.replace("https://www.hirusha.xyz/home.html");
+        }
+    </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "https://cdn.discordapp.com/attachments/877796755234783273/917471237859586108/403-4031699_letter-h-png-stock-photo-letter-h-png.png"
-}</script>
-  <meta name="theme-color" content="#478ac9">
-  <meta property="og:title" content="Home">
-  <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "ROBOTO", sans-serif;
+        }
+
+        .nav,
+        .slider {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            background-color: #1e1f26;
+            text-align: center;
+            padding: 0 2em;
+        }
+
+        .nav h1,
+        .slider h1 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 5vw;
+            margin: 0;
+            padding-bottom: 0.5rem;
+            letter-spacing: 0.3rem;
+            color: #03dac6;
+            transition: all 0.3s ease;
+            z-index: 3;
+        }
+
+        h1:hover {
+            transform: translate3d(0, -10px, 22px);
+            color: #ff0266;
+        }
+
+        .slider h2 {
+            font-size: 2vw;
+            letter-spacing: 0.3rem;
+            font-family: "ROBOTO", sans-serif;
+            font-weight: 300;
+            color: #faebd7;
+            z-index: 4;
+        }
+
+        h3.span {
+            font-size: 2vw;
+            letter-spacing: 0.15rem;
+            font-family: "ROBOTO", sans-serif;
+            font-weight: 300;
+            color: #faebd7;
+            z-index: 4;
+        }
+
+        span:hover {
+            color: #ff0266;
+            font-weight: 500;
+            font-size: 2.2vw;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 75px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+            background: #1e1f26;
+            z-index: 10;
+            transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .nav-container--top-first {
+            position: fixed;
+            top: 75px;
+            transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .nav-container--top-second {
+            position: fixed;
+            top: 0;
+        }
+
+        .nav-container--top-second {
+            position: fixed;
+            top: 0;
+        }
+
+        .nav-tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            color: #03dac6;
+            letter-spacing: 0.1rem;
+            transition: all 0.5s ease;
+            font-size: 2vw;
+        }
+
+        .nav-tab:hover {
+            color: #1e1f26;
+            background: #03dac6;
+            transition: all 0.5s ease;
+        }
+
+        .nav-tab-slider {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 5px;
+            background: #03dac6;
+            transition: left 0.3s ease;
+        }
+
+        .background {
+            position: absolute;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: auto;
+        }
+
+        @media (min-width: 800px) {
+
+            .nav h1,
+            .slider h1 {
+                font-size: 5vw;
+            }
+
+            .nav h2,
+            .slider h2 {
+                font-size: 3vw;
+            }
+
+            .nav-tab {
+                font-size: 3vw;
+            }
+        }
+
+        @media screen only (min-width: 360px) {
+
+            .nav h1,
+            .slider h1 {
+                font-size: 8vw;
+            }
+
+            .nav h2,
+            .slider h2 {
+                font-size: 2vw;
+                letter-spacing: 0.2vw;
+            }
+
+            .nav-tab {
+                font-size: 1.2vw;
+            }
+        }
+
+        .background {
+            position: absolute;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+        }
+
+        .loader span {
+            color: #faebd7;
+            text-shadow: 0 0 0 #faebd7;
+            -webkit-animation: loading 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes loading {
+            to {
+                text-shadow: 20px 0 70px #ff0266;
+                color: #ff0266;
+            }
+        }
+
+        .loader span:nth-child(2) {
+            -webkit-animation-delay: 0.1s;
+        }
+
+        .loader span:nth-child(3) {
+            -webkit-animation-delay: 0.2s;
+        }
+
+        .loader span:nth-child(4) {
+            -webkit-animation-delay: 0.3s;
+        }
+
+        .loader span:nth-child(5) {
+            -webkit-animation-delay: 0.4s;
+        }
+
+        .loader span:nth-child(6) {
+            -webkit-animation-delay: 0.5s;
+        }
+
+        .loader span:nth-child(7) {
+            -webkit-animation-delay: 0.6s;
+        }
+
+        .loader span:nth-child(8) {
+            -webkit-animation-delay: 0.7s;
+        }
+
+        .loader span:nth-child(9) {
+            -webkit-animation-delay: 0.8s;
+        }
+
+        .loader span:nth-child(10) {
+            -webkit-animation-delay: 0.9s;
+        }
+
+        .loader span:nth-child(11) {
+            -webkit-animation-delay: 1s;
+        }
+
+        .loader span:nth-child(12) {
+            -webkit-animation-delay: 1.1s;
+        }
+
+        .loader span:nth-child(13) {
+            -webkit-animation-delay: 1.2s;
+        }
+
+        .loader span:nth-child(14) {
+            -webkit-animation-delay: 1.3s;
+        }
+
+        .loader span:nth-child(15) {
+            -webkit-animation-delay: 1.4s;
+        }
+
+        .loader span:nth-child(16) {
+            -webkit-animation-delay: 1.5s;
+        }
+
+        .loader span:nth-child(17) {
+            -webkit-animation-delay: 1.6s;
+        }
+
+        .loader span:nth-child(18) {
+            -webkit-animation-delay: 1.7s;
+        }
+
+        .loader span:nth-child(19) {
+            -webkit-animation-delay: 1.8s;
+        }
+
+        .loader span:nth-child(20) {
+            -webkit-animation-delay: 1.9s;
+        }
+
+        .loader span:nth-child(21) {
+            -webkit-animation-delay: 2s;
+        }
+
+        .loader span:nth-child(22) {
+            -webkit-animation-delay: 2.1s;
+        }
+
+        h3 {
+            font-size: 2vw;
+            letter-spacing: 0.2rem;
+            font-family: "ROBOTO", sans-serif;
+            font-weight: 300;
+            color: #faebd7;
+            z-index: 4;
+        }
+
+        h4 {
+            font-size: 1vw;
+            letter-spacing: 0.1rem;
+            font-family: "ROBOTO", sans-serif;
+            font-weight: 300;
+            color: #faebd7;
+            z-index: 4;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+
+        th {
+            color: white;
+        }
+
+        th,
+        td {
+            width: 380px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .team-avatar {
+            border-radius: 50%;
+        }
+    </style>
+
 </head>
 
-<body class="u-body">
-  <header class="u-clearfix u-header u-header" id="sec-4247">
-    <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-      <a href="index.html" data-page-id="1084184" class="u-image u-logo u-image-1" data-image-width="860"
-        data-image-height="1032" title="Home">
-        <img
-          src="https://cdn.discordapp.com/attachments/877796755234783273/917471237859586108/403-4031699_letter-h-png-stock-photo-letter-h-png.png"
-          class="u-logo-image u-logo-image-1">
-      </a>
-      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XS">
-        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="#" style="padding: 4px 0px; font-size: calc(1em + 8px);">
-            <svg>
-              <use xlink:href="#menu-hamburger"></use>
-            </svg>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
-                  <rect y="1" width="16" height="2"></rect>
-                  <rect y="7" width="16" height="2"></rect>
-                  <rect y="13" width="16" height="2"></rect>
-                </symbol>
-              </defs>
-            </svg>
-          </a>
-        </div>
-        <div class="u-nav-container">
-          <ul class="u-nav u-unstyled u-nav-1">
-            <li class="u-nav-item"><a
-                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                href="index.html" style="padding: 10px 20px;">Home</a>
-            </li>
-            <li class="u-nav-item"><a
-                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                href="My-Projects.html" style="padding: 10px 20px;">My Projects</a>
-            </li>
-            <li class="u-nav-item"><a
-                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                href="About.html" style="padding: 10px 20px;">About</a>
-            </li>
-          </ul>
-        </div>
-        <div class="u-nav-container-collapse">
-          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-            <div class="u-inner-container-layout u-sidenav-overflow">
-              <div class="u-menu-close"></div>
-              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html">Home</a>
-                </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="My-Projects.html">My Projects</a>
-                </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_d7ff" data-image-width="1620"
-    data-image-height="1080">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
-        <div class="u-gutter-0 u-layout">
-          <div class="u-layout-row">
-            <div
-              class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-container-style u-layout-cell u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-1">
-              <div class="u-container-layout u-valign-middle u-container-layout-1">
-                <div alt="" class="u-image u-image-circle u-image-1" data-image-width="320" data-image-height="320">
-                </div>
-              </div>
-            </div>
-            <div
-              class="u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-white u-layout-cell-2">
-              <div
-                class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-2">
-                <h6 class="u-text u-text-1"><a href="About.html">ABOUT ME</a></h6>
-                <h2 class="u-custom-font u-font-oswald u-text u-text-2">I am hirusha.<br>I code sometimes.
-                </h2>
-                <p class="u-text u-text-3">I am a student.<br>I am from Sri Lanka.<br>I love FOSS.<br>
-                </p>
-                <div class="u-social-icons u-spacing-10 u-social-icons-1">
-                  <a class="u-social-url" target="_blank" data-type="Github" title="Github"
-                    href="https://github.com/hirusha-adi"><span
-                      class="u-icon u-social-github u-social-icon u-icon-1"><svg class="u-svg-link"
-                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
-                        <use xlink:href="#svg-2d50"></use>
-                      </svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-2d50">
-                        <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
-                        <path fill="#FFFFFF" d="M88,51.3c0-5.5-1.9-10.2-5.3-13.7c0.6-1.3,2.3-6.5-0.5-13.5c0,0-4.2-1.4-14,5.3c-4.1-1.1-8.4-1.7-12.7-1.8
-	c-4.3,0-8.7,0.6-12.7,1.8c-9.7-6.6-14-5.3-14-5.3c-2.8,7-1,12.2-0.5,13.5C25,41.2,23,45.7,23,51.3c0,19.6,11.9,23.9,23.3,25.2
-	c-1.5,1.3-2.8,3.5-3.2,6.8c-3,1.3-10.2,3.6-14.9-4.3c0,0-2.7-4.9-7.8-5.3c0,0-5-0.1-0.4,3.1c0,0,3.3,1.6,5.6,7.5c0,0,3,9.1,17.2,6
-	c0,4.3,0.1,8.3,0.1,9.5h25.2c0-1.7,0.1-7.2,0.1-14c0-4.7-1.7-7.9-3.4-9.4C76,75.2,88,70.9,88,51.3z"></path>
-                      </svg></span>
-                  </a>
-                  <a class="u-social-url" target="_blank" data-type="Twitter" title="Twitter"
-                    href="https://twitter.com/hirusha_adikari"><span
-                      class="u-icon u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link"
-                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
-                        <use xlink:href="#svg-6441"></use>
-                      </svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-6441">
-                        <circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle>
-                        <path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
-            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
-            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
-            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
-            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path>
-                      </svg></span>
-                  </a>
-                  <a class="u-social-url" target="_blank" data-type="Instagram" title="Instagram"
-                    href="https://www.instagram.com/hirusha.adikari/"><span
-                      class="u-icon u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link"
-                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
-                        <use xlink:href="#svg-c74c"></use>
-                      </svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-c74c">
-                        <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
-                        <path fill="#FFFFFF"
-                          d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
-            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z">
-                        </path>
-                        <path fill="#FFFFFF"
-                          d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z">
-                        </path>
-                        <path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
-            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
-            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path>
-                      </svg></span>
-                  </a>
-                  <a class="u-social-url" target="_blank" data-type="Instagram" title="Instagram"
-                    href="https://www.instagram.com/hirusha.adikari.photography/"><span
-                      class="u-icon u-social-icon u-social-instagram u-icon-4"><svg class="u-svg-link"
-                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
-                        <use xlink:href="#svg-d15f"></use>
-                      </svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-d15f">
-                        <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
-                        <path fill="#FFFFFF"
-                          d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
-            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z">
-                        </path>
-                        <path fill="#FFFFFF"
-                          d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z">
-                        </path>
-                        <path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
-            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
-            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path>
-                      </svg></span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-align-left u-clearfix u-image u-section-2" id="carousel_d782" data-image-width="1280"
-    data-image-height="853">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <h1 class="u-text u-text-default u-text-1">Some projects...</h1>
-      <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
-        <div class="u-repeater u-repeater-1">
-          <div
-            class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
-            <div class="u-container-layout u-similar-container u-container-layout-1">
-              <div alt="" class="u-image u-image-circle u-image-1" data-image-width="1024" data-image-height="1024">
-              </div>
-              <h4 class="u-text u-text-2">YourBot</h4>
-              <p class="u-text u-text-grey-50 u-text-3">A general purpose discord bot with over 250 commands made with
-                discord.py.</p>
-              <a href="https://github.com/hirusha-adi/Discord-Bot"
-                class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1"
-                target="_blank">more</a>
-            </div>
-          </div>
-          <div
-            class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-2">
-            <div class="u-container-layout u-similar-container u-container-layout-2">
-              <div alt="" class="u-image u-image-circle u-image-2" data-image-width="2800" data-image-height="2800">
-              </div>
-              <h4 class="u-text u-text-4">Email Tracker</h4>
-              <p class="u-text u-text-grey-50 u-text-5">Track the IP address of the receiver and when he/she have opened
-                it&nbsp;</p>
-              <a href="https://github.com/hirusha-adi/Email-Tracker"
-                class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-2"
-                target="_blank">more</a>
-            </div>
-          </div>
-          <div
-            class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-3">
-            <div class="u-container-layout u-similar-container u-container-layout-3">
-              <div alt="" class="u-image u-image-circle u-image-3" data-image-width="360" data-image-height="360"></div>
-              <h4 class="u-text u-text-6">Downloader</h4>
-              <p class="u-text u-text-grey-50 u-text-7">Rick and Morty themed Free and Open Source YouTube Video
-                Downloader.<br>(EDUCATIONAL PURPOSES ONLY)<br>
-              </p>
-              <a href="https://github.com/hirusha-adi/Downloader"
-                class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-3"
-                target="_blank">more</a>
-            </div>
-          </div>
-          <div
-            class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-4">
-            <div class="u-container-layout u-similar-container u-container-layout-4">
-              <div alt="" class="u-image u-image-circle u-image-4" data-image-width="864" data-image-height="980"></div>
-              <h4 class="u-text u-text-8">Data Stealing Pendrive</h4>
-              <p class="u-text u-text-grey-50 u-text-9">An easy to use pendrive, plug it in and all the data will be
-                saved instantly.<br>(EDUCATIONAL PURPOSES ONLY)
-              </p>
-              <a href="https://github.com/hirusha-adi/Hack-with-pendrive"
-                class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-4"
-                target="_blank">more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="u-text u-text-default u-text-10">
-        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5"
-          href="My-Projects.html" data-page-id="1084185" target="_blank">Check out my other projects</a>
-      </p>
-    </div>
-  </section>
+<body>
+    <!-- partial:index.partial.html -->
+    <section class="nav">
+        <h1>@hirushaadi</h1>
+        <h3 class="span loader">
+            <span class='m'>H</span>
+            <span class='m'>I</span>
+            <span class='m'>R</span>
+            <span class='m'>U</span>
+            <span class='m'>S</span>
+            <span class='m'>H</span>
+            <span class='m'>A</span>
+            <span class='m'>&nbsp;</span>
+            <span class='m'>A</span>
+            <span class='m'>D</span>
+            <span class='m'>I</span>
+            <span class='m'>K</span>
+            <span class='m'>A</span>
+            <span class='m'>R</span>
+            <span class='m'>I</span>
+        </h3>
 
+        <div class="nav-container">
+            <a class="nav-tab" href="#tab-pwa">About Me</a>
+            <a class="nav-tab" href="#tab-graphql">Technologies</a>
+            <a class="nav-tab" href="#tab-next">Opinions</a>
+            <a class="nav-tab" href="#tab-typescript">GifGang</a>
+            <a class="nav-tab" href="./home.html">Main Webite</a>
+            <span class="nav-tab-slider"></span>
+        </div>
 
-  <footer class="u-align-center u-clearfix u-footer u-white u-footer" id="sec-cab1">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <p class="u-small-text u-text u-text-variant u-text-1">
-        Hirusha Adikari© -
-        <a href="http://old.hirusha.xyz">
-          Old Website
-        </a>
-        --
-        <a href="http://near.hirusha.xyz">
-          NearBot
-        </a>
-        --
-        <a href="http://yourbot.hirusha.xyz">
-          YourBot
-        </a>
-        --
-        <a href="http://fake.hirusha.xyz/">
-          FakeInfo
-        </a>
-        --
-        <a href="http://password.hirusha.xyz/">
-          Password Checker
-        </a>
-      </p>
-    </div>
-  </footer>
+    </section>
+
+    <main class="main">
+
+        <section class="slider" id="tab-pwa">
+            <h1>About Me</h1>
+            <h2>I am a student who enjoys computer programming</h2>
+        </section>
+
+        <section class="slider" id="tab-graphql">
+            <h1>Technologies</h1>
+            <h2>main technologies i use and work with</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>
+                            <img src="./images/python.webp" alt="" height="175" class="team-avatar">
+                            <h3>Python</h3>
+                            <h4>
+                                Django, Flask, Tensorflow, Discord.py, Instaloader, etc...
+                            </h4>
+                        </th>
+                        <th>
+                            <img src="./images/weblogo.png" alt="" height="175" class="team-avatar">
+                            <h3>Web Development</h3>
+                            <h4>
+                                HTML
+                                <br>
+                                JavaScript
+                                <br>
+                                CSS (Materialize, Bootstraps, FA, etc...)
+                            </h4>
+                        </th>
+                        <th>
+                            <img src="./images/java.png" alt="" height="175" class="team-avatar">
+                            <h3>Java</h3>
+                            <h4>Swing, etc...</h4>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slider" id="tab-next">
+            <h1>Personal Opinions and Stuff</h1>
+            <h2>This might be controversial. lol</h2>
+            <br>
+            <h3>
+                Schools restrict students in every possible way
+            </h3>
+            <br>
+            <h3>
+                Spend your time only on what you think is important because night time makes up half of all time
+            </h3>
+            <br>
+            <h3>
+                Nobody exists on purpose. Nobody belongs anywhere.
+            </h3>
+            <br>
+            <h3>
+                Emotions are chemical reactions that happens within a human
+            </h3>
+            <br>
+            <h3>
+                What people call 'love' is just a chemical reaction that compels animals to breed.
+            </h3>
+            <br>
+            <h3>
+                ONLY education should be FREE!
+            </h3>
+        </section>
+
+        <section class="slider" id="tab-typescript">
+            <h1>GifGang</h1>
+            <h3>
+                <a href="http://gifgang.net" target="_blank" rel="noopener noreferrer">
+                    GifGang
+                </a>
+                is one of my main projects so far. This is a web app that is easily managable,
+                easily self deployable. This web app will give you Images and GIFs taken from
+                many sources (Inlcuding the service name) to easily access a huge amount of
+                content from one website without advertisments or any interruptions.
+                This website has both a
+                <a href="http://gifgang.net" target="_blank" rel="noopener noreferrer">
+                    SFW mode
+                </a>
+                and an
+                <a href="http://gifgang.net/adult" target="_blank" rel="noopener noreferrer">
+                    Adults Only mode.
+                </a>
+            </h3>
+        </section>
+    </main>
+
+    <canvas class="background"></canvas>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script>
+        window.onload = function () {
+            Particles.init({
+                selector: ".background",
+            });
+        };
+        var particles = Particles.init({
+            selector: ".background",
+            color: ["#03dac6", "#ff0266", "#000000"],
+            connectParticles: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    options: {
+                        color: ["#faebd7", "#03dac6", "#ff0266"],
+                        maxParticles: 43,
+                        connectParticles: false,
+                    },
+                },
+            ],
+        });
+
+        class NavigationPage {
+            constructor() {
+                this.currentId = null;
+                this.currentTab = null;
+                this.tabContainerHeight = 70;
+                this.lastScroll = 0;
+                let self = this;
+                $(".nav-tab").click(function () {
+                    self.onTabClick(event, $(this));
+                });
+                $(window).scroll(() => {
+                    this.onScroll();
+                });
+                $(window).resize(() => {
+                    this.onResize();
+                });
+            }
+
+            onTabClick(event, element) {
+                event.preventDefault();
+                let scrollTop =
+                    $(element.attr("href")).offset().top - this.tabContainerHeight + 1;
+                $("html, body").animate({ scrollTop: scrollTop }, 600);
+            }
+
+            onScroll() {
+                this.checkHeaderPosition();
+                this.findCurrentTabSelector();
+                this.lastScroll = $(window).scrollTop();
+            }
+
+            onResize() {
+                if (this.currentId) {
+                    this.setSliderCss();
+                }
+            }
+
+            checkHeaderPosition() {
+                const headerHeight = 75;
+                if ($(window).scrollTop() > headerHeight) {
+                    $(".header").addClass("header--scrolled");
+                } else {
+                    $(".header").removeClass("header--scrolled");
+                }
+                let offset =
+                    $(".nav").offset().top +
+                    $(".nav").height() -
+                    this.tabContainerHeight -
+                    headerHeight;
+                if (
+                    $(window).scrollTop() > this.lastScroll &&
+                    $(window).scrollTop() > offset
+                ) {
+                    $(".header").addClass("et-header--move-up");
+                    $(".nav-container").removeClass("nav-container--top-first");
+                    $(".nav-container").addClass("nav-container--top-second");
+                } else if (
+                    $(window).scrollTop() < this.lastScroll &&
+                    $(window).scrollTop() > offset
+                ) {
+                    $(".header").removeClass("et-header--move-up");
+                    $(".nav-container").removeClass("nav-container--top-second");
+                    $(".et-hero-tabs-container").addClass(
+                        "et-hero-tabs-container--top-first"
+                    );
+                } else {
+                    $(".header").removeClass("header--move-up");
+                    $(".nav-container").removeClass("nav-container--top-first");
+                    $(".nav-container").removeClass("nav-container--top-second");
+                }
+            }
+
+            findCurrentTabSelector(element) {
+                let newCurrentId;
+                let newCurrentTab;
+                let self = this;
+                $(".nav-tab").each(function () {
+                    let id = $(this).attr("href");
+                    let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                    let offsetBottom =
+                        $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                    if (
+                        $(window).scrollTop() > offsetTop &&
+                        $(window).scrollTop() < offsetBottom
+                    ) {
+                        newCurrentId = id;
+                        newCurrentTab = $(this);
+                    }
+                });
+                if (this.currentId != newCurrentId || this.currentId === null) {
+                    this.currentId = newCurrentId;
+                    this.currentTab = newCurrentTab;
+                    this.setSliderCss();
+                }
+            }
+
+            setSliderCss() {
+                let width = 0;
+                let left = 0;
+                if (this.currentTab) {
+                    width = this.currentTab.css("width");
+                    left = this.currentTab.offset().left;
+                }
+                $(".nav-tab-slider").css("width", width);
+                $(".nav-tab-slider").css("left", left);
+            }
+        }
+
+        new NavigationPage();
+
+    </script>
 
 </body>
 
