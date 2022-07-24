@@ -79,7 +79,7 @@
             font-family: "ROBOTO", sans-serif;
         }
 
-        .nav,
+        .navigation,
         .slider {
             display: flex;
             flex-direction: column;
@@ -92,7 +92,7 @@
             padding: 0 2em;
         }
 
-        .nav h1,
+        .navigation h1,
         .slider h1 {
             font-family: "Josefin Sans", sans-serif;
             font-size: 5vw;
@@ -137,7 +137,7 @@
             text-decoration: none;
         }
 
-        .nav-container {
+        .navigation-container {
             display: flex;
             flex-direction: row;
             position: absolute;
@@ -150,23 +150,23 @@
             transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        .nav-container--top-first {
+        .navigation-container--top-first {
             position: fixed;
             top: 75px;
             transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        .nav-container--top-second {
+        .navigation-container--top-second {
             position: fixed;
             top: 0;
         }
 
-        .nav-container--top-second {
+        .navigation-container--top-second {
             position: fixed;
             top: 0;
         }
 
-        .nav-tab {
+        .navigationigation {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -177,13 +177,13 @@
             font-size: 2vw;
         }
 
-        .nav-tab:hover {
+        .navigationigation:hover {
             color: #121213;
             background: #039dda;
             transition: all 0.5s ease;
         }
 
-        .nav-tab-slider {
+        .navigationigation-slider {
             position: absolute;
             bottom: 0;
             width: 0;
@@ -204,35 +204,35 @@
 
         @media (min-width: 800px) {
 
-            .nav h1,
+            .navigation h1,
             .slider h1 {
                 font-size: 5vw;
             }
 
-            .nav h2,
+            .navigation h2,
             .slider h2 {
                 font-size: 3vw;
             }
 
-            .nav-tab {
+            .navigationigation {
                 font-size: 3vw;
             }
         }
 
         @media screen only (min-width: 360px) {
 
-            .nav h1,
+            .navigation h1,
             .slider h1 {
                 font-size: 8vw;
             }
 
-            .nav h2,
+            .navigation h2,
             .slider h2 {
                 font-size: 2vw;
                 letter-spacing: 0.2vw;
             }
 
-            .nav-tab {
+            .navigationigation {
                 font-size: 1.2vw;
             }
         }
@@ -302,7 +302,7 @@
 </head>
 
 <body>
-    <section class="nav">
+    <section class="navigation">
         <h1>@hirushaadi</h1>
         <h3 class="span loader">
             <span class='m'>H</span>
@@ -322,13 +322,13 @@
             <span class='m'>I</span>
         </h3>
 
-        <div class="nav-container">
-            <a class="nav-tab" href="#tab-pwa">About Me</a>
-            <a class="nav-tab" href="#tab-graphql">Technologies</a>
-            <a class="nav-tab" href="#tab-next">Socials</a>
-            <a class="nav-tab" href="#tab-typescript">Current</a>
-            <a class="nav-tab" href="./home.html">Main Website</a>
-            <span class="nav-tab-slider"></span>
+        <div class="navigation-container">
+            <a class="navigationigation" href="#tab-pwa">About Me</a>
+            <a class="navigationigation" href="#tab-graphql">Technologies</a>
+            <a class="navigationigation" href="#tab-next">Socials</a>
+            <a class="navigationigation" href="#tab-typescript">Current</a>
+            <a class="navigationigation" href="./home.html">Main Website</a>
+            <span class="navigationigation-slider"></span>
         </div>
 
     </section>
@@ -456,7 +456,7 @@
             ],
         });
 
-        class NavigationPage {
+        class navigationigationPage {
 
             constructor() {
                 this.currentId = null;
@@ -465,7 +465,7 @@
                 this.lastScroll = 0;
                 let self = this;
 
-                $(".nav-tab").click(function () {
+                $(".navigationigation").click(function () {
                     self.onTabClick(event, $(this));
                 });
 
@@ -507,22 +507,22 @@
                 }
 
                 let offset =
-                    $(".nav").offset().top + $(".nav").height() - this.tabContainerHeight - headerHeight;
+                    $(".navigation").offset().top + $(".navigation").height() - this.tabContainerHeight - headerHeight;
 
                 if ($(window).scrollTop() > this.lastScroll && $(window).scrollTop() > offset) {
                     $(".header").addClass("et-header--move-up");
-                    $(".nav-container").removeClass("nav-container--top-first");
-                    $(".nav-container").addClass("nav-container--top-second");
+                    $(".navigation-container").removeClass("navigation-container--top-first");
+                    $(".navigation-container").addClass("navigation-container--top-second");
                 }
                 else if ($(window).scrollTop() < this.lastScroll && $(window).scrollTop() > offset) {
                     $(".header").removeClass("et-header--move-up");
-                    $(".nav-container").removeClass("nav-container--top-second");
+                    $(".navigation-container").removeClass("navigation-container--top-second");
                     $(".et-hero-tabs-container").addClass("et-hero-tabs-container--top-first");
                 }
                 else {
                     $(".header").removeClass("header--move-up");
-                    $(".nav-container").removeClass("nav-container--top-first");
-                    $(".nav-container").removeClass("nav-container--top-second");
+                    $(".navigation-container").removeClass("navigation-container--top-first");
+                    $(".navigation-container").removeClass("navigation-container--top-second");
                 }
             }
 
@@ -531,7 +531,7 @@
                 let newCurrentTab;
                 let self = this;
 
-                $(".nav-tab").each(function () {
+                $(".navigationigation").each(function () {
                     let id = $(this).attr("href");
                     let offsetTop = $(id).offset().top - self.tabContainerHeight;
                     let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
@@ -558,12 +558,12 @@
                     left = this.currentTab.offset().left;
                 }
 
-                $(".nav-tab-slider").css("width", width);
-                $(".nav-tab-slider").css("left", left);
+                $(".navigationigation-slider").css("width", width);
+                $(".navigationigation-slider").css("left", left);
             }
         }
 
-        new NavigationPage();
+        new navigationigationPage();
 
     </script>
 
