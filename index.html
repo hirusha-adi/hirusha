@@ -323,10 +323,10 @@
         </h3>
 
         <div class="navigation-container">
-            <a class="navigation-tab" href="#tab-pwa">About Me</a>
-            <a class="navigation-tab" href="#tab-graphql">Technologies</a>
-            <a class="navigation-tab" href="#tab-next">Socials</a>
-            <a class="navigation-tab" href="#tab-typescript">Current</a>
+            <a class="navigation-tab" href="#tab-about-me">About Me</a>
+            <a class="navigation-tab" href="#tab-technologies">Technologies</a>
+            <a class="navigation-tab" href="#tab-socials">Socials</a>
+            <a class="navigation-tab" href="#tab-current-project">Current</a>
             <a class="navigation-tab" href="./home.html">Main Website</a>
             <span class="navigation-tab-slider"></span>
         </div>
@@ -335,9 +335,10 @@
 
     <main class="main">
 
-        <section class="slider" id="tab-pwa">
+        <section class="slider" id="tab-about-me">
             <h1>About Me</h1>
-            <h2>I am a student who enjoys computer programming. I am 16 years old. I am from Sri Lanka. I code. I take
+            <h2>
+                I am a student who enjoys computer programming. I am 16 years old. I am from Sri Lanka. I code. I take
                 photos.
                 <br>
                 <a href="https://knowyourmeme.com/memes/btw-i-use-arch" target="_blank" rel="noopener noreferrer"
@@ -347,7 +348,7 @@
             </h2>
         </section>
 
-        <section class="slider" id="tab-graphql">
+        <section class="slider" id="tab-technologies">
             <h1>Technologies</h1>
             <h2>main technologies i use and work with</h2>
             <table>
@@ -379,7 +380,7 @@
             </table>
         </section>
 
-        <section class="slider" id="tab-next">
+        <section class="slider" id="tab-socials">
             <h1>Social Media</h1>
             <h2>follow me on
                 <b>
@@ -415,7 +416,7 @@
             </h2>
         </section>
 
-        <section class="slider" id="tab-typescript">
+        <section class="slider" id="tab-current-project">
             <h1>Current Project</h1>
             <h2>Oxygen</h2>
             <br>
@@ -435,15 +436,18 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script>
+
         window.onload = function () {
             Particles.init({
                 selector: ".background",
             });
         };
+
         var particles = Particles.init({
             selector: ".background",
             color: ["#039dda", "#ff0228", "#000000"],
             connectParticles: true,
+
             responsive: [
                 {
                     breakpoint: 768,
