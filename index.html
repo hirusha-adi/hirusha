@@ -115,43 +115,62 @@ SOFTWARE.
     <!-- Custom Styles -->
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        .nav,
+        .slider {
+            background-color: #121213;
+            padding: 0 2em;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            text-align: center;
+        }
+
+        .nav h1,
+        .slider h1 {
+            color: #039dda;
+            margin: 0;
+            padding-bottom: 0.5rem;
+            letter-spacing: 0.3rem;
+            font-family: "Josefin Sans", sans-serif;
+            transition: all 0.3s ease;
+            z-index: 3;
+            font-size: 5vw;
+        }
+
+        h1:hover {
+            transform: translate3d(0, -10px, 22px);
+            color: #ff0228;
         }
 
         body {
             font-family: "ROBOTO", sans-serif;
         }
 
-        .nav,
-        .slider {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            position: relative;
-            text-align: center;
-            padding: 0 2em;
-            background-color: #121213;
+        h3.span {
+            color: #faebd7;
+            font-family: "ROBOTO", sans-serif;
+            font-weight: 300;
+            font-size: 2vw;
+            z-index: 4;
+            letter-spacing: 0.15rem;
         }
 
-        .nav h1,
-        .slider h1 {
-            font-family: "Josefin Sans", sans-serif;
-            font-size: 5vw;
-            margin: 0;
-            padding-bottom: 0.5rem;
-            letter-spacing: 0.3rem;
-            color: #039dda;
-            transition: all 0.3s ease;
-            z-index: 3;
-        }
-
-        h1:hover {
-            transform: translate3d(0, -10px, 22px);
+        span:hover {
+            font-weight: 500;
+            font-size: 2.2vw;
             color: #ff0228;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         .slider h2 {
@@ -163,26 +182,10 @@ SOFTWARE.
             z-index: 4;
         }
 
-        h3.span {
-            font-size: 2vw;
-            letter-spacing: 0.15rem;
-            font-family: "ROBOTO", sans-serif;
-            font-weight: 300;
-            color: #faebd7;
-            z-index: 4;
-        }
-
-        span:hover {
-            color: #ff0228;
-            font-weight: 500;
-            font-size: 2.2vw;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
         .navigation-container {
+            background: #121213;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.17, 1, 0.21, 1);
             display: flex;
             flex-direction: row;
             position: absolute;
@@ -190,105 +193,85 @@ SOFTWARE.
             width: 100%;
             height: 75px;
             z-index: 10;
-            background: #121213;
-            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         .navigation-container--top-first {
             position: fixed;
             top: 75px;
-            transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-        }
-
-        .navigation-container--top-second {
-            position: fixed;
-            top: 0;
-        }
-
-        .navigation-container--top-second {
-            position: fixed;
-            top: 0;
+            transition: all 0.3s cubic-bezier(0.17, 1, 0.21, 1);
         }
 
         .navigation-tab {
+            color: #039dda;
+            font-size: 2vw;
             display: flex;
             justify-content: center;
             align-items: center;
             flex: 1;
-            color: #039dda;
-            letter-spacing: 0.1rem;
             transition: all 0.5s ease;
-            font-size: 2vw;
+            letter-spacing: 0.1rem;
+        }
+
+        .navigation-container--top-second {
+            position: fixed;
+            top: 0;
+        }
+
+        .navigation-container--top-second {
+            position: fixed;
+            top: 0;
         }
 
         .navigation-tab:hover {
-            color: #121213;
-            background: #039dda;
             transition: all 0.5s ease;
+            background: #039dda;
+            color: #121213;
         }
 
         .navigation-tab-slider {
-            position: absolute;
-            bottom: 0;
-            width: 0;
-            height: 5px;
             background: #039dda;
+            position: absolute;
+            width: 0;
+            bottom: 0;
+            height: 5px;
             transition: left 0.3s ease;
         }
 
         .background {
             position: absolute;
-            height: 100vh;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
+            height: 100vh;
             z-index: auto;
         }
 
         @media (min-width: 800px) {
+
+            .navigation-tab {
+                font-size: 3vw;
+            }
+
+            .nav h2,
+            .slider h2 {
+                font-size: 3vw;
+            }
 
             .nav h1,
             .slider h1 {
                 font-size: 5vw;
             }
 
-            .nav h2,
-            .slider h2 {
-                font-size: 3vw;
-            }
-
-            .navigation-tab {
-                font-size: 3vw;
-            }
-        }
-
-        @media screen only (min-width: 360px) {
-
-            .nav h1,
-            .slider h1 {
-                font-size: 8vw;
-            }
-
-            .nav h2,
-            .slider h2 {
-                font-size: 2vw;
-                letter-spacing: 0.2vw;
-            }
-
-            .navigation-tab {
-                font-size: 1.2vw;
-            }
         }
 
         .background {
-            position: absolute;
             height: 100vh;
-            top: 0;
+            position: absolute;
+            right: 0;
             bottom: 0;
             left: 0;
-            right: 0;
+            top: 0;
             z-index: 0;
         }
 
@@ -300,32 +283,32 @@ SOFTWARE.
 
         @-webkit-keyframes loading {
             to {
-                text-shadow: 20px 0 70px #ff0228;
                 color: #ff0228;
+                text-shadow: 20px 0 70px #ff0228;
             }
         }
 
         h3 {
-            font-size: 2vw;
-            letter-spacing: 0.2rem;
-            font-family: "ROBOTO", sans-serif;
-            font-weight: 300;
             color: #faebd7;
+            font-family: "ROBOTO", sans-serif;
+            letter-spacing: 0.2rem;
+            font-size: 2vw;
+            font-weight: 300;
             z-index: 4;
         }
 
         h4 {
-            font-size: 1vw;
+            color: #faebd7;
             letter-spacing: 0.1rem;
             font-family: "ROBOTO", sans-serif;
             font-weight: 300;
-            color: #faebd7;
+            font-size: 1vw;
             z-index: 4;
         }
 
         table {
-            border-collapse: separate;
             border-spacing: 0 15px;
+            border-collapse: separate;
         }
 
         th {
@@ -352,21 +335,21 @@ SOFTWARE.
     <section class="nav">
         <h1>@hirushaadi</h1>
         <h3 class="span loader">
-            <span class='m'>H</span>
-            <span class='m'>I</span>
-            <span class='m'>R</span>
-            <span class='m'>U</span>
-            <span class='m'>S</span>
-            <span class='m'>H</span>
-            <span class='m'>A</span>
-            <span class='m'>&nbsp;</span>
-            <span class='m'>A</span>
-            <span class='m'>D</span>
-            <span class='m'>I</span>
-            <span class='m'>K</span>
-            <span class='m'>A</span>
-            <span class='m'>R</span>
-            <span class='m'>I</span>
+            <span>H</span>
+            <span>I</span>
+            <span>R</span>
+            <span>U</span>
+            <span>S</span>
+            <span>H</span>
+            <span>A</span>
+            <span>&nbsp;</span>
+            <span>A</span>
+            <span>D</span>
+            <span>I</span>
+            <span>K</span>
+            <span>A</span>
+            <span>R</span>
+            <span>I</span>
         </h3>
 
         <div class="navigation-container">
@@ -497,30 +480,29 @@ SOFTWARE.
             });
         };
 
-        var particles = Particles.init({
-            selector: ".background",
+        var particle_info = Particles.init({
             color: ["#039dda", "#ff0228", "#000000"],
+            selector: ".background",
             connectParticles: true,
-
             responsive: [
                 {
-                    breakpoint: 768,
                     options: {
                         color: ["#faebd7", "#039dda", "#ff0228"],
                         maxParticles: 43,
                         connectParticles: false,
                     },
+                    breakpoint: 768
                 },
             ],
         });
 
-        class NavigationPage {
+        class NavPageMain {
 
             constructor() {
-                this.currentId = null;
                 this.currentTab = null;
-                this.tabContainerHeight = 70;
                 this.lastScroll = 0;
+                this.tabContainerHeight = 69.5;
+                this.currentId = null;
                 let self = this;
 
                 $(".navigation-tab").click(function () {
@@ -547,12 +529,6 @@ SOFTWARE.
                 this.checkHeaderPosition();
                 this.findCurrentTabSelector();
                 this.lastScroll = $(window).scrollTop();
-            }
-
-            onResize() {
-                if (this.currentId) {
-                    this.setSliderCss();
-                }
             }
 
             checkHeaderPosition() {
@@ -584,6 +560,25 @@ SOFTWARE.
                 }
             }
 
+            onResize() {
+                if (this.currentId) {
+                    this.setSliderCss();
+                }
+            }
+
+            setSliderCss() {
+                let width = 0;
+                let left = 0;
+
+                if (this.currentTab) {
+                    width = this.currentTab.css("width");
+                    left = this.currentTab.offset().left;
+                }
+
+                $(".navigation-tab-slider").css("width", width);
+                $(".navigation-tab-slider").css("left", left);
+            }
+
             findCurrentTabSelector(element) {
                 let newCurrentId;
                 let newCurrentTab;
@@ -607,21 +602,9 @@ SOFTWARE.
                 }
             }
 
-            setSliderCss() {
-                let width = 0;
-                let left = 0;
-
-                if (this.currentTab) {
-                    width = this.currentTab.css("width");
-                    left = this.currentTab.offset().left;
-                }
-
-                $(".navigation-tab-slider").css("width", width);
-                $(".navigation-tab-slider").css("left", left);
-            }
         }
 
-        new NavigationPage();
+        new NavPageMain();
 
     </script>
 
