@@ -1,43 +1,17 @@
 # Introduction
 
-## THIS WILL BE COMPLETED AFTER 20th OCTOBER 2023 (Exams)
+## `docs/*`
 
-## About this Section
+Welcome to the Documents section! This is where the content that's truly significant to YOU resides. Everything is meticulously organized in the sidebar for effortless access.
 
-This section houses comprehensive documentation for all of my projects. Each project is organized following a consistent naming and structure convention to make it easy to navigate and access the information you need.
+Here, you'll discover details about my projects, comprehensive documentation for those projects, and a treasure trove of study materials for subjects I'm passionately interested in.
 
-## Structure
+Simply click on each category to explore more and dive deeper into these valuable resources.
 
-For uniformity, each project is structured as follows:
+Enjoy your journey through my digital library!
 
-```
-- <Project-Name> - <Additional-Info>
-|
-|--- <Title>
-```
+:::info Note
 
-Here's a breakdown of what you can expect within each project:
+Some of the content you'll find here is carefully crafted with the help of OpenAI's ChatGPT, ensuring flawless grammar and polished sentences to enhance the reading experience. And please note that I double-check the results to ensure accuracy and authenticity before posting them on my site.
 
-### Project Title
-
-- **Title**: This is the title of the project, providing a clear and concise overview of what the project is about.
-
-#### Documentation Sections
-
-Within each project, you will find detailed documentation organized into the following sections:
-
-```
-- <Project-Name>
-|
-|--- Installation
-|--- Setting up the DB
-|--- Usage Guide
-```
-
-1. **Installation**: This section guides you through the process of installing the project or application, including any prerequisites and step-by-step instructions.
-
-2. **Setting up the DB**: Here, you will find information on configuring and setting up the project's database or data storage solutions.
-
-3. **Usage Guide**: This section offers a comprehensive guide on how to use the project, including features, functionality, and any relevant tips or best practices.
-
-By following this structured approach, you can easily access and navigate the documentation for any project, ensuring a smooth and efficient experience.
+:::
