@@ -2,34 +2,47 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+# Projects
 
-## Getting Started
+## THIS WILL BE COMPLETED AFTER 20th OCTOBER 2023 (Exams)
 
-Get started by **creating a new site**.
+## About this Section
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+This section houses comprehensive documentation for all of my projects. Each project is organized following a consistent naming and structure convention to make it easy to navigate and access the information you need.
 
-## Generate a new site
+## Structure
 
-Generate a new Docusaurus site using the **classic template**:
+For uniformity, each project is structured as follows:
 
-```shell
-npx @docusaurus/init@latest init my-website classic
+```
+- <Project-Name> - <Additional-Info>
+| 
+|--- <Title>
 ```
 
-## Start your site
+Here's a breakdown of what you can expect within each project:
 
-Run the development server:
+### Project Title
 
-```shell
-cd my-website
+- **Title**: This is the title of the project, providing a clear and concise overview of what the project is about.
 
-npx docusaurus start
+#### Documentation Sections
+
+Within each project, you will find detailed documentation organized into the following sections:
+
+```
+- <Project-Name>
+| 
+|--- Installation
+|--- Setting up the DB
+|--- Usage Guide
 ```
 
-Your site starts at `http://localhost:3000`.
+1. **Installation**: This section guides you through the process of installing the project or application, including any prerequisites and step-by-step instructions.
 
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+2. **Setting up the DB**: Here, you will find information on configuring and setting up the project's database or data storage solutions.
+
+3. **Usage Guide**: This section offers a comprehensive guide on how to use the project, including features, functionality, and any relevant tips or best practices.
+
+By following this structured approach, you can easily access and navigate the documentation for any project, ensuring a smooth and efficient experience.

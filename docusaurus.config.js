@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
   title: 'Hirusha Adikari',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'a place to document/display/showcase all my work.',
   url: 'https://hirusha.xyz',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -33,13 +33,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+          // editUrl:
+          // 'https://github.com/facebook/docusaurus/edit/main/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -52,9 +52,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'hirushaadi',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'hirushaadi',
           src: 'img/logo.svg',
         },
         items: [
@@ -62,14 +62,35 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Projects',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/study', label: 'Study', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            label: 'Photos',
+            href: 'https://photos.hirusha.xyz/',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/hirusha-adi',
             label: 'GitHub',
             position: 'right',
           },
+
+          // Add Telegram link
+          {
+            href: 'https://t.me/your-telegram-username',
+            label: 'Telegram',
+            position: 'right',
+            html: `
+            <img
+              src="/img/social/telegram-blue.png"
+              alt="Telegram"
+              style="vertical-align: middle; margin-right: 8px;"
+            />
+          `,
+          },
+
         ],
       },
       footer: {
