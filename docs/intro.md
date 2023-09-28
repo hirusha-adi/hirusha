@@ -1,8 +1,3 @@
----
-sidebar_position: 1
----
-
-
 # Projects
 
 ## THIS WILL BE COMPLETED AFTER 20th OCTOBER 2023 (Exams)
@@ -17,7 +12,7 @@ For uniformity, each project is structured as follows:
 
 ```
 - <Project-Name> - <Additional-Info>
-| 
+|
 |--- <Title>
 ```
 
@@ -33,7 +28,7 @@ Within each project, you will find detailed documentation organized into the fol
 
 ```
 - <Project-Name>
-| 
+|
 |--- Installation
 |--- Setting up the DB
 |--- Usage Guide

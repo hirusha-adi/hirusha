@@ -65,10 +65,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Projects',
+            label: 'Documents',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
-          { to: '/study', label: 'Study', position: 'left' },
+          { to: '/docs/study/', label: 'Study', position: 'left' },
           {
             label: 'Photos',
             href: 'https://photos.hirusha.xyz/',
