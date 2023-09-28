@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhirusha=self.webpackChunkhirusha||[]).push([[121],{8070:s=>{s.exports=[]}}]);
