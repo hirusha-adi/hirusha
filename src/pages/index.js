@@ -29,7 +29,7 @@ function HeroSection() {
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
-            to="/docs/introduction">
+            to="/aboutme">
             About Me
           </Link>
         </div>
@@ -58,9 +58,6 @@ function IntroSecondPart() {
       <div className="container">
         <div className="row">
           <div className="col col--8 col--offset-2">
-            <h2 className="text--center margin-bottom--lg">
-              <span className="badge badge--primary">:-$ whoami</span>
-            </h2>
             <h3
               className={clsx(
                 'text--center',
@@ -79,20 +76,5 @@ function IntroSecondPart() {
     </div>
   );
 }
-// export default function Home() {
-//   const {siteConfig} = useDocusaurusContext();
-//   return (
-//     <Layout
-//       title={`Welcome from ${siteConfig.title}`}
-//       description="DemonKiller's Portfolio & Project Documentation Website">
-
-//       <main>
-//         <HeroSection />
-//         <HomepageFeatures />
-//       </main>
-//     </Layout>
-//   );
-// }
-
 
 export default Home;

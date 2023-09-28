@@ -1,5 +1,7 @@
+
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -16,6 +18,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'hirusha-adi', // Usually your GitHub org/user name.
   projectName: 'hirusha', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -40,6 +43,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           // Please change this to your repo.
           // editUrl:
           // 'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+        },
+        study: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -79,16 +87,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
           // Add Telegram link
           {
-            href: 'https://t.me/your-telegram-username',
+            href: 'https://t.me/hirushaadi',
             label: 'Telegram',
             position: 'right',
-            html: `
-            <img
-              src="/img/social/telegram-blue.png"
-              alt="Telegram"
-              style="vertical-align: middle; margin-right: 8px;"
-            />
-          `,
           },
 
         ],
@@ -136,7 +137,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Hirusha Adikari. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -144,3 +145,4 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
     }),
 });
+
