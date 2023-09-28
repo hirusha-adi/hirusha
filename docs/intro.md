@@ -1,4 +1,4 @@
-# Projects
+# Introduction
 
 ## THIS WILL BE COMPLETED AFTER 20th OCTOBER 2023 (Exams)
 

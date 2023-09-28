@@ -58,7 +58,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         title: 'hirushaadi',
         logo: {
           alt: 'hirushaadi',
-          src: 'img/logo.svg',
+          src: 'img/hirusha.png',
         },
         items: [
           {

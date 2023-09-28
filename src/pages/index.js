@@ -19,7 +19,7 @@ function HeroSection() {
         <img
           alt={siteConfig.title}
           className={clsx(styles.heroBannerLogo, 'margin-vert--md')}
-          src={useBaseUrl('img/logo.svg')}
+          src={useBaseUrl('img/hirusha.png')}
         />
         <p className="hero__subtitle">
           its me hirusha. nice to meet you.
