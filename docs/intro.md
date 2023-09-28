@@ -1,4 +1,4 @@
-# Introduction
+# Welcome to the Documents section!
 
 ## `docs/*`
 
