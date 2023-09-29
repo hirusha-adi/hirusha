@@ -248,10 +248,3 @@ References:
 - [Bypassing Content-based internet packages with an SSL/TLS Tunnel, SNI Spoofing, and DNS spoofing by Shanaka Anuradha Samarakoon](https://arxiv.org/ftp/arxiv/papers/2212/2212.05447.pdf)
 - [Efficiently Bypassing SNI-based HTTPS Filtering by Wazen M. Shbair, Thibault Cholez, Antoine Goichot, Isabelle Chrisment](https://hal.inria.fr/hal-01202712/document)
 
-```
-
-```
-
-```
-
-```
