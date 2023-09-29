@@ -17,7 +17,7 @@ Choose from the options below to access the resources that align with your educa
 
 ## Examinations
 
-### - [Pearson Edexcel IGCSE](/docs/study/edexcel_igcse)
+### - [Pearson Edexcel IGCSE](/docs/study/edexcel_igcse/)
 
 ### - Pearson Edexcel International Advanced Levels
 

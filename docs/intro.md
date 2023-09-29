@@ -1,3 +1,8 @@
+---
+title: Documents
+sidebar_label: Documents
+---
+
 # Welcome to the Documents section!
 
 ## `docs/*`
