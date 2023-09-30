@@ -14,9 +14,3 @@ Here, you'll discover details about my projects, comprehensive documentation for
 Simply click on each category to explore more and dive deeper into these valuable resources.
 
 Enjoy your journey through my digital library!
-
-:::info Note
-
-Some of the content you'll find here is carefully crafted with the help of OpenAI's ChatGPT, ensuring flawless grammar and polished sentences to enhance the reading experience. And please note that I double-check the results to ensure accuracy and authenticity before posting them on my site.
-
-:::
