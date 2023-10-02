@@ -28,6 +28,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      require.resolve("docusaurus-plugin-search-local"),
+      {
+        hashed: true,
+      },
+    ],
+  ],
+
   presets: [
     [
       '@docusaurus/preset-classic',
