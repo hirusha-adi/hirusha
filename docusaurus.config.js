@@ -71,13 +71,39 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            label: 'Blog',
+            to: '/blog/',
             position: 'left',
-            label: 'Documents',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
-          { to: '/docs/study/', label: 'Study', position: 'left' },
+          {
+            label: 'Projects',
+            to: '/docs/projects/',
+            position: 'left',
+          },
+          {
+            label: 'Study',
+            to: '/docs/study/',
+            position: 'left',
+            sidebarId: 'study',
+          },
+          {
+            type: 'dropdown',
+            label: 'Other Documents',
+            position: 'left',
+            items: [
+              {
+                label: 'Mathematics',
+                to: '/docs/maths/',
+                sidebarId: 'maths',
+              },
+              {
+                label: 'Personal Setup',
+                to: '/docs/personal-setup/',
+                sidebarId: 'personal_setup',
+              },
+
+            ],
+          },
           {
             label: 'Photos',
             href: 'https://photos.hirusha.xyz/',
