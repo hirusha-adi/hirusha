@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+title: Welcome to the Study Section!
+sidebar_label: Study Section
+---
+
 # Welcome to the Study Section!
 
 Greetings, fellow knowledge seekers! In this corner of my website, you'll find a collection of study resources that I or my friends have found helpful during our academic journeys. Please keep in mind that these resources are shared for your convenience and information.
