@@ -5,7 +5,7 @@
 ## Documents (Public)
 
 - [Projects](/docs/projects/)
-- [Study](/docs/study/)
+- [Study Resources](/docs/study/)
 - [Mathematics](/docs/Mathematics/)
 - [Awesome Tools](/docs/awesome-tools)
 
