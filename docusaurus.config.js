@@ -110,11 +110,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             ],
           },
           {
-            label: 'Explore',
-            to: '/explore',
-            position: 'left',
-          },
-          {
             label: 'Photos',
             href: 'https://photos.hirusha.xyz/',
             position: 'left',
