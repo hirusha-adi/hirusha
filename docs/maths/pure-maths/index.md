@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Explore Pure Mathematics
-sidebar_label: Explore Pure Maths
+sidebar_label: Pure Maths
 ---
 
 # Explore Pure Mathematics
