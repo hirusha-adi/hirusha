@@ -1,3 +1,0 @@
-# Awesome Tools/Websites
-
-## Temp
