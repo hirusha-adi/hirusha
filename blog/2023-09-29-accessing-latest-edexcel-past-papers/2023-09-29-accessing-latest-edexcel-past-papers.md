@@ -11,6 +11,7 @@ Accessing past papers through methods that violate the terms and services of a w
 
 :::
 
+
 :::caution Note
 
 This method has been tested with IGCSE and IAL past papers.
@@ -21,6 +22,8 @@ This method has been tested with IGCSE and IAL past papers.
 ## Method
 
 1. Visit the official website of Pearson by [clicking here](https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html).
+
+<!--truncate-->
 
 2. Select your qualification.
 
@@ -74,8 +77,6 @@ https://qualifications.pearson.com/content/dam/secure/silver/all-uk-and-internat
 4. **Query Parameter:** `139251129265111` - This is a query parameter appended to the URL. It could serve various purposes, but without context, it's unclear what it represents. It might be a unique identifier or timestamp, but its exact meaning depends on the website's functionality, which I have no idea of.
 
 ## Why it is accessible?
-
-The issue you've described seems to be related to access control or permissions on the server hosting the PDF file. Here's an analysis of the situation:
 
 1. **Direct Link Access**: When you access the PDF file directly using its full URL (`https://dynamicpapers.com/wp-content/uploads/2023/02/wma11-01-que-20230110.pdf`), you can successfully open and view the file. This suggests that the file itself is publicly accessible.
 

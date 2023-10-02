@@ -7,6 +7,8 @@ tags: [python, network, hacking]
 
 TCP over SSL tunneling is a technique for encapsulating normal TCP traffic within SSL/TLS encryption. This can be used to secure network communication and protect against man-in-the-middle attacks.
 
+<!--truncate-->
+
 ![TCP Over SSL Tunnel Software](https://cdn-images-1.medium.com/v2/resize:fit:880/0*ls1-d3UfIMvyvPf0)
 
 Server Name Indication (SNI) is an extension to the TLS protocol that allows a client to specify the domain name it is connecting to at the start of the handshake process. This enables a server to host multiple TLS-based websites on a single IP address and port, as the server can use the SNI information to determine which certificate to present to the client.

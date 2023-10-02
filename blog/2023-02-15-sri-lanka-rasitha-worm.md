@@ -5,9 +5,12 @@ authors: [hirusha]
 tags: [hacking, windows, malware]
 ---
 
-Please note that the “Windows Error” window image provided earlier is no longer functional and no longer appears due to compatibility issues with Windows 10 and 11. However, the worm’s ability to spread through removable media drives still persists in Windows 10, but not in Windows 11. It is worth noting that many users may not even notice any changes in their removable media drive folders once it is infected.
-
 The Rasith.A worm propagates through removable devices. When an infected device is connected to a computer, the malware’s hidden files execute without the user’s knowledge or consent. The worm is self-replicating and steals sensitive system information, thereby continuing its spread. As a standalone malware program, a computer worm seeks to spread to other computers by self-replication.
+
+<!--truncate-->
+
+
+- _( Please note that the “Windows Error” window image provided earlier is no longer functional and no longer appears due to compatibility issues with Windows 10 and 11. However, the worm’s ability to spread through removable media drives still persists in Windows 10, but not in Windows 11. It is worth noting that many users may not even notice any changes in their removable media drive folders once it is infected. )_
 
 Regrettably, the Rasith.A worm has become a common and popular malware variant, with a significant impact on the government office computers in Sri Lanka. The worm shares similarities with the shortcut virus, which has also been widespread in Sri Lanka.
 
