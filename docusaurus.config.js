@@ -97,6 +97,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
                 sidebarId: 'maths',
               },
               {
+                label: 'Awesome Tools',
+                to: '/docs/awesome-tools/',
+                sidebarId: 'awesome_tools',
+              },
+              {
                 label: 'Personal Setup',
                 to: '/docs/personal-setup/',
                 sidebarId: 'personal_setup',
