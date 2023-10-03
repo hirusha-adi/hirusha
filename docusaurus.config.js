@@ -202,7 +202,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             ],
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Hirusha Adikari. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Hirusha Adikari.`,
       },
       prism: {
         theme: lightCodeTheme,
