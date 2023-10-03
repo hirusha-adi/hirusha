@@ -137,7 +137,6 @@ const softwareData = [
 function ArchLinuxManualSetup() {
     return (
         <div>
-            <h1>Example Page</h1>
             <CommandGenWithCheckbox baseCommand={baseCommand} softwareData={softwareData} />
         </div>
     );
