@@ -1,7 +1,7 @@
 import React from 'react';
 import CommandGenWithCheckbox from '@site/src/components/CommandGenWithCheckbox';
 
-const baseCommand = 'yay -S';
+const baseCommand = 'yay -S ';
 const softwareData = [
     {
         category: 'Other Package Managers',
@@ -116,7 +116,6 @@ const softwareData = [
             { name: '--editmenu (Edit PKGBUILD before building)', command: '--editmenu' },
             { name: '--rebuild (Rebuild a package even if its up to date)', command: '--editflags' },
             { name: '--verify (Verify the hashes of downloaded files)', command: '--verify' },
-            { name: '--nodiff (Skip checking for differences in files)', command: '--nodiff' },
             { name: '--noextract (Skip extracting source files)', command: '--noextract' },
             { name: '--editflags (ggggggggggggg)', command: '--editflags' },
         ]
