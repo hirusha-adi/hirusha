@@ -2,9 +2,10 @@
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
+ * learn more here: https://infima.dev/docs/components/alert
  */
 
-/* You can override the default Infima variables here. */
+/* Default */
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -27,7 +28,39 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Custom Font */
+/* --------------------- */
 /* @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
 * {
   font-family: "Source Code Pro", monospace;
 } */
+
+/* Ovveride Default Infima styles  */
+/* --------------------- */
+.button--success {
+  background-color: #25c2a0;
+}
+
+
+/* Check Box */
+/* --------------------- */
+.custom-checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  margin-right: 10px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #083129;
+  border: 2px solid #167560;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked {
+  background-color: #25c2a0;
+}
