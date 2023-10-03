@@ -73,7 +73,7 @@ const softwareData = [
     {
         category: 'Remote Desktop',
         items: [
-            { name: 'TeamViwer', command: 'teamviewer' },
+            { name: 'TeamViewer', command: 'teamviewer' },
             { name: 'AnyDesk', command: 'anydesk-bin' },
         ]
     },
@@ -103,7 +103,7 @@ const softwareData = [
             { name: 'FPC', command: 'fpc' },
             { name: 'NotepadQQ', command: 'notepadqq' },
             { name: 'codeblocks', command: 'codeblocks' },
-            { name: 'MongoDB Compass', command: 'mongodb-compoass' },
+            { name: 'MongoDB Compass', command: 'mongodb-compass' },
         ]
     },
     {
