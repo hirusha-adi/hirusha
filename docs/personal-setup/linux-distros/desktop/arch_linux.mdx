@@ -1,0 +1,78 @@
+---
+title: Arch Linux Setup
+sidebar_label: Arch Linux
+slug: arch-linux
+---
+
+import PackageInstaller from './ArchPackageSelect';
+
+## Auto Setup Script
+
+1. **Step 1: Install Required Packages**
+
+```bash
+sudo pacman -S git curl wget nano base-devel
+```
+
+2. **Step 2: Clone the Repository**
+
+```bash
+git clone https://github.com/hirusha-adi/myLinuxSetup.git
+```
+
+this command will create a new directory called `myLinuxSetup` in your current working directory and download the repository contents into it.
+
+3. **Step 3: Run the Script**
+
+```bash
+cd myLinuxSetup/desktop
+```
+
+```bash
+python arch.py
+```
+
+## Manual Setup
+
+### Update & Upgrade System
+
+```
+sudo pacman -Syyu
+```
+
+
+### Installing `yay`
+
+- #### One Liner
+
+```bash
+sudo pacman -Sy base-devel --noconfirm && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
+```
+
+- #### Manual Method
+
+```bash
+sudo pacman -Sy base-devel --no-confirm
+```
+
+```bash
+git clone https://aur.archlinux.org/yay.git
+```
+
+```bash
+cd yay
+```
+
+```bash
+makepkg -si
+```
+
+now, remove the yay directory as its no longer needed
+
+```bash
+cd .. & rm -rf yay
+```
+
+### Install Packages
+
+<PackageInstaller />
