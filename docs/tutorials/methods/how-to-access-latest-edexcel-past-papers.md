@@ -1,8 +1,6 @@
 ---
-slug: 2023-09-29-how-to-access-latest-edexcel-past-papers
+slug: how-to-access-latest-edexcel-past-papers
 title: How to Access the Latest Edexcel Past Papers
-authors: [hirusha]
-tags: [education, bug]
 ---
 
 :::danger NOTE
@@ -32,30 +30,30 @@ This method has been tested with IGCSE and IAL past papers.
 
 4. Select the exam series. For example, choose the latest June 2023 papers.
 
-![1i](./1.jpg)
+![1i](https://i.imgur.com/BEf8FSM.jpg)
 
 5. Right-click on the locked paper you want to access and copy the link address.
 
-![2i](./2.jpg)
+![2i](https://i.imgur.com/swGbGL1.jpg)
 
 6. Paste the copied link somewhere you can easily select and manipulate its parts. Keep everything that comes after the last `/`.
 
-![3i](./3.jpg)
+![3i](https://i.imgur.com/H5J3CLA.jpg)
 
 
 7. Delete everything after the `?` in the link.
 
-![4i](./4.jpg)
+![4i](https://i.imgur.com/fc8oKQJ.jpg)
 
 8. Put the `<filename>.pdf` into quotation marks and search for it either on [Google](https://google.com) or [DuckDuckGo](https://duckduckgo.com).
 
-![5i](./5.jpg)
+![5i](https://i.imgur.com/YccyN6C.jpg)
 
-![6i](./6.jpg)
+![6i](https://i.imgur.com/9ruhtgr.jpg)
 
 9. You will get a search result that includes the PDF file.
 
-![7i](./7.jpg)
+![7i](https://i.imgur.com/ZtlnpnX.jpg)
 
 10. Open the PDF and enjoy studying. Good luck!
 
@@ -82,7 +80,7 @@ https://qualifications.pearson.com/content/dam/secure/silver/all-uk-and-internat
 
 2. **Access via Website**: When you visit the website's homepage (`https://dynamicpapers.com/`) and attempt to access the same PDF file through the website's navigation or links, you encounter restrictions or find it locked from public access.
 
-![8i](./8.jpg)
+![8i](https://i.imgur.com/r5l9foT.jpg)
 
 This issue can be attributed to a misconfiguration in the website's access control settings or possibly a misconfigured link on their website.
 

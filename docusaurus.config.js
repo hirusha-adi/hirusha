@@ -93,9 +93,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
                 sidebarId: 'awesome_tools',
               },
               {
-                label: 'Personal Setup',
-                to: '/docs/personal-setup/',
-                sidebarId: 'personal_setup',
+                label: 'Tutorials',
+                to: '/docs/tutorials',
+                sidebarId: 'tutorials',
               },
 
             ],

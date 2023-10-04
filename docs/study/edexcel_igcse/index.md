@@ -16,7 +16,7 @@ Please select your subject of interest, and we are here to support your learning
 
 :::tip
 
-**[Click here to read the Guide on Accessing Latest Edexcel Past Papers](/blog/2023-09-29-how-to-access-latest-edexcel-past-papers)**
+**[Click here to read the Guide on Accessing Latest Edexcel Past Papers](/docs/tutorials/methods/how-to-access-latest-edexcel-past-papers)**
 
 *Please take note that this method only works with popular subjects such as Mathematics, Physics, Chemistry, Biology, etc...*
 :::
