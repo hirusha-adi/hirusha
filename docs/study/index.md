@@ -27,7 +27,7 @@ Choose from the options below to access the resources that align with your educa
 
 ### - Pearson Edexcel International Advanced Levels
 
-### - CIE Advanced Levels
+### - [CIE Advanced Levels](cie_al)
 
 ## Topics
 
