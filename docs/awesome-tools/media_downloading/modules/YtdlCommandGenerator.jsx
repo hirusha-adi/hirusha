@@ -14,6 +14,7 @@ function YtDlpCommandGenerator() {
     });
     const [url, setUrl] = useState('');
     const inputRef = useRef(null);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
     const generateCommand = () => {
         let command = `yt-dlp "${url}" `; // Add the URL here
@@ -52,8 +53,15 @@ function YtDlpCommandGenerator() {
         if (inputRef.current) {
             inputRef.current.select();
             document.execCommand('copy');
+            setShowSuccessMessage(true); // Show the success message
         }
     };
+
+    const handleCloseClick = () => {
+        setShowSuccessMessage(false); // Close the success message
+    };
+
+
 
     return (
         <div>
@@ -326,6 +334,20 @@ function YtDlpCommandGenerator() {
             >
                 Copy to Clipboard
             </button>
+
+            {showSuccessMessage && (
+                <div className="alert alert--success" role="alert" style={{ marginTop: '20px' }}>
+                    <button
+                        aria-label="Close"
+                        className="clean-btn close"
+                        type="button"
+                        onClick={handleCloseClick}
+                    >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Successfully copied to clipboard!</strong>
+                </div>
+            )}
 
         </div>
     );
