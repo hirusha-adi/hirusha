@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function YtDlpCommandGenerator() {
     const [videoType, setVideoType] = useState('video');
@@ -13,7 +13,7 @@ function YtDlpCommandGenerator() {
         writeAutoSubs: false,
     });
     const [url, setUrl] = useState('');
-
+    const inputRef = useRef(null);
 
     const generateCommand = () => {
         let command = `yt-dlp "${url}" `; // Add the URL here
@@ -48,6 +48,13 @@ function YtDlpCommandGenerator() {
         return command;
     };
 
+    const handleCopyToClipboard = () => {
+        if (inputRef.current) {
+            inputRef.current.select();
+            document.execCommand('copy');
+        }
+    };
+
     return (
         <div>
             <h3>Media URL</h3>
@@ -61,6 +68,7 @@ function YtDlpCommandGenerator() {
                     width: '100%',
                     border: '1px solid #ccc',
                     resize: 'none',
+                    marginBottom: 20
                 }}
             />
             <h3>Contents to Downlaod</h3>
@@ -309,7 +317,15 @@ function YtDlpCommandGenerator() {
                     border: '1px solid #ccc',
                     resize: 'none',
                 }}
+                ref={inputRef} // Assign the textarea field a ref
             />
+
+            <button
+                onClick={handleCopyToClipboard}
+                className="button button--success"
+            >
+                Copy to Clipboard
+            </button>
 
         </div>
     );
