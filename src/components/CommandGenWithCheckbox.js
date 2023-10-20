@@ -65,7 +65,7 @@ const CommandGenWithCheckbox = ({ baseCommand, softwareData }) => {
                         >
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <strong>Success</strong>
+                        <strong>Successfully copied to clipboard!</strong>
                     </div>
                 )}
             </div>
