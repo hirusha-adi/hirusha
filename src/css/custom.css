@@ -64,3 +64,43 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 .custom-checkbox:checked {
   background-color: #25c2a0;
 }
+
+/* Radio Buttons */
+/* --------------------- */
+.custom-radio-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.custom-radio {
+  margin-right: 10px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #083129;
+  border: 2px solid #167560;
+  border-radius: 50%;
+  /* Make the radio button a circle */
+  cursor: pointer;
+}
+
+.custom-radio:checked {
+  background-color: #25c2a0;
+}
+
+/* Input Text Fields */
+/* --------------------- */
+.custom-input {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #212529;
+}
+
+.custom-input:focus {
+  outline: none;
+  border-color: #007BFF;
+}
