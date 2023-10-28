@@ -5,6 +5,12 @@ sidebar_label: Chemistry
 
 # Chemistry
 
+:::danger
+if you have any doubt regarding any content shared / linked here, contact me and i'll get them removed ASAP
+
+I do not host any of these data. i do not own and i did not purchase anything. everything here is linked to something that has been previously shared online publicly for free by someone (mostly on reddit and huge discord servers).
+:::
+
 ## Books
 
 ### Student Book
@@ -21,10 +27,6 @@ sidebar_label: Chemistry
 ## Notes
 
 ### Save My Exams
-
-:::danger
-I do not host any of these data. i do not own and i did not purchase anything. everything here is linked to something that has been previously shared online for free (mostly on reddit and huge discord servers)
-:::
 
 - [Unit 1](https://mega.nz/file/N2YiELBD#j5vERS7-i4PSSNPXo1QdgpfXYE2DaNWKMcgmSW1ShWU)
 - [Unit 2](https://mega.nz/file/83ZhjaiZ#Ny5ZAyIT_grFfVjylx7grZypsJChtr7l8XiekXwcLh4)
