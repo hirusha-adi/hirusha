@@ -67,7 +67,7 @@ I do not host any of these data. i do not own and i did not purchase anything. e
     - [Khan Academy](https://www.youtube.com/@khanacademy)
 
 
-### For Notes
+### Notes
 
 - [Revisely](https://www.revisely.co.uk/alevel/physics/edexcel/)
 - [StudyWise](https://studywise.co.uk/a-level-revision/physics/)

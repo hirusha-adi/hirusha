@@ -11,18 +11,13 @@ I do not host any of these data. i do not own and i did not purchase anything. e
 
 ## Books
 
-### Student Book
-
 - [AS Level](https://mega.nz/file/C9MjRAqQ#amW9Bkr8rmack8I46h_E_uNo5vpuDr679MOHNvPkp94)
 - [A2 Level](https://mega.nz/file/jpcj1KBJ#dPNHvCO3fAFJo68vytI8GjMLQ4C5nYyu1KjyYOeao-c)
-
-### Other
-
 - [Edexcel IAL Chemistry Lab Book](https://mega.nz/file/3xUQTILL#9hjL6b88F7K-aMLmB_Pi0Nr1zeN5Hlj_5-zocIct60Y)
 - [CGP A-Level Chemistry: Edexcel Year 1 & 2 Complete Revision & Practice](https://mega.nz/file/S88hXQYI#nU7osk0HL27tBoOZzQfNn_ItscFtmOjqkuMwmLfrXGM)
 
 
-## Notes
+## Resources
 
 ### Save My Exams
 
