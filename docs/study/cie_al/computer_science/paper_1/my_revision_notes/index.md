@@ -10,7 +10,7 @@ This study material is created mainly using past paper questions, starting from 
 
 1. [Information representation](chapter_1_information_representation)
 2. [Communication and networking technologies](chapter_2_communication_and_networking_technologies)
-3. [Hardware](chapter_3_hardware)
+3. [Hardware](chapter_3)
 
 <!-- 4. [Logic gates and logic circuits](chapter_4_logic_gates_and_logic_circuits)
 5. [Processor fundamentals](chapter_5_processor_fundamentals)
