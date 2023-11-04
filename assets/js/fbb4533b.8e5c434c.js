@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhirusha=self.webpackChunkhirusha||[]).push([[1669],{4376:s=>{s.exports=JSON.parse('{"label":"others","permalink":"/blog/tags/others","allTagsPath":"/blog/tags","count":1}')}}]);
