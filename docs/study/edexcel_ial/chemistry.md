@@ -3,8 +3,6 @@ title: Chemistry (IAL Edexcel)
 sidebar_label: Chemistry
 ---
 
-# Chemistry
-
 :::danger
 if you have any doubt regarding any content shared / linked here, contact me and i'll get them removed ASAP
 
@@ -45,12 +43,6 @@ I do not host any of these data. i do not own and i did not purchase anything. e
 - [5 - alkenes](https://mega.nz/file/xzoBlaaA#Mbv_OXteUMmzh__LzhlrBVAaYpCxaqcopN0EQpS1Yvk)
 
 ## Guide
-
-:::info note
-
-Source: Suraj, a friend of mine
-
-:::
 
 ### Unit 1
 
