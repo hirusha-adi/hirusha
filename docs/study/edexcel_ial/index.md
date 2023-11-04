@@ -5,6 +5,8 @@
 We are pleased to offer a range of educational resources for the following subjects:
 
 1. [Chemistry](chemistry)
+1. [Physics](physics)
+1. [Biology](biology)
 
 Please select your subject of interest, and we are here to support your learning journey. Best of luck with your studies!
 
