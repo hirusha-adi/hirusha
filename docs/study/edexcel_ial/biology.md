@@ -39,7 +39,7 @@ I do not host any of these data. i do not own and i did not purchase anything. e
 - [Questions (AS Level)](https://drive.google.com/drive/folders/1LEljkyGlN_L7iV8J1JLSm3qBlA5jBlcN)
 - [Questions (A2 Level)](https://drive.google.com/drive/folders/1LJ4rD6HjlcRx9j9_HHnQFmJGUnntD0U0)
 
-### YouTube Channels
+### YouTube
 
 - [Bio U4](https://youtube.com/playlist?list=PLM3KZVmGHyMFY0bukzTVr8DL4MP35w5kv)
 - [Biorach](https://www.youtube.com/@BioRach)
