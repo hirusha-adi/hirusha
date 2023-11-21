@@ -46,7 +46,7 @@ I do not host any of these data. i do not own and i did not purchase anything. e
 - [Questions with Marking Schemes (Mixed)](https://drive.google.com/drive/folders/1T2QjBkCjqEWyUd_-KCy-RgbbCvM_-W2r)
 
 
-### YouTube Channels
+### YouTube
 
 - specifically related to Edexcel IAL 
 
