@@ -9,7 +9,7 @@ Before you get started with our website, follow these installation steps to ensu
 **Step 1: Clear Existing Cache**
 
 ```bash
-npm cache clean -f
+npm cache clean --force
 ```
 
 This command helps ensure that you have a clean slate before installing the required dependencies.
@@ -17,7 +17,7 @@ This command helps ensure that you have a clean slate before installing the requ
 **Step 2: Install Dependencies**
 
 ```bash
-npm install
+npm install --force
 ```
 
 This command installs all the necessary packages and dependencies for our website. 
