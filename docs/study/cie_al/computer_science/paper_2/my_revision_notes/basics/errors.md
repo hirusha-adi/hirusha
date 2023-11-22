@@ -35,7 +35,7 @@ sidebar_position: 5
 	
 - INTEGER + STRING
 - INTEGER & STRING
-- INTEGER < STRING (>,<,<=, >=)
+- INTEGER < STRING
 
 ### What is a Breakpoint?
 
