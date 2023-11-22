@@ -4,6 +4,12 @@ title: De-Bloating Windows and Increasing Privacy
 sidebar_label: Debloating
 ---
 
+- [Tron Script](https://old.reddit.com/r/TronScript/)
+
+    - Tron is a glorified collection of batch files that automate the process of cleaning up Windows systems. It is built with heavy reliance on community input and updated regularly.
+
+    - Tron supports all versions of Windows from 7 to 11 (server variants included).
+
 - [Debotnet](https://github.com/builtbybel/debotnet) - Debotnet is a tiny portable tool for controlling Windows 10's many privacy-related settings and keep your personal data private.
 
     ![i6](https://github.com/builtbybel/debotnet/raw/master/debotnet-intro.gif)
@@ -40,7 +46,7 @@ sidebar_label: Debloating
 
     ![i3](https://cdn.discordapp.com/attachments/1163847683207856178/1165122186844049489/01.png?ex=6545b398&is=65333e98&hm=3aa9a5dbbc6247010a2abee5b126c2135ca1e549ecdb33a7d725f41630ba4961&)
 
-- [Windows.10.DNS.Block.List](https://github.com/schrebra/Windows.10.DNS.Block.List) - Windows DNS Block List
+- [Windows 10 DNS Block List](https://github.com/schrebra/Windows.10.DNS.Block.List) - Windows DNS Block List
 
     - This is an exhaustive list of all Windows DNS names that call back to Microsoft or third party applications builtin to the Operating System.
 
@@ -77,3 +83,9 @@ sidebar_label: Debloating
 * [Windows 10 batch optimizer](https://github.com/SeregaSPb/Windows-10-batch-optimizer) - Autotuner Windows 10 for awesome perfomance setting, privacy and security.
 
 * [Windows-10-Hardening](https://github.com/aghorler/Windows-10-Hardening) - An admittedly frivolous (and infrequently updated) attempt to harden Windows 10.
+
+:::info credits
+
+Resources collected with the help of [TemporalAgent7/awesome-windows-privacy](https://github.com/TemporalAgent7/awesome-windows-privacy) repository
+
+:::
