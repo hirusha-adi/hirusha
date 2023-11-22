@@ -1,15 +1,8 @@
 ---
-sidebar_position: 2
-title: Microsoft Windows
-sidebar_label: Windows
+sidebar_position: 3
+title: De-Bloating Windows and Increasing Privacy
+sidebar_label: Debloating
 ---
-
-## Activation
-
-- [Activation Guide by Piracy Mega Thread](https://rentry.co/megathread-unsafe-sites)
-- [Activation Guide by champagne.pages.dev](https://champagne.pages.dev/activate-windows-office/)
-
-## De-Bloating/Privacy
 
 - [Debotnet](https://github.com/builtbybel/debotnet) - Debotnet is a tiny portable tool for controlling Windows 10's many privacy-related settings and keep your personal data private.
 
@@ -84,21 +77,3 @@ sidebar_label: Windows
 * [Windows 10 batch optimizer](https://github.com/SeregaSPb/Windows-10-batch-optimizer) - Autotuner Windows 10 for awesome perfomance setting, privacy and security.
 
 * [Windows-10-Hardening](https://github.com/aghorler/Windows-10-Hardening) - An admittedly frivolous (and infrequently updated) attempt to harden Windows 10.
-
-## Tweaking
-
-- [Winaero Tweaker](https://winaero.com/winaero-tweaker/) - All-in-one app for tuning Windows {7, 8, 10, 11}
-
-    ![i11](https://cdn.discordapp.com/attachments/1163847683207856178/1165122544949542952/Winaero-Tweaker-1.png?ex=6545b3ed&is=65333eed&hm=19a20fd076630ef8f33bd48843ae2423a0f6b29ca793f3b36101175ba4edc1f2&)
-
-## Other Collections
-
-- [shakil-shahadat/awesome-piracy](https://shakil-shahadat.github.io/awesome-piracy/#windows-privacy) - Piracy Focused Gudies
-
-- [Power Tools](https://www.slant.co/topics/6217/~power-user-tools-for-windows) - A collection of great software for power users
-
-:::tip NOTE
-
-This tools set was collected thanks to the [megathread](https://rentry.co/megathread)
-
-:::
