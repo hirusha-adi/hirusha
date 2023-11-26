@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhirusha=self.webpackChunkhirusha||[]).push([[9331],{4282:s=>{s.exports=JSON.parse('{"label":"windows","permalink":"/blog/tags/windows","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
