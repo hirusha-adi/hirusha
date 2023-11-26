@@ -2,6 +2,7 @@
 sidebar_position: 3
 title: De-Bloating Windows and Increasing Privacy
 sidebar_label: Debloating
+slug: debloating
 ---
 
 - [Tron Script](https://old.reddit.com/r/TronScript/)
