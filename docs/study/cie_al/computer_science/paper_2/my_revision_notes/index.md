@@ -14,7 +14,7 @@ I do not gaurantee anything!
 1. [Basics](basics/)
     1. [Inroduction](basics/introduction)
     2. [Data Types](basics/data_types)
-    3. [Pseudocode](basics/pseudocode)
+    <!-- 3. [Pseudocode](basics/pseudocode) -->
     4. [File Handling](basics/file_handling)
     5. [Errors](basics/errors)
     6. [Flowcharts](basics/flowcharts)
