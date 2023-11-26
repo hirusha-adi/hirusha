@@ -5,8 +5,9 @@ sidebar_label: Sri Lankan AL
 
 ## Available Educational Resources
 
-I'm pleased to offer a range of educational resources for the following subjects:
-
-1. [Computer Science](computer_science)
+1. [Biology](biology)
+2. [Chemistry](chemistry)
+3. [Physics](physics)
+4. [Mathematics](mathematics)
 
 
