@@ -1,5 +1,5 @@
 ---
-title: Notes - Logic circuits and Boolean algebra
+title: Notes - Hardware and virtual machines
 sidebar_label: Notes
 slug: notes
 sidebar_position: 1

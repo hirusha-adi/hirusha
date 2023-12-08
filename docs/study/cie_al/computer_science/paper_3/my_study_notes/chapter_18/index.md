@@ -1,4 +1,4 @@
-# Chapter 18 - Hardware and virtual machines
+# Chapter 18 - Logic circuits and Boolean algebra
 
 ## [Notes](notes)
 ## [ESQ](esq)
