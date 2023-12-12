@@ -238,7 +238,7 @@ a6+bc/+
 - process put in ready state
 - OS decides which process to allocate to processor from the ready queue
 
-### d) Explain the role of the high-level scheduler in a multiprogramming operating system.
+#### d) Explain the role of the high-level scheduler in a multiprogramming operating system.
 
 - decides which processes are to be loaded from backing store
 - into memory /ready queue
