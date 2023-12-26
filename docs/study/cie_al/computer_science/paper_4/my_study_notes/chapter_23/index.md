@@ -1,4 +1,4 @@
-# Chapter 23 - Further problem-solving and programming skills
+# Chapter 23 - Algorithms
 
 ## [Notes](notes)
 

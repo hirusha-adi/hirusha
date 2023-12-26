@@ -1,5 +1,5 @@
 ---
-title: Exam Style Questions - Further problem-solving and programming skills
+title: Exam Style Questions - Algorithms
 sidebar_label: ESQ
 slug: esq
 sidebar_position: 2
