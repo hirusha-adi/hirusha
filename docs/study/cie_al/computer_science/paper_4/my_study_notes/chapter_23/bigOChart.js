@@ -4,11 +4,15 @@ const BigOChartSVG = () => {
   return (
     <div style={{ maxWidth: "600px", width: "100%", overflow: "hidden" }}>
       <svg
-        id="chart"
+        id="chart-container"
         viewBox="0 0 800 500"
         xmlns="http://www.w3.org/2000/svg"
         style={{ width: "100%", height: "auto" }}
       >
+        {/* White background box */}
+        <rect x="0" y="0" width="800" height="500" fill="white" />
+
+        {/* Existing SVG content */}
         {/* horrible region */}
         <path d="M50 450 L 50 0 L 800 0 L 800 450 Z" fill="#ff8989"></path>
         {/* bad region */}
