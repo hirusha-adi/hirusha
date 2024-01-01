@@ -5,6 +5,8 @@ slug: esq
 sidebar_position: 2
 ---
 
+## Tasks
+
 <details>
 <summary>Tasks</summary>
 
@@ -83,7 +85,7 @@ ENDPROCEDURE
 
 #### Run the program and study the output.
 
-```
+```python
 # Global variable
 CallNumber = 0
 
