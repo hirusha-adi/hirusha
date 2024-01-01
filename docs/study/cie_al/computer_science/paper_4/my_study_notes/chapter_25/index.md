@@ -2,4 +2,6 @@
 
 ## [Notes](notes)
 
+## [Pickle for Data Serialization in Python](pickles)
+
 ## [ESQ](esq)

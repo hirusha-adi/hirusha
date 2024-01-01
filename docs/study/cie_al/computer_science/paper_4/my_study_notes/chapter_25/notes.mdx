@@ -89,4 +89,208 @@ DECLARE ThisCar : CarRecord
 
 ### Sequential File Processing
 
+- If we have an array of records, we may want to store the records on disk before the program quits, so that we don't lose the data. 
+- We can open a binary file and write one record after another to the file. 
+- We can then read the records back into the array when the program is run again.
+
+- Python:
+
+```python
+import pickle
+
+Car = [CarRecord() for i in range(100)]
+
+with open('CarFile.DAT', 'wb') as file:
+    for i in range(100):
+        pickle.dump(Car[i], file) # write a whole record to the binary file
+
+Car = []
+with open('CarFile.DAT', 'rb') as file:
+    while True: # check for end of file
+        Car.append(pickle.load(file)) # append record from file to end of list
+```
+
+<details>
+<summary>Pseudocode</summary>
+
+- Saving contents of array 
+
+```
+OPENFILE CarFile FOR WRITE
+FOR i ← 1 TO MaxRecords
+    PUTRECORD CarFile, Car[i]
+NEXT i
+CLOSEFILE CarFile 
+```
+
+- Restoring contents of array
+
+```
+OPENFILE CarFile FOR READ
+FOR i ← 1 TO MaxRecords
+    GETRECORD CarFile, Car[i]
+NEXT i
+CLOSEFILE CarFile 
+```
+
+</details>
+
+### Random-access file processing
+
+- Python:
+
+```python
+import pickle
+
+class CarRecord:
+    def __init__(self, VehicleID):
+        self.VehicleID = VehicleID
+
+# Writing a record to the file
+ThisCar = CarRecord(VehicleID='12345') 
+Address = hash(ThisCar.VehicleID)
+
+with open('CarFile.DAT', 'rb+') as CarFile: # rb+ - can append
+    CarFile.seek(Address)
+    pickle.dump(ThisCar, CarFile)
+
+
+# Reading a record from the file
+VehicleID_to_find = '12345' 
+
+with open('CarFile.DAT', 'rb') as CarFile:
+    Address = hash(VehicleID_to_find)
+    CarFile.seek(Address)    
+    ThisCar = pickle.load(CarFile)
+
+# Print the loaded record
+print(f"Loaded Record: VehicleID - {ThisCar.VehicleID}")
+```
+
+- To retrieve a record based on a given VehicleID, 
+    - the file is opened in read mode (`rb`). 
+    - The file pointer is moved to the calculated address using seek, 
+    - and then pickle.load is used to deserialize (load) the record from the file.
+
+<details>
+<summary>Pseudocode</summary>
+
+- Saving a record
+
+```
+OPENFILE CarFile FOR RANDOM
+Address ← Hash(ThisCar.VehicleID)
+SEEK CarFile, Address
+PUTRECORD CarFile, ThisCar
+CLOSEFILE CarFile
+```
+
+- Retrieving a record
+
+```
+OPENFILE CarFile FOR RANDOM
+Address ← Hash(ThisCar.VehicleID)
+SEEK CarFile, Address
+PUTRECORD CarFile, ThisCar
+CLOSEFILE CarFile 
+```
+
+</details>
+
+## Exception Handling
+
+- essential for writing robust and error-tolerant code. 
+- allows developers to gracefully handle unexpected errors and prevent program crashes
+
+- **Try-Except Block:**
+   - Syntax:
+    ```python
+    try:
+        # Code that might raise an exception
+        # ...
+    except SomeSpecificException as e:
+        # Handle specific exception
+        # ...
+    except AnotherSpecificException as e:
+        # Handle another specific exception
+        # ...
+    except Exception as e:
+        # Handle generic exception
+        # ...
+    else:
+        # Executed if no exception occurs in the try block
+        # ...
+    finally:
+        # Always executed, regardless of whether an exception occurred or not
+        # ...
+     ```
+
+   - Example:
+    ```python
+    try:
+        # Code that might raise an exception
+        result = 10 / 0
+    except ZeroDivisionError:
+        # Handling a specific exception
+        print("Error: Cannot divide by zero!")
+    except Exception as e:
+        # Handling a generic exception
+        print(f"An error occurred: {e}")
+    else:
+        # Executed if no exception occurs in the try block
+        print("No errors!")
+    finally:
+        # Always executed, regardless of whether an exception occurred or not
+        print("Finally block executed.")
+     ```
+
+- **Common Exception Types:**
+    - `IOError`: for example, a file cannot be opened
+    - `ImportError`: Python cannot find the module
+    - `ValueError`: an argument has an inappropriate value
+    - `KeyboardInterrupt`: the user presses Ctrl+C or Ctrl+Del
+    - `EOFError`: a file-read meets an end-of-file condition
+    - `ZeroDivisionError`: a division by zero has been attempted
+
+- **Finally Block:**
+   - The `finally` block is optional and is used for code that must be executed regardless of whether an exception occurred.
+
+   - Example:
+     ```python
+     try:
+         # Code that may raise an exception
+     except ExceptionType as e:
+         # Code to handle the exception
+     finally:
+         # Code that always runs, regardless of exceptions
+     ```
+
+- **Custom Exceptions:**
+   - Developers can create custom exception classes by inheriting from the `Exception` class.
+
+   - Example:
+     ```python
+     class CustomError(Exception):
+         def __init__(self, message):
+             self.message = message
+
+     try:
+         raise CustomError("This is a custom exception")
+     except CustomError as e:
+         print("Custom Error:", e.message)
+     ```
+
+<details>
+<summary>Pseudocode</summary>
+
+```
+TRY
+    <statementsA>
+EXCEPT
+    <statementsB>
+ENDTRY
+```
+
+</details>
+
 
