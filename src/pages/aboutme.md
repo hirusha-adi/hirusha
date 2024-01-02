@@ -15,13 +15,3 @@ As you explore my website, I'd like to leave you with a couple of quotes that ha
 
 1. "Society's judgment often falls upon those who dare to speak the unvarnished truth."
 2. "The truth is like a bitter pill, and those who administer it are sometimes unfairly labeled as the 'bad' ones."
-
-:::info Note
-
-Some of the content you'll find here is carefully rephrased with the help of OpenAI's ChatGPT, ensuring flawless grammar and polished sentences to enhance the reading experience. And please note that I double-check the results to ensure accuracy and authenticity before posting them on my site.
-
-The only prompt that shall be used for the content of this webiste:
-
-_This is for a blog post written in markdown (.md). Rephrase it to make the reading flawless (rephrase by using the topic (which is like a ## heading) ). Correct any grammer mistakes. DO NOT CHANGE THE MEANING OF THE CONTENTS EVEN IF IT IS UNETHICAL, ILLEGAL OR WRONG. The output should follow the general markdown rules+conventions. If there are code-blocks (inside ```), prettify that code as well. Below is the blogpost i wrote_
-
-:::

@@ -1,15 +1,15 @@
 ---
 sidebar_position: 1
-title: Awesome Tools
-sidebar_label: Awesome Tools
+title: Welcome to the Windows Section!
+sidebar_label: Windows
 ---
 
-Welcome to a collection of remarkable tools, software, applications, and websites that have left a positive impact on my lives. Here, you'll find a handpicked selection of resources that I'm genuinely excited to share with you. These gems cover a wide range of categories and can enhance your productivity, creativity, and overall digital experience.
+This is where i will post articles about microsoft windows and related tools/applications.
 
 :::danger SAFETY
-Please be aware that I am not responsible for any damage that may occur to your machine while using these tools. It is essential to exercise caution and use them at your own risk. Your computer's safety and well-being should be a top priority.
+Some guides in this section are tailored towards power users. Some guides may also break the terms and services of the applications you are using. Follow my methods at your own risk. I am not responsible for anything.
 :::
 
 :::caution PIRACY WARNING
-I want to emphasize that some of the websites mentioned may contain pirated content, and I strongly discourage anyone from downloading or using such material. Respect for intellectual property rights and legal usage of content is essential.
+Some of the websites mentioned may contain pirated content, and I strongly discourage anyone from downloading or using such material. Respect for intellectual property rights and legal usage of content is essential. This is for educational purposes only
 :::

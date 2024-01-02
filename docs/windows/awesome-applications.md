@@ -1,22 +1,22 @@
 ---
 sidebar_position: 4
-title: Install Software
-sidebar_label: Applications
-slug: applications
+title: Awesome Applications
+sidebar_label: Awesome Applications
+slug: awesome-applications
 ---
 
 ## Web Browsers
 
 - Recommended
-    - [Thorium](https://thorium.rocks/) - basically google chrome, but faster and better
-    - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+
+  - [Thorium](https://thorium.rocks/) - basically google chrome, but faster and better
+  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 
 - Not Recommended
-    - [Vivaldi](https://vivaldi.com/download/) - best browser, but slow 
-    - [Google Chrome](https://www.google.com/chrome/) - slower than throium
-    - [Google Chrome Canary](https://www.google.com/chrome/canary/) - buggy but with new features
-    - [Brave](https://brave.com/download/) - crypto bloat stuff
-
+  - [Vivaldi](https://vivaldi.com/download/) - best browser, but slow
+  - [Google Chrome](https://www.google.com/chrome/) - slower than throium
+  - [Google Chrome Canary](https://www.google.com/chrome/canary/) - buggy but with new features
+  - [Brave](https://brave.com/download/) - crypto bloat stuff
 
 ## Password Management
 
@@ -50,7 +50,6 @@ slug: applications
 - [dbeaver](https://dbeaver.io/)
 - [Pop SQL](https://popsql.com/download)
 
-
 ### API
 
 - [Postman](https://www.postman.com/downloads/)
@@ -68,7 +67,6 @@ slug: applications
 
 - [VLC](https://www.videolan.org/vlc/)
 - [Spotify](https://www.spotify.com/de/download/windows/)
-
 
 ## Utilities
 
