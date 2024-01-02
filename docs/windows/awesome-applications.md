@@ -1,5 +1,4 @@
 ---
-sidebar_position: 4
 title: Awesome Applications
 sidebar_label: Awesome Applications
 slug: awesome-applications

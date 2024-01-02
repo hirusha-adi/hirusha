@@ -1,5 +1,4 @@
 ---
-sidebar_position: 3
 title: De-Bloating Windows and Increasing Privacy
 sidebar_label: Debloat Windows
 slug: debloat-windows

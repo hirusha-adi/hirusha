@@ -1,5 +1,4 @@
 ---
-sidebar_position: 5
 title: Tweak & Customize Windows to suite your personal needs.
 sidebar_label: Tweaking & Customizations
 slug: tweak-windows

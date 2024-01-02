@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2
 title: Activating Windows / Office
 sidebar_label: Activating Windows / Office
 slug: activating-windows-and-office
