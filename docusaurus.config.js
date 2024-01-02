@@ -77,7 +77,7 @@ import { themes as prismThemes } from "prism-react-renderer";
             },
             {
               type: "dropdown",
-              label: "Other Documents",
+              label: "Other Sections",
               position: "left",
               items: [
                 {
