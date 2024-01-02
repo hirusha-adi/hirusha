@@ -9,7 +9,3 @@ sidebar_label: Other
 ## [Tools](https://rentry.co/megathread-tools)
 
 ## [MegaThread](https://rentry.co/megathread)
-
-
-
-
