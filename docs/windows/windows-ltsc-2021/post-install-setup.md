@@ -81,7 +81,129 @@ Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Print' -Name 'Rpc
    - Function Discovery Resource Publication
    - both of which got disabled by default, and is for network sharing/browsing.
 
-## Restore Microsoft Photos
+## Restore Photo Viewer
+
+### Restore
+
+:::info
+
+The below guide is to enable Windows Photo Viewer for the current User. To enable it for the whole system, follow [this guide by tenforums.com](https://www.tenforums.com/tutorials/14312-restore-windows-photo-viewer-windows-10-a.html)
+
+:::
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aQhLGU_xlQw?si=hXK1k4DUKFYXhTdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+- Save the contents below to file `.reg` file
+
+```reg
+Windows Registry Editor Version 5.00
+
+; Restore_Windows_Photo_Viewer_CURRENT_USER.reg
+; Created by: Shawn Brink
+; Created on: June 27th 2016
+; Updated on: May 7th 2019
+; Tutorial: https://www.tenforums.com/tutorials/14312-restore-windows-photo-viewer-windows-10-a.html
+
+
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.bmp]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.cr2]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.dib]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.gif]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.ico]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.jfif]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.jpe]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.jpeg]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.jpg]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.jxr]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.png]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.tif]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.tiff]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.wdp]
+@="PhotoViewer.FileAssoc.Tiff"
+
+
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.bmp\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.cr2\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.dib\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.gif\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.ico\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.jpeg\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.bmp\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.jfif\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.jpe\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.jxr\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.jpeg\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.jpg\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.png\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.tif\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.tiff\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.wdp\OpenWithProgids]
+"PhotoViewer.FileAssoc.Tiff"=hex(0):
+```
+
+- Merge it
+
+- Go to the Default Apps section in Settings and select Micrososft Photo Viewer
+
+### Alternative
 
 The only good alternative to Microsoft Photos is [ImageGlass](https://github.com/d2phap/ImageGlass)
 
