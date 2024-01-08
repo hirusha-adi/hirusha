@@ -5,310 +5,322 @@ slug: esq
 sidebar_position: 2
 ---
 
+## Tasks
+
 <details>
 <summary>Tasks</summary>
 
-#### Task 26.01
+### Task 27.01
 
-#### 1 Write a complete program to save several car records to a sequential file.
+#### 1 Copy the Car class definition into your program editor and write a simple program to test that each method works.
 
 ```python
-import pickle
+class Car:
+    def __init__(self, n, e):
+        self.__VehicleID = n
+        self.__Registration = ""
+        self.__DateOfRegistration = None
+        self.__EngineSize = e
+        self.__PurchasePrice = 0.00
 
-class CarRecord:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+    @property
+    def VehicleID(self):
+        return self.__VehicleID
 
-# Function to save car records to a file
-def save_car_records(records, filename):
-    with open(filename, 'wb') as file:
-        pickle.dump(records, file)
+    @property
+    def EngineSize(self):
+        return self.__EngineSize
 
-# Sample car records
-car_records = [
-    CarRecord('Toyota', 'Camry', 2022),
-    CarRecord('Honda', 'Accord', 2021),
-    CarRecord('Ford', 'Mustang', 2020)
-]
+    @property
+    def Registration(self):
+        return self.__Registration
 
-# Save car records to a file
-save_car_records(car_records, 'car_records.pkl')
+    @Registration.setter
+    def Registration(self, r):
+        self.__Registration = r
+
+    @property
+    def DateOfRegistration(self):
+        return self.__DateOfRegistration
+
+    @DateOfRegistration.setter
+    def DateOfRegistration(self, d):
+        self.__DateOfRegistration = d
+
+    @property
+    def PurchasePrice(self):
+        return self.__PurchasePrice
+
+    @PurchasePrice.setter
+    def PurchasePrice(self, p):
+        self.__PurchasePrice = p
+
+# Test the Car class
+if __name__ == "__main__":
+    # Create an instance of Car
+    my_car = Car(n=123, e=2.0)
+
+    # Test the getters
+    print("VehicleID:", my_car.VehicleID)
+    print("EngineSize:", my_car.EngineSize)
+    print("Registration:", my_car.Registration)
+    print("DateOfRegistration:", my_car.DateOfRegistration)
+    print("PurchasePrice:", my_car.PurchasePrice)
+
+    # Test the setters
+    my_car.Registration = "ABC123"
+    my_car.DateOfRegistration = "2022-01-08"
+    my_car.PurchasePrice = 25000.00
+
+    # Test the getters after setting values
+    print("\nAfter setting values:")
+    print("VehicleID:", my_car.VehicleID)
+    print("EngineSize:", my_car.EngineSize)
+    print("Registration:", my_car.Registration)
+    print("DateOfRegistration:", my_car.DateOfRegistration)
+    print("PurchasePrice:", my_car.PurchasePrice)
 ```
 
-#### 2 Write another program to read the file and display the contents on screen.
+#### 2 A business wants to store data about companies they supply. The data to be stored includes: company name, email address, date of last contact.
 
-```python
-import pickle
+#### a Design a class Company and draw a class diagram
 
-class CarRecord:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+```
+  +-------------------------------------------+
+  |                  Company                  |
+  +-------------------------------------------+
+  | - company_name: str                       |
+  | - email_address: str                      |
+  | - date_last_contact: str                  |
+  +-------------------------------------------+
+  | + get_company_name(): str                 |
+  | + set_company_name(name: str): void       |
+  | + get_email_address(): str                |
+  | + set_email_address(email: str): void     |
+  | + get_date_last_contact(): str            |
+  | + set_date_last_contact(date: str): void  |
+  +-------------------------------------------+
 
-# Function to read and display car records from a file
-def read_and_display_car_records(filename):
-    with open(filename, 'rb') as file:
-        car_records = pickle.load(file)
-
-        # Display car records
-        print("Car Records:")
-        for record in car_records:
-            print(f"Make: {record.make}, Model: {record.model}, Year: {record.year}")
-
-# Read and display car records from the file
-read_and_display_car_records('car_records.pkl')
 ```
 
-#### Task 26.01
-
-#### Write a complete program to save several car records to a random-access file. Write another program to find a record in the random-access file using the record key. Display the record data on screen.
-
-- Save Car Records to a Random-Access File
+#### Write program code to declare the class. Company name and email address are to be set by the constructor and will never be changed.
 
 ```python
-import pickle
+class Company:
+    def __init__(self, company_name, email_address):
+        self.__company_name = company_name
+        self.__email_address = email_address
+        self.__date_last_contact = None
 
-class CarRecord:
-    def __init__(self, VehicleID, make, model, year):
-        self.VehicleID = VehicleID
-        self.make = make
-        self.model = model
-        self.year = year
+    @property
+    def company_name(self):
+        return self.__company_name
 
-# Function to save car records to a random-access file
-def save_car_records(records, filename):
-    with open(filename, 'wb') as file:
-        for record in records:
-            pickle.dump(record, file)
+    @property
+    def email_address(self):
+        return self.__email_address
 
-# sample car records
-car_records = [
-    CarRecord('1A123', 'Toyota', 'Prius', 2023),
-    CarRecord('2B456', 'Honda', 'Vezel', 2022),
-    CarRecord('3C789', 'Ford', 'Mustang', 2021)
-]
+    @property
+    def date_last_contact(self):
+        return self.__date_last_contact
 
-# Save car records to a random-access file
-save_car_records(car_records, 'car_records.dat')
+    @date_last_contact.setter
+    def date_last_contact(self, date):
+        self.__date_last_contact = date
 ```
 
-- Find and Display a Record in the Random-Access File
+#### c Instantiate one object of this class and test your class code works.
 
 ```python
-import pickle
+# Create an instance of Company
+company = Company(company_name="ABC Corp", email_address="abc@example.com")
 
-class CarRecord:
-    def __init__(self, VehicleID, make, model, year):
-        self.VehicleID = VehicleID
-        self.make = make
-        self.model = model
-        self.year = year
+# Accessing company details
+print("Company Name:", company.company_name)
+print("Email Address:", company.email_address)
 
-# Function to find and display a car record from a random-access file
-def find_and_display_record(filename, key):
-    with open(filename, 'rb') as file:
-        try:
-            while True:
-                record = pickle.load(file)
-                if record.VehicleID == key:
-                    print("Found Record:")
-                    print(f"VehicleID: {record.VehicleID}")
-                    print(f"Make: {record.make}")
-                    print(f"Model: {record.model}")
-                    print(f"Year: {record.year}")
-                    break  # Stop searching once the record is found
-        except EOFError:
-            print(f"No record found with VehicleID '{key}'")
+# Setting date of last contact using property setter
+company.date_last_contact = "2024-01-08"
 
-# Find and display a record with the specified VehicleID
-find_and_display_record('car_records.dat', '2B456')
+# Accessing updated details
+print("Date of Last Contact:", company.date_last_contact)
+```
+
+### Task 27.02
+
+#### Copy the class definitions for LibraryItem, Book and CD into your program editor. Write the additional get methods. Write a simple program to test that each method works.
+
+```python
+import datetime
+
+class LibraryItem:
+    def __init__(self, t, a, i):
+        # constructor / initialiser method
+        self.__Title = t
+        self.__Author_Artist = a
+        self.__ItemID = i
+        self.__OnLoan = False
+        self.__DueDate = datetime.date.today()
+
+    @property
+    def Title(self):
+        return self.__Title
+
+    @property
+    def Author_Artist(self):
+        return self.__Author_Artist
+
+    @property
+    def ItemID(self):
+        return self.__ItemID
+
+    @property
+    def OnLoan(self):
+        return self.__OnLoan
+
+    @property
+    def DueDate(self):
+        return self.__DueDate
+
+    def Borrowing(self):
+        self.__OnLoan = True
+        self.__DueDate = self.__DueDate + datetime.timedelta(weeks=3)
+
+    def Returning(self):
+        self.__OnLoan = False
+
+    def PrintDetails(self):
+        print(self.__Title, '; ', self.__Author_Artist, '; ', end='')
+        print(self.__ItemID, '; ', self.__OnLoan, '; ', self.__DueDate)
+
+    def __repr__(self):
+        return f"LibraryItem('{self.__Title}', '{self.__Author_Artist}', {self.__ItemID})"
+
+class Book(LibraryItem):
+    def __init__(self, t, a, i):
+        # initialiser method
+        LibraryItem.__init__(self, t, a, i)
+        self.__IsRequested = False
+        self.__RequestedBy = 0
+
+    @property
+    def IsRequested(self):
+        return self.__IsRequested
+
+    @IsRequested.setter
+    def IsRequested(self, b):
+        self.__IsRequested = b
+
+    def PrintDetails(self):
+        print("Book Details")
+        LibraryItem.PrintDetails(self)
+        print(self.__IsRequested)
+
+    def __repr__(self):
+        return f"Book('{self.Title}', '{self.Author_Artist}', {self.ItemID})"
+
+class CD(LibraryItem):
+    def __init__(self, t, a, i):
+        # initialiser method
+        LibraryItem.__init__(self, t, a, i)
+        self.__Genre = ""
+
+    @property
+    def Genre(self):
+        return self.__Genre
+
+    @Genre.setter
+    def Genre(self, g):
+        self.__Genre = g
+
+    def __repr__(self):
+        return f"CD('{self.Title}', '{self.Author_Artist}', {self.ItemID})"
+
+# Test the classes
+if __name__ == "__main__":
+    # Test LibraryItem
+    item = LibraryItem("Title1", "Author1", 1)
+    print(item)
+
+    # Test Book
+    book = Book("BookTitle", "BookAuthor", 2)
+    print(book)
+
+    # Test CD
+    cd = CD("CDTitle", "CDArtist", 3)
+    print(cd)
+```
+
+### Task 27.03
+
+#### Write code to define a Borrower class as shown in the class diagram in Figure 27.05
+
+```
++-----------------------------------+
+|    Borrower                       |
++-----------------------------------+
+| BorrowerName  : STRING            |
+| EmailAddress  : STRING            |
+| BorrowerID    : INTEGER           |
+| ItemsOnLoan   : INTEGER           |
++-----------------------------------+
+| Constructor()                     |
+| GetBorrowerName(): STRING         |
+| GetEmailAddress(): STRING         |
+| GetBorrowerID()  : INTEGER        |
+| GetItemsOnLoan() : INTEGER        |
+| UpdateItemsOnLoan(increment_by)   |
+| PrintDetails(): void              |
++-----------------------------------+
+```
+
+#### The constructor should initialise ItemsOnLoan to 0. UpdateItemsOnLoan() should increment ItemsOnLoan by an integer passed as parameter. Write a simple program to test the methods.
+
+```python
+class Borrower:
+    def __init__(self, borrower_name, email_address, borrower_id):
+        self.BorrowerName = borrower_name
+        self.EmailAddress = email_address
+        self.BorrowerID = borrower_id
+        self.ItemsOnLoan = 0
+
+    def GetBorrowerName(self):
+        return self.BorrowerName
+
+    def GetEmailAddress(self):
+        return self.EmailAddress
+
+    def GetBorrowerID(self):
+        return self.BorrowerID
+
+    def GetItemsOnLoan(self):
+        return self.ItemsOnLoan
+
+    def UpdateItemsOnLoan(self, increment_by):
+        self.ItemsOnLoan += increment_by
+
+    def PrintDetails(self):
+        print("Borrower Details:")
+        print("Borrower Name:", self.GetBorrowerName())
+        print("Email Address:", self.GetEmailAddress())
+        print("Borrower ID:", self.GetBorrowerID())
+        print("Items On Loan:", self.GetItemsOnLoan())
+
+# Test the Borrower class
+if __name__ == "__main__":
+    # Create an instance of Borrower
+    borrower = Borrower(borrower_name="John Doe", email_address="john@example.com", borrower_id=1)
+
+    # Display initial details
+    borrower.PrintDetails()
+
+    # Update items on loan
+    borrower.UpdateItemsOnLoan(3)
+
+    # Display updated details
+    borrower.PrintDetails()
 ```
 
 </details>
 
 ## Question 1
-
-#### A company stores details about their customers in a binary file of records.
-
-- #### The key field of a customer record is the customer ID (a number between 100001 and 999999).
-- #### The name of the customer is stored in a 30-character field.
-- #### The customer’s telephone number is stored in a 14-character field.
-- #### The total value of orders so far is stored in a currency (decimal) field.
-
-#### i Write the declaration statement for the record data type CustomerRecord required to store the data. Write program code. [6]
-
-```python
-class CustomerRecord:
-    def __init__(self, customer_id=None, name=None, phone_number=None, total_order_value=None):
-        self.customer_id = customer_id              # The key field
-        self.name = name                            # 30-character field for the customer's name
-        self.phone_number = phone_number            # 14-character field for the telephone number
-        self.total_order_value = total_order_value  # Decimal field for the total value of orders
-```
-
-#### ii Write the declaration statement for an array CustomerData[0 : 999] to store customer records. [2]
-
-```python
-CustomerData = [CustomerRecord() for i in range(1000)]
-```
-
-#### b The array CustomerData is to be used as a hash table to store customer records. The function Hash is used to calculate the address where a record is to be stored.
-
-```
-FUNCTION Hash(CustomerID : INTEGER) RETURNS INTEGER
-    Address ← CustomerID MOD 1000
-    RETURN Address
-ENDFUNCTION
-```
-
-#### i Write program code to implement the function Hash.
-
-```python
-def Hash(CustomerID):
-    return CustomerID % 1000
-
-# or using a single line lambda function
-Hash = lambda CustomerID: CustomerID % 1000
-```
-
-#### ii Write a procedure AddRecord(Customer : CustomerRecord) to add a customer record to the hash table CustomerData. Your solution should handle collisions by using the next available slot in the hash table.
-
-```python
-def AddRecord(Customer):
-    address = Hash(Customer.customer_id)
-
-    while CustomerData[address].customer_id is not None:
-        # Handle collision by moving to the next available slot
-        address = (address + 1) % 1000
-
-    # Add the customer record to the hash table
-    CustomerData[address] = Customer
-```
-
-#### iii Write a function FindRecord(CustomerID : INTEGER) that returns the index of the hash table slot where the record for the customer with CustomerID is stored.
-
-```python
-def FindRecord(CustomerID):
-    address = Hash(CustomerID)
-
-    while CustomerData[address].customer_id is not None:
-        # Check if the current slot matches the desired CustomerID
-        if CustomerData[address].customer_id == CustomerID:
-            return address  # Found the record, return the index
-
-        # Move to the next slot
-        address = (address + 1) % 1000
-
-    return None  # Customer record not found
-```
-
-#### c Before the program stops, the hash table records must be stored in a sequential file, so that the records can be restored to the array when the program is re-entered. Write program code to store the records of the array CustomerData sequentially into a binary file CustomerData.DAT
-
-```python
-import pickle
-
-# Function to store records sequentially into a binary file
-def store_records_to_file(filename, data_array):
-    with open(filename, 'wb') as file:
-        for record in data_array:
-            pickle.dump(record, file)
-
-# Store records from CustomerData array to binary file
-store_records_to_file('CustomerData.DAT', CustomerData)
-```
-
-#### Instead of using a hash table, the company decide they want to store customer records in a direct-access binary file. Explain what changes need to be made to your program to do this
-
-- Data Structure:
-
-  - Use a list or array for CustomerRecord instances.
-  - Eliminate hash function and collision-handling logic.
-
-- Sequential File Handling:
-
-  - Directly access the binary file using the customer's ID as an index.
-  - Write and read records at positions corresponding to the customer's ID.
-
-- Data Storage and Retrieval:
-  - Calculate the file position based on the customer's ID for adding and searching records.
-
-```python
-import pickle
-
-class CustomerRecord:
-    def __init__(self, customer_id=None, name=None, phone_number=None, total_order_value=None):
-        self.customer_id = customer_id
-        self.name = name
-        self.phone_number = phone_number
-        self.total_order_value = total_order_value
-
-# Function to store a record in the direct-access binary file
-def store_record_to_file(filename, record):
-    with open(filename, 'rb+') as file:
-        # Calculate the position based on the customer's ID
-        position = (record.customer_id - 100001) * pickle.PickleBuffer.HEADER_SIZE
-        file.seek(position)
-        pickle.dump(record, file)
-
-# Function to retrieve a record from the direct-access binary file
-def retrieve_record_from_file(filename, customer_id):
-    with open(filename, 'rb') as file:
-        # Calculate the position based on the customer's ID
-        position = (customer_id - 100001) * pickle.PickleBuffer.HEADER_SIZE
-        file.seek(position)
-        try:
-            record = pickle.load(file)
-            return record
-        except EOFError:
-            return None  # Customer record not found
-
-# Example usage:
-customer1 = CustomerRecord(customer_id=100001, name="John Doe", phone_number="555-1234", total_order_value=1500.25)
-store_record_to_file('customer_records.dat', customer1)
-
-customer_id_to_retrieve = 100001
-retrieved_customer = retrieve_record_from_file('customer_records.dat', customer_id_to_retrieve)
-
-if retrieved_customer:
-    print("Retrieved Customer Record:")
-    print(f"Customer ID: {retrieved_customer.customer_id}")
-    print(f"Name: {retrieved_customer.name}")
-    print(f"Phone Number: {retrieved_customer.phone_number}")
-    print(f"Total Order Value: {retrieved_customer.total_order_value}")
-else:
-    print(f"No record found for Customer ID {customer_id_to_retrieve}")
-```
-
-## Question 2
-
-#### A program allows a user to enter a filename for accessing a data file. If the user types in a filename that does not exist, the program crashes. Write program code that includes exception handling to replace the following pseudocode: [5]
-
-```
-OUTPUT "Which file do you want to use? "
-INPUT FileName
-OPENFILE FileName FOR RANDOM
-```
-
-- Python Code:
-
-```python
-while True:
-    try:
-        filename = input("Which file do you want to use? ")
-        with open(filename, 'r') as file:
-            print(f"File '{filename}' opened successfully!")
-        break
-    except FileNotFoundError:
-        print(f"Error: File '{filename}' not found. Please enter a valid filename.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
-
-# a better alternative is to use,
-import os
-os.path.isfile() # check if a file exists
-os.path.isdir() # check if a directory exists
-```
