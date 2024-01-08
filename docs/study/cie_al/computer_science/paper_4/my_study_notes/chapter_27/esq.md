@@ -964,6 +964,62 @@ while True:
         print("Invalid choice. Please enter a valid menu option.")
 ```
 
+### Task 27.08
+
+#### Write the code required for the Lesson and Assessment classes. Add the code for the Course class and test your program with the appropriate simple program from Worked Example 27.03.
+
+```python
+class Lesson:
+    def __init__(self, title, duration, requires_lab):
+        self.Title = title
+        self.Duration = duration
+        self.RequiresLab = requires_lab
+
+    def OutputLessonDetails(self):
+        return f"{self.Title} - Duration: {self.Duration} minutes, Requires Lab: {self.RequiresLab}"
+
+class Assessment:
+    def __init__(self, title, max_marks):
+        self.Title = title
+        self.MaxMarks = max_marks
+
+class Course:
+    def __init__(self, title, max_students):
+        self.CourseTitle = title
+        self.MaxStudents = max_students
+        self.NumberOfLessons = 0
+        self.CourseLesson = []
+        self.CourseAssessment = None
+
+    def AddLesson(self, title, duration, requires_lab):
+        self.NumberOfLessons += 1
+        self.CourseLesson.append(Lesson(title, duration, requires_lab))
+
+    def AddAssessment(self, title, max_marks):
+        self.CourseAssessment = Assessment(title, max_marks)
+
+    def OutputCourseDetails(self):
+        print(f"{self.CourseTitle} Maximum number: {self.MaxStudents}")
+        for i in range(self.NumberOfLessons):
+            print(self.CourseLesson[i].OutputLessonDetails())
+        if self.CourseAssessment:
+            print(f"Assessment: {self.CourseAssessment.Title}, Max Marks: {self.CourseAssessment.MaxMarks}")
+
+def Main():
+    MyCourse = Course("Computing", 10)  # sets up a new course
+
+    MyCourse.AddAssessment("Programming", 100)  # adds an assignment
+    # add 3 lessons
+    MyCourse.AddLesson("Problem Solving", 60, False)
+    MyCourse.AddLesson("Programming", 120, True)
+    MyCourse.AddLesson("Theory", 60, False)
+    # check it all works
+    MyCourse.OutputCourseDetails()
+
+if __name__ == "__main__":
+    Main()
+```
+
 </details>
 
 ## Question 1
