@@ -1,7 +1,5 @@
-# Chapter 26 - File processing and exception handling
+# Chapter 25 - Programming paradigms
 
 ## [Notes](notes)
 
-## [Pickle for Data Serialization in Python](pickles)
-
-## [ESQ](esq)
+## No ESQ in this chapter
