@@ -1023,3 +1023,303 @@ if __name__ == "__main__":
 </details>
 
 ## Question 1
+
+#### A program is to be written using an object-oriented programming language. A bank account class is designed. Two subclasses have been identified:
+
+#### • Personal Account: the account holder pays a monthly fee and may overdraw theaccount up to an agreed overdraft limit.
+
+#### • Savings Account: the account holder must maintain a positive balance and gets paid interest on the balance at an agreed interest rate. a Draw an inheritance diagram for these classes.
+
+```
+          +-------------------+
+          |   BankAccount     |
+          +-------------------+
+                  |
+     +-----------------------+
+     |                       |
++-----------------+  +-----------------+
+| PersonalAccount |  | SavingsAccount  |
++-----------------+  +-----------------+
+```
+
+#### The design for the BankAccount class consists of:
+
+#### • attributes:
+
+#### • AccountHolderName
+
+#### • IBAN: International Bank Account Number
+
+#### • methods:
+
+#### • CreateNewAccount
+
+#### • SetAccountHolderName
+
+#### • GetAccountHolderName
+
+#### • GetIBAN
+
+#### b Write program code for the class definition of the superclass BankAccount.
+
+```python
+class BankAccount:
+    def __init__(self, account_holder_name, iban):
+        self.AccountHolderName = account_holder_name
+        self.IBAN = iban
+
+    def CreateNewAccount(self, account_holder_name, iban):
+        # This method can be used to create a new account with the given details.
+        # You can add any specific logic related to account creation here.
+        self.AccountHolderName = account_holder_name
+        self.IBAN = iban
+
+    def SetAccountHolderName(self, new_name):
+        # This method sets a new account holder name.
+        self.AccountHolderName = new_name
+
+    def GetAccountHolderName(self):
+        # This method returns the account holder name.
+        return self.AccountHolderName
+
+    def GetIBAN(self):
+        # This method returns the IBAN of the account.
+        return self.IBAN
+```
+
+#### c i State the attributes and/or methods required for the subclass PersonalAccount. [4]
+
+- Attributes:
+
+  - MonthlyFee: To represent the monthly fee that the account holder needs to pay.
+  - OverdraftLimit: To specify the agreed overdraft limit for the account.
+
+- Methods:
+  - ApplyMonthlyFee: Deducts the monthly fee from the account balance.
+  - SetOverdraftLimit: Sets or updates the overdraft limit for the account.
+  - GetOverdraftLimit: Retrieves the current overdraft limit for the account.
+
+Additionally, you may want to override the CreateNewAccount method from the superclass to include the specific initialization of the new attributes for a personal account.
+
+```python
+class PersonalAccount(BankAccount):
+    def __init__(self, account_holder_name, iban, monthly_fee, overdraft_limit):
+        super().__init__(account_holder_name, iban)
+        self.MonthlyFee = monthly_fee
+        self.OverdraftLimit = overdraft_limit
+
+    def CreateNewAccount(self, account_holder_name, iban, monthly_fee, overdraft_limit):
+        super().CreateNewAccount(account_holder_name, iban)
+        self.MonthlyFee = monthly_fee
+        self.OverdraftLimit = overdraft_limit
+
+    def ApplyMonthlyFee(self):
+        # Deducts the monthly fee from the account balance.
+        # You can add specific logic here.
+        pass
+
+    def SetOverdraftLimit(self, new_limit):
+        # Sets or updates the overdraft limit for the account.
+        self.OverdraftLimit = new_limit
+
+    def GetOverdraftLimit(self):
+        # Retrieves the current overdraft limit for the account.
+        return self.OverdraftLimit
+```
+
+#### ii State the attributes and/or methods required for the subclass SavingsAccount. [4]
+
+- Attributes:
+
+  - InterestRate: To represent the agreed interest rate for the account.
+
+- Methods:
+  - ApplyInterest: Adds interest to the account balance based on the interest rate.
+  - SetInterestRate: Sets or updates the interest rate for the account.
+  - GetInterestRate: Retrieves the current interest rate for the account.
+
+Additionally, you may want to override the CreateNewAccount method from the superclass to include the specific initialization of the new attributes for a savings account.
+
+```python
+class SavingsAccount(BankAccount):
+    def __init__(self, account_holder_name, iban, interest_rate):
+        super().__init__(account_holder_name, iban)
+        self.InterestRate = interest_rate
+
+    def CreateNewAccount(self, account_holder_name, iban, interest_rate):
+        super().CreateNewAccount(account_holder_name, iban)
+        self.InterestRate = interest_rate
+
+    def ApplyInterest(self):
+        # Adds interest to the account balance based on the interest rate.
+        # You can add specific logic here.
+        pass
+
+    def SetInterestRate(self, new_rate):
+        # Sets or updates the interest rate for the account.
+        self.InterestRate = new_rate
+
+    def GetInterestRate(self):
+        # Retrieves the current interest rate for the account.
+        return self.InterestRate
+```
+
+#### iii Identify the feature of object-oriented program design that combines the attributes and methods into a class. [1]
+
+Encapsulation
+
+## Question 2
+
+#### 2 A bus company in a town has two types of season ticket for their regular customers: pay-as-you go and contract. All season ticket holders have their name and email address recorded. A pay-as-you-go ticket holder pays a chosen amount into their account. Each time the ticket holder makes a journey on the bus, the price of the fare is deducted from the amount held in the account. They can top up the amount at any time. A contract ticket holder pays a fixed fee per month. They can then make unlimited journeys on the bus. The bus company wants a program to process the season ticket data. The program will be written using an object-oriented programming language.
+
+#### a Complete the class diagram showing the appropriate attributes and methods. [7]
+
+```
++-------------------------------------+
+|          SeasonTicketHolder         |
++-------------------------------------+
+| - TicketHolderName: STRING          |
++-------------------------------------+
+| + Constructor()                     |
+| + DeductFare(amount: CURRENCY)      |
+| + TopUp(amount: CURRENCY)           |
++-------------------------------------+
+                       |
+                       |
+                       |
++-------------------------------------+
+|     PayAsYouGoTicketHolder          |
++-------------------------------------+
+| - AccountBalance: CURRENCY          |
++-------------------------------------+
+| + Constructor(Name: STRING,         |
+|                email: STRING)       |
+| + DeductFare(amount: CURRENCY)      |
+| + TopUp(amount: CURRENCY)           |
++-------------------------------------+
+                       |
+                       |
+                       |
++-------------------------------------+
+|     ContractTicketHolder            |
++-------------------------------------+
+| - MonthlyFee: CURRENCY              |
++-------------------------------------+
+| + Constructor(Name: STRING,         |
+|                email: STRING,       |
+|                Fee: CURRENCY)       |
+| + DeductMonthlyFee()                |
++-------------------------------------+
+```
+
+#### b Attributes and methods can be declared as either public or private. i Explain why the SeasonTicketHolder attributes are declared as private. [2]
+
+This ensures data encapsulation, maintaining control over data access, enforcing rules, abstracting implementation details, promoting flexibility, and enhancing security.
+
+#### ii Explain why the SeasonTicketHolder methods have been declared as public. [2]
+
+This allows external code to interact with and utilize the essential functionalities provided by the class
+
+#### Write program code to create a new instance of ContractTicketHolder with: • Identifier: NewCustomer • name: A. Smith • email address: xyz@abc.xx • monthly fee: $10
+
+```python
+class ContractTicketHolder:
+    def __init__(self, name, email, monthly_fee):
+        self.name = name
+        self.email = email
+        self.monthly_fee = monthly_fee
+
+# Creating a new instance of ContractTicketHolder
+new_customer = ContractTicketHolder("A. Smith", "xyz@abc.xx", 10)
+```
+
+## Question 3
+
+#### 3 A queue abstract data type (ADT) is to be implemented using object-oriented programming. Two classes have been identified: Queue and Node. The class diagrams are as follows:
+
+#### a State the relationship between these two classes. [1]
+
+Composition?
+
+#### b b The NodeClass constructor is to: • create a new node • initialise the Data attribute to the empty string • initialise the Pointer attribute to -1. Write program code to define NodeClass, including the get and set methods. [10]
+
+```python
+class NodeClass:
+    def __init__(self):
+        self._data = ""
+        self._pointer = -1
+
+    @property
+    def data(self):
+        return self._data
+
+    @data.setter
+    def data(self, value):
+        self._data = value
+
+    @property
+    def pointer(self):
+        return self._pointer
+
+    @pointer.setter
+    def pointer(self, value):
+        self._pointer = value
+
+# Example usage:
+# Creating a new node and setting/getting attributes
+node = NodeClass()
+node.data = "Hello"
+node.pointer = 42
+
+print("Data:", node.data)
+print("Pointer:", node.pointer)
+```
+
+#### c The QueueClass constructor is to: • create a new queue • initialise the Head and Tail attributes to -1. Write program code to define the constructor for QueueClass. [3]
+
+```python
+class QueueClass:
+    def __init__(self):
+        self.queue = [None] * 51  # Assuming a queue size of 51 (0 to 50)
+        self.head = -1
+        self.tail = -1
+
+# Example usage:
+# Creating a new queue
+my_queue = QueueClass()
+
+# Accessing head and tail attributes
+print("Head:", my_queue.head)
+print("Tail:", my_queue.tail)
+```
+
+#### d The JoinQueue method is to: • create a new object, Node, of NodeClass • assign the value passed as parameter to the Data attribute of Node • assign Node to the end of Queue. Write program code to define the JoinQueue method. [5]
+
+```python
+class QueueClass:
+    def __init__(self):
+        self.queue = [None] * 51  # Assuming a queue size of 51 (0 to 50)
+        self.head = -1
+        self.tail = -1
+
+    def join_queue(self, new_item):
+        if self.tail < 50:
+            new_node = NodeClass()
+            new_node.data = new_item
+            self.tail += 1
+            self.queue[self.tail] = new_node
+        else:
+            print("Queue is full. Cannot add new item.")
+
+# Example usage:
+# Creating a new queue
+my_queue = QueueClass()
+
+# Joining the queue with a new item
+my_queue.join_queue("New Data")
+
+# Accessing head, tail, and the new item in the queue
+print("Head:", my_queue.head)
+print("Tail:", my_queue.tail)
+print("New item in the queue:", my_queue.queue[my_queue.tail].data)
+```
