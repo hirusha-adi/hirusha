@@ -21,6 +21,7 @@ import { themes as prismThemes } from "prism-react-renderer";
     },
 
     plugins: [
+      "plugin-image-zoom",
       [
         require.resolve("docusaurus-plugin-search-local"),
         {
@@ -41,9 +42,36 @@ import { themes as prismThemes } from "prism-react-renderer";
           blog: {
             showReadingTime: true,
             editUrl: "https://github.com/hirusha-adi/hirusha/tree/main/",
+            blogTitle: "Blog title",
+            blogDescription: "Blog",
+            blogSidebarCount: 5,
+            blogSidebarTitle: "All our posts",
+            routeBasePath: "blog",
+            include: ["**/*.{md,mdx}"],
+            exclude: [
+              "**/_*.{js,jsx,ts,tsx,md,mdx}",
+              "**/_*/**",
+              "**/*.test.{js,jsx,ts,tsx}",
+              "**/__tests__/**",
+            ],
+            postsPerPage: 10,
+            blogListComponent: "@theme/BlogListPage",
+            blogPostComponent: "@theme/BlogPostPage",
+            blogTagsListComponent: "@theme/BlogTagsListPage",
+            blogTagsPostsComponent: "@theme/BlogTagsPostsPage",
+            // remarkPlugins: [require("./my-remark-plugin")],
+            rehypePlugins: [],
+            beforeDefaultRemarkPlugins: [],
+            beforeDefaultRehypePlugins: [],
+            truncateMarker: /<!--\s*(truncate)\s*-->/,
+            showReadingTime: true,
           },
           theme: {
             customCss: require.resolve("./src/css/custom.css"),
+          },
+          gtag: {
+            trackingID: "G-XXQ76Y7DDY",
+            anonymizeIP: false,
           },
         }),
       ],
