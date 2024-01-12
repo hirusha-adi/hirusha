@@ -1,16 +1,16 @@
 {
-  "name": "blog",
+  "name": "hirusha",
   "version": "3.0.0",
   "author": {
-    "url": "https://github.com/kuizuo",
+    "url": "https://github.com/hirusha-adi",
     "email": "hi@kuizuo.cn",
     "name": "Kuizuo"
   },
   "repository": {
-    "url": "https://github.com/kuizuo/blog",
+    "url": "https://github.com/hirusha-adi/hirusha",
     "type": "git"
   },
-  "homepage": "https://kuizuo.cn",
+  "homepage": "https://hirusha.xyz",
   "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",

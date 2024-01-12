@@ -10,7 +10,7 @@ const config: Config = {
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'hirusha-adi',
-  projectName: 'blog',
+  projectName: 'hirusha',
   customFields: {
     bio: 'a place to document/display/showcase all my work.',
     description:
