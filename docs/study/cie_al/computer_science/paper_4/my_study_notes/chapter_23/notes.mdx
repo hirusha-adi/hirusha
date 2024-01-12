@@ -1,0 +1,1687 @@
+---
+title: Notes - Algorithms
+sidebar_label: Notes
+slug: notes
+sidebar_position: 1
+---
+
+import BigOChartSVG from "./bigOChart";
+
+- best and easy to follow github repo: [msambol/dsa](https://github.com/msambol/dsa)
+- Please watch this video before getting started:
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/gR6nycuZKlM?si=Yhakoc7QPIWohep1"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+## Bubble Sort
+
+- watch the video below to help visualize the Bubble Sort Algorithm
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/xli_FI7CuzA?si=lHrbZ7SO42mVJvDC"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+- in the below video, note that the "limit value of j" decreases
+- this is done to optimize the algorithm
+  - since everything at the end of the array will be sorted
+  - there's no use to checking the end again and again
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/nmhjrI-aW5o?si=GwXti7qco1ytckIs"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+### Pythonic Approach
+
+- Makes use of some python specific features
+
+```python
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+```
+
+- **`range(0, n - i - 1)`**:
+
+  - The `range()` function in Python generates a sequence of numbers. In this case, it is used to iterate over the elements of the array `arr`. The parameters of `range()` are `start`, `stop`, and `step`. In the given context:
+
+    - `start` is 0.
+    - `stop` is `n - i - 1`.
+    - `step` is 1 (implicitly).
+
+  - So, `range(0, n - i - 1)` creates a sequence of numbers starting from 0 up to (but not including) `n - i - 1`. This is used as the index for accessing elements in the array during the inner loop.
+
+- **`arr[j], arr[j + 1] = arr[j + 1], arr[j]`**:
+
+  - This line is a Pythonic way of swapping the values of `arr[j]` and `arr[j + 1]` in a single line, without using a temporary variable. It utilizes tuple packing and unpacking.
+
+<details>
+<summary>Detailed Example</summary>
+
+```python
+def bubble_sort(arr):
+    """
+    Sorts a list using the Bubble Sort algorithm.
+
+    Parameters:
+    - arr (list): The list to be sorted.
+    """
+    n = len(arr)
+
+    # Traverse through all array elements
+    for i in range(n):
+        # Last i elements are already sorted, so we don't need to check them
+        for j in range(0, n - i - 1):
+            # Swap if the element found is greater than the next element
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+# Example usage:
+my_list = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(my_list)
+
+print("Sorted array:", my_list)
+```
+
+</details>
+
+### Normal Approach
+
+- Refer to the code below if you have trouble understanding the above Pythonic Approach:
+
+```python
+def bubble_sort(my_list: list):
+    max_index = len(my_list) - 1
+    n = max_index
+    while True:
+        no_more_swaps = True
+        for j in range(0, n):
+            if my_list[j] > my_list[j + 1]:
+                # swap two variables (using a third variable)
+                # -------------------------------------------
+                temp = my_list[j]
+                my_list[j] = my_list[j + 1]
+                my_list[j + 1] = temp
+                # -------------------------------------------
+                no_more_swaps = False
+        n -= 1
+        if no_more_swaps:
+            break # exit infinite loop if fully sorted
+```
+
+<details>
+<summary>Detailed Example</summary>
+
+```python
+def bubble_sort(my_list: list):
+    """
+    Sorts a list in ascending order using the Bubble Sort algorithm.
+
+    Parameters:
+    - my_list (list): The list to be sorted.
+    """
+    # Get the index of the last element in the list
+    max_index = len(my_list) - 1
+    n = max_index
+
+    # Continue iterating until the entire list is sorted
+    while True:
+        # Flag to track whether any swaps were made in the current iteration
+        no_more_swaps = True
+
+        # Traverse through the unsorted part of the list
+        for j in range(0, n):
+
+            # Compare adjacent elements and swap if they are in the wrong order
+            if my_list[j] > my_list[j + 1]:
+
+                # Swap elements if they are in the wrong order
+                temp = my_list[j]
+                my_list[j] = my_list[j + 1]
+                my_list[j + 1] = temp
+
+                # Set flag to indicate that a swap occurred
+                no_more_swaps = False
+
+        # Reduce the range of elements to consider in the next iteration
+        n -= 1
+
+        # If no swaps occurred in the inner loop, the list is already sorted
+        if no_more_swaps:
+            break
+
+# Example usage:
+my_list = [4, 2, 7, 1, 9, 3, 5, 8]
+bubble_sort(my_list)
+print("Sorted List:", my_list)
+```
+
+</details>
+
+<br />
+
+<details>
+<summary>Additional Approaches/Implementations</summary>
+
+1. Similiar to what we have done above, but this traverse through the array in reverse order
+
+```python
+def for_for_2_implentation(arr):
+    n = len(arr)
+
+    # Traverse through all array elements in reverse order
+    for i in range(n - 1, 0, -1):
+
+        # Iterate from the beginning to the current position
+        for j in range(i):
+
+            # Swap if the element found is greater than the next element
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+    return arr
+```
+
+2. Using a while loop and a for loop:
+
+```python
+def while_for_implentation(list_a):
+    # Calculate the length of the list minus 1 (indexing starts from 0)
+    indexing_length = len(list_a) - 1
+    # Initialize a flag 'sorted' as False to indicate whether the list is sorted
+    sorted = False
+
+    # Continue sorting until the entire list is sorted
+    while not sorted:
+        # Assume the list is sorted until proven otherwise
+        sorted = True
+
+        # Iterate through the list using a for loop
+        for i in range(0, indexing_length):  # For every value in the list
+            # Check if the current element is not None or not False
+            if list_a[i]:
+                # If the current element is greater than the next element, swap them
+                sorted = False
+                list_a[i], list_a[i+1] = list_a[i+1], list_a[i]
+
+    # Return the sorted list
+    return list_a
+```
+
+</details>
+
+## Insertion Sort
+
+- watch this video below to easily visualize and understand the algorithm
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/JU767SDMDvA?si=oPUyn7BsEyb8XL10"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+- watch the video below to understand the python code
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/R_wDA-PmGE4?si=kQuCpW3a8WRjiA--"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+- Code:
+
+```python
+def insertion_sort(arr: list):
+    for i in range(1, len(arr)):
+        j = i   # start inner loop at the index of outer loop
+        while (j > 0) and (arr[j - 1] > arr[j]): # fix index error, compare current with left element
+            arr[j], arr[j-1] = arr[j-1], arr[j] # swap
+            j = j - 1 # go further to the left
+        # keep on swapping until while j>0 and everything is fully sorted
+```
+
+- `j = i`: start the inner loop at the index of the outer loop
+- `(arr[j - 1] > arr[j])`: check if the neighbour is bigger than our current element
+- `arr[j], arr[j-1] = arr[j-1], arr[j]`: swap the two elements (without a third variable)
+- `j = j - 1`: go further to the left
+- `(j > 0)` if `j` became `0`, it would try to compare `arr[0]` to `arr[-1]` (`-1` element), which is wrong
+
+<details>
+<summary>Pseudocode</summary>
+
+- Psuedocode: easy to understand
+
+```
+for i: 1 to lenght(Arr) -1
+    j = i
+    while (j > 0) and Arr[j-1] > Arr[j]
+        swap Arr[j] and Arr[j-1]
+    j = j - 1
+```
+
+- Psuedocode: from the text book
+
+```
+FOR Pointer ← 1 TO NumberOfitems – 1
+    ItemToBeInserted ← List[Pointer]
+    CurrentItem ← Pointer – 1                       // pointer to last item in sorted part of list
+    WHILE (List[CurrentItem] > ItemToBeInserted)
+                AND (CurrentItem > –1) DO
+        List[CurrentItem + 1] ← List[CurrentItem]   // move current item down
+        CurrentItem ← CurrentItem – 1               // look at the item above
+    ENDWHILE
+    List[CurrentItem + 1] ← ItemToBeInserted        // insert item
+NEXT Pointer
+```
+
+</details>
+
+## Linear Search
+
+<details>
+<summary>Time Complexity</summary>
+
+- Worst Case: **O(n)**
+- Best Case: **Ω(1)**
+
+</details>
+
+- looks at each element in a list one by one until it finds the given element (or until the list is over)
+
+```python
+def linear_search(arr: list, search_for):
+    for element in arr: # iterate through the list
+        if search_for == element: # compare each element
+            return element
+```
+
+<details>
+<summary>Detailed Example</summary>
+
+```python
+def linear_search(arr: list, search_for):
+    """
+    Perform linear search on the given list to find the specified element.
+
+    Parameters:
+    - arr (list): The list to be searched.
+    - search_for: The element to search for in the list.
+
+    Returns:
+    - The found element if present, otherwise None.
+    """
+    for element in arr:
+        # Check if the current element matches the search target.
+        if search_for == element:
+            # If a match is found, return the element.
+            return element
+
+    # If the loop completes without finding a match, return None.
+    return None
+
+# Example usage:
+my_list = [1, 2, 3, 4, 5]
+target_element = 3
+result = linear_search(my_list, target_element)
+
+if result is not None:
+    print(f"Element {target_element} found in the list.")
+else:
+    print(f"Element {target_element} not found in the list.")
+
+```
+
+</details>
+
+## Binary Search
+
+<details>
+<summary>Time Complexity</summary>
+
+- Worst Case: **O(log n)**
+- Best Case: **Ω(1)**
+
+![i1](https://cdn.discordapp.com/attachments/1163847683207856178/1189483935206482010/image.png)
+
+</details>
+
+- basically a book tearing algorithm by prof. David J. Malan from CS50
+- divide and conquer
+
+```python
+def find_index(target, start, end): # target value, start index, end index
+
+    if start > end:
+        return "Not Found"
+
+    middle = (start + end) // 2
+
+    if arr[middle] == target:
+        return f"Found it at index {middle}"
+
+    if arr[middle] > target:
+        return find_index(target, start, middle - 1)
+
+    if arr[middle] < target:
+        return find_index(target, middle + 1, end)
+```
+
+<details>
+<summary>Detailed Example & Explanation</summary>
+
+- repeated checking of the middle item in an ordered search list and discarding the half of the list which does not contain the search item
+  <br />
+  <br />
+- the array should already be sorted!
+- logic:
+
+```
+If no elements
+    return False
+If we found the element
+    return True
+Else if number < middle element
+    search left half
+Else if number > middle element
+    search righ half
+```
+
+- when implementing it, we can either use while loops or resursion
+- the recursive approach is much easier
+
+- python implementation: using recursion
+
+```python
+def find_index(target, start, end):
+    # target value, start index, end index
+    if start > end:
+        return "Not Found"
+
+    middle = (start + end) // 2
+
+    if arr[middle] == target:
+        return f"Found it at index {middle}"
+
+    if arr[middle] > target:
+        return find_index(target, start, middle - 1)
+
+    if arr[middle] < target:
+        return find_index(target, middle + 1, end)
+
+# Example usage
+arr = ["a", "b", "c", "x", "y", "z"]
+target_value = "x"
+result = find_index(target_value, 0, len(arr) - 1)
+print(result)
+```
+
+- python implementation: using loops
+
+```python
+def find_index(target, arr):
+    start, end = 0, len(arr) - 1
+
+    while start <= end:
+        middle = (start + end) // 2
+
+        if arr[middle] == target:
+            return f"Found it at index {middle}"
+
+        elif arr[middle] < target:
+            start = middle + 1
+
+        else:
+            end = middle - 1
+
+    return "Not Found"
+
+# Example usage
+arr = ["a", "b", "c", "x", "y", "z"]
+target_value = "x"
+result = find_index(target_value, arr)
+print(result)
+
+```
+
+- Pseudocode: from text book
+
+```
+Found ← FALSE
+SearchFailed ← FALSE
+First ← 0
+Last ← MaxItems – 1 // set boundaries of search area
+WHILE NOT Found AND NOT SearchFailed DO
+    Middle ← (First + Last) DIV 2 // find middle of current search area
+    IF List[Middle] = SearchItem THEN
+        Found ← TRUE
+    ELSE
+        IF First >= Last THEN // no search area left
+            SearchFailed ← TRUE
+        ELSE
+            IF List[Middle] > SearchItem THEN // must be in first half
+                Last ← Middle - 1 // move upper boundary
+            ELSE // must be in second half
+                First ← Middle + 1 // move lower boundary
+            ENDIF
+        ENDIF
+    ENDIF
+ENDWHILE
+IF Found = TRUE THEN
+    OUTPUT Middle // output position where item was found
+ELSE
+    OUTPUT "Item not present in array"
+ENDIF
+```
+
+</details>
+
+## Abstract Data Types
+
+- Lets see the implementation of Linked Lists, Queues, Stacks and Binary Trees
+
+<details>
+<summary>Learn more about `.pop()` method for lists in Python</summary>
+
+- [Click here](https://www.w3schools.com/python/ref_list_pop.asp) to learn more
+
+- Syntax:
+
+```python
+list.pop(pos)
+```
+
+- Parameter Values:
+
+| Parameter | Description                                                                                                                    |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| pos       | Optional. A number specifying the position of the element you want to remove, default value is -1, which returns the last item |
+
+- Returns: the removed value
+
+- Example 1: Remove and return the last item in the list
+
+```python
+fruits = ['apple', 'banana', 'orange', 'grape']
+
+last_fruit = fruits.pop()
+print("Removed:", last_fruit)
+print("List after pop:", fruits)
+
+# Output:
+# ---------------------------------------------
+# Removed: grape
+# List after pop: ['apple', 'banana', 'orange']
+```
+
+- Example 2: Remove at a Specific Index _(remove and return the item at index 1)_
+
+```python
+colors = ['red', 'green', 'blue', 'yellow']
+
+removed_color = colors.pop(1)
+print("Removed:", removed_color)
+print("List after pop:", colors)
+
+# Output:
+# ---------------------------------------------
+# Removed: green
+# List after pop: ['red', 'blue', 'yellow']
+```
+
+- Example 3: Handling IndexError, when an element at the given index does not exist
+
+```python
+numbers = [1, 2, 3]
+
+try:
+    removed_number = numbers.pop(5) # index 5  is out of range
+    print("Removed:", removed_number)
+except IndexError as e:
+    print("Error:", e)
+
+# Output:
+# ---------------------------------------------
+# Error: pop index out of range
+```
+
+</details>
+
+## Stacks
+
+```python
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        # Checks if the stack is empty
+        return len(self.items) == 0
+
+    def push(self, item):
+        # Adds an element to the top of the stack
+        self.items.append(item)
+
+    def pop(self):
+        # Removes the topmost element from the stack
+        if not self.is_empty():
+            # remove element at end
+            # element at end has index -1
+            # = last added topmost element of the stack
+            return self.items.pop()
+        else:
+            raise IndexError("pop from an empty stack")
+
+    def peek(self):
+        # Retrieves the value of the topmost element in the stack
+        # without removing it
+        if not self.is_empty():
+            return self.items[-1] # -1 index -> topmost element
+        else:
+            raise IndexError("peek from an empty stack")
+
+    def size(self):
+        # Returns the size of the stack
+        return len(self.items)
+
+# Example usage:
+stack = Stack()
+
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+print("Stack:", stack.items)  # Output: Stack: [1, 2, 3]
+print("Size of the stack:", stack.size())  # Output: Size of the stack: 3
+print("Peek at the top of the stack:", stack.peek())  # Output: Peek at the top of the stack: 3
+
+popped_item = stack.pop()
+print("Popped item:", popped_item)  # Output: Popped item: 3
+print("Stack after pop:", stack.items)  # Output: Stack after pop: [1, 2]
+```
+
+## Queue
+
+```python
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        # Checks if the queue is empty
+        return len(self.items) == 0
+
+    def enqueue(self, item):
+        # Adds an element to the the rear/end of the queue
+        self.items.append(item)
+
+    def dequeue(self):
+        # Removes the element from the front of the queue
+        if not self.is_empty():
+            return self.items.pop(0) # remove the first element of self.items list
+        else:
+            raise IndexError("dequeue from an empty queue")
+
+    def peek(self):
+        # Returns the element at the front without removing it
+        if not self.is_empty():
+            return self.items[0] # first element of the array
+        else:
+            raise IndexError("peek from an empty queue")
+
+    def size(self):
+        # Returns the number of elements in the queue
+        return len(self.items)
+
+# Example usage:
+queue = Queue()
+
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
+
+print("Queue:", queue.items)  # Output: Queue: [1, 2, 3]
+print("Size of the queue:", queue.size())  # Output: Size of the queue: 3
+print("Peek at the front of the queue:", queue.peek())  # Output: Peek at the front of the queue: 1
+
+dequeued_item = queue.dequeue()
+print("Dequeued item:", dequeued_item)  # Output: Dequeued item: 1
+print("Queue after dequeue:", queue.items)  # Output: Queue after dequeue: [2, 3]
+```
+
+<details>
+
+<summary>Circular Queues Implementation</summary>
+
+- Circular Queues are used to improve the efficiency
+
+```python
+class CircularQueue:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.queue = [None] * capacity
+        self.front = self.rear = -1
+
+    def is_empty(self):
+        return self.front == -1
+
+    def is_full(self):
+        return (self.rear + 1) % self.capacity == self.front
+
+    def enqueue(self, item):
+        if self.is_full():
+            raise IndexError("enqueue to a full queue")
+        elif self.is_empty():
+            self.front = self.rear = 0
+        else:
+            self.rear = (self.rear + 1) % self.capacity
+        self.queue[self.rear] = item
+
+    def dequeue(self):
+        if self.is_empty():
+            raise IndexError("dequeue from an empty queue")
+        elif self.front == self.rear:
+            item = self.queue[self.front]
+            self.front = self.rear = -1
+        else:
+            item = self.queue[self.front]
+            self.front = (self.front + 1) % self.capacity
+        return item
+
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("peek from an empty queue")
+        return self.queue[self.front]
+
+    def size(self):
+        if self.is_empty():
+            return 0
+        elif self.front <= self.rear:
+            return self.rear - self.front + 1
+        else:
+            return self.capacity - self.front + self.rear + 1
+
+# Example usage:
+cq = CircularQueue(3)
+
+cq.enqueue(1)
+cq.enqueue(2)
+cq.enqueue(3)
+
+print("Circular Queue:", cq.queue)  # Output: Circular Queue: [1, 2, 3]
+print("Size of the Circular Queue:", cq.size())  # Output: Size of the Circular Queue: 3
+print("Peek at the front of the Circular Queue:", cq.peek())  # Output: Peek at the front of the Circular Queue: 1
+
+dequeued_item = cq.dequeue()
+print("Dequeued item:", dequeued_item)  # Output: Dequeued item: 1
+print("Circular Queue after dequeue:", cq.queue)  # Output: Circular Queue after dequeue: [None, 2, 3]
+
+cq.enqueue(4)
+print("Circular Queue after enqueue:", cq.queue)  # Output: Circular Queue after enqueue: [4, 2, 3]
+```
+
+</details>
+
+## Linked List
+
+- Key Terms:
+
+  - **Node**: an element of a list
+  - **Pointer**: a variable that stores the address of the node it points to
+  - **Null pointer**: a pointer that does not point at anything
+  - **Start pointer**: a variable that stores the address of the first element of a linked list
+
+- Watch this video to learn about both Single and Double Linked Lists
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/_jQhALI4ujg?si=AnCxbonMacC_mfkl"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+### Single Linked List
+
+- Watch the video below to learn more (also has a great visual representation)
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/R9PTBwOzceo?si=OTOLGFICANgQv--S"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+{" "}
+
+<br />
+<br />
+
+- Each node contains data and a pointer to the next node.
+- Memory-efficient, as it uses less space per node.
+- Forward traversal only.
+- Insertions and deletions are faster than doubly linked lists.
+  <br />
+  <br />
+- Python Implementation
+
+```python
+# Define a Node class to represent individual elements in the linked list
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Define a LinkedList class to implement the linked list operations
+class LinkedList:
+    def __init__(self):
+        # Initialize an empty linked list with a head set to None
+        self.head = None
+
+    def is_empty(self):
+        # Check if the linked list is empty
+        return self.head is None
+
+    def add_at_head(self, data):
+        # Add a new node with data at the head of the linked list
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    def add_at_tail(self, data):
+        # Add a new node with data at the tail of the linked list
+        new_node = Node(data)
+
+        # If the linked list is empty, set the new node as the head
+        if self.is_empty():
+            self.head = new_node
+        else:
+            # Otherwise, traverse to the end and append the new node
+            current = self.head
+            while current.next is not None:
+                current = current.next
+            current.next = new_node
+
+    def add_at_middle(self, data, position):
+        # Add a new node with data at a specified position in the linked list
+        new_node = Node(data)
+
+        # If the linked list is empty, set the new node as the head
+        if self.is_empty():
+            self.head = new_node
+        elif position == 0:
+            # If position is 0, insert at the beginning
+            new_node.next = self.head
+            self.head = new_node
+        else:
+            # Traverse to the specified position and insert the new node
+            current = self.head
+            count = 1
+
+            while count < position and current.next is not None:
+                current = current.next
+                count += 1
+
+            new_node.next = current.next
+            current.next = new_node
+
+    def search(self, data):
+        # Search for a node with the given data in the linked list
+        current = self.head
+
+        while current is not None:
+            if current.data == data:
+                return True
+            current = current.next
+
+        return False
+
+    def remove(self, data):
+        # Remove the first occurrence of a node with the given data
+        if self.is_empty():
+            return
+
+        if self.head.data == data:
+            # If the head contains the data, update the head
+            self.head = self.head.next
+            return
+
+        current = self.head
+        while current.next is not None:
+            # Traverse the list to find and remove the node with the given data
+            if current.next.data == data:
+                current.next = current.next.next
+                return
+            current = current.next
+
+    def display(self):
+        # Display the elements of the linked list
+        current = self.head
+
+        while current is not None:
+            print(current.data, end=" -> ")
+            current = current.next
+
+        print("None")
+
+# Usage example
+linked_list = LinkedList()
+
+# Add elements to the linked list
+linked_list.add_at_head(3)
+linked_list.add_at_head(2)
+linked_list.add_at_head(1)
+linked_list.add_at_tail(4)
+
+# Display the linked list
+linked_list.display()  # Output: 1 -> 2 -> 3 -> 4 -> None
+
+# Search for a value in the linked list
+print(linked_list.search(3))  # Output: True
+
+# Remove a node with a specific value from the linked list
+linked_list.remove(2)
+
+# Display the modified linked list
+linked_list.display()  # Output: 1 -> 3 -> 4 -> None
+
+# Create another linked list instance
+linked_list2 = LinkedList()
+
+# Add elements to the second linked list, including adding in the middle
+linked_list2.add_at_head(3)
+linked_list2.add_at_head(2)
+linked_list2.add_at_head(1)
+linked_list2.add_at_middle(5, 1)
+
+# Display the second linked list
+linked_list2.display()  # Output: 1 -> 5 -> 2 -> 3 -> None
+
+# Output
+# -------------------------------
+# 1 -> 2 -> 3 -> 4 -> None
+# True
+# 1 -> 3 -> 4 -> None
+# 1 -> 5 -> 2 -> 3 -> None
+```
+
+<details>
+<summary>Alternative Approach</summary>
+
+```python
+# Define a Node class to represent each element in the linked list
+class Node:
+    def __init__(self, data):
+        self.data = data  # Data stored in the node
+        self.next = None  # Reference to the next node in the list
+
+# Define a LinkedList class to represent the linked list and its operations
+class LinkedList:
+    def __init__(self):
+        self.head = None  # Initialize an empty linked list with no head
+
+    def is_empty(self):
+        return self.head is None  # Check if the linked list is empty
+
+    def append(self, data):
+        new_node = Node(data)  # Create a new node with the given data
+        if self.head is None:
+            self.head = new_node  # If the list is empty, set the new node as the head
+            return
+        last_node = self.head
+        while last_node.next: # until the last node is met (with Node.next = None)
+            last_node = last_node.next # Set the next of the new node to the current head
+        last_node.next = new_node  # Append the new node at the end of the list
+
+    def prepend(self, data):
+        new_node = Node(data)
+        new_node.next = self.head  # Set the next of the new node to the current head
+        self.head = new_node  # Set the new node as the new head
+
+    def delete(self, data):
+        if self.head is None:
+            return
+
+        if self.head.data == data:
+            self.head = self.head.next  # If the head contains the data, move the head to the next node
+            return
+
+        current_node = self.head
+        while current_node.next and current_node.next.data != data:
+            current_node = current_node.next
+
+        if current_node.next:
+            current_node.next = current_node.next.next  # Skip the node containing the data to delete it
+
+    def display(self):
+        current_node = self.head
+        while current_node:
+            print(current_node.data, end=" -> ")  # Print the data in the current node
+            current_node = current_node.next
+        print("None")  # Print None to indicate the end of the list
+
+# Example usage:
+linked_list = LinkedList()
+linked_list.append(1)
+linked_list.append(2)
+linked_list.append(3)
+linked_list.prepend(0)
+linked_list.display()
+
+linked_list.delete(2)
+linked_list.display()
+
+# Output
+# -------------------------------
+# 0 -> 1 -> 2 -> 3 -> None
+# 0 -> 1 -> 3 -> None
+```
+
+</details>
+
+<details>
+<summary>Textbook's Approach</summary>
+
+- Python Implementation
+
+```python
+class ListNode:
+    def __init__(self, data=None, next_node=None):
+        self.data = data
+        self.next_node = next_node
+
+class LinkedList:
+    def __init__(self):
+        self.start_node = None
+
+    def insert_node(self, new_item):
+        new_node = ListNode(data=new_item)
+        if not self.start_node or new_item < self.start_node.data:
+            new_node.next_node = self.start_node
+            self.start_node = new_node
+            return
+
+        current_node = self.start_node
+        while current_node.next_node and new_item >= current_node.next_node.data:
+            current_node = current_node.next_node
+
+        new_node.next_node = current_node.next_node
+        current_node.next_node = new_node
+
+    def find_node(self, data_item):
+        current_node = self.start_node
+        while current_node and current_node.data != data_item:
+            current_node = current_node.next_node
+        return current_node
+
+    def delete_node(self, data_item):
+        if not self.start_node:
+            return
+
+        if self.start_node.data == data_item:
+            self.start_node = self.start_node.next_node
+            return
+
+        current_node = self.start_node
+        while current_node.next_node and current_node.next_node.data != data_item:
+            current_node = current_node.next_node
+
+        if current_node.next_node:
+            current_node.next_node = current_node.next_node.next_node
+
+    def output_all_nodes(self):
+        current_node = self.start_node
+        while current_node:
+            print(current_node.data)
+            current_node = current_node.next_node
+
+# Example usage:
+linked_list = LinkedList()
+linked_list.insert_node("Apple")
+linked_list.insert_node("Banana")
+linked_list.insert_node("Orange")
+linked_list.output_all_nodes()
+
+linked_list.delete_node("Banana")
+linked_list.output_all_nodes()
+```
+
+- Pseudocode
+
+```js
+// NullPointer should be set to -1 if using array element with index 0
+CONSTANT NullPointer = –1
+// Declare record type to store data and pointer
+TYPE ListNode
+ DECLARE Data : STRING
+ DECLARE Pointer : INTEGER
+ENDTYPE
+DECLARE StartPointer : INTEGER
+DECLARE FreeListPtr : INTEGER
+DECLARE List : ARRAY[0 : 6] OF ListNode
+PROCEDURE InitialiseList
+ StartPointer ← NullPointer // set start pointer
+ FreeListPtr ← 0 // set starting position of free list
+ FOR Index ← 0 TO 5 // link all nodes to make free list
+ List[Index].Pointer ← Index + 1
+ NEXT Index
+ List[6].Pointer ← NullPointer // last node of free list
+ENDPROCEDURE
+
+PROCEDURE InsertNode(NewItem)
+ IF FreeListPtr <> NullPointer
+ THEN // there is space in the array
+ // take node from free list and store data item
+ NewNodePtr ← FreeListPtr
+ List[NewNodePtr].Data ← NewItem
+ FreeListPtr ← List[FreeListPtr].Pointer
+ // find insertion point
+ ThisNodePtr ← StartPointer // start at beginning of list
+ PreviousNodePtr ← NullPointer
+ WHILE ThisNodePtr <> NullPointer // while not end of list
+ AND List[ThisNodePtr].Data < NewItem DO
+ PreviousNodePtr ← ThisNodePtr // remember this node
+ // follow the pointer to the next node
+ ThisNodePtr ← List[ThisNodePtr].Pointer
+ ENDWHILE
+ IF PreviousNodePtr = StartPointer
+ THEN // insert new node at start of list
+ List[NewNodePtr].Pointer ← StartPointer
+ StartPointer ← NewNodePtr
+ ELSE // insert new node between previous node and this node
+ List[NewNodePtr].Pointer ← List[PreviousNodePtr].Pointer
+ List[PreviousNodePtr].Pointer ← NewNodePtr
+ ENDIF
+ ENDIF
+ENDPROCEDURE
+
+FUNCTION FindNode(DataItem) RETURNS INTEGER // returns pointer to node
+ CurrentNodePtr ← StartPointer // start at beginning of list
+ WHILE CurrentNodePtr <> NullPointer // not end of list
+ AND List[CurrentNodePtr].Data <> DataItem DO // item not found
+ // follow the pointer to the next node
+ CurrentNodePtr ← List[CurrentNodePtr].Pointer
+ENDWHILE
+ RETURN CurrentNodePtr // returns NullPointer if item not found
+ENDFUNCTION
+
+PROCEDURE DeleteNode(DataItem)
+ ThisNodePtr ← StartPointer // start at beginning of list
+ WHILE ThisNodePtr <> NullPointer // while not end of list
+ AND List[ThisNodePtr].Data <> DataItem DO // and item not found
+ PreviousNodePtr ← ThisNodePtr // remember this node
+ // follow the pointer to the next node
+ ThisNodePtr ← List[ThisNodePtr].Pointer
+ ENDWHILE
+ IF ThisNodePtr <> NullPointer // node exists in list
+ THEN
+ IF ThisNodePtr = StartPointer // first node to be deleted
+ THEN
+ // move start pointer to the next node in list
+ StartPointer ← List[StartPointer].Pointer
+ ELSE
+ // it is not the start node;
+ // so make the previous node’s pointer point to
+ // the current node’s 'next' pointer; thereby removing all
+ // references to the current pointer from the list
+ List[PreviousNodePtr].Pointer ← List[ThisNodePtr].Pointer
+ ENDIF
+ List[ThisNodePtr].Pointer ← FreeListPtr
+ FreeListPtr ← ThisNodePtr
+ ENDIF
+ENDPROCEDURE
+
+PROCEDURE OutputAllNodes
+ CurrentNodePtr ← StartPointer // start at beginning of list
+ WHILE CurrentNodePtr <> NullPointer DO // while not end of list
+ OUTPUT List[CurrentNodePtr].Data
+ // follow the pointer to the next node
+ CurrentNodePtr ← List[CurrentNodePtr].Pointer
+ ENDWHILE
+ENDPROCEDURE
+```
+
+</details>
+
+### Double Linked List
+
+- Each node contains data, a pointer to the next node, and a pointer to the previous node.
+- Supports forward and backward traversal.
+- Takes more memory per node due to the additional previous pointer.
+- Insertions and deletions can be faster in certain scenarios due to bidirectional traversal.
+- Example:
+  - back and forward buttons in the web browser
+
+<details>
+<summary>Detailed Example</summary>
+
+```python
+class Node:
+    def __init__(self, data):
+        # Constructor for a Node in the doubly linked list
+        self.data = data  # Data stored in the node
+        self.next = None   # Pointer to the next node in the sequence
+        self.prev = None   # Pointer to the previous node in the sequence
+
+class DoublyLinkedList:
+    def __init__(self):
+        # Constructor for the doubly linked list
+        self.head = None   # Reference to the head (start) of the list
+
+    def append(self, data):
+        # Add a new node with the given data at the end of the list
+        new_node = Node(data)  # Create a new node
+        if not self.head:
+            # If the list is empty, set the new node as the head
+            self.head = new_node
+        else:
+            # Traverse to the end of the list and add the new node
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+            new_node.prev = current
+
+    def prepend(self, data):
+        # Add a new node with the given data at the beginning of the list
+        new_node = Node(data)  # Create a new node
+        new_node.next = self.head  # Set the next pointer of the new node to the current head
+        if self.head:
+            # If the list is not empty, set the previous pointer of the current head to the new node
+            self.head.prev = new_node
+        self.head = new_node  # Set the new node as the new head
+
+    def display_forward(self):
+        # Display the elements of the list in the forward direction
+        current = self.head
+        while current:
+            print(current.data, end=" ")
+            current = current.next
+        print()
+
+    def display_backward(self):
+        # Display the elements of the list in the backward direction
+        current = self.head
+        while current and current.next:
+            current = current.next
+
+        while current:
+            print(current.data, end=" ")
+            current = current.prev
+        print()
+
+# Example usage:
+dll = DoublyLinkedList()
+dll.append(1)
+dll.append(2)
+dll.append(3)
+dll.prepend(0)
+
+print("Forward:")
+dll.display_forward()
+
+print("Backward:")
+dll.display_backward()
+```
+
+</details>
+
+### Circular Linked List
+
+- Similar to singly linked lists but the last node points back to the first node, forming a circle.
+- No need for a separate tail reference.
+- Can be traversed indefinitely without encountering a None reference.
+
+<details>
+<summary>Detailed Example</summary>
+
+```python
+# Node class to represent individual elements in the circular linked list
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+# CircularLinkedList class to manage the circular linked list
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def is_empty(self):
+        return self.head is None
+
+    def append(self, data):
+        # Create a new node with the given data
+        new_node = Node(data)
+
+        # If the circular linked list is empty, make the new node the head and point it to itself
+        if self.is_empty():
+            new_node.next = new_node
+            self.head = new_node
+        else:
+            # Traverse to the last node and update its 'next' pointer to the new node
+            temp = self.head
+            while temp.next != self.head:
+                temp = temp.next
+            temp.next = new_node
+            # Make the new node point to the head to create the circular link
+            new_node.next = self.head
+
+    def display(self):
+        # Display the elements in the circular linked list
+        if self.is_empty():
+            print("Circular Linked List is empty")
+        else:
+            temp = self.head
+            while True:
+                print(temp.data, end=" ")
+                temp = temp.next
+                # If we have traversed the entire circular linked list, break the loop
+                if temp == self.head:
+                    break
+            print()
+
+# Create a circular linked list
+cll = CircularLinkedList()
+
+# Appending elements to the circular linked list
+cll.append(1)
+cll.append(2)
+cll.append(3)
+cll.append(4)
+
+# Displaying the circular linked list
+print("Circular Linked List:")
+cll.display()
+
+```
+
+</details>
+
+## Binary Trees
+
+## Hash Tables
+
+## Dictionaries
+
+- Watch this video below to learn more:
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/MZZSMaEAC2g?si=-unNmrbYMpcLDl0V"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+<br />
+<br />
+
+- A dictionary in Python is defined using curly braces `{}` and consists of key-value pairs separated by colons `:`.
+- Keys are unique and immutable, while values can be of any data type.
+
+- Example 1:
+
+```python
+# Example dictionary
+my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+```
+
+- Example 2: from the text book
+
+```python
+# empty dictionary
+EnglishFrench = {}
+
+# add a key-value pair to the dictionary
+EnglishFrench["book"] = "livre"
+EnglishFrench["pen"] = "stylo"
+
+# access a value in the dictionary
+print(EnglishFrench["book"])
+
+# alternative method of setting up a dictionary
+ComputingTerms = {"Boolean" : "can be TRUE or FALSE", "Bit" : "0 or 1"}
+print(ComputingTerms["Bit"])
+```
+
+#### NOTE:
+
+```python
+my_dict = {}    # this is an empty dictionary
+my_dict = {,}   # this is an empty set
+```
+
+### Available Methods:
+
+1. **`dict.keys()`**:
+
+   - Returns a view of dictionary keys.
+
+   ```python
+   keys = my_dict.keys()
+   print(keys)  # dict_keys(['name', 'age', 'city'])
+   ```
+
+2. **`dict.values()`**:
+
+   - Returns a view of dictionary values.
+
+   ```python
+   values = my_dict.values()
+   print(values)  # dict_values(['John', 25, 'New York'])
+   ```
+
+3. **`dict.items()`**:
+
+   - Returns a view of key-value pairs as tuples.
+
+   ```python
+   items = my_dict.items()
+   print(items)  # dict_items([('name', 'John'), ('age', 25), ('city', 'New York')])
+   ```
+
+4. **`dict.get(key, default)`**:
+
+   - Returns the value for a given key. If the key is not present, it returns the default value.
+
+   ```python
+   age = my_dict.get('age', 0)
+   print(age)  # 25
+   ```
+
+5. **`dict.setdefault(key, default)`**:
+
+   - Similar to `get()`, but sets the default value for the key if it doesn't exist.
+
+   ```python
+   my_dict.setdefault('gender', 'Male')
+   print(my_dict)  # {'name': 'John', 'age': 25, 'city': 'New York', 'gender': 'Male'}
+   ```
+
+6. **`dict.update(dictionary)`**:
+
+   - Updates the dictionary with key-value pairs from another dictionary.
+
+   ```python
+   other_dict = {'country': 'USA', 'age': 26}
+   my_dict.update(other_dict)
+   print(my_dict)  # {'name': 'John', 'age': 26, 'city': 'New York', 'gender': 'Male', 'country': 'USA'}
+   ```
+
+7. **`dict.pop(key, default)`**:
+
+   - Removes and returns the value for a given key. If the key is not present, it returns the default value.
+
+   ```python
+   city = my_dict.pop('city', 'Unknown')
+   print(city)  # 'New York'
+   ```
+
+8. **`dict.popitem()`**:
+
+   - Removes and returns the last key-value pair as a tuple.
+
+   ```python
+   last_item = my_dict.popitem()
+   print(last_item)  # ('country', 'USA')
+   ```
+
+<details>
+<summary>Custom Implementation of a Dictionary in Python (Extra)</summary>
+
+```python
+class CustomDict:
+    def __init__(self):
+        # Initialize an empty list to store key-value pairs
+        self.items = []
+
+    def __getitem__(self, key):
+        # Get the value associated with the given key
+        for k, v in self.items:
+            if k == key:
+                return v
+        # Raise KeyError if the key is not found
+        raise KeyError(key)
+
+    def __setitem__(self, key, value):
+        # Set the value associated with the given key
+        for i, (k, v) in enumerate(self.items):
+            if k == key:
+                # If the key already exists, update its value
+                self.items[i] = (key, value)
+                return
+        # If the key does not exist, add a new key-value pair
+        self.items.append((key, value))
+
+    def __delitem__(self, key):
+        # Delete the key-value pair associated with the given key
+        for i, (k, v) in enumerate(self.items):
+            if k == key:
+                del self.items[i]
+                return
+        # Raise KeyError if the key is not found
+        raise KeyError(key)
+
+    def __contains__(self, key):
+        # Check if the given key exists in the dictionary
+        return any(k == key for k, _ in self.items)
+
+    def keys(self):
+        # Return a list of all keys in the dictionary
+        return [k for k, _ in self.items]
+
+    def values(self):
+        # Return a list of all values in the dictionary
+        return [v for _, v in self.items]
+
+    def items(self):
+        # Return a list of all key-value pairs in the dictionary
+        return self.items
+
+    def __repr__(self):
+        # Return a string representation of the dictionary
+        return '{' + ', '.join(f'{k}: {v}' for k, v in self.items) + '}'
+
+# Example usage:
+custom_dict = CustomDict()
+custom_dict['name'] = 'John'
+custom_dict['age'] = 25
+print(custom_dict)  # Output: {'name': 'John', 'age': 25}
+
+print(custom_dict['name'])  # Output: John
+
+print('city' in custom_dict)  # Output: False
+
+del custom_dict['age']
+print(custom_dict)  # Output: {'name': 'John'}
+```
+
+</details>
+
+## Big O Notation
+
+- [Click here](https://www.bigocheatsheet.com/) open the Big-O-Cheat-Sheet
+- Watch the below video before getting started:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/__vX2sjlpXU?si=7gIqmddlrWTYe37C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br/>
+<br/>
+
+### Rules
+
+1. Ignore Constants
+    - 5n -> `O(n)`
+    - when `n` gets large, the 5 no longer matters
+
+2. Certain terms dominate others
+    - **`O(1)` < `O(log n)` < `O(n)` < `O(n log n)` < `O(n^2)` < `O(2^n)` < `O(n!)`**
+    - ignore of drop low order terms, when they are dominated by high order ones
+
+- [Big O Complexity Chart](https://www.bigocheatsheet.com/):
+    - Red (Horrible) --> Green (Excellent)
+
+<BigOChartSVG />
+<br/>
+<br/>
+
+| Order of Growth | Example                                           | Explanation                                                                                                            |
+|------------------|---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| `O(1)`             | `GetFirstItem(List: ARRAY)`                       | The complexity of the algorithm does not change regardless of the data set size.                                      |
+| `O(n)`             | Linear search<br/>Bubble sort on a sorted list     | Linear growth - Time complexity increases linearly with the size of the data set.                                      |
+| `O(log₂n)`         | Binary search                                     | The total time taken increases as the data set size increases, but each comparison halves the data set. So, the time taken increases by smaller amounts and approaches constant time. |
+| `O(n²)`            | Bubble sort<br/>Insertion sort                     | Polynomial growth - Common with algorithms that involve nested iterations over the data set.                            |
+| `O(n³)`            | Deeper nested iterations                          | Polynomial growth - Deeper nested iterations will result in O(n³), O(n⁴), and so on.                                   |
+| `O(2ⁿ)`            | Recursive calculation of Fibonacci numbers        | Exponential growth - Time complexity grows exponentially with the size of the data set.                                 |
+
+
+### Examples
+
+1. Example 1 - **Constant Time**
+
+```python
+x = 5 + (5 * 20)
+```
+
+- independent of input size, N
+- Time Complexity:
+    - `O(1)`
+
+2. Example 2
+
+```python
+x = 5 + (5 * 20)    # O(1)
+y = 15 -2           # O(1)
+print(x + y)        # O(1)
+```
+
+- Time Complexity:
+    - `O(1)` + `O(1)` + `O(1)` _--> (everything has the same dominance)_
+    - 3 * `O(1)` _--> (we drop constant)_
+    - `O(1)`
+
+3. Example 3 - **Linear Runtime**
+
+```python
+for i in range(0, n):   # n
+    print(x)            # O(1)
+```
+
+- Time Complexity:
+    - n * `O(1)`
+    - `O(n)`
+
+4. Example 4
+
+```python
+y = 5 + (5 * 120)       # O(1)
+for i in range(0, n):   # O(n)
+    print(x)            #
+```
+
+- Time Complexity:
+    - `O(1)` + `O(n)`
+    - `O(n)` _--> (rule 2, we only keep the most dominant)_
+
+5. Example 5 - **Quadratic  Runtime**
+
+```python
+for i in range(0, n):       # O(n)
+    for j in range(0, n):   # O(n)
+        print(i*j)          # O(1)
+```
+
+- Time Complexity:
+    - `O(n)` + `O(n)` + `O(1)`
+    - `O(n^2)`
+
+- basically, `n` to the power of number of inner loops
+
+6. Example 6 
+
+```python
+y = 5 + (5 * 120)           # O(1)
+for i in range(0, n):       # O(n)
+    print(x)                #
+for i in range(0, n):       # O(n^2)
+    for j in range(0, n):   # 
+        print(i*j)          # 
+```
+
+- Time Complexity:
+    - `O(1)` + `O(n)` + `O(n^2)`
+    - `O(n^2)`
+
+7. Example 7
+
+```python
+if x > 0:
+    ...         # O(1)
+else if x < 0:
+    ...         # O(log n)
+else:
+    ...         # O(n^2)
+```
+
+- Time Complexity:
+    - we choose the worst case scenrio, in this case,
+    - `O(n^2)`
+
+<details>
+<summary>(Extra) - Asymptotic Notations</summary>
+
+- This is a mathematical concept
+- There are:
+    1. Big O: `O(n)` - _Upper Bound (Worst Case)_
+    2. Theta: `θ(n)` - _Average Bound (Average Case)_
+    3. Omega: `Ω(n)` - _Lower Bound (Best Case)_
+
+- Watch  the videos below to learn more:
+
+- Sinhala Explanation:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bYc2FwCnjus?si=2yW4bEaQAI7YDiCK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+- Good Explanation in English:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A03oI0znAoc?si=EdN1Ndr9UQQANpbj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nd0XDY-jVHs?si=_eIrYkiQ_OkNjbEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</details>

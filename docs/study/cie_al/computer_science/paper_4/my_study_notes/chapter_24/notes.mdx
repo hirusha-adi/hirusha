@@ -1,0 +1,291 @@
+---
+title: Notes - Recursion
+sidebar_label: Notes
+slug: notes
+sidebar_position: 1
+---
+
+- Quick Introduction:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rf60MejMz3E?si=NgQM5I0Oc9xnAe1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+- Basics:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ivl5-snqul8?si=vI8PsfpI79m8zp2v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+- Best Video about recursion:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8lhxIOAfDss?si=KGGE2TsE8B_hBfSV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+- [Python Recursion](https://www.programiz.com/python-programming/recursion) by programiz.com
+- [Recursion in Python: An Introduction](https://realpython.com/python-recursion/) by realpython.com
+
+## Concept of recursion
+
+- Recursive routine: A function or procedure defined in terms of itself.
+
+- Classic example: Factorial function (n!) 
+    - with base case (0! = 1) 
+    - and general case (n! = n × (n − 1)!)
+    - e.g., 4! = 4 × 3 × 2 × 1 = 24
+
+- Recursive solutions involve bringing the general case closer to the base case with each recursion.
+
+- Key Terms:
+    - **Base case**: An explicit solution to a recursive function.
+    - **General case**: Definition of a recursive function in terms of itself.
+
+## Programming a recursive subroutine
+
+- A recursive subroutine must:
+    - have a base case
+    - have a general case
+    - reach the base case aft er a finite (limited) number of calls to itself.
+
+- Iterative Approach
+
+```python
+# Using a for loop
+def factorial_iterative(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+# Using a while loop
+def factorial_while(n):
+    result = 1
+    while n > 1:
+        result *= n
+        n -= 1
+    return result
+```
+
+- Recursive Approach
+
+```python
+def factorial_recursive(n):
+    if n < 0: # this is a nice to have
+        return "Factorial is not defined for negative numbers"
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial_recursive(n - 1)
+
+# as a one line lambda function
+fact = lambda n: 1 if ((n==0) or (n==1)) else n*fact(n-1)
+```
+
+<details>
+<summary>Pseudocode</summary>
+
+- Iterative Approach
+
+```
+FUNCTION Factorial(n : INTEGER) RETURNS INTEGER
+    Result ← 1
+    FOR i ← 1 TO n
+        Result ← Result * i
+    NEXT i
+    RETURN Result
+ENDFUNCTION
+```
+
+- Recursive Approach
+
+```
+FUNCTION Factorial(n : INTEGER) RETURNS INTEGER
+    IF n = 0 THEN
+        Result ← 1
+    ELSE
+        Result ← n * Factorial(n - 1)
+    ENDIF
+    RETURN Result
+ENDFUNCTION
+```
+
+</details>
+
+## Tracing a recursive subroutine
+
+### Example 1
+
+- basically dry run the algorithm
+
+- consider this code below:
+
+```python
+def CountUpTo(n):
+    if n > 0:
+        CountUpTo(n - 1)
+    print(n)
+
+CountUpTo(3)
+```
+
+<details>
+<summary>Pseudocode</summary>
+
+```
+PROCEDURE CountUpTo(n : INTEGER)
+    IF n > 0 THEN
+        CALL CountUpTo(n - 1)
+    ENDIF
+    OUTPUT n
+ENDPROCEDURE
+
+CALL CountUpTo(3)
+```
+
+</details>
+
+- Note that the statements after `CountUpTo(n - 1)` are not executed until control
+returns to this statement as the recursive calls unwind.
+
+| Call Number | Procedure Call | n   | n > 0 | Output |
+|-------------|-----------------|-----|-------|--------|
+| 1           | CountUpTo(3)    | 3   | TRUE  | -      |
+| 2           | CountUpTo(2)    | 2   | TRUE  | -      |
+| 3           | CountUpTo(1)    | 1   | TRUE  | -      |
+| 4           | CountUpTo(0)    | 0   | FALSE | 0      |
+| (3)         | CountUpTo(1)    | 1   | TRUE  | 1      |
+| (2)         | CountUpTo(2)    | 2   | TRUE  | 2      |
+| (1)         | CountUpTo(3)    | 3   | TRUE  | 3      |
+
+- Call number `4` is when the base case is reached
+- call number `(3) -> (1)` is where the recursive call unwinds
+
+### Example 2
+
+- consider this code below:
+
+```python
+def Factorial(n):
+    if n == 0:
+        result = 1
+    else:
+        result = n * factorial(n - 1)
+    return result
+
+Factorial(4)
+```
+
+<details>
+<summary>Pseudocode</summary>
+
+```
+FUNCTION Factorial(n : INTEGER) RETURNS INTEGER
+    IF n = 0 THEN
+        Result ← 1
+    ELSE
+        Result ← n * Factorial(n – 1)
+    ENDIF
+    RETURN Result
+ENDFUNCTION
+
+Factorial(4)
+```
+
+</details>
+
+- trace table:
+
+| Call Number | Procedure Call  | n   | n = 0 | Result | Return Value |
+|-------------|-----------------|-----|-------|--------| - |
+| 1           | Factorial(4)    | 4   | FALSE | 4*Factorial(4)      | - |
+| 2           | Factorial(3)    | 3   | FALSE | 3*Factorial(2)      | - |
+| 3           | Factorial(2)    | 2   | FALSE | 2*Factorial(1)      | - |
+| 4           | Factorial(1)    | 1   | FALSE | 1*Factorial(0)      | - |
+| 5           | Factorial(0)    | 0   | TRUE  | 1      | 1 |
+| (4)         | Factorial(1)    | 1   | FALSE | 1*1      | 1 |
+| (3)         | Factorial(2)    | 2   | FALSE | 2*1      | 2 |
+| (2)         | Factorial(3)    | 3   | FALSE | 3*2     | 6 |
+| (1)         | Factorial(4)    | 4   | FALSE | 4*6     | 24 |
+
+
+### Example 3
+
+:::info NOTE
+
+- **Convert Decimal Number to Binary Representation**
+- Please remember this, because i have no idea about how it works.
+
+:::
+
+- Program Code:
+
+```python
+def int_to_binary(n):
+    if n == 0 or n == 1:
+        print(n)
+    else:
+        int_to_binary(n // 2)
+        print(n % 2)
+
+int_to_binary(19)
+```
+
+<details>
+<summary>Pseudocode</summary>
+
+```
+PROCEDURE int_to_binary(n : INTEGER)
+    IF (n = 0) OR (n = 1) THEN
+        OUTPUT n
+    ELSE
+        CALL int_to_binary(n DIV 2)
+        OUTPUT(n MOD 2)
+    ENDIF
+ENDPROCEDURE
+```
+
+</details>
+
+- it converts a decimal number `n` into its binary representation using a recursive approach
+
+| Step | n   | Operation            | Output |
+| ---- | --- | -------------------- | ------ |
+| 1    | 19  | Check n = 0 or n = 1 |        |
+| 2    | 19  | Call X(19 DIV 2)     |        |
+| 3    | 9   | Check n = 0 or n = 1 |        |
+| 4    | 9   | Call X(9 DIV 2)      |        |
+| 5    | 4   | Check n = 0 or n = 1 |        |
+| 6    | 4   | Call X(4 DIV 2)      |        |
+| 7    | 2   | Check n = 0 or n = 1 |        |
+| 8    | 2   | Call X(2 DIV 2)      |        |
+| 9    | 1   | Check n = 0 or n = 1 |        |
+| 10   | 1   | Output n             | 1      |
+| 11   | 2   | Output(n MOD 2)      | 0      |
+| 12   | 4   | Output(n MOD 2)      | 0      |
+| 13   | 9   | Output(n MOD 2)      | 1      |
+| 14   | 19  | Output(n MOD 2)      | 1      |
+
+:::warning guide
+refer the **`WORKED EXAMPLE 24.03`** in page number 439. It gives the overview of the *stack* with a recursive approach of the factorial function. 
+:::
+
+## Pros and Cons of Recursion
+
+- When addressing a mathematically recursive problem, implementing the recursive definition is often the most straightforward approach.
+- Some optimizing compilers may convert a recursive subroutine to an iterative one during the compilation process.
+- Recursive solutions tend to be more elegant and require less code compared to their iterative counterparts.
+- However, repeated recursive calls can lead to significant memory usage and processor time, as explained in Section 24.04.
+    - For instance, a procedure call like `CountDownFrom(100)` can result in 100 stack frames, 
+    - impacting memory and processor resources.
+
+
+### Advantages
+
+- **Elegance:** Recursive solutions are often more concise and elegant.
+- **Simplicity:** Recursive code can closely mirror the problem's mathematical definition.
+- **Readability:** Recursive code can be more readable and closer to the problem statement.
+- **Versatility:** Well-suited for problems with inherent recursive structures.
+- **Modularity:** Promotes a modular and divide-and-conquer approach to problem-solving.
+
+### Disadvantages
+
+- **Memory Usage:** Recursive calls may lead to a higher memory consumption due to multiple function calls on the call stack.
+- **Performance Overhead:** Recursive solutions can incur additional function call overhead.
+- **Stack Overflow:** Deep recursion can lead to stack overflow errors if not properly managed.
+- **Complexity:** Recursive code might be harder to understand for some programmers.
+- **Not Always Efficient:** In some cases, iterative solutions may be more efficient in terms of both time and space.
