@@ -1,3 +1,9 @@
+/*
+MIT License
+Copyright (c) 2022 kuizuo
+Based on: https://github.com/kuizuo/blog
+*/ 
+
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
