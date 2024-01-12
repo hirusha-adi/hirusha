@@ -96,8 +96,18 @@ Replace `hirusha-adi` with your actual Git username.
 Execute the following command to build the website and push it to the `gh-pages` branch:
 
 ```bash
-pnpm deploy
+npx docusaurus deploy
 ```
+
+<details>
+<summary>pnpm deploy - gave an error</summary>
+
+```bash
+>pnpm deploy
+ ERR_PNPM_CANNOT_DEPLOY  A deploy is only possible from inside a workspace
+```
+
+</details>
 
 If you are using GitHub Pages for hosting, this command is a convenient way to make your website accessible to the public.
 
