@@ -55,7 +55,8 @@ export default function UserCard({ isNavbar = false }: { isNavbar?: boolean }) {
       </Link>
       <div>
         <Link className={styles.name} href="about">
-          {title}
+          {/* {title} */}
+          Hirusha Adikari
         </Link>
       </div>
       <div className={styles.bio}>{bio}</div>
