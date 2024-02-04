@@ -3,6 +3,8 @@ slug: how-to-be-safe-from-government-traffic-monitoring
 title: How to be safe from government traffic monitoring?
 ---
 
+## INCOMPLETE!
+
 :::note
 
 This guide is tailored to help you conceal your online network activity from both your Internet Service Provider (ISP) and government authorities.
