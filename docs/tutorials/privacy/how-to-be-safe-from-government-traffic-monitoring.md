@@ -3,11 +3,15 @@ slug: how-to-be-safe-from-government-traffic-monitoring
 title: How to be safe from government traffic monitoring?
 ---
 
-## INCOMPLETE!
+:::note note
 
-:::note
+This is a beginner-friendly guide. I'll be writing a guide to staying completely anonymous online in the near future. Stay tuned!
 
-This guide is tailored to help you conceal your online network activity from both your Internet Service Provider (ISP) and government authorities.
+:::
+
+:::info
+
+This guide is tailored to help you conceal your online network activity from both your Internet Service Provider (ISP) and government authorities. This guide does not aim to provide anonymity. Poor operational security (Opsec) is what often leads to the arrest of many activists and cybercriminals. To ensure comprehensive anonymity, it's crucial to follow the recommendations outlined in [privacyguides.net](https://www.privacyguides.org/en/tools/). What constitutes bad Opsec? Consider this example: Using all these tools to create a Facebook account under your real legal name and then engaging in illegal activities.
 
 :::
 
@@ -100,5 +104,70 @@ Let's discuss about DNS to address these concerns.
 
 ## DNS - Domain Name Service
 
-- to be completed
-- include preventing dns leaks and webrtc leaks
+You can use a custom DNS resolver like [Quad9](https://www.quad9.net/), but what about all the telemetry-related traffic (Microsoft Window's phone home features)? How do you block them? You can use a tool like [NextDNS](https://nextdns.io/), BUT:
+
+:::warning don't use NextDNS
+
+- It looks like the [NextDNS clients (Windows, Unix) are open-source](https://github.com/nextdns), but the server software isn't.
+- They [violated their own privacy policy](https://www.reddit.com/r/privacy/comments/jswghu/nextdns_is_leaking_your_email_address_to/) once by using a third-party tool (Intercom).
+- They have a freemium business model where customers pay.
+- They meet the requirements and are part of the [Mozilla’s Trusted Recursive Resolver (TRR) program](https://wiki.mozilla.org/Security/DOH-resolver-policy).
+- I couldn't find any independent audit or even a court case where they could prove the 'no logs' setting.
+
+Source: [Reddit](https://www.reddit.com/r/privacytoolsIO/comments/milkyd/do_you_trust_nextdns/)
+
+:::
+
+So, your best and only option is to purchase a Raspberry Pi (or you can also use an old computer, but this consumes more electricity), and install [PiHole](https://pi-hole.net/). Set a static IP to this device and set it as the default DNS server of the router. Then, all of your home traffic will go through it.
+
+You can watch the below video to get an idea of how it works and to see how easy it is to install.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KBXTnrD_Zs4?si=2FT6aGmjBP83hz6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Note that this video is 4 years old, and the newer versions have improved a lot.
+
+Now, set the upstream DNS of PiHole to Quad9. This should make sure that no DNS requests are being sent to our ISP.
+
+## WebRTC - Web Real-Time Communication
+
+This is the technology that enables real-time communication between web browsers. This offers convenient features like video conferencing and peer-to-peer file sharing.
+
+### Why WebRTC Leaks happen?
+
+WebRTC leaks occur when your browser reveals your real IP address despite using a VPN or proxy service. This happens because WebRTC allows browsers to directly exchange data with other browsers, bypassing VPN or proxy configurations.
+
+### Preventing WebRTC Leaks:
+
+1. #### Disable WebRTC
+
+Google Chrome:
+- Type `chrome://flags/#disable-webrtc` in the address bar.
+- Set the "WebRTC" flag to "Disabled."
+
+Mozilla Firefox:
+- Type about:config in the address bar.
+- Search for `media.peerconnection.enabled` and set it to `"false"`.
+
+2. #### Use a Browser Extension:
+
+Install: [WebRTC Leak Shield](https://chromewebstore.google.com/detail/webrtc-leak-shield/bppamachkoflopbagkdoflbgfjflfnfl) and with a VPN, you are good to go.  
+
+---
+
+You have reached the end of this guide. To verify that everything works, use the tools listed below:
+
+- [Public IP Address](https://browserleaks.com/ip)
+- [DNS Leak Test](https://browserleaks.com/dns)
+- [WebRTC Leak Test](https://browserleaks.com/webrtc)
+- You can also use the other awesome tools by [browserleaks.com](https://browserleaks.com/)
+
+
+:::warning What this guide won't do for you?
+
+- Provide complete anonymity online.
+- Absolve legal consequences of illegal activities.
+- Address non-digital threats to security.
+- Guarantee the security of third-party services.
+
+:::
+
