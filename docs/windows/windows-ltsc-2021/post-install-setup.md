@@ -257,3 +257,8 @@ Windows Registry Editor Version 5.00
 "ParsingName"="shell:::{018D5C66-4533-4307-9B53-224DE2ED1FE6}"
 "RelativePath"="OneDrive"
 ```
+
+## Install Whatsapp Desktop
+
+Visit [RedrootDEV/WhatsAppDesktop-NoStore](https://github.com/RedrootDEV/WhatsAppDesktop-NoStore/tree/main) repository and download the latest release. Extract it and run the executable as an Administrator. It will download the `msixbundle` and install it for you. It will also update it, if already installed.
+
