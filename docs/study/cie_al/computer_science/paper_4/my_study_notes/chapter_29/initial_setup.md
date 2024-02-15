@@ -27,5 +27,10 @@ consult("your_filename.pl").
 ```
 
 
+## 4. run prolog code
+
+https://youtu.be/-v1K9AnkAeM?si=GkfE-tJIqcY21oyx
+
+follow the first coupe of minutes in this video
 
 
