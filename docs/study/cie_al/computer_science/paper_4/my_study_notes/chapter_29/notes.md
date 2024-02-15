@@ -66,8 +66,8 @@ First, [install swi-prolog](./initial_setup.md) before getting started
 - eg:
     - likes(john, mary).
         - read it as john likes mary
-        - john is a object
-        - mary is a object
+        - john is a object / atom
+        - mary is a object / atom
         - likes is the relationship
         - we can call objects as parameters / arguments (what goes inside brackets)
         - make sure to end it with a full stop
@@ -180,10 +180,12 @@ Item = oranges.
 - make sure to press `;` until everything ends
 - the last item in the list will end with a full stop
 
+- note that `_` is the anonymous variable
+
 ## 4. AND / OR
 
-- and is `;`
-- or is `,`
+- and is `,`
+- or is `;`
 
 ```
 likes(jim, flowers).
@@ -197,7 +199,105 @@ dislikes(jim, apple).
 ```
 
 ```
+- does jim likes flowers OR john likes apples?
+?- likes(jim,flowers); likes(john,apples).
+true .
+- because likes(jim,flowers) is true and likes(john,apples) is false
+
+- does jim likes flowers AND john likes apples?
+?- likes(jim,flowers), likes(john,apples).
+false.
+- because likes(jim,flowers) is true and likes(john,apples) is false
+
+- things both jim and john like in common
+
+?- likes(jim,X).
+X = flowers ;
+X = peanuts ;
+X = mangoes ;
+X = oranges.
+
+?- likes(john,X).
+X = flowers ;
+X = oranges.
+
+?- likes(jim,X), likes(john,X).
+X = flowers ;
+X = oranges.
+
+?- likes(jim,X); likes(john,X).
+X = flowers ;
+X = peanuts ;
+X = mangoes ;
+X = oranges ;
+X = flowers ;
+X = oranges.
+
+- using the anonymous variable
+- john likes only 2 items
+?- likes(john, _).
+true ;
+true.
+
+?- listing(likes).
+likes(jim, flowers).
+likes(john, flowers).
+likes(jim, peanuts).
+likes(jim, mangoes).
+likes(jim, oranges).
+likes(john, oranges).
+likes(jane, oranges).
+
+true.
+```
+
+
+# 1 hour video
+
+## Basics
+
+```
+loves(romeo, juliet). % state that romeo loves juliet
+loves(juliet,romeo) :- loves(romeo, juliet). % basically juliet loves romeo if romeo loves juliet
+```
+
+`:-` means "if"
+
+## Rules
+
+```
+happy(albert).
+happy(alice).
+with_albert(alice).
+
+% rule
+laughs(albert) :-
+    happy(albert).
+
+% rule
+dances(alice) :-
+    happy(alice), % and
+    with_albert(alice).
+
+does_alice_dance :- dances(alice),
+    write('When alice is happy with albert, she dances')
 
 ```
 
 
+```
+?- laughs(albert).
+true.
+
+?- dances(albert).
+false.
+
+?- dances(alice).
+true.
+
+?- does_alice_dance.
+When alice is happy with albert, she dances
+true.
+
+
+```
