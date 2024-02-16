@@ -155,9 +155,16 @@ Now, let's load the knowledge base and run some queries:
     ```
 
 
-## 4. Variables
+### Variables
 
-```
+- Variables start with an uppercase letter.
+- Press `;` button on the keyboard to find additional results until everything is listed, once everything is listed, the final result will end with a `.` (period) and you will be taken back to the prompt. (`;` basically means OR)
+- The last item in the list of results ends with a full stop.
+- Note that `_` is the anonymous variable. Scroll up to the "Does Mary own anything?" example to understand it further.
+
+Consider the following database / knowledge base of likes and dislikes:
+
+```prolog
 likes(jim, flowers).
 likes(jim, peanuts).
 likes(jim, mangoes).
@@ -167,41 +174,33 @@ likes(jane, oranges).
 dislikes(jim, apple).
 ```
 
-```
-- what does john like?
-?- likes(jim, Item).
-Item = flowers ;
-Item = peanuts ;
-Item = mangoes ;
-Item = oranges. % the last item in the list will end with a full stop
+- **Query:** What does John like?
+    ```prolog
+    ?- likes(jim, Item).
+    Item = flowers ;
+    Item = peanuts ;
+    Item = mangoes ;
+    Item = oranges.   % The last item in the list ends with a full stop.
+    ```
 
-- who likes oranges?
-?- likes(Person,oranges).
-Person = jim ;
-Person = john ;
-Person = jane. 
+- **Query:** Who likes oranges?
+    ```prolog
+    ?- likes(Person, oranges).
+    Person = jim ;
+    Person = john ;
+    Person = jane.
+    ```
 
-- who likes what?
-?- likes(Person,Item).
-Person = jim,
-Item = flowers ;
-Person = jim,
-Item = peanuts ;
-Person = jim,
-Item = mangoes ;
-Person = jim,
-Item = oranges ;
-Person = john,
-Item = oranges ;
-Person = jane,
-Item = oranges.
-```
-
-- variables start with uppercase letter
-- make sure to press `;` until everything ends
-- the last item in the list will end with a full stop
-
-- note that `_` is the anonymous variable
+- **Query:** Who likes what?
+    ```prolog
+    ?- likes(Person, Item).       % both are variables
+    Person = jim, Item = flowers ;
+    Person = jim, Item = peanuts ;
+    Person = jim, Item = mangoes ;
+    Person = jim, Item = oranges ;
+    Person = john, Item = oranges ;
+    Person = jane, Item = oranges.
+    ```
 
 ## 4. AND / OR
 
@@ -220,6 +219,18 @@ dislikes(jim, apple).
 ```
 
 ```
+
+?- listing(likes).
+likes(jim, flowers).
+likes(john, flowers).
+likes(jim, peanuts).
+likes(jim, mangoes).
+likes(jim, oranges).
+likes(john, oranges).
+likes(jane, oranges).
+
+true.
+
 - does jim likes flowers OR john likes apples?
 ?- likes(jim,flowers); likes(john,apples).
 true .
@@ -260,16 +271,7 @@ X = oranges.
 true ;
 true.
 
-?- listing(likes).
-likes(jim, flowers).
-likes(john, flowers).
-likes(jim, peanuts).
-likes(jim, mangoes).
-likes(jim, oranges).
-likes(john, oranges).
-likes(jane, oranges).
 
-true.
 ```
 
 
