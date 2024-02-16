@@ -543,4 +543,132 @@ Let's run some queries and observe Prolog's behavior:
 
 ### Recursive Rules
 
+In imperative languages, recursion involves defining a function that calls itself. 
 
+However, in Prolog, recursion involves defining rules where a rule can use itself as a sub-goal.
+
+We aim to define a rule to determine if person A is an ancestor of person B. 
+- This rule states that if A is a parent of B, then A is an ancestor of B. 
+- Furthermore, if person A is the parent of someone (P) who is a parent of B, then A is also an ancestor of B. 
+- This concept extends recursively to include ancestors of ancestors. 
+
+```prolog
+% Base case
+ancestor(A, B) :- parent(A, B). 
+
+% General case
+ancestor(A, B) :- parent(A, X), ancestor(X, B). 
+```
+
+It's crucial to note that recursive rules in declarative programming, including Prolog, must adhere to certain principles similar to those in imperative programming:
+
+- Have a base case.
+- Have a general case.
+- **Reach the base case after a finite number of calls to itself.** 
+    - *(like the max. recursion depth in python)*
+
+- **Query:** Who are the ancestors of jack? (youngest generation)
+    ```
+    ?- ancestor(X,jack).
+    X = fred ;
+    X = dave ;
+    false.
+    ```
+
+- **Query:** Who are the ancestors of fred? (middle generation)
+    ```
+    ?- ancestor(X,fred).
+    X = dave ;
+    false.
+    ```
+
+- **Query:** Who are the ancestors of dave? (eldest generation)
+    ```
+    ?- ancestor(X,dave).
+    false.
+    ```
+
+- **Query:** Who is younger than dave? (eldest generation)
+    ```
+    ?- ancestor(dave,X).
+    X = fred ;
+    X = jack ;
+    X = alia ;
+    X = paul ;
+    false.
+    ```
+
+#### Factorial
+
+I'm not very confident about this part
+
+Below code which goes to the knowledge base is an implementation of the factorial function using recursive rules/goals in prolog.
+
+```porlog
+factorial(0, 1).
+factorial(N, Result) :-
+    M is N - 1,
+    factorial(M, PartResult),
+    Result is PartResult * N.
+```
+
+- **Query:** 
+```prolog
+?- factorial(5,X).
+X = 120 ;
+;;ERROR: Stack limit (1.0Gb) exceeded
+ERROR:   Stack sizes: local: 0.9Gb, global: 77.8Mb, trail: 0Kb
+ERROR:   Stack depth: 10,190,797, last-call: 0%, Choice points: 3
+ERROR:   Possible non-terminating recursion:
+ERROR:     [10,190,797] user:factorial(-10190782, _20385830)
+ERROR:     [10,190,796] user:factorial(-10190781, _20385850)
+```
+
+- **Query:** 
+```prolog
+?- factorial(120,X).
+X = 6689502913449127057588118054090372586752746333138029810295671352301633557244962989366874165271984981308157637893214090552534408589408121859898481114389650005964960521256960000000000000000000000000000 ;
+ERROR: Stack limit (1.0Gb) exceeded
+ERROR:   Stack sizes: local: 0.9Gb, global: 77.8Mb, trail: 0Kb
+ERROR:   Stack depth: 10,190,327, last-call: 0%, Choice points: 3
+ERROR:   In:
+ERROR:     [10,190,327] user:factorial(-10190197, _20390728)
+ERROR:     [10,190,326] user:factorial(-10190196, _20390748)
+ERROR:     [10,190,325] user:factorial(-10190195, _20390768)
+ERROR:     [10,190,324] user:factorial(-10190194, _20390788)
+ERROR:     [10,190,323] user:factorial(-10190193, _20390808)
+ERROR: 
+ERROR: Use the --stack_limit=size[KMG] command line option or
+ERROR: ?- set_prolog_flag(stack_limit, 2_147_483_648). to double the limit.
+```
+
+
+- **Query:** 
+```prolog
+?- factorial(5,X).
+X = 120 ;
+ERROR: Stack limit (1.0Gb) exceeded
+ERROR:   Stack sizes: local: 0.9Gb, global: 77.8Mb, trail: 0Kb
+ERROR:   Stack depth: 10,190,925, last-call: 0%, Choice points: 3
+ERROR:   Possible non-terminating recursion:
+ERROR:     [10,190,925] user:factorial(-10190910, _20384088)
+ERROR:     [10,190,924] user:factorial(-10190909, _20384108)
+```
+
+- **Query:** 
+```prolog
+?- factorial(X,5).
+ERROR: Arguments are not sufficiently instantiated
+ERROR: In:
+ERROR:   [10] factorial(_1382,5)
+ERROR:    [9] toplevel_call(user:user: ...) at /usr/lib/swi-prolog/boot/toplevel.pl:1158
+```
+
+- **Query:** 
+```prolog
+?- factorial(X,120).
+ERROR: Arguments are not sufficiently instantiated
+ERROR: In:
+ERROR:   [10] factorial(_4868,120)
+ERROR:    [9] toplevel_call(user:user: ...) at /usr/lib/swi-prolog/boot/toplevel.pl:1158
+```
