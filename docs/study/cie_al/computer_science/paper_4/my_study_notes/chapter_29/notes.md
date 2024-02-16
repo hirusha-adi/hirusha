@@ -605,11 +605,11 @@ I'm not very confident about this part
 Below code which goes to the knowledge base is an implementation of the factorial function using recursive rules/goals in prolog.
 
 ```porlog
-factorial(0, 1).
-factorial(N, Result) :-
-    M is N - 1,
-    factorial(M, PartResult),
-    Result is PartResult * N.
+factorial(0, 1).                % base case: 0! = 1
+factorial(N, Result) :-         % Result = N!
+    M is N - 1,                 % assign N-1 to M
+    factorial(M, PartResult),   % PartResult = (N-1)!
+    Result is PartResult * N.   % Result = N * (N-1)!
 ```
 
 - **Query:** 
