@@ -212,7 +212,7 @@ In Prolog:
 
 Consider the updated database of likes and dislikes:
 
-```
+```prolog
 likes(jim, flowers).
 likes(john, flowers). % Added this new line.
 likes(jim, peanuts).
@@ -224,7 +224,7 @@ dislikes(jim, apple).
 ```
 
 - **Query:** Listing all likes:
-    ```
+    ```prolog
     ?- listing(likes).
     likes(jim, flowers).
     likes(john, flowers).
@@ -237,21 +237,21 @@ dislikes(jim, apple).
     ```
 
 - **Query:** Does Jim like flowers OR does John like apples?
-    ```
+    ```prolog
     ?- likes(jim, flowers); likes(john, apples).
     true.
     ```
     Explanation: `likes(jim, flowers)` is true, and `likes(john, apples)` is false.
 
 - **Query:** Does Jim like flowers AND does John like apples?
-    ```
+    ```prolog
     ?- likes(jim, flowers), likes(john, apples).
     false.
     ```
     Explanation: `likes(jim, flowers)` is true, but `likes(john, apples)` is false, so the conjunction is false.
 
 - **Query:** Things both Jim and John like in common:
-    ```
+    ```prolog
     ?- likes(jim,X).
     X = flowers ;
     X = peanuts ;
@@ -269,7 +269,7 @@ dislikes(jim, apple).
     Explanation: Both Jim and John like flowers and oranges.
 
 - **Query:** Using the anonymous variable:
-    ```
+    ```prolog
     ?- likes(john, _).
     true ;
     true.
@@ -277,53 +277,160 @@ dislikes(jim, apple).
     Explanation: John likes only two items.
 
 
+### Basic Rules
 
-# 1 hour video
+Rules are logical statements defining conditions and conclusions.
 
-## Basics
+In Prolog, `:-` means "if".
 
+
+```prolog
+% Fact: Romeo loves Juliet.
+loves(romeo, juliet).
+
+% Rule: Juliet loves Romeo if Romeo loves Juliet.
+loves(juliet, romeo) :- loves(romeo, juliet).
 ```
-loves(romeo, juliet). % state that romeo loves juliet
-loves(juliet,romeo) :- loves(romeo, juliet). % basically juliet loves romeo if romeo loves juliet
-```
 
-`:-` means "if"
+Additional rules and facts:
 
-## Rules
-
-```
+```prolog
+% Facts: Albert and Alice are happy.
 happy(albert).
 happy(alice).
+
+% Fact: Alice is with Albert.
 with_albert(alice).
 
-% rule
+% Rule: Albert laughs if he is happy.
 laughs(albert) :-
     happy(albert).
 
-% rule
+% Rule: Alice dances if she is happy and with Albert.
 dances(alice) :-
-    happy(alice), % and
+    happy(alice), % "and"
     with_albert(alice).
 
-does_alice_dance :- dances(alice),
-    write('When alice is happy with albert, she dances')
-
+% Rule: Alice does dance if she dances.
+does_alice_dance :- 
+    dances(alice),
+    write('When Alice is happy with Albert, she dances'). % like print() in python
 ```
 
+- **Query:** Does albert laugh?
+    ```prolog
+    ?- laughs(albert).
+    true.
+    ```
+- **Query:** Does albert dance?
+    ```prolog
+    ?- dances(albert).
+    false.
+    ```
+    Explanation: This is false because `dances` is written explicitly for alice only. If we want it to work with anything, we can use variables. More on that later.
+
+
+- **Query:** Does alice dance?
+    ```prolog
+    ?- dances(alice).
+    true.
+    ```
+
+- **Query:** Does alice dance?
+    ```prolog
+    ?- does_alice_dance.
+    When Alice is happy with Albert, she dances
+    true.
+    ```
+
+### Advanced Rules
+
+Consider this family tree example:
+
+![img1](./images/img1.png)
+
+It can be written as follows in the database:
+
+```prolog
+% Facts to define the family tree
+parent(fred, jack). % fred is the parent of jack
+parent(fred, alia).
+parent(fred, paul).
+parent(dave, fred).
+```
+
+We know that G is a grandparent of S, if G is a parent of P and P is a parent of S. We could write this as a rule: (Note that we introduced a temporary variable P which is being used within the rule)
+
+```prolog
+% grandparent(G, S) IF parent(G, P) AND parent(P, S).
+grandparent(G, S) :- parent(G, P), parent(P, S).
+```
+
+A person has a sibling (brother or sister) if they have the same parent. We can write this as the Prolog rule:
 
 ```
-?- laughs(albert).
-true.
-
-?- dances(albert).
-false.
-
-?- dances(alice).
-true.
-
-?- does_alice_dance.
-When alice is happy with albert, she dances
-true.
-
-
+sibling(A, B) :-
+    parent(P, A),   % and
+    parent(P, B).
 ```
+
+- **Query:** Jack is the grandparent of whom?
+    ```prolog
+    ?- grandparent(jack, X).
+    false.
+    ```
+    Explanation: Jack is not a grandparent as he is in the youngest generation of the family tree.
+
+- **Query:** Who is the grandparent of jack?
+    ```prolog
+    ?- grandparent(X, jack).
+    X = dave.
+    ```
+
+- **Query:** Dave is the grandparent of whom?
+    ```prolog
+    ?- grandparent(dave, X).
+    X = jack ;
+    X = alia ;
+    X = paul.
+    ```
+
+- **Query:** Who are the siblings of Jack?
+    ```prolog
+    ?- sibling(X, fred).
+    X = fred.
+    ```
+    Note: We get that fred is his own sibling
+
+- **Query:** Who are the siblings of Paul?
+    ```prolog
+    ?- sibling(X, paul).
+    X = jack ;
+    X = alia ;
+    X = paul.
+    ```
+    Note: We get the answers we expect, but we also get the answer that Paul is his own sibling.
+
+Note: in the last 2 examples, the part of our query is also returned in the answer/result. To fix it, we can modify the code as follows:
+
+```prolog
+sibling(A, B) :-
+    parent(P, A),
+    parent(P, B),
+    not(A=B).       % will stop giving the question itself as an answer
+```
+
+Running the last two quries once again:
+
+- **Query:** Who are the siblings of Jack?
+    ```prolog
+    ?- sibling(X, fred).
+    false.
+    ```
+
+- **Query:** Who are the siblings of Paul?
+    ```prolog
+    ?- sibling(X, paul).
+    X = jack ;
+    X = alia.
+    ```
