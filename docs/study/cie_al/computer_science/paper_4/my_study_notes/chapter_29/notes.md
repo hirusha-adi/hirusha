@@ -202,14 +202,19 @@ dislikes(jim, apple).
     Person = jane, Item = oranges.
     ```
 
-## 4. AND / OR
+### AND / OR / NOT
 
-- and is `,`
-- or is `;`
+In Prolog:
+
+- **AND** is represented by `,`.
+- **OR** is represented by `;`.
+- **NOT** is represented by `not`.
+
+Consider the updated database of likes and dislikes:
 
 ```
 likes(jim, flowers).
-likes(john, flowers). % added this new line
+likes(john, flowers). % Added this new line.
 likes(jim, peanuts).
 likes(jim, mangoes).
 likes(jim, oranges).
@@ -218,61 +223,59 @@ likes(jane, oranges).
 dislikes(jim, apple).
 ```
 
-```
+- **Query:** Listing all likes:
+    ```
+    ?- listing(likes).
+    likes(jim, flowers).
+    likes(john, flowers).
+    likes(jim, peanuts).
+    likes(jim, mangoes).
+    likes(jim, oranges).
+    likes(john, oranges).
+    likes(jane, oranges).
+    true.
+    ```
 
-?- listing(likes).
-likes(jim, flowers).
-likes(john, flowers).
-likes(jim, peanuts).
-likes(jim, mangoes).
-likes(jim, oranges).
-likes(john, oranges).
-likes(jane, oranges).
+- **Query:** Does Jim like flowers OR does John like apples?
+    ```
+    ?- likes(jim, flowers); likes(john, apples).
+    true.
+    ```
+    Explanation: `likes(jim, flowers)` is true, and `likes(john, apples)` is false.
 
-true.
+- **Query:** Does Jim like flowers AND does John like apples?
+    ```
+    ?- likes(jim, flowers), likes(john, apples).
+    false.
+    ```
+    Explanation: `likes(jim, flowers)` is true, but `likes(john, apples)` is false, so the conjunction is false.
 
-- does jim likes flowers OR john likes apples?
-?- likes(jim,flowers); likes(john,apples).
-true .
-- because likes(jim,flowers) is true and likes(john,apples) is false
+- **Query:** Things both Jim and John like in common:
+    ```
+    ?- likes(jim,X).
+    X = flowers ;
+    X = peanuts ;
+    X = mangoes ;
+    X = oranges.
 
-- does jim likes flowers AND john likes apples?
-?- likes(jim,flowers), likes(john,apples).
-false.
-- because likes(jim,flowers) is true and likes(john,apples) is false
+    ?- likes(john,X).
+    X = flowers ;
+    X = oranges.
+    
+    ?- likes(jim, X), likes(john, X).
+    X = flowers ;
+    X = oranges.
+    ```
+    Explanation: Both Jim and John like flowers and oranges.
 
-- things both jim and john like in common
+- **Query:** Using the anonymous variable:
+    ```
+    ?- likes(john, _).
+    true ;
+    true.
+    ```
+    Explanation: John likes only two items.
 
-?- likes(jim,X).
-X = flowers ;
-X = peanuts ;
-X = mangoes ;
-X = oranges.
-
-?- likes(john,X).
-X = flowers ;
-X = oranges.
-
-?- likes(jim,X), likes(john,X).
-X = flowers ;
-X = oranges.
-
-?- likes(jim,X); likes(john,X).
-X = flowers ;
-X = peanuts ;
-X = mangoes ;
-X = oranges ;
-X = flowers ;
-X = oranges.
-
-- using the anonymous variable
-- john likes only 2 items
-?- likes(john, _).
-true ;
-true.
-
-
-```
 
 
 # 1 hour video
