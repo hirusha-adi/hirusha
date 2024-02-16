@@ -9,6 +9,10 @@ First, [install swi-prolog](./initial_setup) before getting started
 
 ## Logic Programming
 
+Programming Languages:
+- Imperative Languages
+- Declarative Languages
+
 ### Introduction
 
 Consider the following example:
@@ -434,3 +438,109 @@ Running the last two quries once again:
     X = jack ;
     X = alia.
     ```
+
+### Instantiation and backtracking
+
+Watch this video to learn more:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AmWf6SeFmqc?si=ytVWrmpIu38DbCrq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+In Prolog, when a query is made, Prolog responds with an answer, typically represented as X = Value. However, it's important to note that the = sign in Prolog does not signify assignment as in imperative programming languages; rather, it indicates instantiation. 
+
+Basically, 
+
+Prolog uses the knowledge base to arrive at answers through a process that can be observed using the graphical debugger or by typing trace. in the Prolog environment. By stepping through the program using the space bar, one can observe Prolog's execution flow.
+
+During this process, several key terms are used to describe Prolog's behavior:
+
+- **Call:** Represents the initial entry into a predicate.
+- **Creep:** Indicates Prolog's movement to the next predicate during execution.
+- **Exit:** Signifies a successful return from a predicate.
+- **Redo:** Indicates that Prolog is attempting to backtrack into a predicate to find another answer.
+- **Fail:** Indicates that Prolog has exhausted all possible solutions and cannot find any more.
+
+Using the graphical debugger or tracing in the Prolog environment provides insight into how Prolog utilizes the knowledge base to arrive at solutions and how it navigates through the search space using backtracking to explore alternative paths.
+
+First, run `trace.` 
+
+```prolog
+?- trace.
+true.
+```
+
+Then, run your query. In Windows, a seperate graphical debugger window will be opened, but not in Linux.
+
+```
+[trace]  ?- sibling(X, paul).
+   Call: (10) sibling(_4360, paul) ? creep
+   Call: (11) parent(_5550, _4360) ? creep
+   Exit: (11) parent(fred, jack) ? creep
+   Call: (11) parent(fred, paul) ? creep
+   Exit: (11) parent(fred, paul) ? creep
+^  Call: (11) not(jack=paul) ? creep
+^  Exit: (11) not(user:(jack=paul)) ? creep
+   Exit: (10) sibling(jack, paul) ? creep
+X = jack .
+```
+
+Graphical Debugger Window in Microsoft Windows:
+
+![img2](images/img2.png)
+
+<details>
+<summary>Another example:</summary>
+
+Consider the following knowledge base:
+
+```prolog
+likes(john, apples).
+likes(john, bananas).
+likes(mary, bananas).
+likes(mary, oranges).
+```
+
+Let's run some queries and observe Prolog's behavior:
+
+1. **Query:** Who likes apples?
+
+    ```prolog
+    ?- likes(Person, apples).
+    Person = john ;
+    false.
+    ```
+
+    Explanation:
+    - Prolog responds with `Person = john`, indicating that John likes apples.
+    - Pressing `;` allows Prolog to backtrack and explore alternative solutions. However, in this case, there are no more solutions, so Prolog responds with `false`.
+
+2. **Query:** Does John like any fruit?
+
+    ```prolog
+    ?- likes(john, Fruit).
+    Fruit = apples ;
+    Fruit = bananas ;
+    false.
+    ```
+
+    Explanation:
+    - Prolog responds with `Fruit = apples` and `Fruit = bananas`, indicating that John likes apples and bananas.
+    - Pressing `;` allows Prolog to backtrack and explore alternative solutions. However, in this case, there are no more solutions, so Prolog responds with `false`.
+
+3. **Query:** Who likes bananas and oranges?
+
+    ```prolog
+    ?- likes(Person, bananas), likes(Person, oranges).
+    Person = mary ;
+    false.
+    ```
+
+    Explanation:
+    - Prolog responds with `Person = mary`, indicating that Mary likes both bananas and oranges.
+    - Pressing `;` allows Prolog to backtrack and explore alternative solutions. However, in this case, there are no more solutions, so Prolog responds with `false`.
+
+</details>
+
+
+### Recursive Rules
+
+
