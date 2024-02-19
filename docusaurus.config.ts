@@ -160,7 +160,8 @@ const config: Config = {
         'rust',
         'toml',
         'protobuf',
-        'prolog'
+        'prolog',
+        'diff'
       ],
       defaultLanguage: 'javascript',
       magicComments: [
