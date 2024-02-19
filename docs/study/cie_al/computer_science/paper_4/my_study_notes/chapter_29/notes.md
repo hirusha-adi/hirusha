@@ -600,9 +600,9 @@ It's crucial to note that recursive rules in declarative programming, including 
 
 #### Factorial
 
-I'm not very confident about this part
+Below code which goes to the knowledge base is an implementation of the factorial function using recursive rules/goals in prolog taken from the text book. 
 
-Below code which goes to the knowledge base is an implementation of the factorial function using recursive rules/goals in prolog.
+This is **erroneous**. 
 
 ```porlog
 factorial(0, 1).                % base case: 0! = 1
@@ -612,63 +612,85 @@ factorial(N, Result) :-         % Result = N!
     Result is PartResult * N.   % Result = N * (N-1)!
 ```
 
-- **Query:** 
-```prolog
-?- factorial(5,X).
-X = 120 ;
-;;ERROR: Stack limit (1.0Gb) exceeded
-ERROR:   Stack sizes: local: 0.9Gb, global: 77.8Mb, trail: 0Kb
-ERROR:   Stack depth: 10,190,797, last-call: 0%, Choice points: 3
-ERROR:   Possible non-terminating recursion:
-ERROR:     [10,190,797] user:factorial(-10190782, _20385830)
-ERROR:     [10,190,796] user:factorial(-10190781, _20385850)
+- **Query:** What is the factorial of 5?
+    ```prolog
+    ?- factorial(5,X).
+    X = 120 ;
+    ;;ERROR: Stack limit (1.0Gb) exceeded
+    ERROR:   Stack sizes: local: 0.9Gb, global: 77.8Mb, trail: 0Kb
+    ERROR:   Stack depth: 10,190,797, last-call: 0%, Choice points: 3
+    ERROR:   Possible non-terminating recursion:
+    ERROR:     [10,190,797] user:factorial(-10190782, _20385830)
+    ERROR:     [10,190,796] user:factorial(-10190781, _20385850)
+    ```
+
+But, how can we fix it? Let's add this new line:
+
+```diff
+ factorial(0, 1).                % base case: 0! = 1
+ factorial(N, Result) :-         % Result = N!
++    N > 0,                      % Set limit so it doesnt go down and halt
+     M is N - 1,                 % assign N-1 to M
+     factorial(M, PartResult),   % PartResult = (N-1)!
+     Result is PartResult * N.   % Result = N * (N-1)!
 ```
 
-- **Query:** 
+This is what our working code looks like now:
+
 ```prolog
-?- factorial(120,X).
-X = 6689502913449127057588118054090372586752746333138029810295671352301633557244962989366874165271984981308157637893214090552534408589408121859898481114389650005964960521256960000000000000000000000000000 ;
-ERROR: Stack limit (1.0Gb) exceeded
-ERROR:   Stack sizes: local: 0.9Gb, global: 77.8Mb, trail: 0Kb
-ERROR:   Stack depth: 10,190,327, last-call: 0%, Choice points: 3
-ERROR:   In:
-ERROR:     [10,190,327] user:factorial(-10190197, _20390728)
-ERROR:     [10,190,326] user:factorial(-10190196, _20390748)
-ERROR:     [10,190,325] user:factorial(-10190195, _20390768)
-ERROR:     [10,190,324] user:factorial(-10190194, _20390788)
-ERROR:     [10,190,323] user:factorial(-10190193, _20390808)
-ERROR: 
-ERROR: Use the --stack_limit=size[KMG] command line option or
-ERROR: ?- set_prolog_flag(stack_limit, 2_147_483_648). to double the limit.
+factorial(0, 1).                % base case: 0! = 1
+factorial(N, Result) :-         % Result = N!
+    N > 0,                      % Set limit
+    M is N - 1,                 % assign N-1 to M
+    factorial(M, PartResult),   % PartResult = (N-1)!
+    Result is PartResult * N.   % Result = N * (N-1)!
 ```
 
+Running all of our queries once again:
 
-- **Query:** 
+- **Query:** What is the factorial of 5?
+    ```prolog
+    ?- factorial(5,X).
+    X = 120 .           % we pressed `Enter` or `.` instead of `;`
+    ```
+
+- **Query:** Factorial of what gives an answer of 120?
+    ```prolog
+    ?- factorial(X,120).
+    ERROR: Arguments are not sufficiently instantiated
+    ERROR: In:
+    ERROR:   [10] factorial(_4868,120)
+    ERROR:    [9] toplevel_call(user:user: ...) at /usr/lib/swi-prolog/boot/toplevel.pl:1158
+    ```
+
+    This still does **not** work to get reverse factorial.
+
+#### Reverse Factorial
+
+To calculate the reverse factorial, we cannot use this same function. We can use the code below instead:
+
 ```prolog
-?- factorial(5,X).
-X = 120 ;
-ERROR: Stack limit (1.0Gb) exceeded
-ERROR:   Stack sizes: local: 0.9Gb, global: 77.8Mb, trail: 0Kb
-ERROR:   Stack depth: 10,190,925, last-call: 0%, Choice points: 3
-ERROR:   Possible non-terminating recursion:
-ERROR:     [10,190,925] user:factorial(-10190910, _20384088)
-ERROR:     [10,190,924] user:factorial(-10190909, _20384108)
+% reverse_factorial/2 is the main predicate that takes a factorial value F and returns the corresponding number N.
+reverse_factorial(F, N) :-
+    reverse_factorial(F, 2, N).     % Call the helper predicate with an initial divisor of 2 and the given factorial value F.
+
+% reverse_factorial/3 is a helper predicate that finds the smallest number N for which N! = F.
+reverse_factorial(1, N, N) :- 
+    true. % Base case: if F is 1, then the result is N.
+
+reverse_factorial(F, X, N) :-
+    F > 1,  % If F is greater than 1 and divisible by X, continue with the next divisor.
+    F mod X =:= 0,
+    NextX is X + 1,
+    NewF is F / X,
+    reverse_factorial(NewF, NextX, N).  % Recursively call reverse_factorial with the updated factorial and divisor.
 ```
 
-- **Query:** 
-```prolog
-?- factorial(X,5).
-ERROR: Arguments are not sufficiently instantiated
-ERROR: In:
-ERROR:   [10] factorial(_1382,5)
-ERROR:    [9] toplevel_call(user:user: ...) at /usr/lib/swi-prolog/boot/toplevel.pl:1158
-```
+- **Query:** Factorial of what gives an answer of 120?
+    ```prolog
+    ?- reverse_factorial(120, N).
+    N = 5.
+    ```
 
-- **Query:** 
-```prolog
-?- factorial(X,120).
-ERROR: Arguments are not sufficiently instantiated
-ERROR: In:
-ERROR:   [10] factorial(_4868,120)
-ERROR:    [9] toplevel_call(user:user: ...) at /usr/lib/swi-prolog/boot/toplevel.pl:1158
-```
+Note: We cannot use the same function to find the base of a given factorial, the Input/Output direction and the nature of calculation is different
+
