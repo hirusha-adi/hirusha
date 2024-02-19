@@ -2,4 +2,6 @@
 
 ## [Notes](notes)
 
+## [Installation Guide](initial_setup)
+
 ## [ESQ](esq)
