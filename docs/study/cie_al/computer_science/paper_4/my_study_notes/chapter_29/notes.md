@@ -62,7 +62,7 @@ Prolog was created in 1970 and has been used in relational databases, design aut
 3. **Rule**: Logical statement defining conditions and conclusions.
 4. **Predicate**: Named relation or property defined by rules or facts.
 5. **Variable**: Placeholder for values, instantiated during execution.
-6. **Query**: Goal or question posed to Prolog for solution.
+6. **Query / Goal**: Goal or question posed to Prolog for solution.
 
 <details>
 
@@ -694,3 +694,121 @@ reverse_factorial(F, X, N) :-
 
 Note: We cannot use the same function to find the base of a given factorial, the Input/Output direction and the nature of calculation is different
 
+## Lists
+
+Lists in Prolog are manipulated by separating the head from the tail using a vertical line (a bar): `|`. For example, `[H|T]` represents a list with head `H` and tail `T`. 
+
+When Prolog matches `[H|T]` to `[car, lorry, boat, ship]`, it instantiates `H` to `car` and `T` to `[lorry, boat, ship]`.
+
+### Head and Tail
+
+Add this to your knowledge base:
+
+```prolog
+showHeadAndTail([H|T], H, T).
+```
+
+- **Query:** What is the head and which part belongs to the tail of the list: `[fred, jack, emma]`.
+    ```prolog
+    ?- showHeadAndTail([fred, jack, emma], Head, Tail).
+    Head = fred,
+    Tail = [jack, emma].
+    ```
+
+Similiarly, when the list is already added to the knowledge base as follows:
+
+```prolog
+myList([1,2,3]).
+```
+
+**Query:** What is the head and the tail of the list (myList) that is already defined in our knowledge base:
+    ```prolog
+    ?- myList([H|T]).
+    H = 1,
+    T = [2, 3].
+    ``` 
+
+### Empty List
+
+`myList` is an empty list:
+
+```prolog
+myList([])
+```
+
+To check if a list is empty, add this rule to your knowledge base:
+
+```prolog
+%   true    IF A is empty
+emptyList(A) :- A = [].
+```
+
+**Query:** Is `[]` an empty list?
+    ```prolog
+    ?- emptyList([]).
+    true.
+    ```
+
+**Query:** Is `[5]` an empty list?
+    ```prolog
+    ?- emptyList([5]).
+    false.
+    ```
+
+**Query:** Is `[1,2,3,4,5,6,7,8,9]` an empty list?
+    ```prolog
+    ?- emptyList([1,2,3,4,5,6,7,8,9]).
+    false.
+    ```
+
+### Append
+
+The **built-in** predicate `append(A, B, C)` joins list `A` and list `B` to produce list `C`.
+
+You don't need to have `append` in the knowledge base as it's built-in to prolog.
+
+Let's consider the example below. 
+
+
+- **Query:** Combine `[a,b]` and `[c,d]` and produce to the `MyList` variable:
+    ```prolog
+    ?- append([a, b], [c, d], MyList).
+    MyList = [a, b, c, d].
+    ```
+
+- **Query:** `[a,b,c,d]` is the final list and its made when `FirstPart` and `[c, d]` is joined together. Find `FirstPart`:
+    ```prolog
+    ?- append(FirstPart, [c, d], [a,b,c,d]).
+    FirstPart = [a, b] ;
+    false.
+    ```
+
+- **Query:** `[a,b,c,d]` is the final list and its made when `[a,b]` and `LastPart` is joined together. Find `LastPart`: 
+    ```prolog
+    ?- append([a,b], LastPart, [a,b,c,d]).
+    LastPart = [c, d].
+    ```
+
+### Member
+
+The built-in predicate `member(A, B)` returns true if item `A` is in list `B`.
+
+You don't need to have `member` in the knowledge base as it's built-in to prolog.
+
+Let's consider the example below. 
+
+- **Query:** is `c` a member of `[a, b, c, d, e]`?
+    ```prolog
+    ?- member(c, [a, b, c, d, e]).
+    true ;
+    false.
+    ```
+
+- **Query:** All the members/elements of our list:
+    ```prolog
+    ?- member(X,[a, b, c, d]).
+    X = a ;
+    X = b ;
+    X = c ;
+    X = d.
+    ```
