@@ -5,4 +5,162 @@ slug: notes
 sidebar_position: 1
 ---
 
-## To be completed
+- Protocols
+    - why are protocols used?
+        - protocols set standards for communication
+        - protocols enable compatibility between devices from different manufacturers
+        - it two devices were sending messages to each other, but using different protocols, they would not be able to communicate properly
+    - four layers of the protocol suite:
+        - application layer
+            - protocols used:
+                - http/https
+                    - used for transfer of web pages from server to client
+                    - for sending and recieving web pages / hypertext documents
+                - ftp
+                    - used for interactive file transfer
+                    - for sending and recieving files over a network / between devices
+                - smtp
+                    - used for sending email messages
+                    - for sending / uploading emails / push protocol
+                - pop3/imap
+                    - description/function:
+                        - used for retrieval of email messages
+                        - for recieving/downloading emails / pull protocol
+                    - purpose:
+                        - used by email clients to retrieve email messages (pull protocol)
+                        - from a mail server (over a TCP/IP connection)
+                        - keeps the server and client in sync (by not deleting the original email)
+                        - allows a cop of the email to be downloaded from the mail server.
+        - transport layer
+            - description/function:
+                - short 
+                    - handles packets
+                - long
+                    - the Transport Layer breaks data into managable packets / performs segmentation
+                    - it adds a packet header
+                    - it recieved data from the application layer
+                    - it sends the packets to the network layer
+                    - it controls the flow of packets
+                    - it handles the packet loss / corruption
+            - protocols used:
+                - SSL (Secure Sockets Layer) and TLS (Transport Layer Security):
+                    - purpose?
+                        - the ssl and tls protocols provide communications securely over the network
+                        - they provide encryption
+                        - they enable two parties to identify and authenticate each other
+                        - and communicate with confidentiality and integrity
+                    - how it's used in client-server communication?
+                        - a ssl/tls connection is initiated by an application
+                        - which becomes the client
+                        - the application which recieves the connection becomes the server
+                        - every new sessions begins with a handshake (as defined by the protocols)
+                        - server sends the digital certificate to the client
+                        - the client vertifies the server's digital certificate
+                        - and obtains the server's public key
+                        - the encryption algorithms are agreed
+                        - the symmetric sessions keys are generated / defined
+        - internet layer
+            - description/function:
+                - short
+                    - handles transmission of data using IP Addresses 
+                    - provides best (optimal) route
+                - long
+                    - the internet layer identified the intended network and host
+                    - it transmits packets to the data link layer / physical layer
+                    - it routes the packets independetly throught the optimum route
+                    - i addresses packets with their source and destination IP addresses
+                    - it then uses an IP address and port number to form a socket
+        - link layer / physical layer
+            - description/function:
+                - handles how data is physically sent
+
+    - bit torrent protocol
+        - what network model?
+            - peer to peer
+        - use?
+            - file sharing
+        - how it works?
+            - BitTorrent client software made available
+            - a computer joins a swarmby using this to load a torrent descriptor file
+            - a server called a tracker that keeps records of all the computers in the swarm
+            - and shares their IP addresses allowing them to connect to each other
+            - one computer in the swarm must have a complete copy of the torrent to be shared
+            - torrent is split into small pieces
+            - pices of the torrent are both downloaded and uploaded
+            - once a computer has a peiceit can become a seed and upload
+            - leeches download much more than they upload
+
+- transmitting data
+    - circuit swithing
+        - how it works?
+            - a dedicated circuit
+            - curcuit is established before transmission starts
+            - data is transferred using the whole bandwidth
+            - all data is tranferred over the same route
+            - curcuit is released after transmission ends
+        - when to use?
+            - this is to be used where a dedicated path needs to be sustained throughout the call / communication
+            - where the whole bandwidth is required
+            - where real time communication is used
+            - a typical application is standard voice communications / video streaming
+        - good:
+            - frames (data) arrive in order and do not need the reassembled
+            - whole of bandwidth is available
+            - dedicated communication channel increases the quality of transmission
+            - data is transmitted with a fixed data rate
+            - no waiting time at switches
+            - suitable for long continuous communication
+            - fast method of data transfer
+            - data arrives in the same order it was sent
+            - data can't get lost
+            - data all follows the same route
+            - better for real time
+            - simple method of transfer
+        - bad:
+            - nobody else can use the same circuit even if it is idle
+            - less secure as only one route used
+    - packet switching
+        - benefit:
+            - accuracy
+                - ensures accurate delivery of the message
+            - completeness
+                - missing packets can be easily detected and re-send request sent so the message arrives complete
+            - resilience 
+                - if a network changes the router can detect this and send the data another way to ensure it arrives
+            - path also available to other users
+            - does not use the whole bandwidth
+            - allows simultaneous use of channel by multiple users
+            - better security as packets hashed and sent by different routes
+        - drawbacks:
+            - time delays to correct errors
+            - network problems may introduce errors in packets
+            - required complex protocols for delivery
+            - unsuitable for realtime transmission applications
+            - time takes to re-assemble packets at the destination
+        - how it works?
+            - long answer
+                - a large message is divided up into a group of smaller chunks of the same size called packets
+                - the packet has a header and a payload
+                - the header contains a source IP, destination IP and a sequence number
+                - each packet is dispatches independently
+                - and may travel along different routes
+                - the packets may arrive out of order
+                - and are re-assembled into the original message at the destination
+                - if packets are missing / curropted, a re-transmission request is sent
+            - short answer
+                - data is split into packets
+                - each packet is given it's own route
+                - the routing for apcket depends on the congestion
+                - packets may not arrive in the given order
+        - what the router does? / role of the router?
+            - the router examines the packet's header
+            - it reads the IP address of the destination (from the packet header)
+            - a router has access to a routing table
+            - containing information about:
+                - available hops
+                - netmask
+                - gateways
+                - etc...
+            - and the status of the routes along the route
+            - the router decides on the best route (next hop)
+            - and sends the packet on its next hop. 
