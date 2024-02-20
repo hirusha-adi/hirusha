@@ -1,4 +1,4 @@
-# My Revision Notes
+# My Study Notes
 
 :::info NOTE
 
@@ -6,7 +6,7 @@ These also include Exam Style Questions at the end of each chapter
 
 :::
 
-## Click on the lesson you want to start exploring my revision notes
+## Click on the lesson you want to start exploring my study notes
 
 17. [Communication and Internet technologies](chapter_17)
 
