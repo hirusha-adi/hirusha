@@ -26,11 +26,10 @@ Inside the prolog application, enter this to load everything in your file to run
 consult("your_filename.pl").
 ```
 
+### Windows
 
-## 4. run prolog code
+Just download the setup and install it.
 
 https://youtu.be/-v1K9AnkAeM?si=GkfE-tJIqcY21oyx
 
-follow the first coupe of minutes in this video
-
-
+Maybe watch the first couple of minutes of this video to learn how to consult your knowledge base and get stuff done with the GUI and stuff. I don't know.
