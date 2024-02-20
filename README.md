@@ -89,6 +89,12 @@ Set your Git user credentials using the following command:
 set GIT_USER=hirusha-adi
 ```
 
+Use the command below if you are using linux:
+
+```bash
+export GIT_USER="hirusha-adi"
+```
+
 Replace `hirusha-adi` with your actual Git username.
 
 **Step 3: Deploy to GitHub Pages**
