@@ -1,4 +1,6 @@
 # Chapter 17 - Communication and Internet technologies
 
-## [Notes](notes)
+## [9618](9618)
+## [9608](9608)
+## [both](both)
 
