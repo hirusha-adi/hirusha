@@ -10,7 +10,7 @@ sidebar_position: 1
         - protocols set standards for communication
         - protocols enable compatibility between devices from different manufacturers
         - it two devices were sending messages to each other, but using different protocols, they would not be able to communicate properly
-    - four layers of the protocol suite:
+    - four layers of the protocol suite of TCP/IP Model (not the [OSI Model](https://security.stackexchange.com/questions/93333/what-layer-is-tls), it's different):
         - application layer
             - protocols used:
                 - http/https
@@ -92,18 +92,7 @@ sidebar_position: 1
 
 - transmitting data
     - circuit swithing
-        - how it works?
-            - a dedicated circuit
-            - curcuit is established before transmission starts
-            - data is transferred using the whole bandwidth
-            - all data is tranferred over the same route
-            - curcuit is released after transmission ends
-        - when to use?
-            - this is to be used where a dedicated path needs to be sustained throughout the call / communication
-            - where the whole bandwidth is required
-            - where real time communication is used
-            - a typical application is standard voice communications / video streaming
-        - good:
+    - good:
             - frames (data) arrive in order and do not need the reassembled
             - whole of bandwidth is available
             - dedicated communication channel increases the quality of transmission
@@ -119,6 +108,17 @@ sidebar_position: 1
         - bad:
             - nobody else can use the same circuit even if it is idle
             - less secure as only one route used
+        - how it works?
+            - a dedicated circuit
+            - curcuit is established before transmission starts
+            - data is transferred using the whole bandwidth
+            - all data is tranferred over the same route
+            - curcuit is released after transmission ends
+        - when to use?
+            - this is to be used where a dedicated path needs to be sustained throughout the call / communication
+            - where the whole bandwidth is required
+            - where real time communication is used
+            - a typical application is standard voice communications / video streaming
     - packet switching
         - benefit:
             - accuracy
@@ -164,3 +164,15 @@ sidebar_position: 1
             - and the status of the routes along the route
             - the router decides on the best route (next hop)
             - and sends the packet on its next hop. 
+        - when use?
+            - packet swithing is most commonly used on data networks such as the internet to send large data files that don't need to be live streamed
+            - packet swithing is used when it is necessary to be able to overcome failed lines by rerouting
+            - it is used when it is necessary for the communication to be more secure
+            - packet switching is used for high volume data transmission
+            - packet switching is used when is it is NOT necessary to use all the bandwidth
+            - eg:
+                - email, 
+                - text messages
+                - documents
+                - VOIP
+                
