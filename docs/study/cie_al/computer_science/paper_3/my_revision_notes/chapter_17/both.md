@@ -1,1 +1,272 @@
-## both
+---
+title: Notes - Communication and Internet technologies
+sidebar_label: Both
+slug: both
+sidebar_position: 3
+---
+
+- Protocols
+    - why are protocols used?
+        - protocols set standards for communication
+        - protocols enable compatibility between devices from different manufacturers
+        - it two devices were sending messages to each other, but using different protocols, they would not be able to communicate properly
+    - why (old)
+		- all data is sent and received using the same rules
+		- all data is sent and received using the same formats
+		- allows communications between devices operating on different platforms
+		- the communication is independent of the software used
+		- the communication is independent of the hardware used
+    - TCP/IP Protocol Suite (Model) (not the [OSI Model](https://security.stackexchange.com/questions/93333/what-layer-is-tls), it's different)
+        - description:
+			- a layered model with 4 layers
+			- uses a set of protocols for transmission of data
+			- transport control protocol with internet protocol
+			- named layers: application, transport, network, data link
+		- tcp
+			- transmission control protocol
+			- working at the transport layer
+			- sets up and maintains connection 
+			- ensures delivery of data between two nodes (on the internet)
+		- ip
+			- internet protocol
+			- working at the internet / network layer
+			- provides rules for exchange of packets / datagrams over the internet
+			- decides the path for transmission of data
+		- application layer
+			- description:
+				- handles access to services
+				- managed data exchange
+				- defines protocol used
+            - protocols used:
+                - http/https
+                    - used for transfer of web pages from server to client
+                    - for sending and recieving web pages / hypertext documents
+                    - from text book    
+                        - HTTP is a transaction-oriented, client–server protocol. The transaction involves the client sending a ‘request’ message and the server sending back a ‘response’ message. The HTTP protocol defines the format of the message. The first line of a request message is the ‘request line’. Optionally this can be followed by header lines. All of this uses ASCII coding. The format of the request line is:  `<Method> <URL> <Version>CRLF`                         
+                        - where CR and LF are the ASCII carriage return and line feed characters. The request line usually has GET as the method. However, there are several alternatives to the GET method which makes HTTP potentially a more widely applicable protocol than just being used for webpage access. The version has to be specified because HTTP has evolved so there is more than one version in use.
+                - ftp
+                    - used for interactive file transfer
+                    - for sending and recieving files over a network / between devices
+					- to directly transfer data between two computers over a network
+					- upload and download files over the internet
+                - smtp
+                    - used for sending email messages
+                    - for sending / uploading emails / push protocol
+					- protocol for sending email
+					- used by mail servers to forward email messages
+                - pop3/imap
+                    - description/function:
+                        - used for retrieval of email messages
+                        - for recieving/downloading emails / pull protocol
+						- mail is held for you by a remote server until you download it
+                    - purpose:
+						- to recieve email
+                        - used by email clients to retrieve email messages (pull protocol)
+                        - from a mail server (over a TCP/IP connection)
+                        - keeps the server and client in sync (by not deleting the original email)
+                        - allows a cop of the email to be downloaded from the mail server.
+				- WiMAX : worldwide intereoperatability for microwave access (AXess)
+					- to provide wireless broadband
+					- where there is no wired infrastructure
+        - transport layer
+            - description/function:
+                - short 
+					- handles the forwarding of packets
+                    - handles packets
+                - long
+                    - the Transport Layer breaks data into managable packets / performs segmentation
+                    - it adds a packet header
+                    - it recieved data from the application layer
+                    - it sends the packets to the network layer
+                    - it controls the flow of packets
+                    - it handles the packet loss / corruption
+        - internet layer
+            - description/function:
+                - short
+                    - handles transmission of data using IP Addresses 
+                    - provides best (optimal) route
+					- handles tranmsission of data / routing / ip address
+                - long
+                    - the internet layer identified the intended network and host
+                    - it transmits packets to the data link layer / physical layer
+                    - it routes the packets independetly throught the optimum route
+                    - i addresses packets with their source and destination IP addresses
+                    - it then uses an IP address and port number to form a socket
+        - data link layer / physical layer
+            - description/function:
+                - handles how data is physically sent
+
+    - ethernet protocol stack
+        - no any questions in 9618
+		- 9608
+			- to send / recieve data along a cable
+			- for local area networks 
+
+    - bit torrent protocol
+        - what network model?
+            - peer to peer
+		- description:
+			- protocl for peer to peer file sharing
+			- decentralized distribution of data
+        - use?
+            - file sharing
+        - how it works (new)?
+            - BitTorrent client software made available
+            - a computer joins a swarmby using this to load a torrent descriptor file
+            - a server called a tracker that keeps records of all the computers in the swarm
+            - and shares their IP addresses allowing them to connect to each other
+            - one computer in the swarm must have a complete copy of the torrent to be shared
+            - torrent is split into small pieces
+            - pices of the torrent are both downloaded and uploaded
+            - once a computer has a peiceit can become a seed and upload
+            - leeches download much more than they upload
+		- how it works (old):
+			- bit torrent client software made available to friends and family computers
+			- a complete copy of the torrent/file to be shared is available on at least one computer
+			- the torrent/file is split into small pieces
+			- rare pieces are given priority for downloading
+			- the torrent descriptor file is made available
+			- a computer joins the swarm by using the bit torrent software to load the torrent descriptor file
+			- the computer can now download a piece of the torrent file
+			- once a computer has a piece / the whole file, it can become a seed (and upload to other members of the swarm)
+			- pieces of the torrent/file are both downloaded and uploaded by each member of the swarm
+			- a server called a tracker keeps records of all the computers in the swarm
+			- the tracker shares their ip addresses allowing connection to each other
+
+- Networks
+	- transmitting data
+		- circuit swithing
+			- good:
+				- frames (data) arrive in order and do not need the reassembled
+				- whole of bandwidth is available
+				- dedicated communication channel increases the quality of transmission
+				- data is transmitted with a fixed data rate
+				- no waiting time at switches
+				- suitable for long continuous communication
+				- fast method of data transfer
+				- data arrives in the same order it was sent
+				- data can't get lost
+				- data all follows the same route
+				- better for real time
+				- simple method of transfer
+			- bad:
+				- nobody else can use the same circuit even if it is idle
+				- less secure as only one route used
+			- how it works?
+				- a dedicated circuit
+				- curcuit is established before transmission starts
+				- data is transferred using the whole bandwidth
+				- all data is tranferred over the same route
+				- curcuit is released after transmission ends
+			- when to use?
+				- this is to be used where a dedicated path needs to be sustained throughout the call / communication
+				- where the whole bandwidth is required
+				- where real time communication is used
+				- a typical application is standard voice communications / video streaming
+		- packet switching
+        - good:
+            - accuracy
+                - ensures accurate delivery of the message
+            - completeness
+                - missing packets can be easily detected and re-send request sent so the message arrives complete
+            - resilience 
+                - if a network changes the router can detect this and send the data another way to ensure it arrives
+            - path also available to other users
+            - does not use the whole bandwidth
+            - allows simultaneous use of channel by multiple users
+            - better security as packets hashed and sent by different routes
+        - bad:
+            - time delays to correct errors
+            - network problems may introduce errors in packets
+            - required complex protocols for delivery
+            - unsuitable for realtime transmission applications
+            - time takes to re-assemble packets at the destination
+        - how it works?
+            - long answer
+                - a large message is divided up into a group of smaller chunks of the same size called packets
+                - the packet has a header and a payload
+                - the header contains a source IP, destination IP and a sequence number
+                - each packet is dispatches independently
+                - and may travel along different routes
+                - the packets may arrive out of order
+                - and are re-assembled into the original message at the destination
+                - if packets are missing / curropted, a re-transmission request is sent
+            - short answer
+                - data is split into packets
+                - each packet is given it's own route
+                - the routing for apcket depends on the congestion
+                - packets may not arrive in the given order
+        - what the router does? / role of the router?
+            - the router examines the packet's header
+            - it reads the IP address of the destination (from the packet header)
+            - a router has access to a routing table
+            - containing information about:
+                - available hops
+                - netmask
+                - gateways
+                - etc...
+            - and the status of the routes along the route
+            - the router decides on the best route (next hop)
+            - and sends the packet on its next hop. 
+        - when use?
+            - packet swithing is most commonly used on data networks such as the internet to send large data files that don't need to be live streamed
+            - packet swithing is used when it is necessary to be able to overcome failed lines by rerouting
+            - it is used when it is necessary for the communication to be more secure
+            - packet switching is used for high volume data transmission
+            - packet switching is used when is it is NOT necessary to use all the bandwidth
+            - eg:
+                - email, 
+                - text messages
+                - documents
+                - VOIP
+	- transmission medium
+		- wired
+			- uses a cable to communicate
+		- wireless
+			- nodes on high frequency use to communicate 
+		- wire vs wireless
+			- has higher security than a wireless network
+			- has lower interence than a wireless network
+			- nodes can be further apart than a wireless network
+			- a wired network has faster rate of data transfer than a wireless network
+			- a devices using a wireless network can be more portable whereas devices in a wired network use fixed connections
+	- topologies
+		- bus
+			- fetures:
+				- all nodes connected to a single cable
+				- with a terminator at each end
+				- uses half duplex
+			- how it works with Ethernet?
+				- ethernet operates over a cable
+				- destination and source nodes are identified my MAC addresses
+				- data to be transmitted is divided into frames
+					- containing: src / dst addresses, data, error checking data
+				- all data is transmitted over the same cable
+				- using csma/cd 
+		- star
+			- all nodes conneced to a central device
+			- each node has its own connection
+			- all data is transferred via the central device
+			- using a bi-directional connection
+	- devices
+		- router
+			- to provide a public ip address
+						
+- SSL (Secure Sockets Layer) and TLS (Transport Layer Security):
+    - purpose?
+        - the ssl and tls protocols provide communications securely over the network
+        - they provide encryption
+        - they enable two parties to identify and authenticate each other
+        - and communicate with confidentiality and integrity
+    - how it's used in client-server communication?
+        - a ssl/tls connection is initiated by an application
+        - which becomes the client
+        - the application which recieves the connection becomes the server
+        - every new sessions begins with a handshake (as defined by the protocols)
+        - server sends the digital certificate to the client
+        - the client vertifies the server's digital certificate
+        - and obtains the server's public key
+        - the encryption algorithms are agreed
+        - the symmetric sessions keys are generated / defined
+
+
