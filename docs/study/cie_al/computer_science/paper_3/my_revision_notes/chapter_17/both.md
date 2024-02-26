@@ -22,16 +22,74 @@ sidebar_position: 3
 			- uses a set of protocols for transmission of data
 			- transport control protocol with internet protocol
 			- named layers: application, transport, network, data link
-		- tcp
-			- transmission control protocol
-			- working at the transport layer
-			- sets up and maintains connection 
-			- ensures delivery of data between two nodes (on the internet)
-		- ip
-			- internet protocol
-			- working at the internet / network layer
-			- provides rules for exchange of packets / datagrams over the internet
-			- decides the path for transmission of data
+        - tcp and ip
+            - tcp
+                - belongs to Transport Layer
+                - description:
+                    - transmission control protocol
+                    - working at the transport layer
+                    - sets up and maintains connection 
+                    - ensures delivery of data between two nodes (on the internet)
+                - function:
+                    - allows applications to exchange data
+                    - establishes and maintains a connection 
+                    - until exchange of data is complete
+                    - determines how to break application data into packets
+                    - determines adds sequence number to tcp header
+                    - sends packets to and accepts packets from the network layer
+                    - manages flow control
+                    - manages congestion avoidance
+                    - acknowledges all packets that arrive
+                    - detects when a packet has not arrived at destination
+                    - handles re-transmission of dropped packets
+                    - reassembles packets into the correct order 
+            - ip
+                - belongs to Internet Layer
+                - description:
+                    - internet protocol
+                    - working at the internet / network layer
+                    - provides rules for exchange of packets / datagrams over the internet
+                    - decides the path for transmission of data
+                - function:
+                    - routes the packets around the network
+                    - adds to the ip header a source / dst address for each paket
+                    - encapuslates data into datagram
+                    - passes datagaram to the network access layer (for tranmission onto the lan)
+                    - defines the addressing method:
+                        eg: NAT, subnetting
+            - how a message is sent using both tcp/ip?
+                - message split into packets
+                - each packet is a fixed size
+                - each packet is given a header
+                - including dst ip, sequence number, etc...
+                - packets are forwarded from one LAN to another
+                - packets may take a different routes
+                - missing packets are requested to be resent
+                - packets re-assembled into order at destination
+            - responsibilites:
+                ![alt text](images/image.png)
+            - structure of a packet:
+                - packet header
+                    - purpose?
+                        - to store data about the packet
+                        - and its routing information
+                        - to ensure it reaches its detination
+                        - to ensure that message can be properly reconstructed
+                    - what is has?
+                        - src ip
+                        - dst ip
+                        - ip version
+                        - no. of packets this message consists
+                        - protocl used
+                        - packet length
+                        - time to live (ttl)
+                        - max. number of hops
+                        - synchronization data
+                        - source port
+                        - dst port
+                        - checksum
+                        - explicit congestion notification
+                - payload (actual data / a chunk of the data that we are transferring)
 		- application layer
 			- description:
 				- handles access to services
@@ -101,6 +159,7 @@ sidebar_position: 3
 		- 9608
 			- to send / recieve data along a cable
 			- for local area networks 
+        - CSMA/CD: not in P3 in new syllabus
 
     - bit torrent protocol
         - what network model?
@@ -142,6 +201,7 @@ sidebar_position: 3
 				- dedicated communication channel increases the quality of transmission
 				- data is transmitted with a fixed data rate
 				- no waiting time at switches
+                - reduced latency
 				- suitable for long continuous communication
 				- fast method of data transfer
 				- data arrives in the same order it was sent
@@ -149,76 +209,103 @@ sidebar_position: 3
 				- data all follows the same route
 				- better for real time
 				- simple method of transfer
+                - there are little to no delays in sending / recieving data once the circuit is set-up
+                    - because stringent error checking (as used in packet switching) is not required
+                    - circuit made available is dedicated to this communication stream
 			- bad:
 				- nobody else can use the same circuit even if it is idle
 				- less secure as only one route used
+                - extra time required to set up circuit at start of the conversation
+                - alternative route not available without restarting the conversation
+                - less secure as easier to intercept data if only one channel used
+                - failiure of this single route used means failure of transmission
 			- how it works?
 				- a dedicated circuit
 				- curcuit is established before transmission starts
 				- data is transferred using the whole bandwidth
 				- all data is tranferred over the same route
 				- curcuit is released after transmission ends
+            - how it works? (old)
+                - set up for duration of the conversation
+                - set up before communication starts
+                - maintained throughtout the communication
+                - all data travels down the same route
+                - dropped at the end of the transmission
+                - complete bandwidth used
 			- when to use?
+                - when having a video conversation
 				- this is to be used where a dedicated path needs to be sustained throughout the call / communication
 				- where the whole bandwidth is required
 				- where real time communication is used
 				- a typical application is standard voice communications / video streaming
 		- packet switching
-        - good:
-            - accuracy
-                - ensures accurate delivery of the message
-            - completeness
-                - missing packets can be easily detected and re-send request sent so the message arrives complete
-            - resilience 
-                - if a network changes the router can detect this and send the data another way to ensure it arrives
-            - path also available to other users
-            - does not use the whole bandwidth
-            - allows simultaneous use of channel by multiple users
-            - better security as packets hashed and sent by different routes
-        - bad:
-            - time delays to correct errors
-            - network problems may introduce errors in packets
-            - required complex protocols for delivery
-            - unsuitable for realtime transmission applications
-            - time takes to re-assemble packets at the destination
-        - how it works?
-            - long answer
-                - a large message is divided up into a group of smaller chunks of the same size called packets
-                - the packet has a header and a payload
-                - the header contains a source IP, destination IP and a sequence number
-                - each packet is dispatches independently
-                - and may travel along different routes
-                - the packets may arrive out of order
-                - and are re-assembled into the original message at the destination
-                - if packets are missing / curropted, a re-transmission request is sent
-            - short answer
-                - data is split into packets
-                - each packet is given it's own route
-                - the routing for apcket depends on the congestion
-                - packets may not arrive in the given order
-        - what the router does? / role of the router?
-            - the router examines the packet's header
-            - it reads the IP address of the destination (from the packet header)
-            - a router has access to a routing table
-            - containing information about:
-                - available hops
-                - netmask
-                - gateways
-                - etc...
-            - and the status of the routes along the route
-            - the router decides on the best route (next hop)
-            - and sends the packet on its next hop. 
-        - when use?
-            - packet swithing is most commonly used on data networks such as the internet to send large data files that don't need to be live streamed
-            - packet swithing is used when it is necessary to be able to overcome failed lines by rerouting
-            - it is used when it is necessary for the communication to be more secure
-            - packet switching is used for high volume data transmission
-            - packet switching is used when is it is NOT necessary to use all the bandwidth
-            - eg:
-                - email, 
-                - text messages
-                - documents
-                - VOIP
+            - good:
+                - communication is asynchronous
+                - accuracy
+                    - ensures accurate delivery of the message
+                - completeness
+                    - missing packets can be easily detected and re-send request sent so the message arrives complete
+                - resilience 
+                    - if a network changes the router can detect this and send the data another way to ensure it arrives
+                - path also available to other users
+                - does not use the whole bandwidth
+                - allows simultaneous use of channel by multiple users
+                - better security as packets hashed and sent by different routes
+            - bad:
+                - time delays to correct errors
+                - network problems may introduce errors in packets
+                - required complex protocols for delivery
+                - unsuitable for realtime transmission applications
+                - time takes to re-assemble packets at the destination
+            - how it works?
+                - long answer
+                    - a large message is divided up into a group of smaller chunks of the same size called packets
+                    - the packet has a header and a payload
+                    - the header contains a source IP, destination IP and a sequence number
+                    - each packet is dispatches independently
+                    - and may travel along different routes
+                    - the packets may arrive out of order
+                    - and are re-assembled into the original message at the destination
+                    - if packets are missing / curropted, a re-transmission request is sent
+                - short answer
+                    - data is split into packets
+                    - each packet is given it's own route
+                    - the routing for apcket depends on the congestion
+                    - packets may not arrive in the given order
+            - what the router does? / role of the router?
+                - the router examines the packet's header
+                - it reads the IP address of the destination (from the packet header)
+                - a router has access to a routing table
+                    - routing table has:
+                        - network id
+                        - routing metric
+                        - next hop / gateway
+                        - interface
+                - containing information about:
+                    - available hops
+                    - netmask
+                    - gateways
+                    - etc...
+                - and the status of the routes along the route
+                - the router decides on the best route (next hop)
+                - and sends the packet on its next hop. 
+            - when use?
+                - packet swithing is most commonly used on data networks such as the internet to send large data files that don't need to be live streamed
+                - packet swithing is used when it is necessary to be able to overcome failed lines by rerouting
+                - it is used when it is necessary for the communication to be more secure
+                - packet switching is used for high volume data transmission
+                - packet switching is used when is it is NOT necessary to use all the bandwidth
+                - eg:
+                    - email, 
+                    - text messages
+                    - documents
+                    - VOIP
+            - why use?
+                - communication is asynchronous
+                - allows for error checking (+ all other good)
+                - real time transmission might not be required
+                - smaller amounts of data are sent (than voice calls), therefore dedicated line / higher bandwidth not required / can share bandwidth
+                - when it doesnt matter if data arrives in order (+ all doesnt matter other bad stuff) 
 	- transmission medium
 		- wired
 			- uses a cable to communicate
@@ -248,9 +335,6 @@ sidebar_position: 3
 			- each node has its own connection
 			- all data is transferred via the central device
 			- using a bi-directional connection
-	- devices
-		- router
-			- to provide a public ip address
 						
 - SSL (Secure Sockets Layer) and TLS (Transport Layer Security):
     - purpose?
