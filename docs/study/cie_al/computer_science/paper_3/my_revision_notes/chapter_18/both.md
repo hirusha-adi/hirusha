@@ -82,6 +82,10 @@ sidebar_position: 2
 
           ![ms1](images/image.png)
 
+        - another question, take a close note at the second part of it
+
+          ![alt text](images/5.png)
+
     - CISC: Complex Instruction Set Computer
 
       - describe
@@ -135,11 +139,18 @@ sidebar_position: 2
 
   - sheduling
     - why? explain a need for this?
+      - allow multi-programming
+      - to give all processes a fair share of the cpu time
+      - to allow all processes to complete in a reasonable amount of time
+      - to allow highest priority jobs to be executed first
+      - to service largest possible number of jobs in a given amount of time
+      - to minimize the amounf of time users must wait for their results
+      - to maximize the use of peripherals
       - process sheduling allows more than one program / task to appear to be executed at the same time / enables multi-tasking and multi-programming
       - to allow high prioriy jobs to be completed first
       - to keep the cpu busy all the time
       - to ensure that all processes execute efficiently
-      - and to have reduced wait times for all processes / to ensure all processes have fair access to the cpu / prevent starvation of some processes
+      - and to have reduced wait times for all processes / prevent starvation of some processes
     - routines
       - shortest job first
         - process are executed in ascending order of the amount of CPU time required
@@ -155,6 +166,25 @@ sidebar_position: 2
         - no complex logic, each process request is queued as it is recieved and executed one by one
         - starvation doesn't occur (because every process will eventually get a chance to run)
         - less processor overhead
+  - processes running states
+    - running processes
+      - when a running process needs to read a file from a disk
+        - running process is halted
+        - process moves to blocked state
+      - when running process usues up its time slice
+        - running process is halted
+          - another has use of the processor
+        - process moves to ready state
+        - until next time slice allocated
+      - ready
+        - conditions to go from ready to running
+          - current process is no longer running // process is available
+          - process was at the end of the ready queue
+          - process has the highest priority
+      - blocked
+        - conditions to move from blocked to ready state
+          - the only required resource becomes available
+          - the only even is complete
 
 - memmory management
 
@@ -194,6 +224,7 @@ sidebar_position: 2
     - access times for paging is fatser than for segmentation
 
 - virtual machines ![alt text](images/2.png)
+
   - what?
     - emulation of a computer system / hardware / software
     - using a host computer system
