@@ -33,7 +33,6 @@ sidebar_position: 2
       - hardwired control unit
       - uses a system where cache is split between data and instructions
     - pipelining
-
       - how pipelining happens during fetch-execute cycle?
         - answer 1
           - instructions are divided into 5 stages (subtasks)
@@ -72,7 +71,26 @@ sidebar_position: 2
       - programmable control unit
       - uses fewer general purpose registers
       - uses both hardwired and microcoded control units
-  - RISC vs CISC Comparison | what | risc | cisc | | - | - | - | | registers | more | less | | addressing modes | less | more | | no. of instructions | small | large | | instructions complexity | simple | complex | | instruction cycles | single cycle instructions | multi cycle instructions | | instruction lengths | fixed length | variable length | | pipelineability | good | bad | | circuit complexity | less complex | more complex | | ram usage | more | less | | control unit | hard wired | programmable | | instruction types | instructions to only load and store to memmory | has many types to address memmory |
+  - RISC vs CISC Comparison 
+
+    | what | risc | cisc | 
+    | - | - | - | 
+    | registers | more | less | 
+    | addressing modes | less | more | 
+    | no. of instructions | small | large | 
+    | instructions complexity | simple | complex | 
+    | instruction cycles | single cycle instructions | multi cycle instructions | 
+    | instruction lengths | fixed length | variable length | 
+    | pipelineability | good | bad | 
+    | circuit complexity | less complex | more complex | 
+    | ram usage | more | less | 
+    | control unit | hard wired | programmable | 
+    | instruction types | instructions to only load and store to memmory | has many types to address memmory |
+
+    - common description:
+      - a processor with a few simple fixed length instructions that have a small number of instruction formats is called a RISC (reduced instruction set computer) processor.
+      - a processor with many complex variable length instrctions that has many instrction formats is called a cics (complex instruction set computer) processor
+      - instruction-level parallelism, applied to the execution of instructions during the fetch-execute cycle is called pipelining
 
 - process management
 
@@ -117,30 +135,41 @@ sidebar_position: 2
     - access times for paging is fatser than for segmentation
 
 - virtual machines
+  ![alt text](images/2.png)
   - what?
     - emulation of a computer system / hardware / software
     - using a host computer system
     - using guest OS for emulation
   - why?
     - emulate a new computer system
+  - role of virtual machine software
+    - create / delete / manage virtual machines
+    - translate instructions used by guet OS to that required by the host OS
+    - hardware emulation
+    - protecting each virtual machine
+      - so several instances can be tested together
   - good:
     - detailed:
       - new system can be tried on different virtual hardware
         - without the need to purcahse the hardware
-      - easier to recover if software emulating the new computer causes system crash
+          - easier to recover if software emulating the new computer causes system crash (with snapshots)
         - as VM provides protection to other software
         - and can restor/rollback and snapshot of the VM
       - emulate the programs for the new computer system that are not compatible with the host computer / operating system by using the guest OS on the old computer
       - more than one new computer system can be emulated
         - this allowss multiple OS to co-exist on a sigle computer
+      - only one set of hardware is required
+        - reduces costs as no need to setup more than one computer
     - short
       - multiple VMs can be run on the same computer simultaneously
       - different instruction set architechtures can be emulated on a single computer
       - a vm can crash without affecting the host machine
+      - easy to recover the vm if software causes system to crash using snapshots
       - there are security benefits
         - if we run a virus by accident, it will only infect the virtual machine
       - cost savings due to not needing to purchase extra hardware
       - can run legacy applications that are currently incompatible
+      - provided protection to host OS from alfunctioning software
   - bad:
     - detailed:
       - VM may not be able to emulate the new hardware
@@ -157,6 +186,7 @@ sidebar_position: 2
       - performance of the guest system cannot be adequaltely measured
       - a virtual machine may be affected by any weakness of the host machine
       - costly and complex to maintain / implement / manage
+      - increases maintainance overhead
       - cannot emulate some hardware.
 - massively parallel computers:
   - characteristics:
