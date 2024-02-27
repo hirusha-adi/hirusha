@@ -8,89 +8,128 @@ sidebar_position: 2
 - computer architechture:
 
   - SIMD
+    - single instruction mutltiple data
     - description:
       - many processors execute the same instruction using different data sets
+    - detailed:
+      - the processor has several ALUs
+      - each ALU executes the same set of instructions on different sets of data at the same time
   - MISD
+    - single instruction mutltiple data
     - description:
       - many processors using different instrctions use the same data set
+    - detailed:
+      - there are several processors
+      - each processor executes different sets of instrcutions on one set of data the same time
   - MIMD
+    - multiple instruction multiple data
     - description:
       - many processors using different instructions using different data sets
+    - detailed:
+      - there are several processors
+      - each processor executes a different set of instructions
+      - each processor operates on different set of data
+  - SISD
+    - single instruction single data
+    - detailed:
+      - there is only one processor
+      - the processor executes one set of instructions on one set of data
+  - comparison
 
-- instruction sets
+    ![alt text](images/4.png)
 
-  - RISC: Reduced Instruction Set Computer
+- instrction sets
 
-    - describe
-      - uses simple instructions
-      - uses a smaller instrction set
-      - uses fixed length instructions
-      - instructions only reqyure one clock cycle
-      - uses single cycle instructions
-      - limited addressing modes
-      - uses many registers
-      - makes use of pipelining
-      - hardwired control unit
-      - uses a system where cache is split between data and instructions
-    - pipelining
-      - how pipelining happens during fetch-execute cycle?
-        - answer 1
-          - instructions are divided into 5 stages (subtasks)
-            - IF - instrution fetch
-            - ID - instrution decode
-            - OF - operand fetch
-            - IE - instruction execute
-            - WB - write back result
-          - each subtask is completed during one clock cycle
-          - no two instructions can execute their sane stage at the same clock cycle
-          - two second instruction begins in the second clock cycle, while the first instrucftion has moved on to its second subtask
-          - the thirs instruction beginds in the third clock cycle while the first and second instructions move on to their second and third subtasks,respectively.
-        - answer 2
-          - pipelining allows seeveral instructions to be processed simulatneously
-          - therefore, increasing the cpu instruction throughput
-            - the number of instructions completed per unit time
-          - each instruction stage / subtask is completed during one clock cycle
-          - no two instructions can execute their same stage of instruction / subtask at the same clock cycle
-          - eg: wguke one instruction is being decoded, the next instruction can be fetched
-      - example question:
+  - used in parallel processing:
 
-        "Complete the table to show how a program consisting of six instructions would be completed using pipelining"
+    - RISC: Reduced Instruction Set Computer
 
-        ![ms1](images/image.png)
+      - describe
+        - uses simple instructions
+        - uses a smaller instrction set
+        - uses fixed length instructions
+        - instructions only reqyure one clock cycle
+        - uses single cycle instructions
+        - limited addressing modes
+        - uses many registers
+        - makes use of pipelining
+        - hardwired control unit
+        - uses a system where cache is split between data and instructions
+      - pipelining
 
-  - CISC: Complex Instruction Set Computer
-    - describe
-      - uses many instruction formats
-      - uses variable length instructions
-      - makes uses of different addressing modes
-      - uses fewer registers
-      - has a large instruction set
-      - requires complex circuits
-      - frequently uses cache
-      - instructions (converted to sub instructions that) many require many clock cycles
-      - programmable control unit
-      - uses fewer general purpose registers
-      - uses both hardwired and microcoded control units
-  - RISC vs CISC Comparison 
+        - how pipelining happens during fetch-execute cycle?
+          - answer 1
+            - instructions are divided into 5 stages (subtasks)
+              - IF - instrution fetch
+              - ID - instrution decode
+              - OF - operand fetch
+              - IE - instruction execute
+              - WB - write back result
+            - each subtask is completed during one clock cycle
+            - no two instructions can execute their sane stage at the same clock cycle
+            - two second instruction begins in the second clock cycle, while the first instrucftion has moved on to its second subtask
+            - the thirs instruction beginds in the third clock cycle while the first and second instructions move on to their second and third subtasks,respectively.
+          - answer 2
+            - pipelining allows seeveral instructions to be processed simulatneously
+            - therefore, increasing the cpu instruction throughput
+              - the number of instructions completed per unit time
+            - each instruction stage / subtask is completed during one clock cycle
+            - no two instructions can execute their same stage of instruction / subtask at the same clock cycle
+            - eg: wguke one instruction is being decoded, the next instruction can be fetched
+        - example question:
 
-    | what | risc | cisc | 
-    | - | - | - | 
-    | registers | more | less | 
-    | addressing modes | less | more | 
-    | no. of instructions | small | large | 
-    | instructions complexity | simple | complex | 
-    | instruction cycles | single cycle instructions | multi cycle instructions | 
-    | instruction lengths | fixed length | variable length | 
-    | pipelineability | good | bad | 
-    | circuit complexity | less complex | more complex | 
-    | ram usage | more | less | 
-    | control unit | hard wired | programmable | 
-    | instruction types | instructions to only load and store to memmory | has many types to address memmory |
+          "Complete the table to show how a program consisting of six instructions would be completed using pipelining"
 
-    - common description:
-      - a processor with a few simple fixed length instructions that have a small number of instruction formats is called a RISC (reduced instruction set computer) processor.
-      - a processor with many complex variable length instrctions that has many instrction formats is called a cics (complex instruction set computer) processor
-      - instruction-level parallelism, applied to the execution of instructions during the fetch-execute cycle is called pipelining
+          ![ms1](images/image.png)
+
+    - CISC: Complex Instruction Set Computer
+
+      - describe
+        - uses many instruction formats
+        - uses variable length instructions
+        - makes uses of different addressing modes
+        - uses fewer registers
+        - has a large instruction set
+        - requires complex circuits
+        - frequently uses cache
+        - instructions (converted to sub instructions that) many require many clock cycles
+        - programmable control unit
+        - uses fewer general purpose registers
+        - uses both hardwired and microcoded control units
+
+    - RISC vs CISC Comparison
+
+      | what | risc | cisc |
+      | --- | --- | --- |
+      | registers | more | less |
+      | addressing modes | less | more |
+      | no. of instructions | small | large |
+      | instructions complexity | simple | complex |
+      | instruction cycles | single cycle instructions | multi cycle instructions |
+      | instruction lengths | fixed length | variable length |
+      | pipelineability | good | bad |
+      | circuit complexity | less complex | more complex |
+      | ram usage | more | less |
+      | control unit | hard wired | programmable |
+      | instruction types | instructions to only load and store to memmory | has many types to address memmory |
+
+      ![alt text](images/3.png)
+
+      - common description:
+        - a processor with a few simple fixed length instructions that have a small number of instruction formats is called a RISC (reduced instruction set computer) processor.
+        - a processor with many complex variable length instrctions that has many instrction formats is called a cics (complex instruction set computer) processor
+        - instruction-level parallelism, applied to the execution of instructions during the fetch-execute cycle is called pipelining
+
+- massively parallel computers:
+
+  - characteristics:
+    - a large number of computer processors
+    - seperate computers connected together
+    - simultaneously performing a set of coordinated computations
+    - working together simultaneously on the same program
+    - collaborative processing
+    - network infrastructure
+    - communicate using a message interface / by sending messages
 
 - process management
 
@@ -125,17 +164,36 @@ sidebar_position: 2
       - so the cpu appears to be able to access more memmory space than the available RAM
       - only the data in uyse needs to be in the main memmor so data can be swapped between the RAM and virtual memmory as necessary
       - virtual memmory is created temporarily
+      - data is swapped between RAM and the disk
+    - disk thrashing
+      - pages are required back in RAM as soon as they are moved to disk
+      - there is continous swapping (of the same pages)
+      - no useful processing happens
+      - deadlock
+        - because pages that are in RAM and on the disk are inter-dependent
+        - nearly all processing time is used for swapping pages
   - paging
-    - paging allows the memmory to be divided into fixed size blocks
-    - the OS divides the memmory into pages
+    - description
+      - paging allows the memmory to be divided into fixed size blocks
+      - the OS divides the memmory into pages
+    - how paging is used to manage memmory?
+      - divide memmory / RAM into frames
+      - divide virtual memmory into blocks of same size called pages
+      - frames / pages are a fixed size
+      - set up page table to translate logical to physicall addresses
+      - keep track of all free frames
+      - swap pages in memory with new pages from a disk when needed
+    - best algorithms for this process:
+      - first in first out
+      - least recently used page
+      - least used page
   - segmentation
     - divides the emmory into variable sized blocks
     - the compiler is responsible for calculating the segment sizes
   - paging vs segmentation
     - access times for paging is fatser than for segmentation
 
-- virtual machines
-  ![alt text](images/2.png)
+- virtual machines ![alt text](images/2.png)
   - what?
     - emulation of a computer system / hardware / software
     - using a host computer system
@@ -188,11 +246,3 @@ sidebar_position: 2
       - costly and complex to maintain / implement / manage
       - increases maintainance overhead
       - cannot emulate some hardware.
-- massively parallel computers:
-  - characteristics:
-    - a large number of computer processors
-    - seperate computers connected together
-    - simultaneously performing a set of coordinated computations
-    - collaborative processing
-    - network infrastructure
-    - communicate using a message interface / by sending messages
