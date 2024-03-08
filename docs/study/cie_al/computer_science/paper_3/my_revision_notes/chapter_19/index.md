@@ -1,3 +1,5 @@
-# Chapter 19 - Hardware and virtual machines
+# Chapter 19 - Logic circuits and Boolean algebra
 
-## [9618](9618)
+## Nothing
+## Learn the theories and practice
+## Refer to the theory note in OneNote
