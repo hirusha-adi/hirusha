@@ -137,7 +137,7 @@ sidebar_position: 2
 
 - process management
 
-  - sheduling
+  - scheduling
     - why? explain a need for this?
       - allow multi-programming
       - to give all processes a fair share of the cpu time
@@ -151,6 +151,7 @@ sidebar_position: 2
       - to keep the cpu busy all the time
       - to ensure that all processes execute efficiently
       - and to have reduced wait times for all processes / prevent starvation of some processes
+      - to ensure all processes have the opportunity to finish
     - routines
       - shortest job first
         - process are executed in ascending order of the amount of CPU time required
@@ -167,25 +168,38 @@ sidebar_position: 2
         - starvation doesn't occur (because every process will eventually get a chance to run)
         - less processor overhead
   - processes running states
-    - running processes
-      - when a running process needs to read a file from a disk
+    - ready
+      - description 1:
+        - conditions to go from ready to running
+        - current process is no longer running // process is available
+        - process was at the end of the ready queue
+        - process has the highest priority
+      - description 2:
+        - the process is not being executed
+        - the process is in the queue
+        - waiting for the processor's attention / time slice
+    - running
+      - description 1:
+        - when a running process needs to read a file from a disk
         - running process is halted
         - process moves to blocked state
-      - when running process usues up its time slice
+        - when running process usues up its time slice
         - running process is halted
           - another has use of the processor
         - process moves to ready state
         - until next time slice allocated
-      - ready
-        - conditions to go from ready to running
-          - current process is no longer running // process is available
-          - process was at the end of the ready queue
-          - process has the highest priority
-      - blocked
+      - description 2:
+        - the process is being executed by the processor
+        - the process is currently using its allocated processor time / time slice
+    - blocked
+      - description 1:
         - conditions to move from blocked to ready state
-          - the only required resource becomes available
-          - the only even is complete
-
+        - the only required resource becomes available
+        - the only even is complete
+      - description 2:
+        - the process is waiting for an event
+        - so it cannot be executed at the moment
+        - eg: input / ouput
 - memmory management
 
   - virtual memmory
@@ -203,6 +217,12 @@ sidebar_position: 2
         - because pages that are in RAM and on the disk are inter-dependent
         - nearly all processing time is used for swapping pages
   - paging
+    - what is a page?
+      - virtual memmory is divided into blocks of fixed size
+    - what is a page frame?
+      - the main memmory is divided into page frames of the same size as a page
+    - what is a page table?
+      - the page (map) table shows the mapping of pages to page frames
     - description
       - paging allows the memmory to be divided into fixed size blocks
       - the OS divides the memmory into pages
@@ -222,6 +242,32 @@ sidebar_position: 2
     - the compiler is responsible for calculating the segment sizes
   - paging vs segmentation
     - access times for paging is fatser than for segmentation
+
+  - other memmory resource management:
+    - moving frequetnyla accessed instructions to cache
+      - for faster recall
+      - as SRAM is used rather than DRAM for cache
+      - making it much faster
+    - making use of virtual memmory
+      - with paging or segmentation
+      - to swap memmory to and from a disk
+    - paritioning memmory
+      - dividing main memmory into static / dyanamic partitions
+      - to allow for more than one program / task to be available
+    - removing unused items/tasks from RAM
+      - by making a partition as available
+      - as soon as the process using it has terminated 
+
+- Disk Resource Management
+  - disk caching
+    - a disk cache holds data that is frequently transferred to/from the disk
+    - the cache can be held on disk or in RAM / or eg: intel optane memmory
+  - compression utility
+    - decreasing the size of a file stored on disk
+    - in order to fit more / larger files on the disk
+  - degfragmentation utility
+    - files are re-arranged to occupy contiguous disk space
+    - this reduces the time taken to access files // decreases latency
 
 - virtual machines ![alt text](images/2.png)
 
@@ -277,3 +323,16 @@ sidebar_position: 2
       - costly and complex to maintain / implement / manage
       - increases maintainance overhead
       - cannot emulate some hardware.
+
+- interrupts
+  - what?
+    - a signal from a software source or hardware device seeking the attention of the processor
+  - how OS uses interrupts to schedule the measuring and recording tasks
+    - uses a timer // two timers
+    - each timer is continually checked to see if 10 seconds has passed
+    - if it has, an interrupt is sent to the OS
+    - OS checks interrupt status
+    - an may pass control to the interrupt handling routing
+    - (if 10 seconds has passed) then the ISR switches process state to running / ready
+    - when finished it passes control back to the OS
+    - the timer is restarted
