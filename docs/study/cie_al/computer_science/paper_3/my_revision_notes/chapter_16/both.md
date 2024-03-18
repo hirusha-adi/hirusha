@@ -130,6 +130,22 @@ sidebar_position: 2
     - direct
         - suitable when
             - record is referenced by a unique address on a disk-type storage medium
+    - random
+        - how a file is accessed?
+            - ID is hashed to give address (home location)
+            - compared to ID stored at given address (home location)
+            - if nothing stored, output message 'record not found'
+            - if record IDs equal, then the record is found
+            - if record IDs not equal, search overflow area / next record
+            - until record found or whole area searched
+            - if no record found, error message
+        - how to add a new file?
+            - ID hashed to give address
+            - check if a record already stored at address
+            - if nothing stored, store a new record
+            - if another record already stored, search overflow data (next record)
+            - until free space found or whole area searched
+            - if no space, output error message
     - sequential
         - suitable when
             - a bank stores its data records in ascending order of account number
