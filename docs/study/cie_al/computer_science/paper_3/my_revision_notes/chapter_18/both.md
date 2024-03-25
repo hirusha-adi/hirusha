@@ -269,7 +269,9 @@ sidebar_position: 2
     - files are re-arranged to occupy contiguous disk space
     - this reduces the time taken to access files // decreases latency
 
-- virtual machines ![alt text](images/2.png)
+- virtual machines 
+
+  ![alt text](images/2.png)
 
   - what?
     - emulation of a computer system / hardware / software
@@ -324,6 +326,8 @@ sidebar_position: 2
       - increases maintainance overhead
       - cannot emulate some hardware.
 
+  ![alt text](images/6.png)
+
 - interrupts
   - what?
     - a signal from a software source or hardware device seeking the attention of the processor
@@ -336,3 +340,5 @@ sidebar_position: 2
     - (if 10 seconds has passed) then the ISR switches process state to running / ready
     - when finished it passes control back to the OS
     - the timer is restarted
+
+  
