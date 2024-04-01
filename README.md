@@ -118,3 +118,14 @@ npx docusaurus deploy
 If you are using GitHub Pages for hosting, this command is a convenient way to make your website accessible to the public.
 
 By following these steps, you can easily set up, develop, and deploy our website using Docusaurus 3 & pnpm.
+
+## Errors
+
+1. `This diff contains a change in line endings from 'LF' to 'CRLF'.`
+
+    simply run:
+
+    ```bash
+    git config core.autocrlf input
+    ```
+
