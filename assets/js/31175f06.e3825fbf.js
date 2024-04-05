@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhirusha=self.webpackChunkhirusha||[]).push([[4586],{34678:a=>{a.exports=JSON.parse('{"label":"privacy","permalink":"/blog/tags/privacy","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

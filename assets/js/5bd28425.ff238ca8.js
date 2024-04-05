@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhirusha=self.webpackChunkhirusha||[]).push([[2308],{5888:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-search-local","id":"default"}')}}]);

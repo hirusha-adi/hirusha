@@ -4,11 +4,183 @@
         <title>Hirusha Adikari</title>
         <link>https://hirusha.xyz/blog</link>
         <description>Hirusha Adikari Blog</description>
-        <lastBuildDate>Thu, 15 Feb 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 03 Apr 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2024 Hirusha Adikari.</copyright>
+        <item>
+            <title><![CDATA[Windows 7 in 2024]]></title>
+            <link>https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024</link>
+            <guid>https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024</guid>
+            <pubDate>Wed, 03 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is my journey of installing Windows 7 for minimal office use in Sri Lanka. The device that i'm dealing with today is an ancient Dell Inspiron N4050 from 2014 (a 10 year Intel i3 laptop).]]></description>
+            <content:encoded><![CDATA[<p>This is my journey of installing Windows 7 for minimal office use in Sri Lanka. The device that i'm dealing with today is an ancient Dell Inspiron N4050 from 2014 (a 10 year Intel i3 laptop).</p>
+<div class="theme-admonition theme-admonition-danger admonition_kr2c alert alert--danger"><div class="admonitionHeading_bxTh"><span class="admonitionIcon_y2bu"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>WARNING</div><div class="admonitionContent_QWhA"><p>This is NOT a guide. This is my personal experience installing Windows 7 on a decade old laptop, so, I might be doing something wrong here. You should not use Windows 7 as it's no longer secure nor its supported anymore by Microsoft. Please use a Linux distribution instead.</p></div></div>
+<p>This has a completely functional copy of Linux Mint installed, thats customized to look like Windows 7.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/WhatsApp%20Image%202024-04-05%20at%2000.12.25_e8c31879-23b7afdb1ad5fdc38f829d6eee4acbf3.jpg" width="1280" height="897" class="img_KnJ7"></p>
+<p>This laptop is equipped with an i3-2350M,  10 Gigabytes of RAM with a SATA SSD.</p>
+<p>The user requirements of this laptop has changed and legacy sinhala font support (FM Bindumathi, FM Gemunu, FM Abhaya, etc...) with the microsoft office suite was a must, so the only option left is to either install Windows 10 or 8 and get the system bloated and slow or to install Windows 7 in 2024.</p>
+<p>Yes, Windows 8 is also discontinued now, but, I personally don't think that it would support this device very well.</p>
+<p>I'm not a huge fan of Windows 8 anyways, so, Windows 7 it is.</p>
+<h2 class="anchor anchorWithStickyNavbar_lQ1M" id="installation">Installation<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#installation" class="hash-link" aria-label="Direct link to Installation" title="Direct link to Installation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="bootable-pendrive">Bootable Pendrive<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#bootable-pendrive" class="hash-link" aria-label="Direct link to Bootable Pendrive" title="Direct link to Bootable Pendrive">​</a></h3>
+<p>You can download the Windows 7 SP1 Ultimate image <a href="https://archive.org/details/7601.24214.180801-1700.win-7sp-1-ldr-escrow-client-ultimate-x-64-fre-en-us_202304" target="_blank" rel="noopener noreferrer">from here</a></p>
+<p>After downloading it, we can write that installation media to a pendrive and boot from it using tools like <a href="https://rufus.ie/en/" target="_blank" rel="noopener noreferrer">Rufus: The Reliable USB Formatting Utility</a> - a Free and Open Source Tool.</p>
+<p>Open Rufus, plug-in your pendrive, select the downloading image (the <code>.iso</code> file).</p>
+<p>Make sure to select the <strong>Partition Scheme</strong> as <strong>MBR</strong> and the <strong>Target System</strong> as <strong>BIOS</strong> when you are trying flash a pendrive for older computers.</p>
+<details class="details_MWPH alert alert--info details_fvjc" data-collapsed="true"><summary>This might happen if you do not do that: </summary><div><div class="collapsibleContent_R17e"><p>You will get this error after you boot from the pendrive after selecting it from the Boot Menu:</p><p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-2-5d37d89ce06d0f23ed3fb6a35ebe04ed.png" width="1280" height="888" class="img_KnJ7"></p></div></div></details>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-94c70bcbb74b221046831c1a95e738b1.png" width="513" height="619" class="img_KnJ7"></p>
+<p>Click on the start button to flash the image make your pendrive bootable.</p>
+<p>After you see "READY" in the progress bar, you are good to go.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-1-15f49a48c52a23d63283c123a9eaa6f1.png" width="474" height="580" class="img_KnJ7"></p>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="installing-windows">Installing Windows<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#installing-windows" class="hash-link" aria-label="Direct link to Installing Windows" title="Direct link to Installing Windows">​</a></h3>
+<p>Remove the pendrive and plug it in to the system that we are going to install the new operating system to. (yes, those are scratches on the laptop chasis caused by myself trying to service it one every year)</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/WhatsApp%20Image%202024-04-05%20at%2000.40.19_d8922199-5b4b6f8cc58dfcfd98dd26a9a52e71d2.jpg" width="1280" height="709" class="img_KnJ7"></p>
+<p>Turn on the device.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/WhatsApp%20Image%202024-04-05%20at%2008.06.05_194af1a7-067485f35310c9873b3bc11c56345252.jpg" width="1280" height="841" class="img_KnJ7"></p>
+<p>Go to the Boot Menu / Boot Options Menu, select the pendrive to boot with and hit enter.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/WhatsApp%20Image%202024-04-05%20at%2008.38.44_da676c76-11443ba8566f1a344b7504fc15a76f21.jpg" width="1280" height="812" class="img_KnJ7"></p>
+<p>Your computer will now boot from the bootable pendrive.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-7-726055ba0c7b482978f0a5429d8040dc.png" width="1280" height="883" class="img_KnJ7"></p>
+<p>Choose your language and the keyboard layout and press "Next".</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-8-f58f4b3e3f901b096276691e8bffe081.png" width="1280" height="862" class="img_KnJ7"></p>
+<p>Click on "Install now".</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-9-89d24d9497fd5254981d2cb74fc55d9b.png" width="1280" height="853" class="img_KnJ7"></p>
+<p>Wait for it to load.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-10-993d07e6b2730d844e8a032a26ab39c9.png" width="1280" height="861" class="img_KnJ7"></p>
+<p>Accept the licence agreement and click "Next".</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-11-2d63fc0f5230d60cd5d1f4a64c7699b6.png" width="1280" height="862" class="img_KnJ7"></p>
+<p>Now, we have to select the type of installation we want. There are two options here: Upgrade and Custom (Advanced). Since i want to completely remove the Linux Mint installation and install Windows 7, i'll select Custom (Advanced).</p>
+<p>The "Upgrade" option has never worked for me, not with Windows 7 nor Windows 10. Maybe i was doing something wrong or it's the most useless feature ever built.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-12-132be5b5ce8cc5de3cb8cad0a9ab5c36.png" width="1280" height="855" class="img_KnJ7"></p>
+<p>Since i want to remove everything, i'll delete all the partitions in my main disk (Disk 0)</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-13-d29af8bcc50f37b309e65bad9652668d.png" width="1280" height="867" class="img_KnJ7"></p>
+<p>So, now, it looks something like this:</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-14-cbeb55a6b180079077f11cace692c4ae.png" width="1280" height="914" class="img_KnJ7"></p>
+<p>Click on "Next" for the installation to begin.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-15-8b5d166909679a5954aa3320df9bb051.png" width="1280" height="841" class="img_KnJ7"></p>
+<p>Your computer will restart once or twice while the installation takes place. It happens automatically.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-16-586a620a3a35898ae8224e2f2c2dedfd.png" width="1280" height="884" class="img_KnJ7"></p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-17-80b50715403bfa179cbf960a59d13f56.png" width="1280" height="879" class="img_KnJ7"></p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-18-65cd4d9541cde70b2f251805d0c60491.png" width="1280" height="981" class="img_KnJ7"></p>
+<p>Now, you will be greeted with the Set Up Windows page. At this stage, it's safe for you to remove your pendrive from the system.</p>
+<p>Enter your username and the computer name.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-19-31211697bc40173c0f70c6fd5a7ca82a.png" width="1280" height="837" class="img_KnJ7"></p>
+<p>I wont be setting any password, you should consider doing this incase if you are setting your computer up with windows 7 for office use.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-20-d895226fcf1e360952eb03e949de088c.png" width="1280" height="832" class="img_KnJ7"></p>
+<p>No, i don't want to activate a discontinued copy of Windows.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-21-1b07a4075f92e8712db3b45b12f517e0.png" width="1280" height="843" class="img_KnJ7"></p>
+<p>And no, i will disable the auto updating because i don't want to spend any resources / network usage trying to ping / GET non existing routes in Microsoft's servers.</p>
+<p>The final update for Windows 7 was on January 10, 2023.</p>
+<details class="details_MWPH alert alert--info details_fvjc" data-collapsed="true"><summary>Additional information about the final windows 7 update</summary><div><div class="collapsibleContent_R17e"><p><em>"While the OS's Extended Support ended on Jan. 14, 2020, the Extended Security Updates (ESUs) reached their end of life on Jan. 10, 2023. As we bid farewell to this successor of Windows Vista, and by far one of the most user-friendly OSs, let us take a deep dive into what Windows 7 end of life entails."</em> - <a href="https://blogs.manageengine.com/desktop-mobile/patch-manager-plus/2023/03/31/windows-7-end-of-life-the-end-of-an-era.html#:~:text=While%20the%20OS's%20Extended%20Support,7%20end%20of%20life%20entails." target="_blank" rel="noopener noreferrer">ManageEngine Blog</a></p><iframe width="560" height="315" src="https://www.youtube.com/embed/tvdpg8mTb6o?si=Sf7Ks8-T0yFiQKJx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div></details>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-22-4d0a6b5755ee4145b4f4538206410f3c.png" width="1280" height="831" class="img_KnJ7"></p>
+<p>Select your time zone</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-23-409766ca16e93339e218a8194f024870.png" width="1280" height="814" class="img_KnJ7"></p>
+<p>And you should be good to go</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-24-156f117c4c99e1b77b2744dec6ddb21f.png" width="1280" height="859" class="img_KnJ7"></p>
+<p>Now, the installation has been completed successfully.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-25-46537a0aae452e3a7d4355262cf01580.png" width="1055" height="667" class="img_KnJ7"></p>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="post-installation-setup">Post Installation Setup<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#post-installation-setup" class="hash-link" aria-label="Direct link to Post Installation Setup" title="Direct link to Post Installation Setup">​</a></h3>
+<p>After the installation, without any graphics driver, my screen resolution defaulted to 800x600 which is literally unusable, so, before anything, lets get started by adjusting the screen resolution to something usable.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-26-928e58e90afbe73e8f4d6702c7299fef.png" width="975" height="639" class="img_KnJ7"></p>
+<h2 class="anchor anchorWithStickyNavbar_lQ1M" id="setting-up">Setting up<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#setting-up" class="hash-link" aria-label="Direct link to Setting up" title="Direct link to Setting up">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="drivers">Drivers<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#drivers" class="hash-link" aria-label="Direct link to Drivers" title="Direct link to Drivers">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_lQ1M" id="downloading---method-1">Downloading - Method 1<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#downloading---method-1" class="hash-link" aria-label="Direct link to Downloading - Method 1" title="Direct link to Downloading - Method 1">​</a></h4>
+<p>Go to your official manufacturers website and download the drivers. A quick and simple google search should get you the required drivers, but this is not always the case. Some manufacturers remove their old device information and drivers from their website. In this case, you'll have to either identify the correct drivers yourself and download them from a third party website or you can follow the method 2 (scroll down).</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-28-0f2701507489e53e93ba3a8fcb7513f6.png" width="905" height="588" class="img_KnJ7"></p>
+<p>Download the required drivers. I will be downloading downloading and installing the Graphics Driver and the WiFi Driver from <a href="https://www.dell.com/support/home/en-us/product-support/product/inspiron-14-intel-n4050/drivers" target="_blank" rel="noopener noreferrer">dell's official website</a>.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-29-209271d6a411b27402668ca12fa0078e.png" width="1115" height="129" class="img_KnJ7"></p>
+<h4 class="anchor anchorWithStickyNavbar_lQ1M" id="downloading---method-2">Downloading - Method 2<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#downloading---method-2" class="hash-link" aria-label="Direct link to Downloading - Method 2" title="Direct link to Downloading - Method 2">​</a></h4>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-31-6684287f6e850bbc9fd0ea54b49717c0.png" width="1209" height="592" class="img_KnJ7"></p>
+<p>Use <a href="https://www.driveridentifier.com/" target="_blank" rel="noopener noreferrer">Driver Identifier</a> which is a free utility which will scan your computer for the required drivers and provide (almost) direct download links from reputable sources (like the manufactures of that specific hardware component, etc..)</p>
+<p>Since the computer has no WiFi drivers, download it from another device and copy it the computer with Windows 7. (you can also downliad it from your phone, plug it in, and copy the setup from your phone)</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-30-d407e06f0b9631d9c008b55d1614850e.png" width="1548" height="776" class="img_KnJ7"></p>
+<p>Open the application and click "I do not have internet connection" and then click on "Scan now".</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-32-2756ef540a96af1ca49d90c2b88feb4e.png" width="1007" height="633" class="img_KnJ7"></p>
+<p>After the scanning is complete, you will be prompted to save a HTML file. Save it to your removable media drive.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-33-e6150fac563637c7cc91b13b8f420ab7.png" width="822" height="518" class="img_KnJ7"></p>
+<p>Plug-in that removable media drive to another device with an internet connection. (Copy and) open the previously saved HTML file.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-3-616215bd7d18fbf85b4fb6a85b446c8c.png" width="664" height="302" class="img_KnJ7"></p>
+<p>After some loading, you will be able to see the missing drivers. Download them through this page. Make sure you download the correct driver variant by reading it's description and supported operating systems carefully.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-5-4e2e5d6b6c004976348d9c2f61b51213.png" width="1270" height="657" class="img_KnJ7"></p>
+<h4 class="anchor anchorWithStickyNavbar_lQ1M" id="installing">Installing<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#installing" class="hash-link" aria-label="Direct link to Installing" title="Direct link to Installing">​</a></h4>
+<p>First, let's install the graphics driver. This laptop has no fancy dedicated graphics cards, it just the iGPU of the processor.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-35-e4798ce86e40cadb3fcb206f730e3b67.png" width="789" height="513" class="img_KnJ7"></p>
+<p>After successfull installation of the graphics driver, you will be greeted with this window:</p>
+<p>With functioning graphics drivers, the Windows Aero Theme (Windows 7 with translucency effects) gets enabled automatically, and then you are prompted saying that this might reduce performance and maybe you should switch back to the Windows 7 Basic theme. I'm not a huge fan of translucency effects, so, i'll disable it.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-36-72c1d9fc63158d0f41957306752f5385.png" width="851" height="583" class="img_KnJ7"></p>
+<p>And the bad resultion has been finally fixed:</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-37-f48679804fbe513068b6f1a04d3c4aa9.png" width="996" height="662" class="img_KnJ7"></p>
+<p>Next, let's install the WiFi Driver, so we can connect an internet connection.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-38-955b531feb0118d37958df015301cbdf.png" width="957" height="594" class="img_KnJ7"></p>
+<p>The devices will be identified by windows and they will be ready to be used. Note: sometimes, you may have to restart the computer for them to works. Depends on the driver and the device.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-39-c6db27e4e52c1b174806a04729e73d09.png" width="925" height="523" class="img_KnJ7"></p>
+<p>And just like that, we are good to go now. All we have to do is install the software updates and security patches.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-40-1f1cae6dbc12eb5108a808df569c7e2a.png" width="975" height="637" class="img_KnJ7"></p>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="updates">Updates<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_lQ1M" id="download">Download<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#download" class="hash-link" aria-label="Direct link to Download" title="Direct link to Download">​</a></h4>
+<p>Click to start downloading the updates:</p>
+<ul>
+<li>
+<p>To get updates past 2019, one should manually install these two updates, in order</p>
+<ol>
+<li><a href="https://catalog.update.microsoft.com/search.aspx?q=kb4490628" target="_blank" rel="noopener noreferrer">KB4490628 Servicing Stack Update</a></li>
+<li><a href="https://catalog.update.microsoft.com/search.aspx?q=kb4474419" target="_blank" rel="noopener noreferrer">KB4474419 SHA-2 Code Signing Update</a></li>
+</ol>
+</li>
+<li>
+<p>WinHlp32 update for Windows 7:</p>
+<ol>
+<li><a href="https://files.thorium.rocks/win7/Windows6.1-KB917607-x86.msu" target="_blank" rel="noopener noreferrer">KB917607 WinHlp32 Update (x86)</a></li>
+<li><a href="https://files.thorium.rocks/win7/Windows6.1-KB917607-x64.msu" target="_blank" rel="noopener noreferrer">KB917607 WinHlp32 Update (x64)</a></li>
+</ol>
+</li>
+<li>
+<p><a href="https://web.archive.org/web/20211107030255/https://github.com/zeffy/wufuc" target="_blank" rel="noopener noreferrer">Wufuc</a>, which enables updates on "unsupported systems". See the <a href="https://web.archive.org/web/20211107030255/https://github.com/zeffy/wufuc#readme" target="_blank" rel="noopener noreferrer">README</a>.</p>
+<ol>
+<li><a href="https://files.thorium.rocks/win7/wufuc_v1.0.1.201-a52637d4.zip" target="_blank" rel="noopener noreferrer">wufuc_v1.0.1.201-a52637d4.zip</a></li>
+</ol>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_lQ1M" id="install">Install<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#install" class="hash-link" aria-label="Direct link to Install" title="Direct link to Install">​</a></h4>
+<p>Before getting started, create a new restore point just to be safe.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-41-2c2fa6d1e5f1f4693245b4a489b366d7.png" width="975" height="576" class="img_KnJ7"></p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-42-9d2660796d086cb1b441222dd0fedde2.png" width="692" height="733" class="img_KnJ7"></p>
+<p>Then, right click on the update file (with the <code>.msu</code> extension) and run it as Administrator.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-43-a6a74aa24e00fba05faa1a7f3e906847.png" width="1042" height="568" class="img_KnJ7"></p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-44-c27958e481f03dca5727269704ddecea.png" width="641" height="423" class="img_KnJ7"></p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-45-07e57c1f11259015b9ada6fb5bbd8b22.png" width="639" height="485" class="img_KnJ7"></p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-46-b84d39969428888cc13c5e8a197310c8.png" width="545" height="363" class="img_KnJ7"></p>
+<p>Since there are no more upcoming updates, i think wufuc might not be necessary.</p>
+<h2 class="anchor anchorWithStickyNavbar_lQ1M" id="software">Software<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#software" class="hash-link" aria-label="Direct link to Software" title="Direct link to Software">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="web-browser">Web Browser<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#web-browser" class="hash-link" aria-label="Direct link to Web Browser" title="Direct link to Web Browser">​</a></h3>
+<p>Internet Explorer is USELESS garbage. So, i will disable it.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-47-f095830910377ea176f44fefe2e107f4.png" width="817" height="657" class="img_KnJ7"></p>
+<p>Google Chrome nor Firefox supports Windows 7 anymore. The only proper option that we are left with is <span style="display:inline-flex;gap:0.25rem"><span></span><a href="https://github.com/Alex313031/thorium-win7/releases" target="_blank" rel="noopener noreferrer">Thorium</a></span>. <span style="display:inline-flex;gap:0.25rem"><span></span><a href="https://github.com/Alex313031/thorium-win7/releases/latest" target="_blank" rel="noopener noreferrer">Click here</a></span> to download the latest version of Thorium. - Yes, it's the faster browser to ever exist so far.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-48-56e0804730e91dcbfa16376658bfd209.png" width="1158" height="529" class="img_KnJ7"></p>
+<p>Give the installer a couple of seconds and it will be installed. (I wasn't connected to the internet while i was installing this)</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-49-89c2ea40291b93f0a795ab707d76de48.png" width="860" height="551" class="img_KnJ7"></p>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="7-zip">7-zip<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#7-zip" class="hash-link" aria-label="Direct link to 7-zip" title="Direct link to 7-zip">​</a></h3>
+<p>This is a great utility, instead of using the never-ending free trial of WinRAR, use 7-zip. <a href="https://www.7-zip.org/download.html" target="_blank" rel="noopener noreferrer">Click here</a> to download it.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-50-a913c88583e8533c5aa40efa6d2fb0d2.png" width="1323" height="754" class="img_KnJ7"></p>
+<p>Download it and run the installer. You should be able to see "7-zip" in the right-click context menu.</p>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="microsoft-office-suite">Microsoft Office Suite<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#microsoft-office-suite" class="hash-link" aria-label="Direct link to Microsoft Office Suite" title="Direct link to Microsoft Office Suite">​</a></h3>
+<p><a href="https://massgrave.dev/" target="_blank" rel="noopener noreferrer">Click here</a> to learn more about downloading the Microsoft Office Suite.</p>
+<p>Since Office 2013 is bloated and Office 2007 looks ancient, I'll be sticking with Microsoft Office 2010, just like the other 1000s of government offices in Sri Lanka.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-51-30cde98547139243200d92ee5fbc7ca3.png" width="678" height="411" class="img_KnJ7"></p>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="nextcloud">Nextcloud<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#nextcloud" class="hash-link" aria-label="Direct link to Nextcloud" title="Direct link to Nextcloud">​</a></h3>
+<p>Luckily, the Nextcloud Desktop sync client still works on Windows 7.</p>
+<p>NOTE: The official client won't work without Service Pack 1 (SP1). In this case, you will have to use a third party client with WebDAV to sync the files. It's extremely slow and not recommended. Please make sure that you have installed the SP1. Not having SP1 will also break support for many applications.</p>
+<p><img loading="lazy" alt="alt text" src="https://hirusha.xyz/assets/images/image-52-ca189d32f40da7560bfa00bc8c9eb8de.png" width="842" height="478" class="img_KnJ7"></p>
+<h3 class="anchor anchorWithStickyNavbar_lQ1M" id="other-applications">Other Applications<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#other-applications" class="hash-link" aria-label="Direct link to Other Applications" title="Direct link to Other Applications">​</a></h3>
+<p>Windows 7 Program Compatibility list: <a href="https://thorium.rocks/misc/win7_compat_list.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<h2 class="anchor anchorWithStickyNavbar_lQ1M" id="credits">Credits<a href="https://hirusha.xyz/blog/2024-04-03-windows-7-in-2024#credits" class="hash-link" aria-label="Direct link to Credits" title="Direct link to Credits">​</a></h2>
+<ul>
+<li>Inspired by <a href="https://thorium.rocks/win7" target="_blank" rel="noopener noreferrer">thorium.rocks/win7</a></li>
+</ul>]]></content:encoded>
+            <category>windows</category>
+        </item>
         <item>
             <title><![CDATA[Beeper - Sounds like a secuirty nightmare]]></title>
             <link>https://hirusha.xyz/blog/2024-02-15-beeper</link>
