@@ -9,6 +9,10 @@ This is my journey of installing Windows 7 for minimal office use in Sri Lanka. 
 
 <!--truncate-->
 
+:::danger WARNING
+This is NOT a guide. This is my personal experience installing Windows 7 on a decade old laptop, so, I might be doing something wrong here. You should not use Windows 7 as it's no longer secure nor its supported anymore by Microsoft. Please use a Linux distribution instead.
+:::
+
 This has a completely functional copy of Linux Mint installed, thats customized to look like Windows 7.
 
 ![alt text](<WhatsApp Image 2024-04-05 at 00.12.25_e8c31879.jpg>)
@@ -202,13 +206,9 @@ After some loading, you will be able to see the missing drivers. Download them t
 
 ![alt text](image-5.png)
 
-### Installing
+#### Installing
 
 First, let's install the graphics driver. This laptop has no fancy dedicated graphics cards, it just the iGPU of the processor. 
-
-![alt text](image-34.png)
-
-Run the installer, just keep on clicking Next on everything. 
 
 ![alt text](image-35.png)
 
@@ -222,3 +222,101 @@ And the bad resultion has been finally fixed:
 
 ![alt text](image-37.png)
 
+Next, let's install the WiFi Driver, so we can connect an internet connection.
+
+![alt text](image-38.png)
+
+The devices will be identified by windows and they will be ready to be used. Note: sometimes, you may have to restart the computer for them to works. Depends on the driver and the device.
+
+![alt text](image-39.png)
+
+And just like that, we are good to go now. All we have to do is install the software updates and security patches.
+
+![alt text](image-40.png)
+
+### Updates
+
+
+#### Download
+
+Click to start downloading the updates:
+
+- To get updates past 2019, one should manually install these two updates, in order
+  1. [KB4490628 Servicing Stack Update](https://catalog.update.microsoft.com/search.aspx?q=kb4490628)
+  2. [KB4474419 SHA-2 Code Signing Update](https://catalog.update.microsoft.com/search.aspx?q=kb4474419)
+
+- WinHlp32 update for Windows 7:
+  1. [KB917607 WinHlp32 Update (x86)](https://files.thorium.rocks/win7/Windows6.1-KB917607-x86.msu)
+  2. [KB917607 WinHlp32 Update (x64)](https://files.thorium.rocks/win7/Windows6.1-KB917607-x64.msu)
+
+- [Wufuc](https://web.archive.org/web/20211107030255/https://github.com/zeffy/wufuc), which enables updates on "unsupported systems". See the [README](https://web.archive.org/web/20211107030255/https://github.com/zeffy/wufuc#readme). 
+  1.  [wufuc_v1.0.1.201-a52637d4.zip](https://files.thorium.rocks/win7/wufuc_v1.0.1.201-a52637d4.zip)
+
+#### Install
+
+Before getting started, create a new restore point just to be safe.
+
+![alt text](image-41.png)
+
+![alt text](image-42.png)
+
+Then, right click on the update file (with the `.msu` extension) and run it as Administrator.
+
+![alt text](image-43.png)
+
+![alt text](image-44.png)
+
+![alt text](image-45.png)
+
+![alt text](image-46.png)
+
+Since there are no more upcoming updates, i think wufuc might not be necessary. 
+
+## Software
+
+### Web Browser
+
+Internet Explorer is USELESS garbage. So, i will disable it.
+
+![alt text](image-47.png)
+
+Google Chrome nor Firefox supports Windows 7 anymore. The only proper option that we are left with is [Thorium](https://github.com/Alex313031/thorium-win7/releases). [Click here](https://github.com/Alex313031/thorium-win7/releases/latest) to download the latest version of Thorium. - Yes, it's the faster browser to ever exist so far.
+
+![alt text](image-48.png)
+
+Give the installer a couple of seconds and it will be installed. (I wasn't connected to the internet while i was installing this)
+
+![alt text](image-49.png)
+
+### 7-zip
+
+This is a great utility, instead of using the never-ending free trial of WinRAR, use 7-zip. [Click here](https://www.7-zip.org/download.html) to download it.
+
+![alt text](image-50.png)
+
+Download it and run the installer. You should be able to see "7-zip" in the right-click context menu.
+
+### Microsoft Office Suite
+
+[Click here](https://massgrave.dev/) to learn more about downloading the Microsoft Office Suite. 
+
+Since Office 2013 is bloated and Office 2007 looks ancient, I'll be sticking with Microsoft Office 2010, just like the other 1000s of government offices in Sri Lanka.
+
+![alt text](image-51.png)
+
+### Nextcloud
+
+Luckily, the Nextcloud Desktop sync client still works on Windows 7. 
+
+NOTE: The official client won't work without Service Pack 1 (SP1). In this case, you will have to use a third party client with WebDAV to sync the files. It's extremely slow and not recommended. Please make sure that you have installed the SP1. Not having SP1 will also break support for many applications.
+
+![alt text](image-52.png)
+
+### Other Applications
+
+Windows 7 Program Compatibility list: [Click here](https://thorium.rocks/misc/win7_compat_list.html)
+
+
+## Credits
+
+- Inspired by [thorium.rocks/win7](https://thorium.rocks/win7)
