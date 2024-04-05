@@ -32,7 +32,7 @@ Open Rufus, plug-in your pendrive, select the downloading image (the `.iso` file
 Make sure to select the **Partition Scheme** as **MBR** and the **Target System** as **BIOS** when you are trying flash a pendrive for older computers.
 
 <details>
-<summary>What if you don't?</summary>
+<summary>This might happen if you do not do that. ,</summary>
 
 You will get this error after you boot from the pendrive after selecting it from the Boot Menu:
 
@@ -52,9 +52,13 @@ Remove the pendrive and plug it in to the system that we are going to install th
 
 ![alt text](<WhatsApp Image 2024-04-05 at 00.40.19_d8922199.jpg>)
 
+Turn on the device.
 
-- and now, our pendrive is ready
+![alt text](<WhatsApp Image 2024-04-05 at 08.06.05_194af1a7.jpg>)
   
+Go to the Boot Menu / Boot Options Menu, select the pendrive to boot with and hit enter. 
+
+![alt text](<WhatsApp Image 2024-04-05 at 08.38.44_da676c76.jpg>)
 
 - installationthe
 - thorium
