@@ -9,9 +9,9 @@ sidebar_position: 2
 
 - mantissa-exponent form 
     - normalized: 
-        - examples:
-            - `1.0000 x 2^3` 
-            - `0.0000 x 2^3`
+        - examples (mantissa):
+            - `10xxxxx` 
+            - `01xxxxx`
         - why?
             - to store the maximum range of numbers in the minimum number of bytes
             - normalization minimises the number of leading zeros / ones represented
@@ -21,7 +21,8 @@ sidebar_position: 2
         - identify normalized and not-normalized form
             - if normalized,    
                 - mantissa should begin with 01 / 10
-                - mantissa should not begind with 00 
+                - mantissa should not begin with 00 (the two most significant bits) 
+                - in mantissa, the 2nd should be the inverse of the 1st bit -> 01, 10
         - is not normalized?
             - first two bits of the mantissa should be different for normalized number (10 / 01)
             - because the mantissa starts with 00
@@ -30,6 +31,14 @@ sidebar_position: 2
             - redundant leading zeros in mantisaa
             - bits lost off right hand (least significant side)
             - multiple representations of a single number
+        - how to normalize?
+            - adjust the exponent, so that the mantissa starts with 01 or 10
+            - dont care about overflows in mantissa if any
+            - small description:
+                ![alt text](image-9.png)
+            - trick:
+                ![alt text](image-10.png)
+
     
     - NOTE: when converting from decimal/denery to mantissa-exponent form
         - if mantissa starts with 1 (MSB) - ( its a two's complement number )
@@ -67,12 +76,16 @@ sidebar_position: 2
         - largest two's complement
             - mantissa: **0**1111111
             - note that is starts with 0
-            ![alt text](image-3.png)
-        - smallest
-            - mantissa: 00000000
-            - exponent: 0000
+            - if we add anything to this, an overflow will occur
+            ![alt text](image-14.png)
+        - smallest two's complement, non zero (it's a vert small decimal number)
+            - mantissa: 01000000
+            - exponent: 1000
 
     - overflow
+        - description
+            - can occur when the number becomes too large
+            - to be represented in the avilable number of bits
         - eg: (from a question):
             - why 513 (>511) cannot be stored accurately as a normalized floating point number with a 10-bit mantissa?\
                 - requires 11 bits to store accurately
@@ -84,6 +97,9 @@ sidebar_position: 2
                 - the number of bits for the mantissa must be increased
                 - 11/12 bits mantissa and 5/4 bits exponent
     - underflow
+        - description (short)
+            - number s so small to be represented by the number of bits available
+        - description (long)
         - when an underflow (opposite of overflow) occurs in a binary floating point system
         - following an arithmetic/logical operation
         - the result is too small to be precisely represented in the avilable system
@@ -97,98 +113,150 @@ sidebar_position: 2
             - the precision of the number would be reduced
             - because the LSB of the original number has been lost (truncated)
     
+    - issues with binary representations
+        - rounding errors
+            - there is no exact binary conversion for some numbers
+            - more bits are needed to store the number than are available
+        
+        - decimal arithmetic inaccurate decimals, why?
+            - ![alt text](image-13.png)
+                - 0.2/0.4 cannot be represented exactly in binary / rounding error
+                - 0.2/0.4 has been represented by a value just greater than 0.2/0.4
+                - therefore, multiplying these  two representations together increases the difference
+                - difference after the calculation is significant enough to be seen (give the number of positions after the decimal place)
+            - ![alt text](image-3.png)
+                - 0.1/0.2/0.3 cannot be represented exactly in binary (due rounding errors)
+                - adding two or more inaccurate representaions together increases the probability of inaccuracy
+                - giving an answer where the difference is significant enough to be seen
+    
     - conversions 
         - refer the physical note
+        - methods:
+            - mantissa-exponent form to dernery/decimal (Method 1)
+            ![alt text](image-7.png)
+
+            - mantissa-exponent form to dernery/decimal (Method 2)
+            ![alt text](image-8.png)
+
         - examples
-            - mantissa-exponent form to denery/decimal
+            - mantissa-exponent form to denery/decimal (other)
             ![alt text](image-4.png)
+
+            - when Two's Complement, it's valid for both mantissa and exponent. In this below image, the exponent is -1.
+            ![alt text](image-6.png)
+
+            - first show **+11.625** (normal method), then **-11.625** (take the two's complement, and follow the normal method)
+            ![alt text](image-11.png)
+            ![alt text](image-12.png)
 
 
 ![alt text](image-1.png)
 
 
 - user defined data types
-    - called records
+    - why necessary?
+        - no suitable data type is provided by the language used
+        - the programmer needs to specify a new data type
+        - that meets the requirements of the application / program
     - purpose?
         - to create a new data type (from existing data types)
         - to allow data types not available in a programming language to be constructed
             - to extend the flexibility of the programming language
     - user defined types:
-        - non composite data types
-            - pointer data type
+        - meaning
+            - derived from one or more existing data types
+            - used to extend the built-in data types
+            - creates data-types specific to applications // programmer's requirements
+        - types:
+            - non composite data types
                 - meaning
-                    - used to reference a memmory location
-                - examples:
-                        - 1: note the **^** infront of Parts
-                        ```
-                        // define the reference data type 
-                        TYPE Parts = (Monitor, Keyboard, Mouse)
+                    - a single data types that does not involve a reference to another type
+                    - (which is usually built in to the programming language)
+                - pointer data type
+                    - meaning
+                        - used to reference a memmory location
+                    - examples:
+                            - 1: note the **^** infront of Parts
+                            ```
+                            // define the reference data type 
+                            TYPE Parts = (Monitor, Keyboard, Mouse)
 
-                        // use the pointer and reference to Parts
-                        TYPE SelectParts = ^Parts
+                            // use the pointer and reference to Parts
+                            TYPE SelectParts = ^Parts
 
-                        // if the question doesn't give the variable name but suggests a data type
-                        TYPE SelectNames = ^STRING
+                            // if the question doesn't give the variable name but suggests a data type
+                            TYPE SelectNames = ^STRING
+                            ```
+                - enumerated data type
+                    - meaning
+                        - ordered list of possible values
+                    - examples:
+                        - `WeekEnd` stores data about the days that are not school days:
                         ```
-            - enumerated data type
+                        TYPE WeekEnd = (Saturday, Sunday)
+                        // note, they are not "strings", write write the values inside the brackets
+                        ```
+                        - Departement stores one of three values: Sales, Tech, CustomerServices
+                        ```
+                        DECLARE Departement: (Sales, Tech, CustomerServices)
+                        ``` 
+            - composite data type
                 - meaning
-                    - ordered list of possible values
-                - examples:
-                    - `WeekEnd` stores data about the days that are not school days:
-                    ```
-                    TYPE WeekEnd = (Saturday, Sunday)
-                    // note, they are not "strings", write write the values inside the brackets
-                    ```
-                    - Departement stores one of three values: Sales, Tech, CustomerServices
-                    ```
-                    DECLARE Departement: (Sales, Tech, CustomerServices)
-                    ``` 
-        - composite data type
-            - record
-                - description
-                    - collection of related items which may have different data types
-                - meaning?
-                    - a data type constructed by a progammer (not a primitive data type)
-                    - a data type that references at least one other data type
-                    - and data types can be primitive, or user defined
-                
-                - examples:
-                    - `ClubMeet` type stores first, last names, the days to stay home without school
-                    ```
-                    // our enumerated data type
-                    TYPE WeekEnd = (Saturday, Sunday)
+                    - data type constructed from other data types
+                - record
+                    - description
+                        - collection of related items which may have different data types
+                    - meaning?
+                        - a data type constructed by a progammer (not a primitive data type)
+                        - a data type that references at least one other data type
+                        - and data types can be primitive, or user defined
+                    
+                    - examples:
+                        - `ClubMeet` type stores first, last names, the days to stay home without school
+                        ```
+                        // our enumerated data type
+                        TYPE WeekEnd = (Saturday, Sunday)
 
-                    // composite data type
-                    TYPE ClubMeet
-                        DECLARE FirstName: STRING
-                        DECLARE LastName: STRING
-                        DECLARE Holiday: WeekEnd
-                    ENDTYPE
+                        // composite data type
+                        TYPE ClubMeet
+                            DECLARE FirstName: STRING
+                            DECLARE LastName: STRING
+                            DECLARE Holiday: WeekEnd
+                        ENDTYPE
 
-                    // declaring our variable
-                    DECLARE TestObj: ClubMeet
+                        // declaring our variable
+                        DECLARE TestObj: ClubMeet
 
-                    // to assign values
-                    TestObj.FirstName <-- "Hirusha"
-                    TestObj.LastName <-- "Adikari"
-                    ```
-            - other composite data types:
-                - arrays
-                    - indexed collection of items with same data type
-                - sets
-                    - stores a finite number of different values that have no order 
-                        - (values don't repeat)
-                    - supports mathematical operations
-                - lists
-                    - indexed collection of items that can have different data types
-                - class / struct / structure
-                    - gives properties and methods for an object
-                - stack 
-                - queue 
-                - linked list
-                - dictionary
-                - objects
-        - other
+                        // to assign values
+                        TestObj.FirstName <-- "Hirusha"
+                        TestObj.LastName <-- "Adikari"
+                        ```
+                - other composite data types:
+                    - arrays
+                        - description
+                            - indexed collection of items with same data type
+                        - declaration
+                            ```
+                            // DECLARE <Array_Name>: ARRAY[<Index_Start>:<Index_End>] OF <Data_Type>
+
+                            // array with 20 elements of type Integer
+                            DECLARE ArrName: ARRAY[1:20] OF INTEGER
+                            ```
+                    - sets
+                        - stores a finite number of different values that have no order 
+                            - (values don't repeat)
+                        - supports mathematical operations
+                    - lists
+                        - indexed collection of items that can have different data types
+                    - class / struct / structure
+                        - gives properties and methods for an object
+                    - stack 
+                    - queue 
+                    - linked list
+                    - dictionary
+                    - objects
+                    - collections
+        - more/other stuff
             - variable's value should be within 1 and 10 (both start and end are inclusive)
             ```
             DECLARE Copies: 1 .. 10
