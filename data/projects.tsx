@@ -68,6 +68,17 @@ export const projects: Project[] = [
     tags: ['archived'],
     type: 'old',
   },
+  {
+    title: 'GTA-AHK-Script',
+    description:
+      'AutoHotKey scripts to be used with GTA V for an easier gameplay.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/ahk.jpg',
+    website: 'https://github.com/hirusha-adi/GTA-AHK-Script',
+    source: 'https://github.com/hirusha-adi/GTA-AHK-Script',
+    tags: ['archived'],
+    type: 'old',
+  },
 
 
   // {
