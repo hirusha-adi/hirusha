@@ -80,6 +80,17 @@ export const projects: Project[] = [
     type: 'old',
   },
   {
+    title: 'Userphone-Fun-Discord',
+    description:
+      'AutoHotKey script to abuse the --userphone command in yggdrasil discord bot.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/ahk.jpg',
+    website: 'https://github.com/hirusha-adi/Userphone-Fun-Discord',
+    source: 'https://github.com/hirusha-adi/Userphone-Fun-Discord',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
     title: 'Intel-Scraper',
     description:
       'Web scraper to scrape intel processor information from: https://ark.intel.com/content/',
@@ -120,6 +131,28 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Join-Zoom-Meeting.png',
     website: 'https://github.com/hirusha-adi/Join-Zoom-Meeting',
     source: 'https://github.com/hirusha-adi/Join-Zoom-Meeting',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'ikmanLK-Scrapper',
+    description:
+      'Scrap advertisments from ikman.lk.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/ikmanLK-Scrapper.png',
+    website: 'https://github.com/hirusha-adi/ikmanLK-Scrapper',
+    source: 'https://github.com/hirusha-adi/ikmanLK-Scrapper',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Contact-Manager-CLI',
+    description:
+      'Create a CLI tool that works like a contacts manager app, this was my first project with SQL (sqlite3).',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Contact-Manager-CLI.png',
+    website: 'https://github.com/hirusha-adi/Contact-Manager-CLI',
+    source: 'https://github.com/hirusha-adi/Contact-Manager-CLI',
     tags: ['archived'],
     type: 'old',
   },
