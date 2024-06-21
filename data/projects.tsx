@@ -189,6 +189,28 @@ export const projects: Project[] = [
     tags: ['archived'],
     type: 'old',
   },
+  {
+    title: 'Image-Resizer',
+    description:
+      'First time using PIL/Pillow.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Image-Resizer.png',
+    website: 'https://github.com/hirusha-adi/Image-Resizer',
+    source: 'https://github.com/hirusha-adi/Image-Resizer',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Image-Resizer-2',
+    description:
+      'First time using PIL/Pillow.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Image-Resizer.png',
+    website: 'https://github.com/hirusha-adi/Image-Resizer-2',
+    source: 'https://github.com/hirusha-adi/Image-Resizer-2',
+    tags: ['archived'],
+    type: 'old',
+  },
   
 
 
