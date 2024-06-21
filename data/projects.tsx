@@ -48,12 +48,28 @@ export const projects: Project[] = [
     description:
       'Scam the user into scanning a login QR code by sending a fake gifted nitro subscription.',
     preview:
-      'https://camo.githubusercontent.com/aa0714bd153599dbdbe05b0ac34ae7b0dcb7db22b2222ea5af429037709fc70a/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3835333831373839333734343830333834302f3839393331373034383937373535313431302f756e6b6e6f776e2e706e67',
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Discord-Token-Grabber-by-QR.png',
     website: 'https://github.com/hirusha-adi/Discord-Token-Grabber-by-QR',
     source: 'https://github.com/hirusha-adi/Discord-Token-Grabber-by-QR',
     tags: ['opensource', 'favorite', 'security'],
     type: 'tools',
   },
+
+  // old
+  // ---
+  {
+    title: 'Mahathama-Gandhi',
+    description:
+      'Website made for a history school project in Year 7, about India.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Mahathama-Gandhi.png',
+    website: 'https://github.com/hirusha-adi/Mahathama-Gandhi',
+    source: 'https://github.com/hirusha-adi/Mahathama-Gandhi',
+    tags: ['archived'],
+    type: 'old',
+  },
+
+
   // {
   //   title: 'rust-wasm-md5',
   //   description: 'Rust',
@@ -78,6 +94,7 @@ export type TagType =
   | 'osint'
   | 'security'
   | 'fork'
+  | 'archived'
 
 export type ProjectType = 'web' | 'tools' | 'other' | 'bot' | 'old' | 'personal'
 
@@ -141,6 +158,12 @@ export const Tags: Record<TagType, Tag> = {
     description: 'A forked repository that i improved upon',
     color: '#0000ff',
   },
+  archived: {
+    label: 'Archived',
+    description: 'BAD CODE & DESIGN. PLEASE DO NOT OPEN THIS.',
+    color: '#0000ff',
+  }
+  
 }
 
 export const TagList = Object.keys(Tags) as TagType[]
