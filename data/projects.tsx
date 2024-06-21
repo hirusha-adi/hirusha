@@ -79,6 +79,51 @@ export const projects: Project[] = [
     tags: ['archived'],
     type: 'old',
   },
+  {
+    title: 'Intel-Scraper',
+    description:
+      'Web scraper to scrape intel processor information from: https://ark.intel.com/content/',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Intel-Scraper.png',
+    website: 'https://github.com/hirusha-adi/Intel-Scraper',
+    source: 'https://github.com/hirusha-adi/Intel-Scraper',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Calc',
+    description:
+      'Simple calculator made with Swing framework - Java.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Calc.png',
+    website: 'https://github.com/hirusha-adi/Calc',
+    source: 'https://github.com/hirusha-adi/Calc',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'firrst-discord-bot',
+    description:
+      'My very first discord bot, made following a youtube tutorial, to be hosted on repl.it.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/discord.png',
+    website: 'https://github.com/hirusha-adi/firrst-discord-bot',
+    source: 'https://github.com/hirusha-adi/firrst-discord-bot',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Join-Zoom-Meeting',
+    description:
+      'Join zoom meeting automtaically at given time using PyAutoGui',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Join-Zoom-Meeting.png',
+    website: 'https://github.com/hirusha-adi/Join-Zoom-Meeting',
+    source: 'https://github.com/hirusha-adi/Join-Zoom-Meeting',
+    tags: ['archived'],
+    type: 'old',
+  },
+  
 
 
   // {
