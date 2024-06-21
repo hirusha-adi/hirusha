@@ -146,6 +146,17 @@ export const projects: Project[] = [
     type: 'old',
   },
   {
+    title: 'Riyasewana-Scraper',
+    description:
+      'Scrap advertisments from riyasewana.com. has both a CLI and a GUI version.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Riyasewana-Scraper.png',
+    website: 'https://github.com/hirusha-adi/Riyasewana-Scraper',
+    source: 'https://github.com/hirusha-adi/Riyasewana-Scraper',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
     title: 'Contact-Manager-CLI',
     description:
       'Create a CLI tool that works like a contacts manager app, this was my first project with SQL (sqlite3).',
@@ -153,6 +164,28 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Contact-Manager-CLI.png',
     website: 'https://github.com/hirusha-adi/Contact-Manager-CLI',
     source: 'https://github.com/hirusha-adi/Contact-Manager-CLI',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Dictionary',
+    description:
+      'A simple dictionary application made with tkinter/tcl and difflib to get close matches.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Dictionary.png',
+    website: 'https://github.com/hirusha-adi/Dictionary',
+    source: 'https://github.com/hirusha-adi/Dictionary',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'bat-code-generator',
+    description:
+      'Put together sketchy/malicious batch code - ultimate skid edition.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/bat-code-generator.png',
+    website: 'https://github.com/hirusha-adi/bat-code-generator',
+    source: 'https://github.com/hirusha-adi/bat-code-generator',
     tags: ['archived'],
     type: 'old',
   },
