@@ -27,7 +27,7 @@ export default function Home(): JSX.Element {
                 <div className="col col--8 col--offset-2">
                   <h3 className={clsx('text--center', 'margin-bottom--lg')}>
                     "Don't let the chains of orthodoxy shackle your imagination. Break free and let
-                    your ideas soar, for that's where true innovation is born."
+                    your ideas soar, for that's where true innovation is born." - TEST !23
                   </h3>
                   <center>- hirusha</center>
                 </div>
