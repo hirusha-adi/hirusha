@@ -11,7 +11,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
   organizationName: 'hirusha-adi',
   projectName: 'hirusha',
-  trailingSlash: false, // change this to false and try if it fails
+  // trailingSlash: false, // change this to false and try if it fails
   customFields: {
     bio: 'a place to document/display/showcase all my work.',
     description:
