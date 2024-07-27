@@ -13,7 +13,9 @@ tags: [crowdstrike,troubleshooting,automation]
 
 A detailed usage guide followed by great explanation is included this project's github repository: https://github.com/hirusha-adi/crowdstrike-fix/
 
-This is just an abstraction of what happend
+Additional information can also be found [here (docs/projects/crowdstrike_fix)](http://localhost:3000/docs/projects/crowdstrike_fix/).
+
+This is just an abstraction of what happend.
 
 ## Introduction
 
