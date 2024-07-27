@@ -61,7 +61,7 @@ function CategoryList() {
 
 export default function Resources() {
   const title = 'Recommended'
-  const description = 'A list of tools tools that I actually recommend'
+  const description = 'A list of tools that I actually recommend'
 
   return (
     <HtmlClassNameProvider
