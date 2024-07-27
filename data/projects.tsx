@@ -212,7 +212,39 @@ export const projects: Project[] = [
     tags: ['archived'],
     type: 'old',
   },
-  
+  {
+    title: 'xTable-CLI',
+    description:
+      'Multiple table with Loops in Python.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/xTable-CLI.png',
+    website: 'https://github.com/hirusha-adi/xTable-CLI',
+    source: 'https://github.com/hirusha-adi/xTable-CLI',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Word Counter',
+    description:
+      'Count words with a tcl/tkinter GUI.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/word-counter.png',
+    website: 'https://github.com/hirusha-adi/word-counter',
+    source: 'https://github.com/hirusha-adi/word-counter',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Track IP',
+    description:
+      'Count words with a tcl/tkinter GUI.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Track-IP.png',
+    website: 'https://github.com/hirusha-adi/Track-IP',
+    source: 'https://github.com/hirusha-adi/Track-IP',
+    tags: ['archived'],
+    type: 'old',
+  },
 
 
   // {
