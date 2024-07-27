@@ -1,6 +1,6 @@
 ---
 slug: 2024-07-27-crowdstikr-fix
-title: Fix to the crowd strike issue
+title: Fix the CrowsStrike issue, quickly & easily 
 authors: [hirusha]
 tags: [crowdstrike,troubleshooting,automation]
 ---
