@@ -60,8 +60,8 @@ function CategoryList() {
 }
 
 export default function Resources() {
-  const title = '网址导航'
-  const description = '整合日常开发常用，推荐的网站导航页'
+  const title = 'Recommended'
+  const description = 'A list of tools tools that I actually recommend'
 
   return (
     <HtmlClassNameProvider

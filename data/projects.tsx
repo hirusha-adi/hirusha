@@ -57,17 +57,18 @@ export const projects: Project[] = [
 
   // old
   // ---
-  {
-    title: 'Mahathama-Gandhi',
-    description:
-      'Website made for a history school project in Year 7, about India.',
-    preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Mahathama-Gandhi.png',
-    website: 'https://github.com/hirusha-adi/Mahathama-Gandhi',
-    source: 'https://github.com/hirusha-adi/Mahathama-Gandhi',
-    tags: ['archived'],
-    type: 'old',
-  },
+  // no, not this.... uhh
+  // {
+  //   title: 'Mahathama-Gandhi',
+  //   description:
+  //     'Website made for a history school project in Year 7, about India.',
+  //   preview:
+  //     'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Mahathama-Gandhi.png',
+  //   website: 'https://github.com/hirusha-adi/Mahathama-Gandhi',
+  //   source: 'https://github.com/hirusha-adi/Mahathama-Gandhi',
+  //   tags: ['archived'],
+  //   type: 'old',
+  // },
   {
     title: 'GTA-AHK-Script',
     description:
