@@ -235,16 +235,568 @@ export const projects: Project[] = [
     type: 'old',
   },
   {
-    title: 'Track IP',
+    title: 'subdomain-scanner',
     description:
-      'Count words with a tcl/tkinter GUI.',
+      'a fast, multithreaded subdomain scanner + word list',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Track-IP.png',
-    website: 'https://github.com/hirusha-adi/Track-IP',
-    source: 'https://github.com/hirusha-adi/Track-IP',
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/subdomain-scanner.png',
+    website: 'https://github.com/hirusha-adi/subdomain-scanner',
+    source: 'https://github.com/hirusha-adi/subdomain-scanner',
     tags: ['archived'],
     type: 'old',
   },
+  {
+    title: 'hide-data-in-jpeg',
+    description:
+      'Basic image stenography for .jpeg image',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/hide-data-in-jpeg.png',
+    website: 'https://github.com/hirusha-adi/hide-data-in-jpeg',
+    source: 'https://github.com/hirusha-adi/hide-data-in-jpeg',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'logger',
+    description:
+      'A very bad implementation of a custom logger in python',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/logger.png',
+    website: 'https://github.com/hirusha-adi/logger',
+    source: 'https://github.com/hirusha-adi/logger',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'SRAW',
+    description:
+      'Some Random API Wrapper',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/SRAW.png',
+    website: 'https://github.com/hirusha-adi/SRAW',
+    source: 'https://github.com/hirusha-adi/SRAW',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Reidor',
+    description:
+      'The ultimate discord server raiding bot, with safe mode.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Reidor.png',
+    website: 'https://github.com/hirusha-adi/Reidor',
+    source: 'https://github.com/hirusha-adi/Reidor',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'IPT-RSS-BOT',
+    description:
+      'A discord bot to notify new updates in any IP-Torrents RSS Feed.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/IPT-RSS-BOT.png',
+    website: 'https://github.com/hirusha-adi/IPT-RSS-BOT',
+    source: 'https://github.com/hirusha-adi/IPT-RSS-BOT',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Email-Spammer',
+    description:
+      'Spam emails, send from many sendors to many recievers.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Email-Spammer.png',
+    website: 'https://github.com/hirusha-adi/Email-Spammer',
+    source: 'https://github.com/hirusha-adi/Email-Spammer',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'tree',
+    description:
+      'An implementation of the tree command, also works with Linux.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/tree.png',
+    website: 'https://github.com/hirusha-adi/tree',
+    source: 'https://github.com/hirusha-adi/tree',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'youtube-search-and-download',
+    description:
+      'Search and download youtube videos',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/youtube-search-and-download.png',
+    website: 'https://github.com/hirusha-adi/youtube-search-and-download',
+    source: 'https://github.com/hirusha-adi/youtube-search-and-download',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Ubuntu-Setup-Post-Install',
+    description:
+      'Post install setup for ubuntu. PLEASE DO NOT USE THIS!',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Ubuntu-Setup-Post-Install.png',
+    website: 'https://github.com/hirusha-adi/Ubuntu-Setup-Post-Install',
+    source: 'https://github.com/hirusha-adi/Ubuntu-Setup-Post-Install',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Chrome-Password-Stealer',
+    description:
+      'Steal chromium based passwords and email them.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Chrome-Password-Stealer.png',
+    website: 'https://github.com/hirusha-adi/Chrome-Password-Stealer',
+    source: 'https://github.com/hirusha-adi/Chrome-Password-Stealer',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Arch-Based-Distros-Software-Installer',
+    description:
+      'Post install setup for arch linux.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Arch-Based-Distros-Software-Installer.png',
+    website: 'https://github.com/hirusha-adi/Arch-Based-Distros-Software-Installer',
+    source: 'https://github.com/hirusha-adi/Arch-Based-Distros-Software-Installer',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Fake-Information-Webpage',
+    description:
+      'Basically a knock-off of fakenamegenerator.com based on Flask.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Fake-Information-Webpage.png',
+    website: 'https://github.com/hirusha-adi/Fake-Information-Webpage',
+    source: 'https://github.com/hirusha-adi/Fake-Information-Webpage',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'backdoor',
+    description:
+      'Simple reverse-shell / backdoor',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/backdoor.png',
+    website: 'https://github.com/hirusha-adi/backdoor',
+    source: 'https://github.com/hirusha-adi/backdoor',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'UnSillyRAT',
+    description:
+      'Highly improved, feature-rich version of UnSillyRAT',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/UnSillyRAT.png',
+    website: 'https://github.com/hirusha-adi/UnSillyRAT',
+    source: 'https://github.com/hirusha-adi/UnSillyRAT',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'calendar-multi-platform',
+    description:
+      '`cal` command that also works on windows',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/calendar-multi-platform.png',
+    website: 'https://github.com/hirusha-adi/calendar-multi-platform',
+    source: 'https://github.com/hirusha-adi/calendar-multi-platform',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'EXIF-Extract-JPG',
+    description:
+      'Extract EXIF information from JPG images (made to work with instaloader images)',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/EXIF-Extract-JPG.png',
+    website: 'https://github.com/hirusha-adi/EXIF-Extract-JPG',
+    source: 'https://github.com/hirusha-adi/EXIF-Extract-JPG',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Notes-QT',
+    description:
+      'Simple text-editor like Notepad, built with Qt and Python',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Notes-QT.png',
+    website: 'https://github.com/hirusha-adi/Notes-QT',
+    source: 'https://github.com/hirusha-adi/Notes-QT',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Simple-Calculator-with-Python',
+    description:
+      'Simple calculator written with tkinter/tcl in Python',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Simple-Calculator-with-Python.png',
+    website: 'https://github.com/hirusha-adi/Simple-Calculator-with-Python',
+    source: 'https://github.com/hirusha-adi/Simple-Calculator-with-Python',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Whatsapp-Group-Logo-Creator-RIS',
+    description:
+      'Whatsapp group logo creator for School',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Whatsapp-Group-Logo-Creator-RIS.png',
+    website: 'https://github.com/hirusha-adi/Whatsapp-Group-Logo-Creator-RIS',
+    source: 'https://github.com/hirusha-adi/Whatsapp-Group-Logo-Creator-RIS',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Image-Sharing-Website',
+    description:
+      'Simple website to share images, based on Flask.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Image-Sharing-Website.png',
+    website: 'https://github.com/hirusha-adi/Image-Sharing-Website',
+    source: 'https://github.com/hirusha-adi/Image-Sharing-Website',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'File-Manager',
+    description:
+      'Simple file server like `filebrowser` made with Flask.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/File-Manager.png',
+    website: 'https://github.com/hirusha-adi/File-Manager',
+    source: 'https://github.com/hirusha-adi/File-Manager',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Sri-Lanka-Covid-19-Dashboard',
+    description:
+      'Covid-19 statistics dashboard based on the API of hpb.health.gov.lk',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Sri-Lanka-Covid-19-Dashboard.png',
+    website: 'https://github.com/hirusha-adi/Sri-Lanka-Covid-19-Dashboard',
+    source: 'https://github.com/hirusha-adi/Sri-Lanka-Covid-19-Dashboard',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Focus',
+    description:
+      'Add entries to the hosts file depending on what time it is to avoid distractions',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Focus.png',
+    website: 'https://github.com/hirusha-adi/Focus',
+    source: 'https://github.com/hirusha-adi/Focus',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Email-Validator',
+    description:
+      'Simple API to validate emails with regex.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Email-Validator.png',
+    website: 'https://github.com/hirusha-adi/Email-Validator',
+    source: 'https://github.com/hirusha-adi/Email-Validator',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Downloader',
+    description:
+      'Youtube media downlader - CLI, Web-UI, GUI (rick and morty themed)',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Downloader.png',
+    website: 'https://github.com/hirusha-adi/Downloader',
+    source: 'https://github.com/hirusha-adi/Downloader',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Instagram-Unfollow',
+    description:
+      'Use selenium to unfolow everyone in your instagram profile',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Instagram-Unfollow.png',
+    website: 'https://github.com/hirusha-adi/Instagram-Unfollow',
+    source: 'https://github.com/hirusha-adi/Instagram-Unfollow',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'Linux package manager wrapper kinda thing...',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Fake-Email-Sender',
+    description:
+      'Send fake emails using anonymouse.org',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Fake-Email-Sender.png',
+    website: 'https://github.com/hirusha-adi/Fake-Email-Sender',
+    source: 'https://github.com/hirusha-adi/Fake-Email-Sender',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Discord-Bot',
+    description:
+      'aka YourBot, my second discord bot, with over 250+ commands',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Discord-Bot.png',
+    website: 'https://github.com/hirusha-adi/Discord-Bot',
+    source: 'https://github.com/hirusha-adi/Discord-Bot',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Cats',
+    description:
+      'Website to display cat images',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Cats.png',
+    website: 'https://github.com/hirusha-adi/Cats',
+    source: 'https://github.com/hirusha-adi/Cats',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Dogs',
+    description:
+      'Website to display dog images',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Dogs.png',
+    website: 'https://github.com/hirusha-adi/Dogs',
+    source: 'https://github.com/hirusha-adi/Dogs',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Discord-Channel-Attacthment-Save',
+    description:
+      'Save all the attatchments sent in a channel',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Discord-Channel-Attacthment-Save.png',
+    website: 'https://github.com/hirusha-adi/Discord-Channel-Attacthment-Save',
+    source: 'https://github.com/hirusha-adi/Discord-Channel-Attacthment-Save',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Jokes',
+    description:
+      'Website with jokes, with an API - data scraped from several APIs',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Jokes.png',
+    website: 'https://github.com/hirusha-adi/Jokes',
+    source: 'https://github.com/hirusha-adi/Jokes',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'OpenCV-Video-Tools',
+    description:
+      'Apply cascades easily',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/OpenCV-Video-Tools.png',
+    website: 'https://github.com/hirusha-adi/OpenCV-Video-Tools',
+    source: 'https://github.com/hirusha-adi/OpenCV-Video-Tools',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'SMS-Sending-Discord-Bot',
+    description:
+      'Send SMS with a discord bot using the Telnyx API',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/SMS-Sending-Discord-Bot.png',
+    website: 'https://github.com/hirusha-adi/SMS-Sending-Discord-Bot',
+    source: 'https://github.com/hirusha-adi/SMS-Sending-Discord-Bot',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'Pagination-Guides',
+    description:
+      '(Bad) pagination guide for Flask-Pagination',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Pagination-Guides.png',
+    website: 'https://github.com/hirusha-adi/Pagination-Guides',
+    source: 'https://github.com/hirusha-adi/Pagination-Guides',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+  {
+    title: 'WTF',
+    description:
+      'desccccccccccccccccccccccc',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
+    website: 'https://github.com/hirusha-adi/WTF',
+    source: 'https://github.com/hirusha-adi/WTF',
+    tags: ['archived'],
+    type: 'old',
+  },
+
 
 
   // {
