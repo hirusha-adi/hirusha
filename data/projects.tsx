@@ -66,7 +66,7 @@ export const projects: Project[] = [
   //     'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Mahathama-Gandhi.png',
   //   website: 'https://github.com/hirusha-adi/Mahathama-Gandhi',
   //   source: 'https://github.com/hirusha-adi/Mahathama-Gandhi',
-  //   tags: ['archived'],
+  //   tags: ['archived', 'basic'],
   //   type: 'old',
   // },
   {
@@ -77,7 +77,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/ahk.jpg',
     website: 'https://github.com/hirusha-adi/GTA-AHK-Script',
     source: 'https://github.com/hirusha-adi/GTA-AHK-Script',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -88,7 +88,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/ahk.jpg',
     website: 'https://github.com/hirusha-adi/Userphone-Fun-Discord',
     source: 'https://github.com/hirusha-adi/Userphone-Fun-Discord',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -99,7 +99,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Intel-Scraper.png',
     website: 'https://github.com/hirusha-adi/Intel-Scraper',
     source: 'https://github.com/hirusha-adi/Intel-Scraper',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -110,7 +110,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Calc.png',
     website: 'https://github.com/hirusha-adi/Calc',
     source: 'https://github.com/hirusha-adi/Calc',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -121,7 +121,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/discord.png',
     website: 'https://github.com/hirusha-adi/firrst-discord-bot',
     source: 'https://github.com/hirusha-adi/firrst-discord-bot',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -132,7 +132,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Join-Zoom-Meeting.png',
     website: 'https://github.com/hirusha-adi/Join-Zoom-Meeting',
     source: 'https://github.com/hirusha-adi/Join-Zoom-Meeting',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -143,7 +143,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/ikmanLK-Scrapper.png',
     website: 'https://github.com/hirusha-adi/ikmanLK-Scrapper',
     source: 'https://github.com/hirusha-adi/ikmanLK-Scrapper',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -154,7 +154,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Riyasewana-Scraper.png',
     website: 'https://github.com/hirusha-adi/Riyasewana-Scraper',
     source: 'https://github.com/hirusha-adi/Riyasewana-Scraper',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -165,7 +165,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Contact-Manager-CLI.png',
     website: 'https://github.com/hirusha-adi/Contact-Manager-CLI',
     source: 'https://github.com/hirusha-adi/Contact-Manager-CLI',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -176,7 +176,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Dictionary.png',
     website: 'https://github.com/hirusha-adi/Dictionary',
     source: 'https://github.com/hirusha-adi/Dictionary',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -187,7 +187,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/bat-code-generator.png',
     website: 'https://github.com/hirusha-adi/bat-code-generator',
     source: 'https://github.com/hirusha-adi/bat-code-generator',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -198,7 +198,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Image-Resizer.png',
     website: 'https://github.com/hirusha-adi/Image-Resizer',
     source: 'https://github.com/hirusha-adi/Image-Resizer',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -209,7 +209,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Image-Resizer.png',
     website: 'https://github.com/hirusha-adi/Image-Resizer-2',
     source: 'https://github.com/hirusha-adi/Image-Resizer-2',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -220,7 +220,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/xTable-CLI.png',
     website: 'https://github.com/hirusha-adi/xTable-CLI',
     source: 'https://github.com/hirusha-adi/xTable-CLI',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -231,7 +231,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/word-counter.png',
     website: 'https://github.com/hirusha-adi/word-counter',
     source: 'https://github.com/hirusha-adi/word-counter',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -242,7 +242,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/subdomain-scanner.png',
     website: 'https://github.com/hirusha-adi/subdomain-scanner',
     source: 'https://github.com/hirusha-adi/subdomain-scanner',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -253,7 +253,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/hide-data-in-jpeg.png',
     website: 'https://github.com/hirusha-adi/hide-data-in-jpeg',
     source: 'https://github.com/hirusha-adi/hide-data-in-jpeg',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -264,7 +264,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/logger.png',
     website: 'https://github.com/hirusha-adi/logger',
     source: 'https://github.com/hirusha-adi/logger',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -275,7 +275,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/SRAW.png',
     website: 'https://github.com/hirusha-adi/SRAW',
     source: 'https://github.com/hirusha-adi/SRAW',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -286,7 +286,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Reidor.png',
     website: 'https://github.com/hirusha-adi/Reidor',
     source: 'https://github.com/hirusha-adi/Reidor',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -297,7 +297,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/IPT-RSS-BOT.png',
     website: 'https://github.com/hirusha-adi/IPT-RSS-BOT',
     source: 'https://github.com/hirusha-adi/IPT-RSS-BOT',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -308,7 +308,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Email-Spammer.png',
     website: 'https://github.com/hirusha-adi/Email-Spammer',
     source: 'https://github.com/hirusha-adi/Email-Spammer',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -319,7 +319,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/tree.png',
     website: 'https://github.com/hirusha-adi/tree',
     source: 'https://github.com/hirusha-adi/tree',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -330,7 +330,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/youtube-search-and-download.png',
     website: 'https://github.com/hirusha-adi/youtube-search-and-download',
     source: 'https://github.com/hirusha-adi/youtube-search-and-download',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -341,7 +341,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Ubuntu-Setup-Post-Install.png',
     website: 'https://github.com/hirusha-adi/Ubuntu-Setup-Post-Install',
     source: 'https://github.com/hirusha-adi/Ubuntu-Setup-Post-Install',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -352,7 +352,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Chrome-Password-Stealer.png',
     website: 'https://github.com/hirusha-adi/Chrome-Password-Stealer',
     source: 'https://github.com/hirusha-adi/Chrome-Password-Stealer',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -363,7 +363,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Arch-Based-Distros-Software-Installer.png',
     website: 'https://github.com/hirusha-adi/Arch-Based-Distros-Software-Installer',
     source: 'https://github.com/hirusha-adi/Arch-Based-Distros-Software-Installer',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -374,7 +374,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Fake-Information-Webpage.png',
     website: 'https://github.com/hirusha-adi/Fake-Information-Webpage',
     source: 'https://github.com/hirusha-adi/Fake-Information-Webpage',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -385,7 +385,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/backdoor.png',
     website: 'https://github.com/hirusha-adi/backdoor',
     source: 'https://github.com/hirusha-adi/backdoor',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -396,7 +396,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/UnSillyRAT.png',
     website: 'https://github.com/hirusha-adi/UnSillyRAT',
     source: 'https://github.com/hirusha-adi/UnSillyRAT',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -407,7 +407,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/calendar-multi-platform.png',
     website: 'https://github.com/hirusha-adi/calendar-multi-platform',
     source: 'https://github.com/hirusha-adi/calendar-multi-platform',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -418,7 +418,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/EXIF-Extract-JPG.png',
     website: 'https://github.com/hirusha-adi/EXIF-Extract-JPG',
     source: 'https://github.com/hirusha-adi/EXIF-Extract-JPG',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -429,7 +429,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Notes-QT.png',
     website: 'https://github.com/hirusha-adi/Notes-QT',
     source: 'https://github.com/hirusha-adi/Notes-QT',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -440,7 +440,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Simple-Calculator-with-Python.png',
     website: 'https://github.com/hirusha-adi/Simple-Calculator-with-Python',
     source: 'https://github.com/hirusha-adi/Simple-Calculator-with-Python',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -451,7 +451,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Whatsapp-Group-Logo-Creator-RIS.png',
     website: 'https://github.com/hirusha-adi/Whatsapp-Group-Logo-Creator-RIS',
     source: 'https://github.com/hirusha-adi/Whatsapp-Group-Logo-Creator-RIS',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -462,7 +462,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Image-Sharing-Website.png',
     website: 'https://github.com/hirusha-adi/Image-Sharing-Website',
     source: 'https://github.com/hirusha-adi/Image-Sharing-Website',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -473,7 +473,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/File-Manager.png',
     website: 'https://github.com/hirusha-adi/File-Manager',
     source: 'https://github.com/hirusha-adi/File-Manager',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -484,7 +484,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Sri-Lanka-Covid-19-Dashboard.png',
     website: 'https://github.com/hirusha-adi/Sri-Lanka-Covid-19-Dashboard',
     source: 'https://github.com/hirusha-adi/Sri-Lanka-Covid-19-Dashboard',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -495,7 +495,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Focus.png',
     website: 'https://github.com/hirusha-adi/Focus',
     source: 'https://github.com/hirusha-adi/Focus',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -506,7 +506,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Email-Validator.png',
     website: 'https://github.com/hirusha-adi/Email-Validator',
     source: 'https://github.com/hirusha-adi/Email-Validator',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -517,7 +517,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Downloader.png',
     website: 'https://github.com/hirusha-adi/Downloader',
     source: 'https://github.com/hirusha-adi/Downloader',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -528,7 +528,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Instagram-Unfollow.png',
     website: 'https://github.com/hirusha-adi/Instagram-Unfollow',
     source: 'https://github.com/hirusha-adi/Instagram-Unfollow',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -539,7 +539,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
     website: 'https://github.com/hirusha-adi/WTF',
     source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -550,29 +550,29 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Fake-Email-Sender.png',
     website: 'https://github.com/hirusha-adi/Fake-Email-Sender',
     source: 'https://github.com/hirusha-adi/Fake-Email-Sender',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'Discord-RAT',
     description:
-      'desccccccccccccccccccccccc',
+      '(Incompleted) RAT which uses discord as a C2.',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Discord-RAT.png',
+    website: 'https://github.com/hirusha-adi/Discord-RAT',
+    source: 'https://github.com/hirusha-adi/Discord-RAT',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'makeapp',
     description:
-      'desccccccccccccccccccccccc',
+      'Build a desktop executable that will wrap any given website...',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/makeapp.png',
+    website: 'https://github.com/hirusha-adi/makeapp',
+    source: 'https://github.com/hirusha-adi/makeapp',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -583,7 +583,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Discord-Bot.png',
     website: 'https://github.com/hirusha-adi/Discord-Bot',
     source: 'https://github.com/hirusha-adi/Discord-Bot',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -594,7 +594,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Cats.png',
     website: 'https://github.com/hirusha-adi/Cats',
     source: 'https://github.com/hirusha-adi/Cats',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -605,7 +605,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Dogs.png',
     website: 'https://github.com/hirusha-adi/Dogs',
     source: 'https://github.com/hirusha-adi/Dogs',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -616,7 +616,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Discord-Channel-Attacthment-Save.png',
     website: 'https://github.com/hirusha-adi/Discord-Channel-Attacthment-Save',
     source: 'https://github.com/hirusha-adi/Discord-Channel-Attacthment-Save',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -627,7 +627,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Jokes.png',
     website: 'https://github.com/hirusha-adi/Jokes',
     source: 'https://github.com/hirusha-adi/Jokes',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -638,7 +638,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/OpenCV-Video-Tools.png',
     website: 'https://github.com/hirusha-adi/OpenCV-Video-Tools',
     source: 'https://github.com/hirusha-adi/OpenCV-Video-Tools',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -649,7 +649,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/SMS-Sending-Discord-Bot.png',
     website: 'https://github.com/hirusha-adi/SMS-Sending-Discord-Bot',
     source: 'https://github.com/hirusha-adi/SMS-Sending-Discord-Bot',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
@@ -660,144 +660,395 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Pagination-Guides.png',
     website: 'https://github.com/hirusha-adi/Pagination-Guides',
     source: 'https://github.com/hirusha-adi/Pagination-Guides',
-    tags: ['archived'],
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'Call-Flooding-Discord-Bot',
     description:
-      'desccccccccccccccccccccccc',
+      'A discord bot that will run flood.sh (wrapper)',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Call-Flooding-Discord-Bot.png',
+    website: 'https://github.com/hirusha-adi/Call-Flooding-Discord-Bot',
+    source: 'https://github.com/hirusha-adi/Call-Flooding-Discord-Bot',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'DoxBin',
     description:
-      'desccccccccccccccccccccccc',
+      'Bad rewrite-ish of doxbin, with flask.',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/DoxBin.png',
+    website: 'https://github.com/hirusha-adi/DoxBin',
+    source: 'https://github.com/hirusha-adi/DoxBin',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'BullyTron',
     description:
-      'desccccccccccccccccccccccc',
+      'replace letters with lookalikes, making it undetectable for discord server moderation bots to detect your messages properly',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/BullyTron.png',
+    website: 'https://github.com/hirusha-adi/BullyTron',
+    source: 'https://github.com/hirusha-adi/BullyTron',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'Copycat-Discord-Bot',
     description:
-      'desccccccccccccccccccccccc',
+      'this bot will repeat everything you say - very stupid idea...',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Copycat-Discord-Bot.png',
+    website: 'https://github.com/hirusha-adi/Copycat-Discord-Bot',
+    source: 'https://github.com/hirusha-adi/Copycat-Discord-Bot',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'Reaction-Roles-Disocrd-Bot',
     description:
-      'desccccccccccccccccccccccc',
+      'simple reaction roles bot discord made with discord.py',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Reaction-Roles-Disocrd-Bot.png',
+    website: 'https://github.com/hirusha-adi/Reaction-Roles-Disocrd-Bot',
+    source: 'https://github.com/hirusha-adi/Reaction-Roles-Disocrd-Bot',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'National-Fuel-Pass-Nativefied',
     description:
-      'desccccccccccccccccccccccc',
+      'Build and electron wrapper for the National Fuel Pass website',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/National-Fuel-Pass-Nativefied.png',
+    website: 'https://github.com/hirusha-adi/National-Fuel-Pass-Nativefied',
+    source: 'https://github.com/hirusha-adi/National-Fuel-Pass-Nativefied',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'Geonode-Free-Proxies-API-Wrapper',
     description:
-      'desccccccccccccccccccccccc',
+      'Python API wrapper to fetch free Genode proxies easily',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Geonode-Free-Proxies-API-Wrapper.png',
+    website: 'https://github.com/hirusha-adi/Geonode-Free-Proxies-API-Wrapper',
+    source: 'https://github.com/hirusha-adi/Geonode-Free-Proxies-API-Wrapper',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'PDF-password-cracker',
     description:
-      'desccccccccccccccccccccccc',
+      'Crack passwords of password protected PDFs',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/PDF-password-cracker.png',
+    website: 'https://github.com/hirusha-adi/PDF-password-cracker',
+    source: 'https://github.com/hirusha-adi/PDF-password-cracker',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
 
   {
-    title: 'WTF',
+    title: 'MusicBot',
     description:
-      'desccccccccccccccccccccccc',
+      'My very first music bot based on Lavalink',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/MusicBot.png',
+    website: 'https://github.com/hirusha-adi/MusicBot',
+    source: 'https://github.com/hirusha-adi/MusicBot',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'NordVPN-Checker',
     description:
-      'desccccccccccccccccccccccc',
+      'Nord VPN account cracker / checker',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/NordVPN-Checker.png',
+    website: 'https://github.com/hirusha-adi/NordVPN-Checker',
+    source: 'https://github.com/hirusha-adi/NordVPN-Checker',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'Windscribe-Checker',
     description:
-      'desccccccccccccccccccccccc',
+      'Windscribe VPN account cracker / checker',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Windscribe-Checker.png',
+    website: 'https://github.com/hirusha-adi/Windscribe-Checker',
+    source: 'https://github.com/hirusha-adi/Windscribe-Checker',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
   {
-    title: 'WTF',
+    title: 'Market',
     description:
-      'desccccccccccccccccccccccc',
+      'Full stack market place application build with Flask + MongoDB, UI inspired by riyasewana.lk',
     preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WTF.png',
-    website: 'https://github.com/hirusha-adi/WTF',
-    source: 'https://github.com/hirusha-adi/WTF',
-    tags: ['archived'],
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Market.png',
+    website: 'https://github.com/hirusha-adi/Market',
+    source: 'https://github.com/hirusha-adi/Market',
+    tags: ['archived', 'basic'],
     type: 'old',
   },
-
-
+  {
+    title: 'CV-Generator',
+    description:
+      'Generate a website CV by filling a JSON file',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/CV-Generator.png',
+    website: 'https://github.com/hirusha-adi/CV-Generator',
+    source: 'https://github.com/hirusha-adi/CV-Generator',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'spam',
+    description:
+      'This Script will help you to spam anything to anywhere you like!',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/spam.png',
+    website: 'https://github.com/hirusha-adi/spam',
+    source: 'https://github.com/hirusha-adi/spam',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'bsoderrorcodes',
+    description:
+      'This website contains all the BSOD codes and messages',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/bsoderrorcodes.png',
+    website: 'https://github.com/hirusha-adi/bsoderrorcodes',
+    source: 'https://github.com/hirusha-adi/bsoderrorcodes',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'yourbot',
+    description:
+      'Website of Discord-Bot (aka YourBot), copied from yggdrasil',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/yourbot.png',
+    website: 'https://github.com/hirusha-adi/yourbot',
+    source: 'https://github.com/hirusha-adi/yourbot',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'OL-Past-Papers-Website-Sri-Lanka',
+    description:
+      'Collection of CGE O/L past papers of Sri Lankan syllabus',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/OL-Past-Papers-Website-Sri-Lanka.png',
+    website: 'https://github.com/hirusha-adi/OL-Past-Papers-Website-Sri-Lanka',
+    source: 'https://github.com/hirusha-adi/OL-Past-Papers-Website-Sri-Lanka',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'InstaStalker',
+    description:
+      'Get information of instagram profiles, with an easy to use web user interface',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/InstaStalker.png',
+    website: 'https://github.com/hirusha-adi/InstaStalker',
+    source: 'https://github.com/hirusha-adi/InstaStalker',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Keylogger-CPP',
+    description:
+      'a simple keylogger written in C++',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Keylogger-CPP.png',
+    website: 'https://github.com/hirusha-adi/Keylogger-CPP',
+    source: 'https://github.com/hirusha-adi/Keylogger-CPP',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Keylogger',
+    description:
+      'a complex keylogger written in Python',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Keylogger.png',
+    website: 'https://github.com/hirusha-adi/Keylogger',
+    source: 'https://github.com/hirusha-adi/Keylogger',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Fortnite-Tracker-Discord-Bot',
+    description:
+      'Discord bot to display fortnite account stats',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Fortnite-Tracker-Discord-Bot.png',
+    website: 'https://github.com/hirusha-adi/Fortnite-Tracker-Discord-Bot',
+    source: 'https://github.com/hirusha-adi/Fortnite-Tracker-Discord-Bot',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Discord-Account-Always-Onlie',
+    description:
+      'Keep your discord account always online (self-bot)',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Discord-Account-Always-Onlie.png',
+    website: 'https://github.com/hirusha-adi/Discord-Account-Always-Onlie',
+    source: 'https://github.com/hirusha-adi/Discord-Account-Always-Onlie',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'SpotifyTool',
+    description:
+      'Download music in spotify playlists, from youtube',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/SpotifyTool.png',
+    website: 'https://github.com/hirusha-adi/SpotifyTool',
+    source: 'https://github.com/hirusha-adi/SpotifyTool',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Stealth-Loader',
+    description:
+      'download an exe and start it in background in without notifying the user in windows',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Stealth-Loader.png',
+    website: 'https://github.com/hirusha-adi/Stealth-Loader',
+    source: 'https://github.com/hirusha-adi/Stealth-Loader',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Windows-Media-Creation-Tool-Clone',
+    description:
+      'Windows Media Creation Tool Knockoff made with tkinter to run malicious code in the background',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Windows-Media-Creation-Tool-Clone.png',
+    website: 'https://github.com/hirusha-adi/Windows-Media-Creation-Tool-Clone',
+    source: 'https://github.com/hirusha-adi/Windows-Media-Creation-Tool-Clone',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Windows-Scripts',
+    description:
+      'A cool collection of powershell scripts for windows 10 & 11 that i found online',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Windows-Scripts.png',
+    website: 'https://github.com/hirusha-adi/Windows-Scripts',
+    source: 'https://github.com/hirusha-adi/Windows-Scripts',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'myLinuxSetup',
+    description:
+      'Personal Linux Setup Scripts, for both my desktop and the home server',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/myLinuxSetup.png',
+    website: 'https://github.com/hirusha-adi/myLinuxSetup',
+    source: 'https://github.com/hirusha-adi/myLinuxSetup',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Auto-Nirsoft',
+    description:
+      'Auto execute all NirSoft tools, all at once, for malicious purposes',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Auto-Nirsoft.png',
+    website: 'https://github.com/hirusha-adi/Auto-Nirsoft',
+    source: 'https://github.com/hirusha-adi/Auto-Nirsoft',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'regex-gen',
+    description:
+      'vvvvvvvvvvvvvvvvvvvvvv',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/regex-gen.png',
+    website: 'https://github.com/hirusha-adi/regex-gen',
+    source: 'https://github.com/hirusha-adi/regex-gen',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'docx-search',
+    description:
+      'Search contents in all .docx files in the given directory',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Market.png',
+    website: 'https://github.com/hirusha-adi/Market',
+    source: 'https://github.com/hirusha-adi/Market',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'WhatsApp-Chats-Parser',
+    description:
+      'Save exported whatsapp chats (txt) as json or csv',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/WhatsApp-Chats-Parser.png',
+    website: 'https://github.com/hirusha-adi/WhatsApp-Chats-Parser',
+    source: 'https://github.com/hirusha-adi/WhatsApp-Chats-Parser',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'iFake',
+    description:
+      'The only Fake/Random Information Generator you will ever need',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/iFake.png',
+    website: 'https://github.com/hirusha-adi/iFake',
+    source: 'https://github.com/hirusha-adi/iFake',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'youtube-download-list',
+    description:
+      'Download a list of youtube videos saved in a text file',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/youtube-download-list.png',
+    website: 'https://github.com/hirusha-adi/youtube-download-list',
+    source: 'https://github.com/hirusha-adi/youtube-download-list',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Bruteforce-List-Generator',
+    description:
+      'Generate password lists easily (like `crunchy`)',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Bruteforce-List-Generator.png',
+    website: 'https://github.com/hirusha-adi/Bruteforce-List-Generator',
+    source: 'https://github.com/hirusha-adi/Bruteforce-List-Generator',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
+  {
+    title: 'Learning-Pascal',
+    description:
+      'My personal pascal notes',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Learning-Pascal.png',
+    website: 'https://github.com/hirusha-adi/Learning-Pascal',
+    source: 'https://github.com/hirusha-adi/Learning-Pascal',
+    tags: ['archived', 'basic'],
+    type: 'old',
+  },
 
   // {
   //   title: 'rust-wasm-md5',
@@ -824,6 +1075,7 @@ export type TagType =
   | 'security'
   | 'fork'
   | 'archived'
+  | 'basic'
 
 export type ProjectType = 'web' | 'tools' | 'other' | 'bot' | 'old' | 'personal'
 
@@ -834,6 +1086,7 @@ export const projectTypeMap = {
   other: 'Other',
   old: 'Old',
   archived: 'Archived',
+  basic: 'Basic'
 }
 
 export type Project = {
@@ -884,11 +1137,16 @@ export const Tags: Record<TagType, Tag> = {
   },
   fork: {
     label: 'Forked',
-    description: 'A forked repository that i improved upon',
+    description: 'A forked repository that i improved upon.',
     color: '#0000ff',
   },
   archived: {
     label: 'Archived',
+    description: 'Archived projects, i might never work on these again.',
+    color: '#0000ff',
+  },
+  basic: {
+    label: 'Basic',
     description: 'BAD CODE & DESIGN. PLEASE DO NOT OPEN THIS.',
     color: '#0000ff',
   }
