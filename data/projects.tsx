@@ -1,4 +1,7 @@
 export const projects: Project[] = [
+
+  // Tools
+  // ---------
   {
     title: 'Data-Recovery',
     description:
@@ -11,39 +14,6 @@ export const projects: Project[] = [
     type: 'tools',
   },
   {
-    title: 'Fuel-Availability',
-    description:
-      'A web-based platform that helps fuel stations manage fuel availability, with user-friendly UI and comprehensive admin panel',
-    preview:
-      'https://user-images.githubusercontent.com/36286877/221198338-87532d43-56c8-4c60-b8a4-1a224b778767.png',
-    website: 'https://github.com/hirusha-adi/Fuel-Availability',
-    source: 'https://github.com/hirusha-adi/Fuel-Availability',
-    tags: ['opensource', 'favorite', 'large', 'teamsds'],
-    type: 'web',
-  },
-  {
-    title: 'Near',
-    description:
-      'An easy to deoloy, fully featured, Discord Bot also with the capability to play music using Lavalink for Team SDS',
-    preview:
-      'https://user-images.githubusercontent.com/36286877/208341567-6706e40f-03b5-4e29-836c-760708f2e619.png',
-    website: 'https://github.com/hirusha-adi/Near',
-    source: 'https://github.com/hirusha-adi/Near',
-    tags: ['opensource', 'favorite', 'large'],
-    type: 'bot',
-  },
-  {
-    title: 'InstaStalker',
-    description:
-      'Get information of instagram profiles easily with a user friendly web user interface.',
-    preview:
-      'https://user-images.githubusercontent.com/36286877/163312296-dac7047a-c8b2-4a8f-a25f-e8cd7d5c2fc9.png',
-    website: 'https://github.com/hirusha-adi/InstaStalker',
-    source: 'https://github.com/hirusha-adi/InstaStalker',
-    tags: ['opensource', 'favorite', 'osint'],
-    type: 'web',
-  },
-  {
     title: 'Discord-Token-Grabber-by-QR',
     description:
       'Scam the user into scanning a login QR code by sending a fake gifted nitro subscription.',
@@ -54,6 +24,270 @@ export const projects: Project[] = [
     tags: ['opensource', 'favorite', 'security'],
     type: 'tools',
   },
+  {
+    title: 'Password-Check',
+    description:
+      'Password Strength Checker with zxcvbn: has an android app, website, cli tool',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Password-Check.png',
+    website: 'https://github.com/hirusha-adi/Password-Check',
+    source: 'https://github.com/hirusha-adi/Password-Check',
+    tags: ['opensource', 'favorite', 'security', 'archived'],
+    type: 'tools',
+  },
+  {
+    title: 'Anti-Debug',
+    description:
+      'Debug mode detection with C++',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Anti-Debug.png',
+    website: 'https://github.com/hirusha-adi/Anti-Debug',
+    source: 'https://github.com/hirusha-adi/Anti-Debug',
+    tags: ['opensource', 'security', 'archived', 'basic'],
+    type: 'tools',
+  },
+  {
+    title: 'Markdown-to-HTML',
+    description:
+      'Markdown to HTML with custom styling',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Markdown-to-HTML.png',
+    website: 'https://github.com/hirusha-adi/Markdown-to-HTML',
+    source: 'https://github.com/hirusha-adi/Markdown-to-HTML',
+    tags: ['opensource', 'security', 'basic', 'favorite'],
+    type: 'tools',
+  },
+  {
+    title: 'docx-search',
+    description:
+      'Search contents in all .docx files in the given directory',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/docx-search.png',
+    website: 'https://github.com/hirusha-adi/docx-search',
+    source: 'https://github.com/hirusha-adi/docx-search',
+    tags: ['archived', 'basic'],
+    type: 'tools',
+  },
+  
+  // Web
+  // ---------
+  {
+    title: 'Near',
+    description:
+      'An easy to deoloy, fully featured, Discord Bot also with the capability to play music using Lavalink for Team SDS',
+    preview:
+      'https://user-images.githubusercontent.com/36286877/208341567-6706e40f-03b5-4e29-836c-760708f2e619.png',
+    website: 'https://github.com/hirusha-adi/Near',
+    source: 'https://github.com/hirusha-adi/Near',
+    tags: ['opensource', 'large'],
+    type: 'bot',
+  },
+
+  {
+    title: 'Fuel-Availability',
+    description:
+      'A web-based platform that helps fuel stations manage fuel availability, with user-friendly UI and comprehensive admin panel',
+    preview:
+      'https://user-images.githubusercontent.com/36286877/221198338-87532d43-56c8-4c60-b8a4-1a224b778767.png',
+    website: 'https://github.com/hirusha-adi/Fuel-Availability',
+    source: 'https://github.com/hirusha-adi/Fuel-Availability',
+    tags: ['opensource', 'favorite', 'large', 'teamsds', 'archived'],
+    type: 'web',
+  },
+  {
+    title: 'SLOS-Website',
+    description:
+      'Get information of instagram profiles easily with a user friendly web user interface.',
+    preview:
+      'https://docusaurus.io/img/docusaurus_keytar.svg',
+    website: 'https://github.com/hirusha-adi/SLOS-Website',
+    source: 'https://github.com/hirusha-adi/SLOS-Website',
+    tags: ['opensource', 'underdev'],
+    type: 'web',
+  },
+  {
+    title: 'InstaStalker',
+    description:
+      'Get information of instagram profiles easily with a user friendly web user interface.',
+    preview:
+      'https://user-images.githubusercontent.com/36286877/163312296-dac7047a-c8b2-4a8f-a25f-e8cd7d5c2fc9.png',
+    website: 'https://github.com/hirusha-adi/InstaStalker',
+    source: 'https://github.com/hirusha-adi/InstaStalker',
+    tags: ['opensource', 'osint', 'archived'],
+    type: 'web',
+  },
+  {
+    title: 'Personal Website (this)',
+    description:
+      'My personal website',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/hirusha.png',
+    website: 'https://hirusha.xyz',
+    source: 'https://github.com/hirusha-adi/hirusha',
+    tags: ['opensource', 'favorite'],
+    type: 'web',
+  },
+  {
+    title: '1v1',
+    description:
+      'Website like "Facemash" from the movie "The Social Nework" with a Tinder like UI',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/1v1.png',
+    website: 'https://github.com/hirusha-adi/1v1',
+    source: 'https://github.com/hirusha-adi/1v1',
+    tags: ['archived'],
+    type: 'web',
+  },
+  {
+    title: 'photos',
+    description:
+      'My personal website to display my photography stuff',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/photos.png',
+    website: 'https://photos.hirusha.xyz',
+    source: 'https://github.com/hirusha-adi/photos',
+    tags: ['archived'],
+    type: 'web',
+  },
+  
+
+  // Education/Knowledge Stuff
+  {
+    title: 'OL-Past-Papers-Website-Sri-Lanka',
+    description:
+      'Collection of CGE O/L past papers of Sri Lankan syllabus',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/OL-Past-Papers-Website-Sri-Lanka.png',
+    website: 'https://ol.hirusha.xyz',
+    source: 'https://github.com/hirusha-adi/OL-Past-Papers-Website-Sri-Lanka',
+    tags: ['archived', 'opensource'],
+    type: 'education',
+  },
+  {
+    title: 'Cambridge-A-Level-Computer-Science-9618-4',
+    description:
+      'CIE A/L CS 9618 P4 Past Paper attempts & exam paper prediction + more...',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Cambridge-A-Level-Computer-Science-9618-4.png',
+    website: 'https://hirusha-adi.github.io/Cambridge-A-Level-Computer-Science-9618-4/',
+    source: 'https://github.com/hirusha-adi/Cambridge-A-Level-Computer-Science-9618-4',
+    tags: ['archived', 'opensource'],
+    type: 'education',
+  },
+  {
+    title: 'SaveMyExams-Download',
+    description:
+      'Save notes as PDF from SaveMyExams.co.uk',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/SaveMyExams-Download.png',
+    website: 'https://hirusha-adi.github.io/SaveMyExams-Download/',
+    source: 'https://github.com/hirusha-adi/SaveMyExams-Download',
+    tags: ['archived', 'opensource'],
+    type: 'education',
+  },
+  {
+    title: 'Learning-Pascal',
+    description:
+      'My journey learning Pascal',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Learning-Pascal.png',
+    website: 'https://hirusha-adi.github.io/Learning-Pascal/',
+    source: 'https://github.com/hirusha-adi/Learning-Pascal',
+    tags: ['archived', 'opensource'],
+    type: 'education',
+  },
+
+  // isithealthy
+  // Stuff from: https://github.com/is-it-healthy
+  {
+    title: 'Website',
+    description:
+      'Modern website that follows the material theme, with a point your camera to scan feature. Made with Vuetify (Vue3).',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/isithealthy-website.png',
+    website: 'https://food.hirusha.xyz',
+    source: 'https://github.com/is-it-healthy/website',
+    tags: ['opensource', 'underdev'],
+    type: 'isithealthy',
+  },
+  {
+    title: 'Android App',
+    description:
+      'Basic android app that wraps the built website, made with Apache Cordova.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/isithealthy-android-app.png',
+    website: 'https://github.com/is-it-healthy/android-app/',
+    source: 'https://github.com/is-it-healthy/android-app',
+    tags: ['opensource', 'underdev'],
+    type: 'isithealthy',
+  },
+  {
+    title: 'INS Data',
+    description:
+      'Data about INS codes, scraped from many sources.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/isithealthy-data.png',
+    website: 'https://github.com/is-it-healthy/data/',
+    source: 'https://github.com/is-it-healthy/data',
+    tags: ['opensource', 'underdev'],
+    type: 'isithealthy',
+  },
+  {
+    title: 'Documentation',
+    description:
+      'Detailed documentation for both users and developers.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/isithealthy-docs.png',
+    website: 'https://github.com/is-it-healthy/docs/',
+    source: 'https://github.com/is-it-healthy/docs',
+    tags: ['opensource', 'underdev'],
+    type: 'isithealthy',
+  },
+  {
+    title: 'Artwork',
+    description:
+      'All artwork used in this project, with sources/credits mentioned.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/isithealthy-artwork.png',
+    website: 'https://github.com/is-it-healthy/artwork/',
+    source: 'https://github.com/is-it-healthy/artwork',
+    tags: ['opensource'],
+    type: 'isithealthy',
+  },
+  {
+    title: '(Old) API',
+    description:
+      'API for accessing the old database.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/isithealthy-api.png',
+    website: 'https://github.com/is-it-healthy/api/',
+    source: 'https://github.com/is-it-healthy/api',
+    tags: ['archived', 'opensource'],
+    type: 'isithealthy',
+  },
+  {
+    title: '(Old) Website',
+    description:
+      'Old website that fetches all of the data on page load for fast searches. Based on ReactJS and MaterialUI',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/isithealthy-website-old.png',
+    website: 'https://github.com/is-it-healthy/website-old/',
+    source: 'https://github.com/is-it-healthy/website-old',
+    tags: ['archived', 'opensource'],
+    type: 'isithealthy',
+  },
+  {
+    title: '(Old) Android App',
+    description:
+      'Android app that wraps the old website. A progressive web app wrapper.',
+    preview:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/isithealthy-android-app-old.png',
+    website: 'https://github.com/is-it-healthy/android-app-old/',
+    source: 'https://github.com/is-it-healthy/android-app-old',
+    tags: ['archived', 'opensource'],
+    type: 'isithealthy',
+  }, 
+  
 
   // old
   // ---
@@ -840,17 +1074,7 @@ export const projects: Project[] = [
     tags: ['archived', 'basic'],
     type: 'old',
   },
-  {
-    title: 'OL-Past-Papers-Website-Sri-Lanka',
-    description:
-      'Collection of CGE O/L past papers of Sri Lankan syllabus',
-    preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/OL-Past-Papers-Website-Sri-Lanka.png',
-    website: 'https://github.com/hirusha-adi/OL-Past-Papers-Website-Sri-Lanka',
-    source: 'https://github.com/hirusha-adi/OL-Past-Papers-Website-Sri-Lanka',
-    tags: ['archived', 'basic'],
-    type: 'old',
-  },
+  
   {
     title: 'InstaStalker',
     description:
@@ -984,17 +1208,6 @@ export const projects: Project[] = [
     type: 'old',
   },
   {
-    title: 'docx-search',
-    description:
-      'Search contents in all .docx files in the given directory',
-    preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Market.png',
-    website: 'https://github.com/hirusha-adi/Market',
-    source: 'https://github.com/hirusha-adi/Market',
-    tags: ['archived', 'basic'],
-    type: 'old',
-  },
-  {
     title: 'WhatsApp-Chats-Parser',
     description:
       'Save exported whatsapp chats (txt) as json or csv',
@@ -1038,17 +1251,18 @@ export const projects: Project[] = [
     tags: ['archived', 'basic'],
     type: 'old',
   },
-  {
-    title: 'Learning-Pascal',
-    description:
-      'My personal pascal notes',
-    preview:
-      'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Learning-Pascal.png',
-    website: 'https://github.com/hirusha-adi/Learning-Pascal',
-    source: 'https://github.com/hirusha-adi/Learning-Pascal',
-    tags: ['archived', 'basic'],
-    type: 'old',
-  },
+  // Also added this to 'Education' section
+  // {
+  //   title: 'Learning-Pascal',
+  //   description:
+  //     'My personal pascal notes',
+  //   preview:
+  //     'https://raw.githubusercontent.com/hirusha-adi/hirusha/main/data/projects_images/Learning-Pascal.png',
+  //   website: 'https://github.com/hirusha-adi/Learning-Pascal',
+  //   source: 'https://github.com/hirusha-adi/Learning-Pascal',
+  //   tags: ['archived', 'basic'],
+  //   type: 'old',
+  // },
 
   // {
   //   title: 'rust-wasm-md5',
@@ -1077,16 +1291,18 @@ export type TagType =
   | 'archived'
   | 'basic'
 
-export type ProjectType = 'web' | 'tools' | 'other' | 'bot' | 'old' | 'personal'
+export type ProjectType = 'web' | 'tools' | 'other' | 'bot' | 'old' | 'personal' | 'education' | 'isithealthy'
 
 export const projectTypeMap = {
   web: 'Wesbites',
   tools: 'Software',
+  education: 'Education/Knowledge',
+  isithealthy: 'is it healthy?',
   bot: 'Bots',
   other: 'Other',
   old: 'Old',
   archived: 'Archived',
-  basic: 'Basic'
+  basic: 'Basic',
 }
 
 export type Project = {
