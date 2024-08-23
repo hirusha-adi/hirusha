@@ -1,8 +1,8 @@
 ---
 slug: 2024-08-23-cultural-beliefs-vs-rationality
-title: Cultural Beliefs vs. Rationality
+title: Cultural Beliefs vs. Rationality (Self-Fulfilling Prophecy)
 authors: [hirusha]
-tags: [life, controversial]
+tags: [life, controversial, psychology]
 ---
 
 ![](./media/2024-08-23-cultural-beliefs-vs-rationality.jpg)
@@ -63,9 +63,9 @@ NO! I’m going to stop this here. This list could go on forever.
 
 ## Conclusion
 
-In conclusion, these occurrences are driven entirely by psychological effects. T
+In conclusion, these occurrences are driven entirely by psychological effects, specifically the concept of the self-fulfilling prophecy. A self-fulfilling prophecy occurs when a person's belief or expectation influences their actions in a way that causes the belief or expectation to come true.
 
-hose who believe in these myths are the most affected, as their minds are conditioned to expect negative outcomes, leading to self-fulfilling prophecies. 
+Those who believe in these myths are most affected, as their minds are conditioned to anticipate negative outcomes, which then leads to behaviors that confirm their fears.
 
 Even those who do not fully believe in these superstitions might still experience some influence, as the mere knowledge of such beliefs can subtly impact their thoughts and actions. 
 
@@ -73,4 +73,11 @@ However, those who are unaware of these absurd mythological beliefs are safe fro
 
 An individual who approaches life rationally will not develop such irrational fears on their own, remaining unaffected unless these absurd cultural believes are introduced to them by others.
 
-Stay away from culture and act and think rationally.
+Stay away from absurd cultural beliefs and act and think rationally.
+
+## References
+
+- https://www.medicalnewstoday.com/articles/self-fulfilling-prophecy
+- https://en.wikipedia.org/wiki/Self-fulfilling_prophecy
+- https://www.britannica.com/topic/self-fulfilling-prophecy
+- https://health.clevelandclinic.org/self-fulfilling-prophecy
