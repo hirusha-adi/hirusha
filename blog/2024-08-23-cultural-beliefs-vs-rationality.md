@@ -79,3 +79,4 @@ Stay away from absurd cultural beliefs and act and think rationally.
 - https://en.wikipedia.org/wiki/Self-fulfilling_prophecy
 - https://www.britannica.com/topic/self-fulfilling-prophecy
 - https://health.clevelandclinic.org/self-fulfilling-prophecy
+- Grammatical and Vocabulary improvements made using ChatGPT
