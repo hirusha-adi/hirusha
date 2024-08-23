@@ -31,8 +31,6 @@ In essence, the belief that seeing something bad in the morning will lead to a b
 
 ### Example 2
 
-### Example 3
-
 In various cultures, encountering a black cat is believed to be an ill omen, signaling bad luck or misfortune. Much like the situation described in [Example 1](#example-1), this belief can lead to a similar psychological effect.
 
 When someone encounters a black cat and associates it with bad luck, this belief can deeply impact their mindset. The individual may start anticipating problems or setbacks, leading them to act in ways that inadvertently contribute to negative outcomes. The expectation of misfortune can heighten their anxiety and alertness to potential issues, often resulting in a focus on negative aspects rather than solutions.
