@@ -26,8 +26,7 @@ export default function Home(): JSX.Element {
               <div className="row">
                 <div className="col col--8 col--offset-2">
                   <h3 className={clsx('text--center', 'margin-bottom--lg')}>
-                    "Don't let the chains of orthodoxy shackle your imagination. Break free and let
-                    your ideas soar, for that's where true innovation is born." - TEST !23
+                    "An idiot admires complexity, a genius admires simplicity, a physicist tries to make it simple, for an idiot anything the more complicated it is the more he will admire it, if you make something so clusterfucked he can't understand it he's gonna think you're a god cause you made it so complicated nobody can understand it. That's how they write journals in Academics, they try to make it so complicated people think you're a genius" ― Terry Davis, Creator of Temple OS
                   </h3>
                   <center>- hirusha</center>
                 </div>
