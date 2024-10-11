@@ -237,12 +237,12 @@ const config: Config = {
       },
     ],
     ['@docusaurus/plugin-ideal-image', { disableInDev: false }],
-    [
-      require.resolve('docusaurus-plugin-search-local'),
-      {
-        hashed: true,
-      },
-    ],
+    // [
+    //   require.resolve('docusaurus-plugin-search-local'),
+    //   {
+    //     hashed: true,
+    //   },
+    // ],
     [
       '@docusaurus/plugin-pwa',
       {
@@ -269,10 +269,10 @@ const config: Config = {
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Normal.min.css',
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Semibold.min.css',
   ],
-  // i18n: {
-    // defaultLocale: 'en',
-    // locales: ['en'],
-  // },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
 }
 
 export default config
