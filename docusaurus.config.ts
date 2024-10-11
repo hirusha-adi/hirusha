@@ -98,8 +98,7 @@ const config: Config = {
             { label: 'Blog', to: 'blog' },
             { label: 'Archive', to: 'blog/archive' },
             { label: 'Study', to: '/docs/study/' },
-            { label: 'Projects', to: 'project' },
-            { label: 'Documentation', to: '/docs/projects/' },
+            { label: 'Projects', to: '/docs/projects/' },
           ],
         },
         {
@@ -123,7 +122,7 @@ const config: Config = {
           title: 'More',
           items: [
             { label: 'Recommended Tools', position: 'right', to: '/recommended-tools' },
-            { label: 'Contributions', position: 'right', to: '/contributions' },
+            { label: 'Projects', position: 'right', to: '/docs/projects' },
             { label: 'Theme by 愧怍', position: 'right', to: 'https://github.com/kuizuo/blog' },
             {
               html: `
@@ -237,6 +236,11 @@ const config: Config = {
       },
     ],
     ['@docusaurus/plugin-ideal-image', { disableInDev: false }],
+    //   require.resolve('docusaurus-plugin-search-local'),
+    //   {
+    //     hashed: true,
+    //   },
+    // ],
     // [
     //   require.resolve('docusaurus-plugin-search-local'),
     //   {
