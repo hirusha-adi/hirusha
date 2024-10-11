@@ -4,8 +4,6 @@ export type Social = {
   twitter?: string
   medium?: string
   linkedin?: string
-  instagram1?: string
-  instagram2?: string
   telegram?: string
   email?: string
 }
@@ -16,8 +14,6 @@ const social: Social = {
   twitter: 'https://twitter.com/hirushaadi',
   medium: 'https://medium.com/@hirushaadi',
   linkedin: 'https://www.linkedin.com/in/hirusha-adikari-9b2b48169/',
-  instagram1: 'https://www.instagram.com/hirusha.adikari/',
-  instagram2: 'https://www.instagram.com/hirushaadi.photos',
   telegram: 'https://t.me/hirushaadi',
   email: 'mailto:hirushaadi@gmail.com',
 }

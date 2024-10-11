@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link'
 import WebDeveloperSvg from '@site/static/svg/undraw_web_developer.svg'
 import OpenSourceSvg from '@site/static/svg/undraw_open_source.svg'
 import SpiderSvg from '@site/static/svg/undraw_spider.svg'
@@ -35,7 +36,7 @@ const FEATURES: FeatureItem[] = [
       <p>
         As a hobbyist photographer, I aim to capture the beauty of the world through my lens and
         bring a unique perspective to every image I create.{' '}
-        <a href="https://photos.hirusha.xyz/">Click here</a> to checkout my photos.
+        <Link to="https://photos.hirusha.xyz/">Click here</Link> to checkout my photos.
       </p>
     ),
     Svg: OpenSourceSvg,
