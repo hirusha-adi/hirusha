@@ -21,16 +21,16 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(@algolia/client-search@4.24.0)(@types/react@18.3.11)(eslint@8.57.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.17.2)(typescript@5.3.3)
       '@giscus/react':
-        specifier: ^2.3.0
+        specifier: ^2.4.0
         version: 2.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@popperjs/core':
         specifier: ^2.11.8
         version: 2.11.8
       dayjs:
-        specifier: ^1.11.10
+        specifier: ^1.11.13
         version: 1.11.13
       docusaurus-plugin-image-zoom:
-        specifier: ^1.0.0
+        specifier: ^1.0.1
         version: 1.0.1(@docusaurus/theme-classic@3.1.0(@types/react@18.3.11)(eslint@8.57.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3))
       docusaurus-plugin-sass:
         specifier: ^0.2.5
@@ -39,31 +39,31 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1(@docusaurus/core@3.1.0(@docusaurus/types@3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(eslint@8.57.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3))(@docusaurus/utils-validation@3.1.0(@docusaurus/types@3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(@docusaurus/utils@3.1.0(@docusaurus/types@3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       framer-motion:
-        specifier: ^10.16.4
+        specifier: ^10.18.0
         version: 10.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       loadsh:
         specifier: ^0.0.4
         version: 0.0.4
       ora:
-        specifier: ^7.0.0
+        specifier: ^7.0.1
         version: 7.0.1
       prism-react-renderer:
-        specifier: ^2.3.1
+        specifier: ^2.4.0
         version: 2.4.0(react@18.3.1)
       raw-loader:
         specifier: ^4.0.2
         version: 4.0.2(webpack@5.95.0)
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-popper:
         specifier: ^2.3.0
         version: 2.3.0(@popperjs/core@2.11.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       sass:
-        specifier: ^1.64.1
+        specifier: ^1.79.5
         version: 1.79.5
     devDependencies:
       '@docusaurus/eslint-plugin':
@@ -73,7 +73,7 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@docusaurus/tsconfig':
-        specifier: ^3.1.0
+        specifier: ^3.5.2
         version: 3.5.2
       '@docusaurus/types':
         specifier: 3.1.0
@@ -82,25 +82,25 @@ importers:
         specifier: ^4.1.1
         version: 4.1.1(react@18.3.1)
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.0.0
+        specifier: ^6.21.0
         version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.3.3))(eslint@8.57.1)(typescript@5.3.3)
       '@typescript-eslint/parser':
-        specifier: ^6.0.0
+        specifier: ^6.21.0
         version: 6.21.0(eslint@8.57.1)(typescript@5.3.3)
       eslint:
-        specifier: ^8.53.0
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-config-prettier:
-        specifier: ^9.0.0
+        specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.1)
       eslint-plugin-prettier:
-        specifier: ^5.0.0
+        specifier: ^5.2.1
         version: 5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.3)
       prettier:
-        specifier: ^3.1.0
+        specifier: ^3.3.3
         version: 3.3.3
       stylelint:
-        specifier: ^15.0.0
+        specifier: ^15.11.0
         version: 15.11.0(typescript@5.3.3)
       stylelint-config-prettier:
         specifier: ^9.0.5
@@ -112,10 +112,10 @@ importers:
         specifier: ^34.0.0
         version: 34.0.0(stylelint@15.11.0(typescript@5.3.3))
       stylelint-config-standard-scss:
-        specifier: ^11.0.0
+        specifier: ^11.1.0
         version: 11.1.0(postcss@8.4.47)(stylelint@15.11.0(typescript@5.3.3))
       typescript:
-        specifier: ~5.3.0
+        specifier: ~5.3.3
         version: 5.3.3
 
 packages:
