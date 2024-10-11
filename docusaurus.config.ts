@@ -13,9 +13,9 @@ const config: Config = {
   projectName: 'hirusha',
   // trailingSlash: false, // change this to false and try if it fails
   customFields: {
-    bio: 'a place to document/display/showcase all my work.',
+    bio: 'A place to document/display/showcase all my work.',
     description:
-      "I'm an IT student.",
+      "I make websites. I take photos. I make discord bots. I make some cool stuff every now and then. I teach sometimes. This is a place to document/display/showcase my work.",
   },
   themeConfig: {
     metadata: [
@@ -79,8 +79,7 @@ const config: Config = {
               sidebarId: 'tutorials',
             },
             { label: 'Recommended Tools', to: '/recommended-tools' },
-            { label: 'Contributions', to: '/contributions' },
-            { label: 'Archive', to: 'blog/archive' },
+            { label: 'Blog Posts (List)', to: 'blog/archive' },
           ],
         },
         {
