@@ -236,17 +236,12 @@ const config: Config = {
       },
     ],
     ['@docusaurus/plugin-ideal-image', { disableInDev: false }],
-    //   require.resolve('docusaurus-plugin-search-local'),
-    //   {
-    //     hashed: true,
-    //   },
-    // ],
-    // [
-    //   require.resolve('docusaurus-plugin-search-local'),
-    //   {
-    //     hashed: true,
-    //   },
-    // ],
+    [
+      require.resolve('docusaurus-plugin-search-local'),
+      {
+        hashed: true,
+      },
+    ],
     [
       '@docusaurus/plugin-pwa',
       {
