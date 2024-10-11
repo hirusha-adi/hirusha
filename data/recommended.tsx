@@ -28,18 +28,12 @@ export const resourceData: ResourceCategory[] = [
         href: 'https://www.mozilla.org/en-US/firefox/developer/',
       },
       {
-        name: 'Google Chrome',
-        desc: 'Up to date. Slow. Best sync.',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg',
-        href: 'https://www.google.com/chrome/',
-      },
-      {
         name: 'Thorium',
         desc: 'Fastest. Not as up to date as Chrome. FOSS, Basically Chrome.',
         logo: 'https://thorium.rocks/imgs/thorium.svg',
         href: 'https://thorium.rocks/',
       },
-      
+
     ],
   },
   {
@@ -99,23 +93,11 @@ export const resourceData: ResourceCategory[] = [
       },
       {
         name: 'GitHub Desktop',
-        desc: 'Easy repo github management.',
+        desc: 'Easy github repo management.',
         logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png',
         href: 'https://github.com/',
       },
     ],
   },
-
-  // {
-  //   name: '站点 🖥️',
-  //   resources: [
-  //     {
-  //       name: 'Developer Roadmap',
-  //       desc: 'Roadmap to becoming a web developer.',
-  //       logo: '/img/resource/roadmap.png',
-  //       href: 'https://roadmap.sh/',
-  //     },
-  //   ],
-  // },
 
 ]
