@@ -9,16 +9,7 @@ import { useThemeConfig } from '@docusaurus/theme-common'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
-import { projects } from '@site/data/projects'
-
 import styles from './styles.module.scss'
-
-type Count = {
-  blog: number
-  tag: number
-  doc: number
-  project: number
-}
 
 export default function UserCard({ isNavbar = false }: { isNavbar?: boolean }) {
   const {
@@ -41,13 +32,6 @@ export default function UserCard({ isNavbar = false }: { isNavbar?: boolean }) {
     usePluginData('docusaurus-plugin-content-docs') as { versions: { docs: BlogPost[] } }
   )?.versions[0].docs
 
-  const count: Count = {
-    blog: blogData.postNum,
-    tag: blogData.tagNum ?? 0,
-    doc: docData?.length ?? 0,
-    project: projects?.length ?? 0,
-  }
-
   return (
     <div className={clsx(isNavbar ? styles.userCardNavbar : styles.userCard)}>
       <Link href="/about">
@@ -61,21 +45,17 @@ export default function UserCard({ isNavbar = false }: { isNavbar?: boolean }) {
       </div>
       <div className={styles.bio}>{bio}</div>
       <div className={styles.num}>
-        <Link className={styles.numItem} href="/archive">
+        <Link className={styles.numItem} href="/blog/archive">
           <Icon icon="carbon:blog" width="20" height="20" />
-          {count.blog}
         </Link>
         <Link className={styles.numItem} href="/blog/tags">
           <Icon icon="ri:price-tag-3-line" width="20" height="20" />
-          {count.tag}
         </Link>
-        <Link className={styles.numItem} href="/docs/skill">
-          <Icon icon="carbon:notebook" width="20" height="20" />
-          {count.doc}
+        <Link className={styles.numItem} href="/docs/study">
+          <Icon icon="bi:book" width="20" height="20" />
         </Link>
-        <Link className={styles.numItem} href="/project" data-tips="project count">
-          <Icon icon="ph:projector-screen" width="20" height="20" />
-          {count.project}
+        <Link className={styles.numItem} href="/docs/projects">
+          <Icon icon="codicon-project" width="20" height="20" />
         </Link>
       </div>
       <SocialLinks

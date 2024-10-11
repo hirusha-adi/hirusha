@@ -15,7 +15,7 @@ const config: Config = {
   customFields: {
     bio: 'a place to document/display/showcase all my work.',
     description:
-      "I'm currently a Year 13 student studying for my ALs, Who is passionate about working with technology. This is a place to document/display/showcase all my work.",
+      "I'm an IT student.",
   },
   themeConfig: {
     metadata: [
@@ -25,7 +25,7 @@ const config: Config = {
       },
       {
         name: 'keywords',
-        content: 'blog, javascript, python, react, security, pentest, web, flask, django, osint',
+        content: 'blog, javascript, python, react, security, pentest, web, flask, django, osint, web development, programming',
       },
     ],
     docs: {
@@ -55,17 +55,9 @@ const config: Config = {
         },
         {
           label: 'Projects',
+          to: '/docs/projects/',
           position: 'right',
-          items: [
-            {
-              label: 'All Projects',
-              to: '/project',
-            },
-            {
-              label: 'Guides & Documentation',
-              to: '/docs/projects/',
-            },
-          ],
+          sidebarId: 'study',
         },
         {
           label: 'Other Sections',
