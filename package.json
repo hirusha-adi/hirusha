@@ -41,7 +41,7 @@
     "dayjs": "^1.11.13",
     "docusaurus-plugin-image-zoom": "^1.0.1",
     "docusaurus-plugin-sass": "^0.2.5",
-    "docusaurus-plugin-search-local": "^1.0.1",
+    "docusaurus-plugin-search-local": "^2.1.0",
     "framer-motion": "^10.18.0",
     "loadsh": "^0.0.4",
     "ora": "^7.0.1",
