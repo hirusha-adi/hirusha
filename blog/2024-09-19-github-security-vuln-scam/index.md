@@ -90,7 +90,7 @@ I ran the sample through Any.Run for dynamic analysis. You can view the report [
 
 The stealer connects to several unknown hosts, likely for redundancy. If one IP or domain gets taken down, the stealer can still communicate with others.
 
-Suricata, an open-source intrusion detection system, has identified this as the "LUMMA Stealer."
+Suricata, an open-source intrusion detection system, has identified this as the ["LUMMA Stealer"](https://malpedia.caad.fkie.fraunhofer.de/details/win.lumma)
 
 ![alt text](image-7.png)
 
