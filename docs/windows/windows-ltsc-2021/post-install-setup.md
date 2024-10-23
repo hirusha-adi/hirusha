@@ -35,7 +35,7 @@ slug: post-install-setup
 
 - Microsoft posts the official "workaround" which is enabling the "AllowInsecureGuestAuth" group policy
 
-![i2](https://i.stack.imgur.com/Arp4t.png)
+![image](./image.png)
 
 - And it works
 
