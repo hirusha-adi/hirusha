@@ -129,7 +129,7 @@ l.close()
    - `SNI_HOST`: The hostname to inject in the SNI field. This is the host that the target server will see in the SNI field of the TLS handshake.
    - `LISTEN_PORT`: The local port that the proxy server listens on to accept incoming client connections.
 
-#### Connection Handling (`conecta(c, a)`)
+#### Connection Handling
 
 The main function, `conecta`, handles each incoming client connection. Here’s how it works:
 
