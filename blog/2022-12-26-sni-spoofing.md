@@ -5,23 +5,21 @@ authors: [hirusha]
 tags: [python, network, hacking]
 ---
 
-TCP over SSL tunneling is a technique for encapsulating normal TCP traffic within SSL/TLS encryption. This can be used to secure network communication and protect against man-in-the-middle attacks.
+In today’s internet, SNI (Server Name Indication) plays a critical role in making secure connections. However, the SNI field is sometimes used as a gatekeeper to restrict or manage content access. This blog post will walk through **what SNI spoofing is, why it works**, and demonstrate how to implement a basic SNI spoofing proxy in Python.
 
 <!--truncate-->
 
-![TCP Over SSL Tunnel Software](https://cdn-images-1.medium.com/v2/resize:fit:880/0*ls1-d3UfIMvyvPf0)
+## SNI Spoofing: Basics
 
-Server Name Indication (SNI) is an extension to the TLS protocol that allows a client to specify the domain name it is connecting to at the start of the handshake process. This enables a server to host multiple TLS-based websites on a single IP address and port, as the server can use the SNI information to determine which certificate to present to the client.
+### What is SNI?
 
-SNI injection involves manipulating the SNI field in the TLS handshake process in order to trick the server into presenting a different certificate than the one it would normally present. This can be used in various ways, such as to bypass certificate-based access controls or to perform man-in-the-middle attacks.
+**Server Name Indication (SNI)** is an extension of the TLS (Transport Layer Security) protocol that allows a client to specify the hostname it wants to connect to during the TLS handshake. This is important because many servers host multiple domains on the same IP address, especially in virtual hosting setups. When a client specifies the intended hostname, the server can respond with the correct SSL/TLS certificate. Without SNI, the server wouldn’t know which certificate to provide, and the connection might fail.
 
-In the context of TCP over SSL tunneling, SNI injection can be used to bypass controls that are based on the domain name being accessed. For example, if a client is using an SSL tunnel to access a specific domain, the server may only allow access if the SNI field in the TLS handshake matches that domain. By injecting a different domain name into the SNI field, the client may be able to bypass these controls and gain access to the server even if it is not normally allowed.
+#### Example
 
-It is important to note that SNI injection can be a serious security vulnerability and should be properly mitigated to prevent exploitation.
+Imagine a server hosting both `example.com` and `example.net`. When you visit `https://example.com`, your browser sends a request with the hostname `example.com` in the SNI field, allowing the server to select the correct SSL certificate. If the SNI field didn’t specify this hostname, the server might provide the certificate for `example.net`, leading to a certificate mismatch.
 
-The SNI (Server Name Indication) header is an extension to the TLS (Transport Layer Security) protocol that allows a client to specify the desired server name during the SSL/TLS handshake. This is typically used to identify the server that the client wants to connect to when multiple servers are hosted on the same IP address.
-
-Here is the wireshark output of the extension:
+Below is the wireshark output of the extension, where the "Server Name" is `clients5.google.com`
 
 ```
 Extension: server_name (len=24)
@@ -34,66 +32,82 @@ Server Name length: 19
 Server Name: clients5.google.com
 ```
 
-Spoofing the SNI header involves sending a forged SNI value to the server during the SSL/TLS handshake. This can be done by specifying a different server name when creating the SSL context on the client side. For example, if the client wants to connect to www.example.com, but wants to spoof the SNI header to say www.spoofed-sni.com, it can do so by specifying www.spoofed-sni.com as the server name when creating the SSL context.
+### What is SNI Spoofing?
 
-There are a few reasons why someone might want to spoof the SNI header. One reason is to bypass network restrictions that are based on the server name. For example, if a client is blocked from accessing www.example.com, but is allowed to access www.spoofed-sni.com, it can use SNI spoofing to bypass the restriction. Another reason is to perform SSL strip attacks, where an attacker intercepts and downgrades secure connections to non-secure connections in order to steal sensitive information.
+SNI spoofing is the process of altering the SNI field in a client’s TLS handshake to make the server believe the client is requesting a different hostname. This is often done to bypass content restrictions or access restricted sections of a server. By changing the SNI field, we can trick the server into thinking we’re accessing a different hostname, which may allow access to certain restricted resources.
 
-It’s important to note that spoofing the SNI header does not necessarily guarantee a successful connection to the desired server. The server may still perform checks to verify the authenticity of the client and the connection, and may reject the connection if it determines that the client is not legitimate.
+### How it Works?
 
-Original Code: [Click here.](https://sourceforge.net/p/tcpoverssltunnel/code-0/ci/master/tree/client.py#l10)
+At the core, SNI spoofing involves intercepting a connection and modifying the SNI field before forwarding it to the destination server. The **SNI field is set during the TLS handshake** - the initial part of a secure connection setup. By manipulating the SNI hostname, we essentially alter the target of the request in the server’s eyes.
+
+Here’s how it works in simple terms:
+1. **Client connects to a proxy** and sends a request to access a specific website.
+2. **Proxy intercepts the request** and reads the target hostname and port.
+3. **Proxy establishes a secure connection to the server**, but it injects a different hostname into the SNI field.
+4. The server responds based on the spoofed hostname, giving access based on this modified SNI field.
+
+### Implementation
+
+Now, let’s dive into the Python code. Below is a Python script that implements a simple SSL/TLS proxy with SNI spoofing. It listens on a port for incoming client connections, intercepts each request, and injects a custom SNI hostname before forwarding the request to the server.
+
+The code provided below is a full implementation of a basic SNI spoofing proxy.
 
 ```python
-import socket, threading, select
+# -*- coding: utf-8 -*-
 
-SNI_HOST = 'www.example.com'
-LISTEN_PORT = 8088
+import socket
+import threading
+import select
 
+SNI_HOST = 'www.example.com'  # The hostname to inject in the SNI field
+LISTEN_PORT = 8088  # Port on which the proxy listens for client connections
 
 def conecta(c, a):
-	print('<#> Cliente {} recebido!'.format(a[-1]))
-	request = c.recv(8192)
+    print('<#> Cliente {} recebido!'.format(a[-1]))
+    request = c.recv(8192)
 
-	host = request.split(':')[0].split()[-1]
-	port = request.split(':')[-1].split()[0]
+    host = request.split(':')[0].split()[-1]  # Extract target host from client request
+    port = request.split(':')[-1].split()[0]  # Extract target port from client request
 
+    # Establish a connection to the target host and port
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((str(host), int(port)))
 
-	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	s.connect((str(host), int(port)))
+    # Wrap the socket with SSL and specify the SNI hostname
+    import ssl
+    ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
+    s = ctx.wrap_socket(s, server_hostname=str(SNI_HOST))
 
-	# Wrap o SSL.
-	import ssl
-	ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
-	s = ctx.wrap_socket(s, server_hostname=str(SNI_HOST))
+    # Inform the client that the connection has been established
+    c.send(b"HTTP/1.1 200 Established\r\n\r\n")
 
-	# Direta
-	c.send(b"HTTP/1.1 200 Established\r\n\r\n")
+    # Enter a loop to forward data between client and server
+    connected = True
+    while connected:
+        r, w, x = select.select([c, s], [], [c, s], 3)
+        if x:
+            connected = False
+            break
+        for i in r:
+            try:
+                # Receive data
+                data = i.recv(8192)
+                if not data:
+                    connected = False
+                    break
+                # Forward data to the correct recipient
+                if i is s:
+                    c.send(data)
+                else:
+                    s.send(data)
+            except:
+                connected = False
+                break
+    c.close()
+    s.close()
+    print('<#> Cliente {} Desconectado!'.format(a[-1]))
 
-
-
-	connected = True
-	while connected == True:
-		r, w, x = select.select([c,s], [], [c,s], 3)
-		if x: connected = False; break
-		for i in r:
-			try:
-				# Break if not data.
-				data = i.recv(8192)
-				if not data: connected = False; break
-				if i is s:
-					# Download.
-					c.send(data)
-				else:
-					# Upload.
-					s.send(data)
-			except:
-				connected = False
-				break
-	c.close()
-	s.close()
-	print('<#> Cliente {} Desconectado!'.format(a[-1]))
-
-
-# Listen
+# Setup listening socket for incoming connections
 print('Injector SSL com SNI Host em Python\n\
 Versao de Teste.\n\
 Criado por Marcone.\n')
@@ -102,151 +116,176 @@ l.bind(('', int(LISTEN_PORT)))
 l.listen(0)
 print('Esperando Cliente no Ip e Porta: 127.0.0.1:{}\n'.format(LISTEN_PORT))
 while True:
-	c, a = l.accept()
-	threading.Thread(target=conecta, args=(c, a)).start()
+    c, a = l.accept()
+    threading.Thread(target=conecta, args=(c, a)).start()
 l.close()
 ```
 
-This Python code appears to be a simple implementation of a Secure Sockets Layer (SSL) injector with Server Name Indication (SNI) host.
+### Walkthrough
 
-The code starts by importing the socket, threading, and select modules. The SNI_HOST and LISTEN_PORT variables are then defined at the beginning of the script. The SNI_HOST variable specifies the hostname that the client will be requesting a secure connection to, while the LISTEN_PORT variable specifies the port number that the injector will be listening on for incoming connection requests.
+#### Setup
 
-The conecta() function is then defined, which takes two arguments: c and a. This function is called whenever a new client connects to the injector. The function begins by printing a message indicating that a new client has connected, and then it receives a request from the client using the recv() method of the c socket object.
+1. **SNI_HOST and LISTEN_PORT**:
+   - `SNI_HOST`: The hostname to inject in the SNI field. This is the host that the target server will see in the SNI field of the TLS handshake.
+   - `LISTEN_PORT`: The local port that the proxy server listens on to accept incoming client connections.
 
-The host and port specified in the client’s request are then extracted from the request using the split() method, and a new socket connection is established to the specified host and port using the connect() method of the socket module.
+#### Connection Handling (`conecta(c, a)`)
 
-The new socket connection is then wrapped in an SSL context using the wrap_socket() method of the ssl module, and the SNI_HOST variable is passed as the server_hostname argument to the wrap_socket() method.
+The main function, `conecta`, handles each incoming client connection. Here’s how it works:
 
-The conecta() function then sends an HTTP "200 Established" response to the client, and enters a loop to continually receive data from either the client or the server and send it to the other party. The loop terminates when either the client or the server closes the connection.
+1. **Intercepting Client Request**: It receives the initial client request and extracts the `host` and `port` to which the client wants to connect.
+2. **SSL Wrapping with SNI Injection**:
+   - It establishes a secure connection to the specified `host` and `port`.
+   - The `ssl.SSLContext` object wraps the socket and sets the SNI field to the specified `SNI_HOST`.
+3. **Data Forwarding**: It then continuously forwards data between the client and the target server until one of them disconnects.
+4. **Closing Connections**: When either party disconnects or an error occurs, both the client and server sockets are closed.
 
-Finally, the conecta() function closes both the client and server sockets and prints a message indicating that the client has been disconnected.
+#### Listener
 
-The main body of the script then creates a new socket using the socket module's socket() function and binds it to the LISTEN_PORT on the local host. The socket is then set to listen for incoming connection requests using the listen() method.
+The last section of the script sets up the main listening socket on the specified `LISTEN_PORT`. For each incoming connection, a new thread is started, running the `conecta` function.
 
-The script enters an infinite loop, waiting for new clients to connect using the accept() method of the listening socket. Whenever a new client connects, a new thread is created to handle the connection using the conecta() function as the target, and the client socket and address are passed as arguments.
+### How?
 
-Finally, the listening socket is closed when the script terminates.
+The script essentially acts as a **man-in-the-middle proxy** that:
+- Accepts incoming client connections.
+- Modifies the SNI field to a different hostname (`SNI_HOST`) during the TLS handshake.
+- Forwards data back and forth, giving the client the impression it is connected directly to the destination server.
 
-It looks like this code could potentially be used for SNI spoofing, which is a technique that involves presenting a fake SSL certificate to a client in order to intercept and decrypt the client’s traffic.
+The **`server_hostname` parameter** in the `ctx.wrap_socket()` function is the key part of the spoofing process. By specifying a custom hostname, the proxy is able to "spoof" the SNI field and trick the server into responding as if the client was accessing the specified `SNI_HOST`.
 
-It is possible that you could use this code to trick your Internet Service Provider (ISP) into believing that you are accessing a different hostname than the one you are actually accessing. However, keep in mind that this code alone is not sufficient to fully trick your ISP.
 
-To trick your ISP using this code, you would need to set up a fake SSL certificate for the hostname that you want to spoof, and configure the injector to use this certificate when establishing the SSL connection with your ISP. You would also need to configure your device to send all of your network traffic through the injector, rather than directly to the Internet.
+## SNI Spoofing: Advanced - with TCP over SSL Tunneling
 
-To use this code for SNI spoofing, you would need to modify the SNI_HOST variable to specify the hostname that you want to spoof. You would then need to set up a fake SSL certificate for this hostname, and configure the injector to use this certificate when establishing the SSL connection with the client.
+In addition to using a simple SSL proxy, a more advanced method for SNI spoofing involves setting up a **TCP over SSL tunnel**. This method allows the creation of a secure, low-level connection to manipulate data directly, providing more control over how the connection is handled. With this technique, we can extend the basic SNI spoofing by establishing an SSL tunnel, which makes it appear as if we are accessing an entirely different hostname even over a raw TCP connection.
+
+### What?
+
+TCP over SSL tunneling is a technique where a direct TCP connection is encapsulated within SSL encryption. This allows all TCP data to pass securely through an SSL connection, allowing us to establish a secure tunnel to any server and port while controlling SSL handshakes, including modifying SNI fields. 
+
+The benefit of SSL tunneling with TCP over a raw connection is:
+- **Encryption**: It keeps data secure and encrypted during transit.
+- **Advanced Manipulation**: It allows for complex alterations of SSL parameters, such as SNI spoofing.
+- **Compatibility**: It works well for situations requiring data encapsulation for legacy applications or systems that do not natively support SSL.
+
+### How it Works?
+
+The process of setting up a TCP over SSL tunnel with SNI spoofing involves these steps:
+1. **Establish a TCP connection** with the target server.
+2. **Wrap the TCP socket with SSL** to create a secure tunnel.
+3. **Inject a custom SNI hostname** in the SSL handshake to spoof the intended hostname.
+4. **Forward data securely** through the established tunnel, acting as a transparent proxy between the client and the target server.
+
+This setup makes the server think it’s communicating directly with a client requesting the spoofed SNI hostname, while we control the data flow within the tunnel.
+
+### Implementation
+
+The following code sets up a TCP over SSL tunnel in Python with SNI spoofing capabilities, where it can forward data securely between the client and the target server.
 
 ```python
 import socket
 import ssl
+import threading
+import select
 
-# Create a socket and bind it to a port
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(('localhost', 8080))
-sock.listen()
+# Configurable SNI host and listening port
+SNI_HOST = 'www.example.com'  # Hostname to spoof in the SNI field
+LISTEN_PORT = 8088  # Local port to listen on
 
-# Accept incoming connections
-conn, addr = sock.accept()
+def handle_client(client_socket, client_address):
+    print(f"Connection received from {client_address}")
 
-# Wrap the socket in an SSL context
-context = ssl.create_default_context()
-ssl_sock = context.wrap_socket(conn, server_side=True)
+    # Receive initial client request and parse the target host and port
+    client_request = client_socket.recv(8192)
+    target_host = client_request.split(b':')[0].split()[-1].decode()
+    target_port = int(client_request.split(b':')[-1].split()[0])
 
-# Read data from the SSL socket and send it through the tunnel
-data = ssl_sock.read()
-tunnel_sock = socket.create_connection(('www.example.com', 443))
-tunnel_sock.sendall(data)
+    # Establish a TCP connection to the target server
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.connect((target_host, target_port))
 
-# Read the response from the tunnel and send it back to the client
-response = tunnel_sock.recv(4096)
-ssl_sock.sendall(response)
+    # Wrap the server socket with SSL and inject custom SNI hostname
+    ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
+    secure_socket = ssl_context.wrap_socket(server_socket, server_hostname=SNI_HOST)
 
-# Close the sockets
-ssl_sock.close()
-tunnel_sock.close()
+    # Inform the client of the successful connection establishment
+    client_socket.send(b"HTTP/1.1 200 Connection Established\r\n\r\n")
+
+    # Begin data forwarding between the client and the target server
+    while True:
+        sockets_ready, _, _ = select.select([client_socket, secure_socket], [], [])
+        for sock in sockets_ready:
+            try:
+                # Read data from either socket and forward it to the other
+                data = sock.recv(8192)
+                if not data:
+                    return  # Disconnect if no data is received
+                if sock is client_socket:
+                    secure_socket.send(data)
+                else:
+                    client_socket.send(data)
+            except Exception as e:
+                print(f"Error during data forwarding: {e}")
+                return
+
+    # Close all connections when finished
+    client_socket.close()
+    secure_socket.close()
+    print(f"Disconnected from {client_address}")
+
+# Setup main listener socket for incoming client connections
+def start_server():
+    print(f"Starting TCP over SSL Tunnel on port {LISTEN_PORT}")
+    listener_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    listener_socket.bind(('', LISTEN_PORT))
+    listener_socket.listen(5)
+    print(f"Listening for clients on port {LISTEN_PORT}...")
+
+    # Accept incoming connections and start new threads to handle each one
+    while True:
+        client_socket, client_address = listener_socket.accept()
+        threading.Thread(target=handle_client, args=(client_socket, client_address)).start()
+
+start_server()
 ```
 
-This code creates a socket and binds it to the localhost on port 8080. It then listens for incoming connections and accepts them when they arrive. The incoming connection is then wrapped in an SSL context and the data from the connection is read. The data is then sent through a tunnel to the destination server (www.example.com on port 443 in this example). The response from the destination server is read and sent back to the client through the SSL socket. Finally, the sockets are closed.
+### Walkthrough
 
-To spoof the SNI (Server Name Indication) header, you can use the ssl_sock.server_hostname attribute to specify the desired SNI value when creating the SSL context. For example:
+1. **Setting Up the Listener**:
+   - The server listens on the specified `LISTEN_PORT`.
+   - When a client connection is established, it hands off the socket to a new thread running the `handle_client` function.
 
-```
-context = ssl.create_default_context()
-context.check_hostname = False
-context.verify_mode = ssl.CERT_NONE
-ssl_sock = context.wrap_socket(conn, server_side=True, server_hostname='www.spoofed-sni.com')
-```
+2. **Handling the Client Request**:
+   - The `handle_client` function receives the client request and parses out the target `host` and `port`.
+   - Using the `SNI_HOST`, the script wraps the connection in an SSL tunnel, where it spoofs the SNI field with the hostname `SNI_HOST`.
 
-This will cause the SNI header to be sent with the value ‘www.spoofed-sni.com' when the SSL handshake is performed.
+3. **SSL Wrapping with SNI Spoofing**:
+   - The `ssl_context.wrap_socket()` function creates an SSL-encrypted connection with the specified `server_hostname` as the SNI field.
+   - This is where the SNI spoofing occurs. By specifying a different hostname in the `server_hostname` parameter, we are telling the server to see the request as originating for `SNI_HOST`.
 
-First, the socket and ssl modules are imported. These modules provide the necessary functions for creating sockets and wrapping them in SSL contexts.
+4. **Data Forwarding**:
+   - The script then enters a loop to read data from either the client or the server socket.
+   - It forwards data from the client to the secure server socket and vice versa, effectively tunneling the TCP connection over SSL with the modified SNI.
 
-```
-import socket
-import ssl
-```
+## Uses
 
-Next, a socket is created and bound to the localhost on port 8080. The socket is then put into listening mode to wait for incoming connections.
+1. **Bypassing SNI-Based Restrictions**: Some network restrictions rely on the SNI field to block specific websites. By using a spoofed SNI hostname, you can sometimes bypass these restrictions.
+2. **Testing and Debugging**: This can be useful in penetration testing and network debugging, as it allows you to see how a server responds to different SNI hostnames.
+3. **Encapsulation of Non-SSL Protocols**: With this setup, you can tunnel non-SSL-based TCP protocols over SSL, useful for legacy systems requiring security on modern networks.
 
-```
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(('localhost', 8080))
-sock.listen()
-```
+## Limitations & Considerations
 
-When an incoming connection is received, it is accepted and stored in the conn variable along with the address of the client in the addr variable
+1. **Compatibility**: While many servers respond correctly to SNI spoofing, some use additional verification mechanisms that can detect or reject spoofed SNI requests.
+2. **SSL Handshake Complexity**: Since we’re altering SSL parameters, certain systems may be incompatible with this setup if they require specific handshake details.
+3. **Legal and Ethical Implications**: Using SNI spoofing and tunneling techniques without authorization can be illegal and unethical. Always get permission before testing or bypassing network restrictions.
 
-```
-conn, addr = sock.accept()
-```
+## Conclusion
 
-The incoming connection is then wrapped in an SSL context using the wrap_socket function. This function takes the connection as an argument and returns an SSL socket object. The server_side argument is set to True to indicate that the socket will be used to accept connections from clients.
+TCP over SSL tunneling with SNI spoofing provides a powerful technique for network testing and bypassing SNI-based access restrictions. By encapsulating a TCP connection within SSL and modifying the SNI field, we gain more control over secure communications, which can be useful for network administrators, testers, and researchers. However, this technique requires caution and should always be used responsibly and ethically.
 
-```
-context = ssl.create_default_context()
-ssl_sock = context.wrap_socket(conn, server_side=True)
-```
+## References
 
-The data from the SSL socket is read using the read function and stored in the data variable.
-
-```
-data = ssl_sock.read()
-```
-
-A connection is then established with the destination server using the create_connection function from the socket module. This function takes the address of the destination server as an argument and returns a socket object that can be used to send and receive
-
-```
-tunnel_sock = socket.create_connection(('www.example.com', 443))
-```
-
-The data that was read from the SSL socket is then sent through the tunnel to the destination server using the sendall function.
-
-```
-tunnel_sock.sendall(data)
-```
-
-The response from the destination server is read using the recv function and stored in the response variable.
-
-```
-response = tunnel_sock.recv(4096)
-```
-
-The response is then sent back to the client through the SSL socket using the sendall function.
-
-```
-ssl_sock.sendall(response)
-```
-
-Finally, both the SSL socket and the tunnel socket are closed using the close function.
-
-```
-ssl_sock.close()
-tunnel_sock.close()
-```
-
-In conclusion, it is possible to create a TCP over SSL tunnel using Python’s ssl module. This can be useful for encrypting network traffic and bypassing network restrictions. The SNI (Server Name Indication) header can also be spoofed by specifying a different server name when creating the SSL context on the client side. While SNI spoofing can be used for legitimate purposes, it can also be used for malicious purposes such as bypassing network restrictions or performing SSL strip attacks. It's important to be aware of the potential risks and use SNI spoofing responsibly.
-
-References:
-
+- [Code for SNI Spoofing](https://sourceforge.net/p/tcpoverssltunnel/code-0/ci/master/tree/client.py#l10)
 - [Bypassing Content-based internet packages with an SSL/TLS Tunnel, SNI Spoofing, and DNS spoofing by Shanaka Anuradha Samarakoon](https://arxiv.org/ftp/arxiv/papers/2212/2212.05447.pdf)
 - [Efficiently Bypassing SNI-based HTTPS Filtering by Wazen M. Shbair, Thibault Cholez, Antoine Goichot, Isabelle Chrisment](https://hal.inria.fr/hal-01202712/document)
-
