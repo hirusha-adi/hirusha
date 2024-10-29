@@ -3,7 +3,7 @@ title: Getting Started with i3wm - A Beginner's Guide for Laptops
 sidebar_label: i3wm Guide (Laptops)
 ---
 
-## INCOMPLETE!
+![alt text](image-7.png)
 
 This guide is for user's running Ubuntu 22.04 on their laptops. Everything mentioned in this post has been tested on Pop OS 22.04 (non NVIDIA edition).
 
@@ -11,7 +11,7 @@ Note: Do not proceed if you are not the type of person that is ready to read doc
 
 ## Why i3wm?
 
-i3wm is highly documented, and has more support online.
+i3wm is highly documented, and has more support online. It's not based on Wayland. So, i dont have trouble with NVIDIA GPUs.
 
 Learn the basics and use it for 30 minute's and you wouldn't want to swicth back. You dont have to keep on pressing Alt+Tab severl times to go through and select open windows. you can launch apps quickly. You can see your system's information easily at a glance. Its lightweight. Its extremely customizable. Its efficient, so, it saves time. ots quick and easy to navigate (after getting used to, which you can - even within several minutes)
 
@@ -114,18 +114,12 @@ rm -rf ~/.cache/fontconfig
 sudo fc-cache -r -v
 ```
 
-### Update Fonts
+### Update Fonts (i3)
 
-in the i3config:
+in the i3 config:
 
 ```
 font pango:JetBrainsMono Nerd Font 14
-```
-
-in the polybar config (to be set up soon):
-
-```
-font-0 = "JetBrainsMono Nerd Font:size=16;2"
 ```
 
 ## Custom Wallapers
@@ -309,6 +303,8 @@ exec --no-startup-id "sudo libinput-gestures-setup start"
 
 ## The Bar
 
+![alt text](image-6.png)
+
 ### Remove Default Bar
 
 ```
@@ -404,6 +400,19 @@ exec_always ~/.config/i3/launch.sh
 ### How it works?
 
 Polybar has several modules. [Click here](https://github.com/polybar/polybar/wiki/Module:-script) to learn what a module is. Basically, its a block of text/icon shown on the bar. You can use many of the pre-written modules or you can easily create your own.
+
+### Modules Introduction
+
+Here are some basics. You can learn everything required [here](https://github.com/polybar/polybar/wiki). Also, all the options for each module are given in the documentation.
+
+```ini
+[module/module_name]                ; `module_name` is the name of the module       
+type = ...                          ; type of the module. refer to docs for more info
+interval = 5                        ; how often to update this? `5` means update each 5 seconds
+format-prefix = "  "               ; icon (LHS) of the module text/content
+format-prefix-foreground = #ff0000  ; color of the icon
+format-margin = 8pt                 ; margin of the icon
+```
 
 ### Modules
 
@@ -691,6 +700,12 @@ border-color = #00000000
 
 Note that the `border-color = #00000000` means nothing will be displayed. It's not black. By doing this, you can have a gap between the bar and the applications being opened.
 
+Also, make sure to update the font: otherwise, the icons will not work.
+
+```
+font-0 = "JetBrainsMono Nerd Font:size=16;2"
+```
+
 You can nothing you cant customize using the config file. [Click here](https://github.com/polybar/polybar/wiki) to read the official documentation.
 
 ## Compositor
@@ -711,18 +726,301 @@ exec_always compton -f
 
 An alternative, more maintained, upto date option is `picom`. You can also install it instead of `compton` if you'd like to. [Click here](https://github.com/yshui/picom) to learn more.
 
+
+## Application Launcher
+
+### Installation
+
+We will use rofi instead of dmenu. You can build the latest from the source following [this guide](https://github.com/davatorium/rofi/blob/next/INSTALL.md#dependency), or you can install using your distribution's default package manager. Which is what we will be doing:
+
+```
+sudo apt install rofi
+```
+
+You can run the command below to show the launcher. 
+
+```
+rofi -show run
+```
+
+### Configuration
+
+You can type the application name here, similar to dmenu. If you have installed a compositor, transparency effects when customizing this should work without any issue.
+
+When launching rofi, you can heavily customize it usinf command line arguments, but, we will use the config file instead.
+
+To dump the default config, you can run the command below:
+
+```
+rofi -dump-config > ~/.config/rofi/config.rasi
+```
+
+Note that the directory we saved is a place where rofi checks for a config file be default.
+
+You can bind this to `Alt+d`, similar to launching dmenu. To do it, add this to your i3 config file:
+
+```
+bindsym $mod+d exec rofi -show run
+```
+
+### Basic Customization
+
+There are 3 modes my default: `window`, `run`, and `ssh`. You can keep track of your ssh connections and quickly make connections, but we will not be adding ssh. 
+
+I will also increase the font size and the font. Keep the `timeout` and `filebrowser` settings as it is. Refer to the [docs](https://davatorium.github.io/rofi/CONFIG/) if you want to change something without breaking it.
+
+You will see a lot of configuration settings commented out, these are the default settings. you can customize what ever you want as you wish but we will not be doing a lot of this since we will be [installing theme](#themes)
+
+```rasi
+configuration {
+  modi: "window,run";
+  font: "JetBrainsMono Nerd Font 17.5";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+```
+
+### Themes
+
+The documentation related to themeing can be found [here](https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown).
+
+All the themes that are officially supported can be found [here](https://github.com/davatorium/rofi/tree/next/themes). 
+
+First change your current working directory to the rofi config directory:
+
+```
+cd ~/.config/rofi/
+```
+
+
+Download the required theme(s) using wget or curl:
+
+Note that some themes might be depending on other themes/configs, in that case, you will have to download all the themes/configs its dependent on as well. For example, `gruvbox-dark-hard` is dependent on `gruvbox-common.rasinc`, so, we will have to download both of theme
+
+```
+wget "https://raw.githubusercontent.com/davatorium/rofi/refs/heads/next/themes/gruvbox-common.rasinc"
+wget "https://raw.githubusercontent.com/davatorium/rofi/refs/heads/next/themes/gruvbox-dark-hard.rasi"
+``` 
+
+Next, you have to set the theme by editing the rofi config file.
+
+```rasi
+@theme "gruvbox-dark-hard"
+```
+
+Note that the theme name is `gruvbox-dark-hard` and it will look for `gruvbox-dark-hard.rasi` in the config directory. For all themes you download, you can simply remove the `.rasi` extension when mentioning the theme name.
+
+## Clipboard Manager
+
+None of the tutorials / blog posts / official docs worked, but the documentation provided by archwiki did work.
+
+### Installation
+
+Place the binary in a directory that has been added to your system. We will be choosing `~/.local/bin/`.  Lets make that directory if it doesn't already exist and cd into it.
+
+```bash
+mkdir -p ~/.local/bin/  && cd ~/.local/bin/
+```
+
+If this folder is not already added to path, add this to end of your bashrc at `~/.bashrc`, and restart your shell or source it.
+
+```bash
+export PATH="~/.local/bin:$PATH"
+```
+
+Now, you can download the executable binary:
+
+```bash
+wget "https://github.com/erebe/greenclip/releases/download/v4.2/greenclip"
+```
+
+Then, set the permissions to executable:
+
+```
+chmod +x ./greenclip
+```
+
+Your installation is now complete.
+
+[Click here](https://github.com/erebe/greenclip) to refer the official documentation for more information.
+
+### Setup
+
+`greenclip` should be able to monitor the clipboard, to keep track of it. For that, the greenclip daemon should be running the bakckground.
+
+Add this to your i3 config file to auto start the daemon on startup, and to show greenclip using rofi:
+
+```
+exec --no-startup-id greenclip daemon & > /dev/null
+bindsym Mod4+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
+bindsym Mod4+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
+```
+
+Note that `Mod4` is the "Super"/"Win"/"Start" key. So, similar to windows, you can show the clipboard manager on `Super+c` and `Super+v`.
+
+### Configuration
+
+The default conifguration file is at: `~/.config/greenclip.toml`. You can update it to suite your needs:
+
+```toml
+
+[greenclip]
+  blacklisted_applications = []
+  enable_image_support = true
+  history_file = "/home/hirusha/.cache/greenclip.history"
+  image_cache_directory = "/tmp/greenclip"
+  max_history_length = 50
+  max_selection_size_bytes = 0
+  static_history = ["GClipboard managed by greenclip"]
+  trim_space_from_selection = true
+  use_primary_selection_as_input = false
+```
+
+`static_history` is a list of strings that will be not be removed from the history. It will always be available.
+
+In the configuration above, the images (in the clipboard, for examples, screenshots taken with flameshot that are copied to the clipboard) will be saved to `image_cache_directory = "/tmp/greenclip"`. Also, make sure to update the `history_file` to a directory specific to your system. You can change the number of items that greenclip should keep track ofu by editing `max_history_length`. the default is 50. Additional information about configuring this can be found [here](https://github.com/erebe/greenclip).
+
+You may have to restart the `green daemon` or system for the changes to take place.  
+
+## Terminal
+
+![alt text](image-5.png)
+
+this is optional. this is completely for the looks and minimalisticness. `gnome-terminal` should also suffice but it's menu bar on a tiling window manager does not look great, so, we will be using alacritty.  Also, its fast and has graphics acceleration.
+
+### Installation
+
+Run the command below:
+
+```
+sudo apt install alacritty
+```
+
+To start the terminal on `Alt+Return`, you can set it explicitly to use alacritty, or the default `i3-sensible-terminal` will choose `alacritty` or `gnome-terminal`
+
+You either keep your i3 config file as it is, 
+
+```
+bindsym $mod+Return exec i3-sensible-terminal
+```
+
+or, to explicitly mention and start alacritty, use this:
+
+```
+bindsym $mod+Return exec alacritty
+```
+
+### Configuration File
+
+This section of this post will be outdated extremely soon. Since i'm using Pop OS 22.04, the repositories has an old version that has not been updated in centuries. classic ubuntu. 
+
+The default configuration is now a `.toml` file in the latest version, but the version in the ubuntu repository still uses the old `.yml` config file. There was nothing i could find in the official documentation as it was discontinued a long time ago. Just when i was about to build the latest version from source, i found the old `.yml` config file [here](https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml). I'm too bored to built it from source now. 
+
+Lets create the default directory and cd into it: Note that this is where alacritty will look for the configuration files by default.
+
+```bash
+mkdir -p ~/.config/alacritty && ~/.config/alacritty
+```
+
+Then, lets donwload the default configuration file:
+
+```
+wget "https://raw.githubusercontent.com/tmcdonell/config-alacritty/refs/heads/master/alacritty.yml"
+```
+
+When you do not mention anything in the `~/.config/alacritty/alacritty.yml`, it will just set itself to the hardocded defaults. 
+
+### Customization
+
+I won't be doing any serious customizations. If you want to get into it, please build the latest version from the source and configure this following the [official documentation]() by eiditing the `*.toml` configuration file. I will be editing the old deprecated `.yml` config file here.
+
+I want it to be slightly transluscent, so, i will set the opacity to 95%, but, for this to work, you must have a compositor install.
+
+```yml
+window:
+  opacity: 0.95
+```
+
+Then, the default font and the font size:
+
+```yml
+font:
+  size: 15
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Medium
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: "Light Italic"
+```
+
+The color scheme:
+
+```yml
+
+colors:
+  # Default colors
+  primary:
+    background: '0x0A0A0A'
+    foreground: '0xCCCCCC'
+  # Normal colors
+  normal:
+    black:   '0xffffff'
+    red:     '0xc82829'
+    green:   '0x718c00'
+    yellow:  '0xeab700'
+    blue:    '0x4271ae'
+    magenta: '0x8959a8'
+    cyan:    '0x3e999f'
+    white:   '0x4d4d4c'
+  # Bright colors
+  bright:
+    black:   '0x8e908c'
+    red:     '0xf5871f'
+    green:   '0xe0e0e0'
+    yellow:  '0xd6d6d6'
+    blue:    '0x969896'
+    magenta: '0x282a2e'
+    cyan:    '0xa3685a'
+    white:   '0x1d1f21'
+```
+
+The cursor from a block to a beam, for a modern look:
+
+```yml
+cursor:
+  style: Beam
+  unfocused_hollow: true
+```
+
+And, i also prefer the debug level to be OFF
+
+```yml
+debug:
+  log_level: OFF
+```
+
 ## References
 
 - Some images / screenshots taken from: https://opensource.com/article/18/8/getting-started-i3-window-manager
 - Polybar `brightnessctl` module: https://github.com/pim-n/brightnessctl-polybar
 - Polybar documentation: https://github.com/polybar/polybar/wiki
 - Enabling multimedia keys: https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
-
+- Rofi documentation: https://davatorium.github.io/rofi/
+- Setup greenclip with rofi on i3wm: https://wiki.archlinux.org/title/Greenclip
+- Greenclip: https://github.com/erebe/greenclip
+- Alacritty: https://github.com/alacritty/alacritty
+- Old alacritty .yml config: https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml
 
 ---
 
 Last updated on 2024 October 28.
-
-
-
-TODO:  compton, custom colors for both i3 and polybar, alacritty installation and customization, rofi installation and customization
