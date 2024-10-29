@@ -152,7 +152,8 @@ const config: Config = {
         'toml',
         'protobuf',
         'prolog',
-        'diff'
+        'diff',
+        'ini'
       ],
       defaultLanguage: 'javascript',
       magicComments: [
@@ -239,7 +240,7 @@ const config: Config = {
     // BROKEN!
     // PLEASE FIX IT LATER
     // MAYBE UPDATE DOCUSAURUS, THEN UPDATE THIS AND TRY AGAIN.
-    // Documentation: 
+    // Documentation:
     //    https://github.com/gabrielcsapo/docusaurus-plugin-search-local/tree/fd78d6e00986ccc5e7b0e6bfd4e30d45c04ed2f2
     [
       require.resolve('docusaurus-plugin-search-local'),
