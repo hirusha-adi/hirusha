@@ -17,13 +17,13 @@ slug: post-install-setup
 
 - Download and run [O&O ShutUp10](https://www.oo-software.com/en/shutup10) to disable telemetry.
 
-![a1](https://www.naut.ca/blog/content/images/2019/07/sidebysideshutup10v2.png)
+![a1](../images/ltsc-shutup10.png)
 
 ### Disabling `Allow Telemetry`
 
 - In local group policy editor
 
-![a2](https://i.imgur.com/CD7wfNB.png)
+![a2](../images/ltsc-telemetry.png)
 
 ## Access Public Network Shares
 
@@ -31,21 +31,21 @@ slug: post-install-setup
 
 - If you are the kind of person that has your small local samba share setup at your house with no authentication (guest login allowed), you will run into this error: `0x80004005`
 
-![i1](https://i.stack.imgur.com/PCJ3z.png)
+![i1](../images/ltsc-neterr.png)
 
 - Microsoft posts the official "workaround" which is enabling the "AllowInsecureGuestAuth" group policy
 
-![image](./image.png)
+![image](../images/ltsc-lanman.png)
 
 - And it works
 
-![i3](https://i.stack.imgur.com/JZyO6.png)
+![i3](../images/ltsc-fileaccfix.png)
 
 ### Printers (`0x0000011b`)
 
 - But, when you try to access a printer, you will get this error: `0x0000011b`
 
-![i4](https://i.stack.imgur.com/2S6se.png)
+![i4](../images/ltsc-printerr.png)
 
 - The posted official workaround is incomplete and printing doesn't fully respect this group policy configuration because as a fix for [CVE-2021-1678](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1678) Microsoft increased the printer spooler protection but they forgot to let printing work for people who don't bother too much with proper encryption and authentication which `AllowInsecureGuestAuth` disables
 
@@ -64,7 +64,7 @@ Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Print' -Name 'Rpc
 
 - Restarting the Printer Spooler service is enough to apply the fix
 
-![i5](https://i.stack.imgur.com/TyYQn.png)
+![i5](../images/ltsc-printerspooler.png)
 
 - Looking back at both of these error, if they still won't work, try this instead:
 

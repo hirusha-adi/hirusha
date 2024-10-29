@@ -6,12 +6,12 @@ slug: tweak-windows
 
 - [Winaero Tweaker](https://winaero.com/winaero-tweaker/) - All-in-one app for tuning Windows {7, 8, 10, 11}
 
-  ![i11](https://cdn.discordapp.com/attachments/1163847683207856178/1165122544949542952/Winaero-Tweaker-1.png)
+  ![i11](./images/winareotweaker.png)
 
 - [Windows Power Toys](https://github.com/microsoft/PowerToys) - Windows system utilities to maximize productivity
 
-  ![i12](https://www.techrepublic.com/wp-content/uploads/2023/04/w_windows10_powertoys_general_page-770x515.jpg)
+  ![i12](./images/powertoys.png)
 
-- [Classic Shell](https://www.fosshub.com/Classic-Shell.html)
+- [Classic Shell](https://www.fosshub.com/Classic-Shell.html) - to customize the windows shell, the start menu and the explorer to be specific.
 
-  ![i13](https://cdn.discordapp.com/attachments/1163847683207856178/1176805531042730044/image.png)
+  ![i13](./images/classicshell.png)

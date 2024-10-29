@@ -11,5 +11,5 @@ Some guides in this section are tailored towards power users. Some guides may al
 :::
 
 :::caution PIRACY WARNING
-Some of the websites mentioned may contain pirated content, and I strongly discourage anyone from downloading or using such material. Respect for intellectual property rights and legal usage of content is essential. This is for educational purposes only
+Some of the websites mentioned may contain pirated content, and I strongly discourage anyone from downloading or using such material. Respect for intellectual property rights and legal usage of content is essential. This is for educational purposes only.
 :::

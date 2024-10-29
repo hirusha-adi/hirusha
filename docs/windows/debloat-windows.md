@@ -12,42 +12,23 @@ slug: debloat-windows
 
 - [Debotnet](https://github.com/builtbybel/debotnet) - Debotnet is a tiny portable tool for controlling Windows 10's many privacy-related settings and keep your personal data private.
 
-  ![i6](https://github.com/builtbybel/debotnet/raw/master/debotnet-intro.gif)
-
 - [Privatezilla](https://github.com/builtbybel/privatezilla) - Performs a privacy & security check of Windows 10.
-
-  ![i4](https://github.com/builtbybel/privatezilla/raw/master/assets/intro.gif)
 
 - [WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker) - Block spying and tracking on Windows
 
-  ![i5](https://cdn.discordapp.com/attachments/1163847683207856178/1165128912137900063/menu.png?ex=6545b9db&is=653344db&hm=2e26c47ecd224c87f853e5b9afa961dba8b7f09b8624d5b3102c385e917bfb33&)
-
 - [privacy.sexy](https://privacy.sexy/) ([Source Code](https://github.com/undergroundwires/privacy.sexy)) - Open-source tool to enforce privacy & security best-practices on Windows and macOS, because privacy is sexy.
-
-  ![i7](https://github.com/undergroundwires/privacy.sexy/raw/master/img/screenshot.png?raw=true)
 
 - [WinSlap](https://github.com/svenmauch/WinSlap) - Swiftly configure a fresh Windows 10 installation with useful tweaks and antispy settings.
 
-  ![i8](https://camo.githubusercontent.com/220f6e3342dcc932e027150d012960b71684a201585296df5119c3a327dabb6a/68747470733a2f2f7472616e736665722e6d617563682e6d652f77696e736c61705f76315f372e706e67)
-
 - [Chemo](https://github.com/t-richards/chemo) - Remove pre-installed junk from Windows 10.
-
-  ![i9](https://user-images.githubusercontent.com/3905798/55773602-5f5f8800-5a5f-11e9-8f9f-672de4ffdcb6.png)
 
 - [0&0](https://www.oo-software.com/en/shutup10) - Free antispy tool
 
-  ![i1](https://cdn.discordapp.com/attachments/1163847683207856178/1165120648616620083/01.png?ex=6545b229&is=65333d29&hm=f91784ce0c8c43caae146d0cdb4506f7301dd0e2f9605bac4c6c331c690d11b6&)
-
 - [WPD Privacy Dashboard](https://wpd.app/) -
-
-  ![i2](https://cdn.discordapp.com/attachments/1163847683207856178/1165121045750087711/mainwindow.png?ex=6545b288&is=65333d88&hm=35ed70ecc8bc6db387f644f20c83e274cb84887bc05dfc9c9ae05c1f16cb8442&)
 
 - [O&O AppBuster](https://www.oo-software.com/en/ooappbuster) - Bust Apps you do not want (uninstall store applications and packages)
 
-  ![i3](https://cdn.discordapp.com/attachments/1163847683207856178/1165122186844049489/01.png?ex=6545b398&is=65333e98&hm=3aa9a5dbbc6247010a2abee5b126c2135ca1e549ecdb33a7d725f41630ba4961&)
-
 - [Windows 10 DNS Block List](https://github.com/schrebra/Windows.10.DNS.Block.List) - Windows DNS Block List
-
   - This is an exhaustive list of all Windows DNS names that call back to Microsoft or third party applications builtin to the Operating System.
 
 - [Windows 10 Privacy Guide - 1903 Update](https://github.com/adolfintel/Windows10-Privacy) ([mirror](https://fdossena.com/?p=w10debotnet/index_1903.frag))

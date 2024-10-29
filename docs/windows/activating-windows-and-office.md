@@ -6,7 +6,7 @@ slug: activating-windows-and-office
 
 :::danger note
 
-this may violate the terms and services of windows and this might be illegal
+This may violate the terms and conditions of windows and this might be illegal.
 
 :::
 
@@ -15,6 +15,9 @@ this may violate the terms and services of windows and this might be illegal
 This is possible thanks to this awesome open source project: [Microsoft Activation Scripts](https://massgrave.dev/index.html)
 
 :::
+
+![im1](./images/massgrave.png)
+
 
 1. Right click on the start button
 
@@ -29,8 +32,6 @@ This is possible thanks to this awesome open source project: [Microsoft Activati
    ```
 
 4. Select your option and perform the action you want
-
-   ![I2](https://cdn.discordapp.com/attachments/1163847683207856178/1176800016225030154/image.png)
 
    - `[1] HWID` is the best option here
    - `[3] KMS38` - use this only if `[1] HWID` fails
