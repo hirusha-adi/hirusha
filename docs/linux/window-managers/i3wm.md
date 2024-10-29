@@ -1,5 +1,5 @@
 ---
-title: Getting Started with i3wm - A Beginner's Guide for Laptops
+title: Getting Started with i3wm - A Beginner's Guide
 sidebar_label: i3wm Guide
 ---
 
