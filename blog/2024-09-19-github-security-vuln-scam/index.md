@@ -71,6 +71,8 @@ Let's break it down:
 ![alt text](image-4.png)
 
 
+The infected file can be downloaded from [here](./l6E.exe.bin-infected.zip). The password for this file is: `infected`. 
+
 Static Analysis with VirusTotal
 
 Running a static analysis through VirusTotal shows that only 12 antivirus engines detected this file as malicious. It appears to be a common stealer, but the low detection rate suggests it might be packed in a way that evades many detection systems. You can view the report [here](https://www.virustotal.com/gui/url/b64a25fef85ad988dee3ds3b772ea60dc4d53333cd0857924745c000ff858c5eb).
