@@ -1,13 +1,17 @@
 ---
 title: Getting Started with i3wm - A Beginner's Guide for Laptops
-sidebar_label: i3wm Guide (Laptops)
+sidebar_label: i3wm Guide
 ---
 
 ![alt text](image-7.png)
 
-This guide is for user's running Ubuntu 22.04 on their laptops. Everything mentioned in this post has been tested on Pop OS 22.04 (non NVIDIA edition).
+If you’re looking to dive into a new way of managing your desktop, i3wm might be just what you need! This guide will help you get started with i3wm, particularly if you're using Ubuntu 22.04 (although there may be some slight differences in setup). I've tested everything on Pop!_OS 22.04 (non-NVIDIA edition) on my laptop, so it should work smoothly with similar setups.
 
-Note: Do not proceed if you are not the type of person that is ready to read documentation.
+:::danger WARNING
+
+Only proceed if you’re up for reading some documentation along the way. i3wm isn’t for everyone—it requires some patience and a willingness to tinker a bit.
+
+:::
 
 ## Why i3wm?
 
@@ -938,7 +942,7 @@ When you do not mention anything in the `~/.config/alacritty/alacritty.yml`, it 
 
 ### Customization
 
-I won't be doing any serious customizations. If you want to get into it, please build the latest version from the source and configure this following the [official documentation]() by eiditing the `*.toml` configuration file. I will be editing the old deprecated `.yml` config file here.
+I won't be doing any serious customizations. If you want to get into it, please build the latest version from the source and configure this following the [official documentation](https://github.com/alacritty/alacritty/tree/master/extra/man) by eiditing the `*.toml` configuration file. I will be editing the old deprecated `.yml` config file here.
 
 I want it to be slightly transluscent, so, i will set the opacity to 95%, but, for this to work, you must have a compositor install.
 
