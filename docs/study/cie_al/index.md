@@ -3,7 +3,6 @@ title: Cambridge Assessment International Education Advanced Levels
 sidebar_label: CIE Advanced Levels
 ---
 
-## Available Educational Resources
+## Available Resources
 
-To Do
-
+1. [Computer Science (9618)](./cs-9618.md)
