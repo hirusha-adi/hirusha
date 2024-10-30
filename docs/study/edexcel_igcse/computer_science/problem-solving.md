@@ -53,8 +53,6 @@ For each and every algorithm mentioned below, please also refer to the Flowchart
 
 ### Bubble Sort
 
-[Click here](/docs/study/cie_al/computer_science/paper_4/my_study_notes/chapter_23/notes#bubble-sort) to open the notes.
-
 ### Marge Sort
 
 Visualize and get a basic idea here: 
@@ -72,11 +70,7 @@ Learn to do it with python: (optional)
 
 ### Linear Search
 
-[Click here](/docs/study/cie_al/computer_science/paper_4/my_study_notes/chapter_23/notes#linear-search) to open the notes
-
 ### Binary Search
-
-[Click here](/docs/study/cie_al/computer_science/paper_4/my_study_notes/chapter_23/notes#binary-search) to open the notes
 
 ## Decomposition and Abstraction
 

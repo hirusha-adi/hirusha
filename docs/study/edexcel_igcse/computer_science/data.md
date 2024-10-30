@@ -10,8 +10,6 @@ sidebar_label: 3. Data
 
 ## Binary
 
-[Click here](/docs/study/cie_al/computer_science/paper_1/my_revision_notes/chapter_1_information_representation) to open my short note about this section. Please refer only upto the end of "Overflow" section
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mmAj60c5pXE?si=UhpGUPL4tb2Ck9HP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Decimal to Binary
@@ -72,8 +70,6 @@ They are of two types:
 
 ### Character Sets
 
-[Click here](/docs/study/cie_al/computer_science/paper_1/my_revision_notes/chapter_1_information_representation#character-sets) to open notes about Character Sets (ASCII, Unicode)
-
 Best explnation:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5aJKKgSEUnY?si=-Ew_UmEDgZXIAp9B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -84,8 +80,6 @@ If it's still not clear, refer to this video as well (this also has some addiiti
 
 ### Images (Bitmaps)
 
-[Click here](/docs/study/cie_al/computer_science/paper_1/my_revision_notes/chapter_1_information_representation#bitmaps) to open notes.
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0KmimFoalTI?si=pPQP07E9B9vopR2B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Basic Video:
@@ -93,8 +87,6 @@ Basic Video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/j0BGFvI5e-U?si=cWnDFLq_gPtzdUM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Sound
-
-[Click here](/docs/study/cie_al/computer_science/paper_1/my_revision_notes/chapter_1_information_representation#sound) to open notes.
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HlOTuCFtuV8?si=ocAFLBOpKrDjWthF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -118,8 +110,6 @@ Make sure to also watch this video to be able to calculate the file sizes:
 :::
 
 ## Data Storage and Compression
-
-[Click here](https://hirusha.xyz/docs/study/cie_al/computer_science/paper_1/my_revision_notes/chapter_1_information_representation#compression) to open my notes
 
 ### File Sizes
 
