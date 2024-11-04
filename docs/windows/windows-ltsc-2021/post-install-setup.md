@@ -21,7 +21,11 @@ slug: post-install-setup
 
 ### Disabling `Allow Telemetry`
 
-- In local group policy editor
+- to disable Allow Telemetry
+
+   1. Open the Local Group Policy Editor (`gpedit.msc` in Run)
+   2. Go to "Administrative Templates" -> "Windows Components" -> "Data Collection and Peview Builds" -> "Allow Telemetry"
+   3. Disable it
 
 ![a2](../images/ltsc-telemetry.png)
 
@@ -34,6 +38,10 @@ slug: post-install-setup
 ![i1](../images/ltsc-neterr.png)
 
 - Microsoft posts the official "workaround" which is enabling the "AllowInsecureGuestAuth" group policy
+
+   1. Open the Local Group Policy Editor (`gpedit.msc` in Run)
+   2. Go to "Administrative Templates" -> "Networks" -> "Lanman Workstation" -> "Enable insecure guest logons"
+   3. Enable it
 
 ![image](../images/ltsc-lanman.png)
 
@@ -199,15 +207,19 @@ Windows Registry Editor Version 5.00
 "PhotoViewer.FileAssoc.Tiff"=hex(0):
 ```
 
-- Merge it
+- then, Right click -> Merge
 
 - Go to the Default Apps section in Settings and select Micrososft Photo Viewer
 
 ### Alternative
 
-The only good alternative to Microsoft Photos is [ImageGlass](https://github.com/d2phap/ImageGlass)
+The only good alternative to Microsoft Photos is [Honeyview](https://www.bandisoft.com/honeyview/)
 
-![a3](https://raw.githubusercontent.com/ImageGlass/releases/main/screenshots/v9.0/9.0_b1.webp)
+To install [HoneyView with chocolatey](https://community.chocolatey.org/packages/honeyview.install), run:
+
+```
+choco install honeyview.install
+```
 
 ## OneDrive Problem
 
@@ -258,7 +270,95 @@ Windows Registry Editor Version 5.00
 "RelativePath"="OneDrive"
 ```
 
-## Install Whatsapp Desktop
+## Install Chocolately
+
+[Click here](../chocolately) for more information.
+
+## Install WhatsApp Desktop
+
+Installing WhatsApp on Windows LTSC 2021 requires a few extra steps since the Microsoft Store isn’t natively available. Here’s a simple guide to get it set up:
+
+### Approach 1
+
+:::warning Warning
+
+This doesn't always work!
+
+:::
 
 Visit [RedrootDEV/WhatsAppDesktop-NoStore](https://github.com/RedrootDEV/WhatsAppDesktop-NoStore/tree/main) repository and download the latest release. Extract it and run the executable as an Administrator. It will download the `msixbundle` and install it for you. It will also update it, if already installed.
 
+### Approach 2
+
+**Step 1: Get the WhatsApp Desktop URL**
+
+1. Go to the Microsoft Store’s [WhatsApp Desktop page](https://apps.microsoft.com/detail/9nksqgp7f2nh?hl=en-US&gl=US).
+2. Copy the URL of the page.
+
+**Step 2: Generate Download Links for Required Files**
+
+1. Visit [store.rg-adguard.net](https://store.rg-adguard.net).
+2. Paste the copied WhatsApp Desktop URL in the input field.
+3. Set *Request Type* to “URL (link)” and *Select ring* to “PR.”
+4. Click to generate the download links for the .appx or .msixbundle files required for installation.
+
+![alt text](../images/ltsc-wa-store.png)
+
+**Step 3: Download the Necessary Files**
+
+To install WhatsApp Desktop, you’ll need to download several files by architecture. For most users, the following files are required:
+
+- *WhatsApp Desktop*
+   - `5319275A.WhatsAppDesktop_2.2443.7.0_neutral_~_cv1g1gvanyjgm.msixbundle`
+- *Dependencies*
+   - `Microsoft.NET.Native.Framework.2.2_2.2.29512.0_x64__8wekyb3d8bbwe.appx`
+   - `Microsoft.NET.Native.Runtime.2.2_2.2.28604.0_x64__8wekyb3d8bbwe.appx`
+   - `Microsoft.UI.Xaml.2.8_8.2310.30001.0_x64__8wekyb3d8bbwe.appx`
+   - `Microsoft.VCLibs.140.00.UWPDesktop_14.0.33728.0_x64__8wekyb3d8bbwe.appx`
+   - `Microsoft.VCLibs.140.00_14.0.33519.0_x64__8wekyb3d8bbwe.appx`
+
+To download each file, right-click the hyperlink, select “Copy link address,” open a new tab, and paste the link to start the download.
+
+**Step 4: Download the App Installer**
+
+To install `.msixbundle` files, you’ll need Microsoft’s App Installer:
+
+- Download it from the [Microsoft Docs](https://learn.microsoft.com/en-us/windows/msix/app-installer/install-update-app-installer).
+- The file should be named something like:
+   `Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle`
+
+**Step 5: Install the Dependencies**
+
+Now, we’ll install each of the dependencies using PowerShell:
+
+1. Open PowerShell as Administrator.
+2. Run the following command to install each dependency file, replacing `FilePath.Appx` with the actual path to each file.
+   ```ps1
+   Add-AppxPackage -Path .\FilePath.Appx
+   ```
+
+Install these files in any order:
+
+- `Microsoft.NET.Native.Framework.2.2_2.2.29512.0_x64__8wekyb3d8bbwe.appx`
+- `Microsoft.NET.Native.Runtime.2.2_2.2.28604.0_x64__8wekyb3d8bbwe.appx`
+- `Microsoft.UI.Xaml.2.8_8.2310.30001.0_x64__8wekyb3d8bbwe.appx`
+- `Microsoft.VCLibs.140.00.UWPDesktop_14.0.33728.0_x64__8wekyb3d8bbwe.appx`
+- `Microsoft.VCLibs.140.00_14.0.33519.0_x64__8wekyb3d8bbwe.appx`
+
+Similarly, install the *App Installer*:
+
+- `Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle`
+
+![alt text](../images/ltsc-add-appx.png)
+
+**Step 6: Install WhatsApp Desktop**
+
+1. After installing the dependencies, double-click the downloaded WhatsApp Desktop file:
+   - `5319275A.WhatsAppDesktop_2.2443.7.0_neutral_~_cv1g1gvanyjgm.msixbundle`
+2. This will open with the Desktop App Installer. Click Install to complete the setup.
+
+![alt text](../images/ltsc-wa-install.png)
+
+**Yay!**
+
+With the App Installer now set up, you can install other .appx and .msixbundle packages directly.
