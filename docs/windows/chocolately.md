@@ -41,7 +41,7 @@ Chocolatey makes it simple to find and install packages. Visit [community.chocol
 
 - **Install a Package**:
    ```ps1
-   choco install packagename
+   choco install packagename -y
    ```
    Replace `packagename` with the software’s name. Chocolatey will handle downloading, installing, and setting up the software.
 
