@@ -306,6 +306,8 @@ Visit [RedrootDEV/WhatsAppDesktop-NoStore](https://github.com/RedrootDEV/WhatsAp
 
 **Step 3: Download the Necessary Files**
 
+([This](https://github.com/R-YaTian/LTSC-Add-MicrosoftStore-2021_2024/tree/main)) can also be used to download the dependencies.
+
 To install WhatsApp Desktop, you’ll need to download several files by architecture. For most users, the following files are required:
 
 - *WhatsApp Desktop*
