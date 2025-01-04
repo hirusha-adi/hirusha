@@ -1,9 +1,7 @@
 ---
-title: Autostart Services with systemd in Linux
+title: Autostart Services with Systemd in Linux
 sidebar_label: Autostart Services (with systemd)
 ---
-
-# Autostart Services with Systemd in Linux
 
 Before getting started, it's recommended that you have a basic idea of what's actually going on by reading [this](https://wiki.archlinux.org/title/Systemd) awesome page on the Arch Wiki.
 
