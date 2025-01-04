@@ -3,46 +3,157 @@ title: Autostart Services with systemd in Linux
 sidebar_label: Autostart Services (with systemd)
 ---
 
-The command i want to run is:
+# Autostart Services with Systemd in Linux
 
-```
-/mnt/B84CC2894CC241BC/Installations/Pocketbase/pocketbase
-```
+Before getting started, it's recommended that you have a basic idea of what's actually going on by reading [this](https://wiki.archlinux.org/title/Systemd) awesome page on the Arch Wiki.
 
-where `/mnt/B84CC2894CC241BC/Installations/Pocketbase` is the directory and `pocetbase` is the name of the binary that i want to exe
-
-## Preperations
-
-First, you have to get your username, by running:
+The command we want to run is:
 
 ```bash
-uname
+/apps/myapp/executable
 ```
 
-Then, you should know the name of the group you are in, by running:
+where `/apps/myapp` is the directory and `executable` is the name of the binary that we want to execute.
+
+
+## Preparations
+
+### Using your user account (Not Recommended)
+
+If you're running the service using your existing user account, follow these steps:
+
+1. Get your username by running:
+
+   ```bash
+   id -un
+   ```
+
+2. Find your group name by running:
+
+   ```bash
+   id -gn
+   ```
+
+3. For detailed user and group information, run:
+
+   ```bash
+   id
+   ```
+
+   Example output:
+
+   ```bash
+   uid=1000(username) gid=1000(groupname) groups=1000(groupname),27(sudo),100(users)
+   ```
+
+   Here, `username` is your username, and `groupname` after `gid=` is your primary group name.
+
+
+### Creating a Separate User and Group (Recommended)
+
+For better security, it's recommended to create a separate user and group to run the service. This ensures the service is isolated from your main user account.
+
+To create a new user and group:
+
+1. Create a new group:
+
+   ```bash
+   sudo groupadd servicegroup
+   ```
+
+2. Create a new user with no login shell and assign it to the group:
+
+   ```bash
+   sudo useradd -r -s /usr/sbin/nologin -g servicegroup serviceuser
+   ```
+
+   - `-r`: Creates a system user.
+   - `-s /usr/sbin/nologin`: Ensures the user cannot log in.
+   - `-g servicegroup`: Assigns the user to the specified group.
+
+3. Ensure the user and group have the necessary permissions for the application directory:
+
+   ```bash
+   sudo chown -R serviceuser:servicegroup /apps/myapp
+   ```
+
+Ensure that the user running the service has the necessary permissions to access the application directory and any configuration files or resources it depends on.
+
+## Creating a Systemd Service File
+
+1. Create a systemd service file:
+
+   ```bash
+   sudo nano /etc/systemd/system/myapp.service
+   ```
+
+   Replace `myapp` with the desired name for the service.
+
+2. Add the following content:
+
+   ```ini
+   [Unit]
+   Description=MyApp Service
+   After=network.target
+
+   [Service]
+   ExecStart=/apps/myapp/executable args --config arg2
+   WorkingDirectory=/apps/myapp
+   Restart=always
+   User=serviceuser
+   Group=servicegroup
+
+   [Install]
+   WantedBy=multi-user.target
+   ```
+
+   Replace the following placeholders:
+   - `ExecStart`: Full path to your executable with any required arguments.
+   - `WorkingDirectory`: Directory where your application resides.
+   - `User`: The user running the service.
+   - `Group`: The group running the service.
+   - For more details, refer to the [systemd.service documentation](https://man.archlinux.org/man/systemd.service.5#OPTIONS)'s OPTIONS section.
+
+
+3. Save and close the file.
+
+## Enabling and Starting the Service
+
+1. Reload systemd to recognize the new service:
+
+   ```bash
+   sudo systemctl daemon-reload
+   ```
+
+2. Enable the service to start on boot:
+
+   ```bash
+   sudo systemctl enable myapp
+   ```
+
+3. Start the service immediately:
+
+   ```bash
+   sudo systemctl start myapp
+   ```
+
+4. Verify the service is running:
+
+   ```bash
+   sudo systemctl status myapp
+   ```
+
+## Viewing Logs
+
+To view logs for the service in real-time, run:
 
 ```bash
-id -gn
+journalctl -u myapp -f
 ```
 
-Note that the `-gn` argument will only show the group name, to see all the details, just run the `id` command. For example:
+Make sure to test the service thoroughly to confirm it behaves as expected both during manual starts and after a system reboot.
 
-```bash
-$ id
 
-uid=1000(username) gid=1000(groupname) groups=1000(groupname),27(sudo),100(users)
-```
 
-Here, `username` is your username, and `groupname` after `gid=` is your primary group name.`
-
-## Creating a systemd service file
-
-Create a Systemd Service File
-
-```bash
-sudo nano /etc/systemd/system/pocketbase.service
-```
-
-make sure to replace `pocketbase` with the name you want to give to this service.
 
 
