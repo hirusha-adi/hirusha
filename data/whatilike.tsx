@@ -1,45 +1,19 @@
-import Link from '@docusaurus/Link'
-import WebDeveloperSvg from '@site/static/svg/undraw_web_developer.svg'
-import OpenSourceSvg from '@site/static/svg/undraw_open_source.svg'
-import SpiderSvg from '@site/static/svg/undraw_spider.svg'
+import ClassCieOlCs25Revision from '@site/static/svg/class_cie_ol_cs_s25_revision.jpg'
+import ClassCieOlCs26Theory from '@site/static/svg/class_cie_ol_cs_s26_theory.jpg'
 
 export type FeatureItem = {
   title: string
-  text: JSX.Element
   Svg: React.ComponentType<React.ComponentProps<'svg'>>
 }
 
 const FEATURES: FeatureItem[] = [
   {
     title: 'I like to make my own stuff',
-    text: (
-      <p>
-        Why pay for an application when you can build your own? Why use some generic application
-        when you can build your own application to suite your specific needs?
-      </p>
-    ),
-    Svg: WebDeveloperSvg,
+    Svg: ClassCieOlCs25Revision,
   },
   {
     title: 'I like security stuff',
-    text: (
-      <p>
-        I am very new to this field and am currently in the process of learning. I have reported
-        several issues that I found while learning and hope to continue doing this in the future.
-      </p>
-    ),
-    Svg: SpiderSvg,
-  },
-  {
-    title: 'I like to take photos',
-    text: (
-      <p>
-        As a hobbyist photographer, I aim to capture the beauty of the world through my lens and
-        bring a unique perspective to every image I create.{' '}
-        <Link to="https://photos.hirusha.xyz/">Click here</Link> to checkout my photos.
-      </p>
-    ),
-    Svg: OpenSourceSvg,
+    Svg: ClassCieOlCs26Theory,
   },
 ]
 
