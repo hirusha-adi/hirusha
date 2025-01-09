@@ -5,20 +5,20 @@ import styles from './styles.module.scss'
 import features, { type FeatureItem } from '@site/data/whatilike'
 import SectionTitle from '../SectionTitle'
 
-function Feature({ title, Svg }: FeatureItem) {
+function Feature({ title, imgUrl }: FeatureItem) {
   return (
     <div className={clsx('col', styles.feature)}>
       <div className="text--center">
         <div
           style={{
             width: '100%',
-            maxWidth: '150px',
+            maxWidth: '500px',
             aspectRatio: '1 / 1',
             overflow: 'hidden',
             margin: '0 auto',
           }}
         >
-          <Svg style={{ width: '100%', height: '100%' }} role="img" />
+          <img src={imgUrl} alt={title} style={{ width: '100%', height: '100%' }} role="img" />
         </div>
       </div>
     </div>

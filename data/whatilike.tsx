@@ -1,19 +1,18 @@
-import ClassCieOlCs25Revision from '@site/static/svg/class_cie_ol_cs_s25_revision.jpg'
-import ClassCieOlCs26Theory from '@site/static/svg/class_cie_ol_cs_s26_theory.jpg'
-
 export type FeatureItem = {
   title: string
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>
+  imgUrl: string
 }
 
 const FEATURES: FeatureItem[] = [
   {
     title: 'I like to make my own stuff',
-    Svg: ClassCieOlCs25Revision,
+    imgUrl:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/refs/heads/main/static/class/class_cie_ol_cs_s25_revision.jpg',
   },
   {
     title: 'I like security stuff',
-    Svg: ClassCieOlCs26Theory,
+    imgUrl:
+      'https://raw.githubusercontent.com/hirusha-adi/hirusha/refs/heads/main/static/class/class_cie_ol_cs_s26_theory.jpg',
   },
 ]
 
