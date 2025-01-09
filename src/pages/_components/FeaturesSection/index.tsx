@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 
 import styles from './styles.module.scss'
-import features, { type FeatureItem } from '@site/data/whatilike'
+import features, { type FeatureItem } from '@site/data/classes'
 import SectionTitle from '../SectionTitle'
 
 function Feature({ title, imgUrl }: FeatureItem) {
