@@ -15,7 +15,7 @@ const social: Social = {
   medium: 'https://medium.com/@hirushaadi',
   linkedin: 'https://www.linkedin.com/in/hirusha-adikari-9b2b48169/',
   telegram: 'https://t.me/hirushaadi',
-  email: 'mailto:hirushaadi@gmail.com',
+  email: 'mailto:hello@hirusha.xyz',
 }
 
 const SOCIAL = {
