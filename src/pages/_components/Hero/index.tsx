@@ -103,7 +103,7 @@ export default function Hero() {
       <div className={styles.intro}>
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants}>
-          {`I make websites. I take photos. I make discord bots. I make some cool stuff every now and then. I teach sometimes. This is a place to document/display/showcase my work.`}
+          {`This is my website!`}
         </motion.p>
         <motion.div custom={3} initial="hidden" animate="visible" variants={variants}>
           <SocialLinks />
