@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
         <Hero />
         <div className="container-wrapper">
           <BlogSection />
-          <FeaturesSection />
+          {/* <FeaturesSection /> */}
           <div className={clsx('padding-vert--xl')}>
             <div className="container">
               <div className="row">
