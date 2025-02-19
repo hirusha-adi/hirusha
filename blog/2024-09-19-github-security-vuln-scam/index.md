@@ -214,35 +214,3 @@ circumstances will you use this Data to:
 
 ...
 ```
-
-This domain is registered through WebNic. The WHOIS report shows that the registrant information is protected, and the registrar is based in Malaysia.
-
-```
-Admin Street: L4-E-2, Level 4, Enterprise 4, Technology Park Malaysia, Bukit Jalil
-Admin City: Kuala Lumpur
-Admin State/Province: Wilayah Persekutuan
-Admin Postal Code: 57000
-Admin Country: Malaysia
-Admin Phone: +60.389966788
-```
-
-Googling the registrar's phone number reveals multiple scam reports associated with domains registered through this company.
-
-![alt text](image-16.png)
-
-Googling the address yields results that suggest multiple businesses operate from the same location. 
-
-It’s possible they all share the building, but the specific mention of “L4-E-2, Level 4, Enterprise 4” suggests this could be the exact office within the building. What’s particularly notable is the inconsistency of the addresses listed for each company, raising suspicions.
-
-![alt text](image-26.png)
-
-It’s likely that "Qinetics Solutions Sdn Bhd" is a legitimate company, while "Qnity" might be the scammer, using a name that closely resembles a legitimate business in the vicinity.
-
-The Google reviews for this relatively small company further corroborate this, as more people have reported scams involving domains registered through this registrar.
-
-![alt text](image-19.png)
-
-There are two possible conclusions:
-
-1. This is a legitimate company providing legitimate services, but scammers are heavily abusing its platform.
-2. This is an illegitimate company that’s facilitating or directly involved in scamming people.
