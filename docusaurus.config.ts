@@ -78,7 +78,6 @@ const config: Config = {
               to: '/docs/tutorials',
               sidebarId: 'tutorials',
             },
-            { label: 'Recommended Tools', to: '/recommended-tools' },
             { label: 'Blog Posts (List)', to: 'blog/archive' },
           ],
         },
@@ -121,7 +120,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            { label: 'Recommended Tools', position: 'right', to: '/recommended-tools' },
             { label: 'Projects', position: 'right', to: '/docs/projects' },
             { label: 'Theme by 愧怍', position: 'right', to: 'https://github.com/kuizuo/blog' },
             {

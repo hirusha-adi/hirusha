@@ -40,7 +40,7 @@ Changes made by 愧怍 (kuizo) can be found [here](https://kuizuo.cn/docs/docusa
 - Switched from alglolia search to [`docusaurus-plugin-search-local`](https://github.com/gabrielcsapo/docusaurus-plugin-search-local)
 - removed Chinese, the site is English only.
 - changed `/friends` to `/contributions`
-- changed `/resources` to `/recommended-tools`
+- changed `/resources` to `/recommended-tools`, later, removed it completely.
 - and, changed the structure of `/docs/` and `/blog/` with `sidebars.ts` to suite my personal needs
 
 ## 📥 Installation
