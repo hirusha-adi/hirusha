@@ -5,7 +5,7 @@ authors: [hirusha]
 tags: [life, controversial, psychology]
 ---
 
-![](./media/2024-08-23-cultural-beliefs-vs-rationality.jpg)
+![](./image.jpg)
 
 Culture is all about the shared knowledge, beliefs, traditions, and practices of a group of people. It shapes everything in life how we talk, what we eat, how we dress, and what we value. Most of the time, culture is passed down from previous generations.
 
