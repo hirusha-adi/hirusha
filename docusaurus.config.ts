@@ -62,48 +62,8 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Main Sections',
-          items: [
-            { label: 'Blog', to: 'blog' },
-            { label: 'Archive', to: 'blog/archive' },
-            { label: 'Study', to: '/docs/study/' },
-            { label: 'Projects', to: '/docs/projects/' },
-          ],
-        },
-        {
-          title: 'Other Sections',
-          items: [
-            { label: 'Linux', to: '/docs/study/' },
-            { label: 'Windows', to: '/docs/windows/' },
-            { label: 'Tutorials', to: '/docs/tutorials/' },
-          ],
-        },
-        {
-          title: 'Social Media',
-          items: [
-            { label: 'GitHub', href: 'https://github.com/hirusha-adi' },
-            { label: 'Twitter', href: 'https://twitter.com/hirushaadi' },
-            { label: 'Photos', to: 'https://photos.hirusha.xyz/' },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            { label: 'Projects', position: 'right', to: '/docs/projects' },
-            { label: 'Theme by 愧怍', position: 'right', to: 'https://github.com/kuizuo/blog' },
-            {
-              html: `
-                <a href="https://docusaurus.io/" target="_blank" rel="noreferrer noopener">
-                  <img src="/img/buildwith.png" alt="build with docusaurus" width="120" height="50"/>
-                <a/>
-                `,
-            },
-          ],
-        },
-      ],
+      // change this to `dark` if footer's theme breaks
+      style: 'light',
       copyright: `
         <p>Copyright © 2020-${new Date().getFullYear()} Hirusha Adikari.</p>
         `,
