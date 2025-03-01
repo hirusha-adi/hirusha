@@ -1,15 +1,18 @@
 ---
 title: How to install themes easily using ocs-url
-sidebar_label: How to use ocs-url
+authors: [hirusha]
+tags: [sysadmin,systemd,linux,tutorial]
 ---
 
+![im1](install_themes_easily_ocs_url-im1.png)
+
 ocs-url is an install helper program for items served on OpenCollaborationServices (OCS) that lets you easily install themes & plugins. This tool will download and extract them to the required directories automatically.
+
+<!--truncate-->
 
 ## Install
 
 Visit [this url](https://www.opendesktop.org/p/1136805/) and download the latest package. Download the `.deb` file if you are usuing debian/ubuntu and the `.rmp` for fedora/rhel. This guide will focus on installing it on Ubuntu.
-
-![im1](images/install_themes_easily_ocs_url-im1.png)
 
 Open your terminal inside the folder you saved the `.deb` file and run the command below:
 
@@ -49,14 +52,14 @@ I primarily use KDE as my Deskotp Environment in my main computer. For example, 
 
 Visit the store page of your required theme/plugin/extension, click on Install.
 
-![alt text](images/install_themes_easily_ocs_url-im2.png)
+![alt text](install_themes_easily_ocs_url-im2.png)
 
 Your browser will request for permission for the store to open `ocs-url://` type of a URL. This URL is what the package we installed earlier is looking for. Click on 'Open ocs-url'.
 
-![alt text](images/install_themes_easily_ocs_url-im3.png)
+![alt text](install_themes_easily_ocs_url-im3.png)
 
 Click on Install and this will download it, and extract it to the (default) required directory.
 
-![alt text](images/install_themes_easily_ocs_url-im4.png)
+![alt text](install_themes_easily_ocs_url-im4.png)
 
 To verify the installation location, you can click on "Open" after it has been installed to check where the files are.  In this case, the files have been installed successfully to: `~/.themes/Windows7Kvantum/`. Just as we want it 
