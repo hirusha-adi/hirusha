@@ -43,38 +43,16 @@ const config: Config = {
           to: '/blog/',
         },
         {
-          label: 'Study',
-          to: '/docs/study/',
+          label: 'Tags',
+          to: '/blog/tags/',
           position: 'right',
           sidebarId: 'study',
         },
         {
-          label: 'Projects',
-          to: '/docs/projects/',
+          label: 'Archive',
+          to: '/blog/archive',
           position: 'right',
           sidebarId: 'study',
-        },
-        {
-          label: 'Other Sections',
-          position: 'right',
-          items: [
-            {
-              label: 'Linux',
-              to: '/docs/linux/',
-              sidebarId: 'linux',
-            },
-            {
-              label: 'Windows',
-              to: '/docs/windows/',
-              sidebarId: 'windows',
-            },
-            {
-              label: 'Tutorials',
-              to: '/docs/tutorials',
-              sidebarId: 'tutorials',
-            },
-            { label: 'Blog Posts (List)', to: 'blog/archive' },
-          ],
         },
         {
           label: 'Photos',
@@ -106,7 +84,6 @@ const config: Config = {
         {
           title: 'Social Media',
           items: [
-            { label: 'About', to: '/about' },
             { label: 'GitHub', href: 'https://github.com/hirusha-adi' },
             { label: 'Twitter', href: 'https://twitter.com/hirushaadi' },
             { label: 'Photos', to: 'https://photos.hirusha.xyz/' },
@@ -128,7 +105,7 @@ const config: Config = {
         },
       ],
       copyright: `
-        <p>Copyright © 2023-2024 Hirusha Adikari</p>
+        <p>Copyright © 2020-${new Date().getFullYear()} Hirusha Adikari.</p>
         `,
     },
     prism: {

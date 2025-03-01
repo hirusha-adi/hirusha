@@ -120,7 +120,7 @@ export default function Hero() {
           <div className={styles.outer}>
             <div className={styles.gradient} />
             <Link className={styles.button} href={'./blog'}>
-              About
+              {`Discover`}
             </Link>
           </div>
         </motion.div>
