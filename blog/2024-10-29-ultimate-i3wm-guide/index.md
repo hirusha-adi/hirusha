@@ -1,9 +1,14 @@
 ---
 title: Getting Started with i3wm - A Beginner's Guide
-sidebar_label: i3wm Guide
+authors: [hirusha]
+tags: [customization,linux,ricing,tutorial]
 ---
 
 ![alt text](image-7.png)
+
+If you're looking for a lightweight, highly customizable, and keyboard-driven window manager, i3wm is one of the best choices out there. Whether you're a beginner exploring tiling window managers or an advanced user wanting to fine-tune your workflow, this ultimate guide to i3wm will walk you through everything—from installation and configuration to productivity tips and essential scripts. Get ready to take full control of your Linux desktop like never before!
+
+<!--truncate-->
 
 If you’re looking to dive into a new way of managing your desktop, i3wm might be just what you need! This guide will help you get started with i3wm, particularly if you're using Ubuntu 22.04 (although there may be some slight differences in setup). I've tested everything on Pop!_OS 22.04 (non-NVIDIA edition) on my laptop, so it should work smoothly with similar setups.
 
@@ -1143,7 +1148,3 @@ Thats it! Congratulations for making it here! If you have any more questions, fe
 - Alacritty: https://github.com/alacritty/alacritty
 - Old alacritty .yml config: https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml
 - Remove i3wm border: https://www.reddit.com/r/i3wm/comments/87kclz/comment/dwdhtql/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
-
----
-
-Last updated on 2024 October 28.
