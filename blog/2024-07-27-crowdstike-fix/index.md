@@ -4,9 +4,9 @@ authors: [hirusha]
 tags: [crowdstrike,troubleshooting,automation]
 ---
 
-Build a Windows-PE image to delete the required files that caused CrowdStrike's Falcon Scanner to break and crash Windows installations on boot. You can also export all of the recovery keys from the Active Directory to a CSV file and use them to recover devices quickly - with almost a plug and play experience.
-
 ![](./image.png)
+
+Build a Windows-PE image to delete the required files that caused CrowdStrike's Falcon Scanner to break and crash Windows installations on boot. You can also export all of the recovery keys from the Active Directory to a CSV file and use them to recover devices quickly - with almost a plug and play experience.
 
 <!--truncate-->
 
