@@ -98,7 +98,7 @@ VIDEO_GOES_HERE
 
 In the end, I just deleted the files.
 
-### Windows based fix
+### Win10XPE based fix
 
 Demonstration:
 
@@ -115,7 +115,7 @@ Note that this is different from Windows PE. This is basically a live environmen
 
 Of course, this script does not support BitLocker-encrypted devices because I do not have a proper test environment to test anything.
 
-### WindowsPE based fix.
+### WindowsPE based fix
 
 Demonstration (when BitLocker is enabled):
 
