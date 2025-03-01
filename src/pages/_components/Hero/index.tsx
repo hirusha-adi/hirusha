@@ -1,5 +1,6 @@
 import React from 'react'
 import { Variants, motion, useScroll, useTransform } from 'framer-motion' // Import motion from framer-motion
+import Link from '@docusaurus/Link'
 
 import HeroMain from './img/hero_main.svg'
 
@@ -103,7 +104,7 @@ export default function Hero() {
       <div className={styles.intro}>
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants}>
-          {`This is my website!`}
+          {`This is my website! This is where i write about stuff i find cool.`}
         </motion.p>
         <motion.div custom={3} initial="hidden" animate="visible" variants={variants}>
           <SocialLinks />
@@ -118,9 +119,9 @@ export default function Hero() {
         >
           <div className={styles.outer}>
             <div className={styles.gradient} />
-            <a className={styles.button} href={'./about'}>
+            <Link className={styles.button} href={'./blog'}>
               About
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

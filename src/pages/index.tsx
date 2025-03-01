@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '@theme/Layout'
 import Hero from './_components/Hero'
 import BlogSection from './_components/BlogSection'
-import FeaturesSection from './_components/FeaturesSection'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import clsx from 'clsx'
 
@@ -18,7 +17,6 @@ export default function Home(): JSX.Element {
         <Hero />
         <div className="container-wrapper">
           <BlogSection />
-          {/* <FeaturesSection /> */}
           <div className={clsx('padding-vert--xl')}>
             <div className="container">
               <div className="row">
