@@ -7,7 +7,7 @@ tags: [security,privacy]
 
 An all-in-one messaging platform that's too good to be true!
 
-![](./media/2024-02-15-beeper-img3.png)
+![](./image-3.png)
 
 <!--truncate-->
 
@@ -21,7 +21,7 @@ I was trying to find a good client for WhatsApp for Linux, and that's when I cam
 
 ## What is Beeper?
 
-![2](./media/2024-02-15-beeper-img2.png)
+![2](./image-2.png)
 
 This app allows you to combine all of your messaging apps into one place. You can log in to each and every platform provided by Beeper and manage all of your chats within one application easily. You can also use iMessage on Android (and even on Windows Computers) after some setup. I don't have any comments about it since I'm completely in the Android ecosystem.
 
@@ -63,7 +63,7 @@ Not only are your messages being decrypted by Beeper and then re-encrypted, but 
 
 "Beeper Cloud backs up an encrypted copy of all your Beeper Cloud chat history on Beeper servers. This allows you to install Beeper Cloud on a new device and view your entire past chat history." - Source: [FAQ Page](https://www.beeper.com/faq#how-does-beeper-cloud-keep-my-data-safe)
 
-![1](./media/2024-02-15-beeper-img1.png)
+![1](./image-1.png)
 
 This literally destroys the main security and privacy-related features of Signal. Not only are they being stored online by a third party, but the messages will also be visible in clear text during the decrypting and re-encrypting process. It only takes one single service to be compromised, for the attackers to easily monitor all of your activity in all of these platforms easily.
 
