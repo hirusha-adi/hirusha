@@ -13,9 +13,9 @@ const config: Config = {
   projectName: 'hirusha',
   // trailingSlash: false, // change this to false and try if it fails
   customFields: {
-    bio: 'A place to document/display/showcase all my work.',
+    bio: 'Hey! This is my website.',
     description:
-      "I make websites. I take photos. I make discord bots. I make some cool stuff every now and then. I teach sometimes. This is a place to document/display/showcase my work.",
+      "This is where i write about stuff.",
   },
   themeConfig: {
     metadata: [
@@ -25,14 +25,9 @@ const config: Config = {
       },
       {
         name: 'keywords',
-        content: 'blog, javascript, python, react, security, pentest, web, flask, django, osint, web development, programming',
+        content: 'blog, javascript, python, react, security, pentest, web, flask, django, osint, web development, programming, security, hacking, scammers, scam, scambaiting, teamsds, scammer.info',
       },
     ],
-    docs: {
-      sidebar: {
-        hideable: true,
-      },
-    },
 
     navbar: {
       logo: {
@@ -151,7 +146,7 @@ const config: Config = {
         'protobuf',
         'prolog',
         'diff',
-        'ini'
+        'ini',
       ],
       defaultLanguage: 'javascript',
       magicComments: [
@@ -191,10 +186,7 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          path: 'docs',
-          sidebarPath: 'sidebars.ts',
-        },
+        docs: false,
         blog: false,
         theme: {
           customCss: ['./src/css/custom.scss'],
@@ -219,8 +211,7 @@ const config: Config = {
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
           `https://github.com/hirusha-adi/hirusha/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        blogDescription:
-          'A space to share enjoyable content and express my personal perspective on various matters.',
+        blogDescription: 'A space to share enjoyable content and express my personal perspective on various matters.',
         blogSidebarCount: 10,
         blogSidebarTitle: 'Blogs',
         postsPerPage: 10,
