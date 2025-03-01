@@ -1,7 +1,7 @@
 ---
 title: How to install themes easily using ocs-url
 authors: [hirusha]
-tags: [sysadmin,systemd,linux,tutorial]
+tags: [customization,linux,tools,tutorial]
 ---
 
 ![im1](install_themes_easily_ocs_url-im1.png)

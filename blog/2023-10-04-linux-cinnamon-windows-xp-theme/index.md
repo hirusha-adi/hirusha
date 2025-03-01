@@ -1,12 +1,16 @@
 ---
-title: Windows XP Theme
-sidebar_label: Windows XP Theme
-slug: cinnamon-windows-xp-theme
+title: Recreate the Classic Windows XP Theme on Linux Mint
+authors: [hirusha]
+tags: [customization,linux,cinnamon,tutorial]
 ---
 
-![img](https://i.imgur.com/tEquSOE.png)
+![alt text](image.png)
 
-:::danger Note
+Miss the good old Windows XP look? This guide shows you how to bring it back on Linux Mint with a simple one-liner, an easy script, or manual steps 🚀.
+
+<!--truncate-->
+
+:::warning Note
 This has only been tested on Linux Mint. These customizations are not made by me and might break your system.
 :::
 
