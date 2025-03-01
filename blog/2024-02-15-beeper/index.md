@@ -1,5 +1,4 @@
 ---
-slug: 2024-02-15-beeper
 title: Beeper - Sounds like a secuirty nightmare
 authors: [hirusha]
 tags: [security,privacy]

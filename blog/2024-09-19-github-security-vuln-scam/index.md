@@ -1,5 +1,4 @@
 ---
-slug: 2024-09-19-github-security-vuln-scam
 title: Exploring a Github Security Vulnerability scam.
 authors: [hirusha]
 tags: [security,scam]

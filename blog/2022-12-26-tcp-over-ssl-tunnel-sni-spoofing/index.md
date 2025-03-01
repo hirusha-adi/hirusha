@@ -1,5 +1,4 @@
 ---
-slug: 2022-12-26-tcp-over-ssl-tunnel-sni-spoofing
 title: SNI Spoofing Analysis
 authors: [hirusha]
 tags: [python, network, hacking]

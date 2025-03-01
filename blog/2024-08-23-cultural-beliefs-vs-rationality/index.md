@@ -1,5 +1,4 @@
 ---
-slug: 2024-08-23-cultural-beliefs-vs-rationality
 title: Cultural Beliefs vs. Rationality (Self-Fulfilling Prophecy)
 authors: [hirusha]
 tags: [life, controversial, psychology]

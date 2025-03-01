@@ -1,5 +1,4 @@
 ---
-slug: 2024-04-03-windows-7-in-2024
 title: Windows 7 in 2024
 authors: [hirusha]
 tags: [windows]
