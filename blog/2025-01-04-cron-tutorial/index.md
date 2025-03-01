@@ -1,7 +1,14 @@
 ---
 title: Automating system tasks with Cron
-sidebar_label: Task Automation (with Cron)
+authors: [hirusha]
+tags: [sysadmin,cron,automation,linux,tutorial]
 ---
+
+![alt text](image.png)
+
+This guide covers the basics of using Cron, a time-based job scheduler in Unix-like systems. You'll learn how to set up and manage cron jobs, understand cron syntax, and explore practical examples for automating system tasks efficiently.
+
+<!--truncate-->
 
 **Cron** is a time-based job scheduler in Unix-like operating systems. It allows users to schedule tasks (known as "cron jobs") to run at specific times or intervals. These tasks are defined in a **crontab** (cron table) file.
 
@@ -179,4 +186,3 @@ grep CRON /var/log/syslog
 3. Use absolute paths for scripts and executables to avoid issues with `cron`’s limited environment.
 
 For more information, refer to the [Cron Man Page](https://man7.org/linux/man-pages/man5/crontab.5.html).
-

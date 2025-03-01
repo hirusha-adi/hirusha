@@ -8,6 +8,8 @@ tags: [sysadmin,ssh,linux,tutorial]
 
 SSH (Secure Shell) is a protocol used to securely connect to a remote computer or server over a network. It allows you to execute commands, manage files, and perform administrative tasks remotely.
 
+<!--truncate-->
+
 ## Setup OpenSSH
 
 [OpenSSH](https://www.openssh.com/) is a connectivity tool for remote sign-in that uses the SSH protocol. In this post, we will see how to set it up.
