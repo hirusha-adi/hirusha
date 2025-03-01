@@ -1,7 +1,10 @@
 ---
 title: Setup SSH Securely, with Password-less Login
-sidebar_label: SSH Setup
+authors: [hirusha]
+tags: [sysadmin,ssh,linux,tutorial]
 ---
+
+![alt text](image.png)
 
 SSH (Secure Shell) is a protocol used to securely connect to a remote computer or server over a network. It allows you to execute commands, manage files, and perform administrative tasks remotely.
 

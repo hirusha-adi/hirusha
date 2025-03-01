@@ -1,7 +1,14 @@
 ---
-title: Using Wacom Tablets in Linux
-sidebar_label: Wacom Tablets
+title: Setting Up Wacom Tablets on Linux - A Complete Guide
+authors: [hirusha]
+tags: [linux,wacom,tutorials]
 ---
+
+![alt text](image.png)
+
+This guide explains how to set up and configure Wacom tablets on Linux (tested with Pop!_OS with KDE), including verifying drivers, mapping tablets to monitors, troubleshooting common issues, and automating the setup process.
+
+<!--truncate-->
 
 ## Introduction
 
