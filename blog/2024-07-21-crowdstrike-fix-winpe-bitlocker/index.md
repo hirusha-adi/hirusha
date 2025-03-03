@@ -1,15 +1,19 @@
 ---
-title: Fix using a WindowsPE Image (with BitLocker support). 
-sidebar_label: WindowsPE Image (BitLocker)
+title: Fix the issue caused by CrowdStrike in 2024 using WinPE (with BitLocker Support)
+authors: [hirusha]
+tags: [sysadmin,crowdstrike,fix,tutorial]
 ---
+
+![alt text](image.png)
+
+<!--truncate-->
+
 
 Credits: [Tiraj Adikari](https://www.linkedin.com/in/tiraj-adikari-a1686229/?originalSubdomain=au)
 
 Supports Bitlocker Encryption?: Yes.
 
 Demonstration: [Youtube](https://www.youtube.com/watch?v=eIsE5G4tihY)
-
-![image](https://github.com/user-attachments/assets/3e184bde-9627-4d41-b8e4-33a86da339fd)
 
 ## Usage Guide
 

@@ -1,7 +1,12 @@
 ---
-title: Fix using a custom Windows ISO. 
-sidebar_label: Custom Windows ISO
+title: Fix the issue caused by CrowdStrike in 2024 using Win10XPE
+authors: [hirusha]
+tags: [sysadmin,crowdstrike,fix,tutorial]
 ---
+
+<!-- ![alt text](image.png) -->
+
+<!--truncate-->
 
 Summary:
 
@@ -32,48 +37,48 @@ https://github.com/user-attachments/assets/e703600f-9b48-45be-8531-96a8018cc211
 
 - Mount your original windows 10 iso file
 
-![WhatsApp Image 2024-07-21 at 14 38 43_01dd9311](https://github.com/user-attachments/assets/4659d40e-687c-4707-b82c-bd077ef07b1a)
+![alt text](image.png)
 
 - Download [this tool](https://github.com/ChrisRfr/Win10XPE), extract it and set it up, and run it as an administrator
 
-![WhatsApp Image 2024-07-21 at 14 39 05_be864aa0](https://github.com/user-attachments/assets/4aec23c0-0ba3-4bf8-ad06-b130046c5137)
+![alt text](image-1.png)
 
 - Click on Select Source Folder
 
-![WhatsApp Image 2024-07-21 at 14 39 18_3d7d88b3](https://github.com/user-attachments/assets/b9685c86-fc99-4a51-82a7-990384e0a2d4)
+![alt text](image-2.png)
 
 - And select the mounted original windows volume
 
-![WhatsApp Image 2024-07-21 at 14 39 37_f684ba08](https://github.com/user-attachments/assets/4210ad24-1aba-4442-9730-686c20973cfb)
+![alt text](image-3.png)
 
 - Come to the Source tab in the Build Core section and set the Source Directory to a drive with atleast 10GB of free storage
 
-![WhatsApp Image 2024-07-21 at 14 42 27_e7b25121](https://github.com/user-attachments/assets/f20b4295-eef1-4159-ad78-8a92c7bb5fb2)
+![alt text](image-4.png)
 
 - Come back to the Script section and under Main Interface, update the settings and displayed here, enable "Add Your Custom Folder", and click on "Open Custom Folder",
 
-![WhatsApp Image 2024-07-21 at 14 40 52_f9e35187](https://github.com/user-attachments/assets/0e9a624e-a0f3-47e5-87ab-93dcff139277)
+![alt text](image-5.png)
 
 - Update the files as required, you can copy the files in this directory if this github repository to it, you can also go to upper levels of this directory and find the Wallpapers directory, this is where you can update the Wallpaper.
 
 - If you want Bitlocker support, you can use files from the `winpe-bitlocker` directory of this repository to get the two required files (the script and the csv of exported bitlocker keys) and place it inside the target System32 directory and continue with the other steps mentioned in this guide.
 
-![WhatsApp Image 2024-07-21 at 14 41 03_914c2f50](https://github.com/user-attachments/assets/2d34d0b5-1565-4ee1-9b11-620296e76127)
+![alt text](image-6.png)
 
 - Go to the Build Options section and update the settings as displayed here
 
-![WhatsApp Image 2024-07-21 at 14 41 52_f30f2b8a](https://github.com/user-attachments/assets/f07a99ad-a263-45da-93cd-c22c750656f4)
+![alt text](image-7.png)
 
 - Expand the sidebar and go to Win10XPE -> Apps -> Components -> PowerShell Core and press on Launch to get the required files (approx 100MB) and test it
 
-![WhatsApp Image 2024-07-21 at 14 40 02_72351536](https://github.com/user-attachments/assets/9148ee98-ecf3-4260-8530-e4976774fb3b)
+![alt text](image-8.png)
 
 - You can now come to the Create ISO section in the sidebar, set the settings to whats displayed here and press on "Play" to start building the image
 
-![WhatsApp Image 2024-07-21 at 14 42 39_1aa38551](https://github.com/user-attachments/assets/70758c3a-0913-4891-a613-179c895abb32)
+![alt text](image-9.png)
 
 - Wait for it to complete,
 
-![WhatsApp Image 2024-07-21 at 14 46 41_7e274e17](https://github.com/user-attachments/assets/a465c457-ca5a-4862-a697-91221f5fe866)
+![alt text](image-10.png)
 
 - You should now find your `Win10XPE_x64.iso` inside the same directory with `Win10XPE.exe`

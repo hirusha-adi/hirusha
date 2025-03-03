@@ -1,9 +1,8 @@
 ---
-title: Fix using a WindowsPE Image. 
-sidebar_label: WindowsPE Image
+title: Fix the issue caused by CrowdStrike in 2024 using WinPE
+authors: [hirusha]
+tags: [sysadmin,crowdstrike,fix,tutorial]
 ---
-
-# Fix using a WindowsPE Image
 
 Supports Bitlocker Encryption?: No.
 

@@ -1,7 +1,10 @@
 ---
-title: Fix manually. 
-sidebar_label: Fix manually
+title: Fix the issue caused by CrowdStrike in 2024 manully
+authors: [hirusha]
+tags: [sysadmin,crowdstrike,fix,tutorial]
 ---
+
+<!--truncate-->
 
 ## If BitLocker is not enabled
 
