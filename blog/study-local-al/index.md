@@ -6,10 +6,10 @@ tags: [study,al,local-syllabus]
 
 ## Available Educational Resources
 
-<!-- 1. [Biology](biology) -->
-<!-- 2. [Chemistry](chemistry) -->
-<!-- 3. [Physics](physics) -->
-<!-- 4. [Mathematics](mathematics) -->
+1. [Biology](https://hirusha.xyz/blog/study-local-al-biology)
+2. [Chemistry](https://hirusha.xyz/blog/study-local-al-chemistry)
+3. [Physics](https://hirusha.xyz/blog/study-local-al-physics)
+4. [Mathematics](https://hirusha.xyz/blog/study-local-al-maths)
 
 ## General Resources
 
