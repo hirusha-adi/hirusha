@@ -55,6 +55,14 @@ const config: Config = {
           sidebarId: 'study',
         },
         {
+          label: 'Other',
+          position: 'right',
+          items: [
+            { label: 'Projects', to: '/projects/' },
+            { label: 'Study', to: '/study/' },
+          ],
+        },
+        {
           label: 'Photos',
           href: 'https://photos.hirusha.xyz/',
           position: 'right',
