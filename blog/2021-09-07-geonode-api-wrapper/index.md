@@ -1,10 +1,14 @@
 ---
 title: Genode Free Proxies API Wrapper
+authors: [hirusha]
+tags: [api,development,python]
 ---
 
 API wrapper for [https://geonode.com/free-proxy-list](https://geonode.com/free-proxy-list)
 
-Scrape proxies easily with a basic understanding of Python 3 (knowledge of `for` loops is sufficient to use this API wrapper). This wrapper facilitates the scraping of the Genode Free Proxies API and returns the results.
+Gitub repo: [@hirusha-adi/Geonode-Free-Proxies-API-Wrapper](https://github.com/hirusha-adi/Geonode-Free-Proxies-API-Wrapper)
+
+This tool will help you to scrape free proxies from geonode, quickly and easily!
 
 ## Usage
 
