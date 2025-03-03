@@ -24,4 +24,4 @@ for proxy in proxies:
     print(proxy)
 ```
 
-Ensure that you have an active internet connection while using this wrapper, as it fetches data from an online API. A
+Ensure that you have an active internet connection while using this wrapper, as it fetches data from an online API.

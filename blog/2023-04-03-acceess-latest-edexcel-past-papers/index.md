@@ -1,7 +1,9 @@
 ---
-slug: how-to-access-latest-edexcel-past-papers
 title: How to Access the Latest Edexcel Past Papers
+authors: [hirusha]
+tags: [study,edexcel,hacking,tutorials]
 ---
+
 
 :::danger NOTE
 
@@ -30,30 +32,29 @@ This method has been tested with IGCSE and IAL past papers.
 
 4. Select the exam series. For example, choose the latest June 2023 papers.
 
-![1i](https://i.imgur.com/BEf8FSM.jpg)
+![alt text](image.png)
 
 5. Right-click on the locked paper you want to access and copy the link address.
 
-![2i](https://i.imgur.com/swGbGL1.jpg)
+![alt text](image-1.png)
 
 6. Paste the copied link somewhere you can easily select and manipulate its parts. Keep everything that comes after the last `/`.
 
-![3i](https://i.imgur.com/H5J3CLA.jpg)
-
+![alt text](image-2.png)
 
 7. Delete everything after the `?` in the link.
 
-![4i](https://i.imgur.com/fc8oKQJ.jpg)
+![alt text](image-3.png)
 
 8. Put the `<filename>.pdf` into quotation marks and search for it either on [Google](https://google.com) or [DuckDuckGo](https://duckduckgo.com).
 
-![5i](https://i.imgur.com/YccyN6C.jpg)
+![alt text](image-4.png)
 
-![6i](https://i.imgur.com/9ruhtgr.jpg)
+![alt text](image-5.png)
 
 9. You will get a search result that includes the PDF file.
 
-![7i](https://i.imgur.com/ZtlnpnX.jpg)
+![alt text](image-6.png)
 
 10. Open the PDF and enjoy studying. Good luck!
 
@@ -89,5 +90,3 @@ This issue can be attributed to a misconfiguration in the website's access contr
 - **Broken or Incomplete Links**: The links on the website may be broken or incomplete, leading to restrictions on accessing the file through the website's navigation. This could happen if the links are not correctly configured to point to the PDF file.
 
 - **Authentication or Authorization Issue**: There could be a problem with the website's authentication or authorization system. If the website is supposed to restrict access to certain content to registered or authorized users, this system may not be functioning as intended.
-
-

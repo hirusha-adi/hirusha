@@ -1,7 +1,9 @@
 ---
-title: Mathematics (IAL Edexcel)
-sidebar_label: Maths
+title: Pearson Edexcel IAL (International Advanved Levels) - Mathematics
+authors: [hirusha]
+tags: [study,al,edexcel,maths]
 ---
+
 
 :::danger
 if you have any doubt regarding any content shared / linked here, contact me and i'll get them removed ASAP
@@ -76,5 +78,3 @@ I do not host any of these data. i do not own and i did not purchase anything. e
 2. [StudyWise](https://studywise.co.uk/a-level-revision/maths/)
 3. [MathGenie](https://www.mathsgenie.co.uk/newalevel.html)
 4. [Physics & Maths Tutor](https://www.physicsandmathstutor.com/maths-revision/)
-
-

@@ -1,6 +1,7 @@
 ---
-title: Physics (IAL Edexcel)
-sidebar_label: Physics
+title: Pearson Edexcel IAL (International Advanved Levels) - Mathematics
+authors: [hirusha]
+tags: [study,al,edexcel,maths]
 ---
 
 :::danger
@@ -387,4 +388,3 @@ Random ERROR (or Uncertainty*):
 - An error caused by unpredictable variations in conditions
 - For e.g., it is nearly impossible to read a meniscus at the exact same angle and under the exact same conditions
 - This error can be due to both systematic and random effects and an error of unknown size is a source of [random] uncertainty
-    

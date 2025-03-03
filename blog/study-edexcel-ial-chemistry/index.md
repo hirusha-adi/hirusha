@@ -1,7 +1,9 @@
 ---
-title: Chemistry (IAL Edexcel)
-sidebar_label: Chemistry
+title: Pearson Edexcel IAL (International Advanved Levels) - Chemistry
+authors: [hirusha]
+tags: [study,al,edexcel,chemistry]
 ---
+
 
 :::danger
 if you have any doubt regarding any content shared / linked here, contact me and i'll get them removed ASAP
