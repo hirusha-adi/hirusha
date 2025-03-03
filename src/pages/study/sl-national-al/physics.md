@@ -1,9 +1,4 @@
----
-title: Sri Lankan General Certificate of Education (GCE) Advanced Level - Physics
-authors: [hirusha]
-tags: [study,al,local-syllabus,physics]
----
-
+# Sri Lankan General Certificate of Education (GCE) Advanced Level - Physics
 
 ## Resource Books
 

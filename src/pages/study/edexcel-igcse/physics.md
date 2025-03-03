@@ -1,9 +1,4 @@
----
-title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Physics
-authors: [hirusha]
-tags: [study,igcse,physics]
----
-
+# Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Physics
 
 ### SaveMyExams Revision Notes
 

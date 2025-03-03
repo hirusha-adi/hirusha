@@ -1,8 +1,4 @@
----
-title: Buy Cambridge Computer Science (9618/9608) Study Resources
-authors: [hirusha]
-tags: [study,cie]
----
+# Buy Cambridge Computer Science (9618/9608) Study Resources
 
 Looking to master Cambridge Computer Science (9618/9608)? Get access to comprehensive study resources covering everything from 2015 to the present. 
 

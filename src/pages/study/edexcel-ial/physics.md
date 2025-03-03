@@ -1,8 +1,4 @@
----
-title: Pearson Edexcel IAL (International Advanved Levels) - Physics
-authors: [hirusha]
-tags: [study,al,edexcel,physics]
----
+# Pearson Edexcel IAL (International Advanved Levels) - Physics
 
 :::danger
 if you have any doubt regarding any content shared / linked here, contact me and i'll get them removed ASAP

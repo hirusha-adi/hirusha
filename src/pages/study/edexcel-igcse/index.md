@@ -1,17 +1,13 @@
----
-title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Study Resources
-authors: [hirusha]
-tags: [study,igcse,edexcel]
----
+# Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Study Resources
 
 ## Available Educational Resources
 
 We are pleased to offer a range of educational resources for the following subjects:
 
-1. [Chemistry](https://hirusha.xyz/blog/study-edexcel-igcse-chemistry)
-2. [Physics](https://hirusha.xyz/blog/study-edexcel-igcse-physics)
-3. [Biology](https://hirusha.xyz/blog/study-edexcel-igcse-biology)
-4. [Maths](https://hirusha.xyz/blog/study-edexcel-igcse-maths)
+1. [Chemistry](./chemistry)
+2. [Physics](./physics)
+3. [Biology](./biology)
+4. [Maths](./maths)
 
 Please select your subject of interest, and we are here to support your learning journey. Best of luck with your studies!
 
@@ -21,4 +17,3 @@ Please select your subject of interest, and we are here to support your learning
 
 *Please take note that this method only works with popular subjects such as Mathematics, Physics, Chemistry, Biology, etc...*
 :::
-

@@ -1,8 +1,4 @@
----
-title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Mathematics
-authors: [hirusha]
-tags: [study,igcse,maths]
----
+# Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Mathematics
 
 ### Past Papers
 

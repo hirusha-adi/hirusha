@@ -1,8 +1,4 @@
----
-title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Biologu
-authors: [hirusha]
-tags: [study,igcse,biology]
----
+# Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Biology
 
 ### SaveMyExams Revision Notes
 

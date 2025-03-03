@@ -1,9 +1,4 @@
----
-title: Pearson Edexcel IAL (International Advanved Levels) - Biology
-authors: [hirusha]
-tags: [study,al,edexcel,biology]
----
-
+# Pearson Edexcel IAL (International Advanved Levels) - Biology
 
 :::danger
 if you have any doubt regarding any content shared / linked here, contact me and i'll get them removed ASAP

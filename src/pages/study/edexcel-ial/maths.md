@@ -1,8 +1,4 @@
----
-title: Pearson Edexcel IAL (International Advanved Levels) - Mathematics
-authors: [hirusha]
-tags: [study,al,edexcel,maths]
----
+# Pearson Edexcel IAL (International Advanved Levels) - Mathematics
 
 
 :::danger

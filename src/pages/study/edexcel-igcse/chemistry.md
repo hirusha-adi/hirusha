@@ -1,8 +1,4 @@
----
-title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Chemistry
-authors: [hirusha]
-tags: [study,igcse,chemistry]
----
+# Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Chemistry
 
 ### SaveMyExams Revision Notes
 

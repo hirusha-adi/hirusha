@@ -1,8 +1,6 @@
----
-title: Sri Lankan General Certificate of Education (GCE) Advanced Level - Mathematics
-authors: [hirusha]
-tags: [study,al,local-syllabus,mathematics]
----
+# Sri Lankan General Certificate of Education (GCE) Advanced Level - Mathematics
+
+## Guide (Optional)
 
 :::info FOR SINHALA MEDIUM
 
@@ -13,9 +11,6 @@ Stay updated with his latest lessons by visiting his YouTube channel [here](http
 It's important to note that this article is not affiliated with him in any way and is solely based on my personal experience and opinion.
 
 :::
-
-
-## Guide
 
 :::info FOR ENGLISH MEDIUM
 
