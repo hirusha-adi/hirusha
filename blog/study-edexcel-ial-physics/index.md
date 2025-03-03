@@ -1,7 +1,7 @@
 ---
-title: Pearson Edexcel IAL (International Advanved Levels) - Mathematics
+title: Pearson Edexcel IAL (International Advanved Levels) - Physics
 authors: [hirusha]
-tags: [study,al,edexcel,maths]
+tags: [study,al,edexcel,physics]
 ---
 
 :::danger
