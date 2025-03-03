@@ -7,3 +7,4 @@ This section of my website has some study resources that I think are good. Most 
 - [Sri Lankan National Curriculum - GCE Advanced Level (in English)](/study/sl-national-al/) 
 - [Pearson Edexcel IGCSE (International General Certificate of Secondary Education)](/study/edexcel-igcse/)
 - [Pearson Edexcel IAL (International Advanved Levels)](/study/edexcel-ial/)
+- [Cambridge A/L (Advanved Levels)](/study/cie-al/)
