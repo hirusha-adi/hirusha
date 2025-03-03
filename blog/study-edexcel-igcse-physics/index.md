@@ -1,10 +1,9 @@
 ---
-sidebar_position: 3
-title: Physics (IGCSE Edexcel)
-sidebar_label: Physics
+title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Physics
+authors: [hirusha]
+tags: [study,igcse,physics]
 ---
 
-# Physics
 
 ### SaveMyExams Revision Notes
 

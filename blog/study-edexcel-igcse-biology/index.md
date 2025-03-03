@@ -1,10 +1,8 @@
 ---
-sidebar_position: 1
-title: Biology (IGCSE Edexcel)
-sidebar_label: Biology
+title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Biologu
+authors: [hirusha]
+tags: [study,igcse,biology]
 ---
-
-# Biology
 
 ### SaveMyExams Revision Notes
 

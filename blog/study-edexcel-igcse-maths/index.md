@@ -1,10 +1,8 @@
 ---
-sidebar_position: 4
-title: Mathematics (IGCSE Edexcel)
-sidebar_label: Mathematics
+title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Mathematics
+authors: [hirusha]
+tags: [study,igcse,maths]
 ---
-
-# Mathematics
 
 ### Past Papers
 

@@ -1,10 +1,8 @@
 ---
-sidebar_position: 2
-title: Chemistry (IGCSE Edexcel)
-sidebar_label: Chemistry
+title: Pearson Edexcel IGCSE (International General Certificate of Secondary Education) - Chemistry
+authors: [hirusha]
+tags: [study,igcse,chemistry]
 ---
-
-# Chemistry
 
 ### SaveMyExams Revision Notes
 
