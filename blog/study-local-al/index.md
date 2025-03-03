@@ -1,14 +1,15 @@
 ---
-title: Sri Lankan General Certificate of Education (GCE) - Advanced Level
-sidebar_label: Sri Lankan AL
+title: Sri Lankan General Certificate of Education (GCE) Advanced Level - Study Resources
+authors: [hirusha]
+tags: [study,al,local-syllabus]
 ---
 
 ## Available Educational Resources
 
-1. [Biology](biology)
-2. [Chemistry](chemistry)
-3. [Physics](physics)
-4. [Mathematics](mathematics)
+<!-- 1. [Biology](biology) -->
+<!-- 2. [Chemistry](chemistry) -->
+<!-- 3. [Physics](physics) -->
+<!-- 4. [Mathematics](mathematics) -->
 
 ## General Resources
 
@@ -28,7 +29,5 @@ If you prefer not to navigate through the resources on my website, you can simpl
 - I was able to find only the past papers from 2015 in the official governement website.
 - I found 2 websites that hosted these past papers, but they were hidden behind a paywall.
 - The level of importance/attention dedicated to English medium papers by the government is pathetic.
-
-![i1](https://quotefancy.com/media/wallpaper/1600x900/1425502-Aaron-Swartz-Quote-Information-is-power-But-like-all-power-there.jpg)
 
 :::

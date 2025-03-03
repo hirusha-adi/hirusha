@@ -1,9 +1,13 @@
 ---
 title: Buy Cambridge Computer Science (9618/9608) Study Resources
-sidebar_label: Computer Science
+authors: [hirusha]
+tags: [study,cie]
 ---
 
 Looking to master Cambridge Computer Science (9618/9608)? Get access to comprehensive study resources covering everything from 2015 to the present. 
+
+<!--truncate-->
+
 
 ## Available Resources
 
@@ -66,7 +70,7 @@ Looking to master Cambridge Computer Science (9618/9608)? Get access to comprehe
 ## How to Get Started
 
 1. **Contact**  
-   Reach out via email at [hirushaadi@gmail.com](mailto:hirushaadi@gmail.com) or on WhatsApp at +94777662700 to receive payment details.
+   Reach out via email at [hello@hirusha.xyz](mailto:hello@hirusha.xyz) or on WhatsApp at +94777662700 to receive payment details.
 2. **Receive Your Documents**  
    Once payment is confirmed, your resources will be delivered within 24 hours.
 

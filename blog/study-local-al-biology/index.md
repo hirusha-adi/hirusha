@@ -1,7 +1,7 @@
 ---
-sidebar_position: 1
-title: Biology
-sidebar_label: Biology
+title: Sri Lankan General Certificate of Education (GCE) Advanced Level - Biology
+authors: [hirusha]
+tags: [study,al,local-syllabus,biology]
 ---
 
 ## Resource Books

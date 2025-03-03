@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
-title: Chemistry
-sidebar_label: Chemistry
+title: Sri Lankan General Certificate of Education (GCE) Advanced Level - Chemistry
+authors: [hirusha]
+tags: [study,al,local-syllabus,biology]
 ---
 
 ## Resource Books

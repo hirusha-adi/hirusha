@@ -1,7 +1,7 @@
 ---
-sidebar_position: 3
-title: Physics
-sidebar_label: Physics
+title: Sri Lankan General Certificate of Education (GCE) Advanced Level - Physics
+authors: [hirusha]
+tags: [study,al,local-syllabus,physics]
 ---
 
 
@@ -236,8 +236,4 @@ sidebar_label: Physics
 - [Essay Paper](https://mega.nz/file/N2whgAgC#NwPR8gJgSPy1A6GYmAeCIu0ZSQv5_as8gCuqgGcEsD8)
 - [MCQ Paper](https://mega.nz/file/86Aywb6J#dmWa5Tay1KSiBK2CLqYzWl7IA8i0z8K-1xlv1xmB5QM)
 - [Marking Scheme](https://mega.nz/file/AqwAWaDA#usKLReCrDA0u5otMQutGzyspLxPB1JbYRyNJWMdlyEA)
-
-
-
-
 

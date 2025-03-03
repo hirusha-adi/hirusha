@@ -1,7 +1,7 @@
 ---
-sidebar_position: 4
-title: Mathematics
-sidebar_label: Mathematics
+title: Sri Lankan General Certificate of Education (GCE) Advanced Level - Mathematics
+authors: [hirusha]
+tags: [study,al,local-syllabus,mathematics]
 ---
 
 :::info FOR SINHALA MEDIUM
@@ -9,8 +9,6 @@ sidebar_label: Mathematics
 For those seeking an excellent A/L Maths class in Sinhala Medium, I highly recommend Ajantha Dissanayake Sir's classes. His approach to each lesson and his meticulously crafted course plan stand out as the best in the field. Ajantha Dissanayake Sir conducts physical classes in Nugegoda, Kandy, and Kurunegala. Alternatively, you can also benefit from his online lessons, where students have the flexibility to pause the videos, attempt the questions on their own, and then review them alongside the instructional content.
 
 Stay updated with his latest lessons by visiting his YouTube channel [here](https://www.youtube.com/@ajanthadissanayakeofficial8370/videos).
-
-![i1](https://yt3.googleusercontent.com/_HFaiL95UYtT9HtLoGBBak8jNqMrtGVem2kNjm8XHmw3RndH1pfuKu1fI2k_IdKtMKJwe0A0atY=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj)
 
 It's important to note that this article is not affiliated with him in any way and is solely based on my personal experience and opinion.
 
