@@ -4,9 +4,9 @@ authors: [hirusha]
 tags: [customization,linux,cinnamon,tutorial]
 ---
 
-![alt text](image.png)
-
 Miss the good old Windows XP look? This guide shows you how to bring it back on Linux Mint with a simple one-liner, an easy script, or manual steps 🚀.
+
+![alt text](image.png)
 
 <!--truncate-->
 

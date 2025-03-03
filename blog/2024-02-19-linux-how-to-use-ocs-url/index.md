@@ -4,9 +4,9 @@ authors: [hirusha]
 tags: [customization,linux,tools,tutorial]
 ---
 
-![im1](install_themes_easily_ocs_url-im1.png)
-
 ocs-url is an install helper program for items served on OpenCollaborationServices (OCS) that lets you easily install themes & plugins. This tool will download and extract them to the required directories automatically.
+
+![im1](install_themes_easily_ocs_url-im1.png)
 
 <!--truncate-->
 

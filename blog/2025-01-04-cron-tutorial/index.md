@@ -4,9 +4,9 @@ authors: [hirusha]
 tags: [sysadmin,cron,automation,linux,tutorial]
 ---
 
-![alt text](image.png)
-
 This guide covers the basics of using Cron, a time-based job scheduler in Unix-like systems. You'll learn how to set up and manage cron jobs, understand cron syntax, and explore practical examples for automating system tasks efficiently.
+
+![alt text](image.png)
 
 <!--truncate-->
 

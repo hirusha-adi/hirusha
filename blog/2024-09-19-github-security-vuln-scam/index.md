@@ -4,11 +4,11 @@ authors: [hirusha]
 tags: [security,scam]
 ---
 
-![alt text](image.png)
-
 Today, I received an email claiming that a security vulnerability had been detected in one of my GitHub repositories. Typically, I receive security notifications from Dependabot, which direct me back to GitHub for further action.
 
 However, this email was unusual. It prompted me to visit an external site, github-scanner.com, rather than linking to GitHub. The email was tied to an issue opened in my repository, urging me to visit this unknown link for more information on how to resolve the issue.
+
+![alt text](image.png)
 
 <!--truncate-->
 

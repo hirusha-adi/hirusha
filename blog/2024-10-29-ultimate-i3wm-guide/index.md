@@ -4,9 +4,9 @@ authors: [hirusha]
 tags: [customization,linux,ricing,tutorial]
 ---
 
-![alt text](image-7.png)
-
 If you're looking for a lightweight, highly customizable, and keyboard-driven window manager, i3wm is one of the best choices out there. Whether you're a beginner exploring tiling window managers or an advanced user wanting to fine-tune your workflow, this ultimate guide to i3wm will walk you through everything—from installation and configuration to productivity tips and essential scripts. Get ready to take full control of your Linux desktop like never before!
+
+![alt text](image-7.png)
 
 <!--truncate-->
 

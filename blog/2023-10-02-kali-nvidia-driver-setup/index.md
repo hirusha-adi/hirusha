@@ -4,9 +4,9 @@ authors: [hirusha]
 tags: [kali,drivers,linux,debian,tutorial,nvidia]
 ---
 
-![alt text](image.png)
-
 If you're running Kali Linux on bare metal and want to get your Nvidia graphics card up and running, here's a straightforward guide to help you install the necessary drivers. Don't worry, I'll walk you through the process step by step.
+
+![alt text](image.png)
 
 <!--truncate-->
 

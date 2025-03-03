@@ -4,13 +4,13 @@ authors: [hirusha]
 tags: [life, controversial, psychology]
 ---
 
-![](./image.jpg)
-
 Culture is all about the shared knowledge, beliefs, traditions, and practices of a group of people. It shapes everything in life how we talk, what we eat, how we dress, and what we value. Most of the time, culture is passed down from previous generations.
 
 Since culture is such a big part of our lives, this article will look at some beliefs that challenge cultural norms.
 
 Some of you might find these ideas controversial, but they’re based on logic, not tradition.
+
+![a](./image.jpg)
 
 <!--truncate-->
 

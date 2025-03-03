@@ -4,6 +4,8 @@ authors: [hirusha]
 tags: [sysadmin,crowdstrike,fix,tutorial]
 ---
 
+Fix the issue caused by CrowdStrike in 2024 using WinPE for computers that uses BitLocker.
+
 ![alt text](image.png)
 
 <!--truncate-->

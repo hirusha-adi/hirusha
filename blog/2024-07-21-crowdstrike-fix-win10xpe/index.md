@@ -4,7 +4,7 @@ authors: [hirusha]
 tags: [sysadmin,crowdstrike,fix,tutorial]
 ---
 
-<!-- ![alt text](image.png) -->
+Fix the issue caused by CrowdStrike in 2024 using Win10XPE, a customized & slimmed down version of the regular Windows image.
 
 <!--truncate-->
 

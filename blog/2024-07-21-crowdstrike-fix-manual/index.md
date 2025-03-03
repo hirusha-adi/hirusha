@@ -4,6 +4,8 @@ authors: [hirusha]
 tags: [sysadmin,crowdstrike,fix,tutorial]
 ---
 
+Fix the issue caused by CrowdStrike in 2024 manully using many different methods.
+
 <!--truncate-->
 
 ## If BitLocker is not enabled

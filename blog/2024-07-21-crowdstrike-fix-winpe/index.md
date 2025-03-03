@@ -4,7 +4,9 @@ authors: [hirusha]
 tags: [sysadmin,crowdstrike,fix,tutorial]
 ---
 
-Supports Bitlocker Encryption?: No.
+Fix the issue caused by CrowdStrike in 2024 using WinPE for computers that doesn't use BitLocker.
+
+<!--truncate-->
 
 ## Usage Guide
 

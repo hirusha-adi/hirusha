@@ -4,9 +4,9 @@ authors: [hirusha]
 tags: [sysadmin,systemd,linux,tutorial]
 ---
 
-![alt text](image.png)
-
 Automating the startup of services in Linux is crucial for ensuring system reliability and reducing manual intervention. In this guide, you'll learn how to use systemd to create and manage a service that starts automatically on boot. We'll cover setting up a dedicated user for security, creating a service file, enabling the service, and troubleshooting common issues.
+
+![alt text](image.png)
 
 <!--truncate-->
 

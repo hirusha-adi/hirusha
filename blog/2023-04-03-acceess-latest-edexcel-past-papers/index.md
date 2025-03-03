@@ -4,6 +4,9 @@ authors: [hirusha]
 tags: [study,edexcel,hacking,tutorials]
 ---
 
+This guide explains how to access Edexcel past papers by analyzing URL structures and website configurations. It explores direct link access, potential misconfigurations, and ethical considerations. While the method may work under certain conditions, users are reminded to respect copyright laws and website terms of service.
+
+<!--truncate-->
 
 :::danger NOTE
 
@@ -22,8 +25,6 @@ This method has been tested with IGCSE and IAL past papers.
 ## Method
 
 1. Visit the official website of Pearson by [clicking here](https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html).
-
-<!--truncate-->
 
 2. Select your qualification.
 
