@@ -209,6 +209,7 @@ const config: Config = {
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Semibold.min.css',
   ],
   scripts: [
+    // Based on: https://github.com/Swetrix/docs/blob/main/docusaurus.config.js
     {
       src: 'https://cdn.jsdelivr.net/gh/Swetrix/swetrix-js@latest/dist/swetrix.js', defer: true,
     },
