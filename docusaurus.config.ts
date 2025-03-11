@@ -208,6 +208,14 @@ const config: Config = {
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Normal.min.css',
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Semibold.min.css',
   ],
+  scripts: [
+    {
+      src: 'https://cdn.jsdelivr.net/gh/Swetrix/swetrix-js@latest/dist/swetrix.js', defer: true,
+    },
+    {
+      src: 'js/setupswetrix.js', defer: true,
+    }
+  ],
 }
 
 export default config
