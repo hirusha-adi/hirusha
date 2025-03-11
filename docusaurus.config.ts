@@ -208,12 +208,6 @@ const config: Config = {
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Normal.min.css',
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Semibold.min.css',
   ],
-  scripts: {
-    src: "https://cdn.jsdelivr.net/gh/Swetrix/swetrix-js@latest/dist/swetrix.js",
-    async: true,
-    "data-swetrix-id": "CBLOtmpMBXMl",
-    "data-api": "https://api.analytics.plzhack.me",
-  },
 }
 
 export default config
