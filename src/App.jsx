@@ -2,7 +2,7 @@ function App() {
 
   return (
     <>
-      <h1>Vite + React + Tailwind</h1>
+      <h1>Vite + React JS + Tailwind + DaisyUI</h1>
     </>
   )
 }
