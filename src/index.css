@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+/* reference: https://daisyui.com/docs/config/ */
+@plugin "daisyui" {
+    themes: dark --default;
+    root: ":root";
+    include: ;
+    exclude: ;
+    prefix: ;
+    logs: true;
+}
