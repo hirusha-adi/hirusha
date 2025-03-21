@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import * as Swetrix from "swetrix";
 
 
@@ -7,19 +5,11 @@ function App() {
   // tracking (swetrix)
   // -----------------------------
   // (site location)
-  const location = useLocation();
-  // (init)
-  useEffect(() => {
-    Swetrix.init("CBLOtmpMBXMl", {
-      apiURL: "https://api.analytics.plzhack.me/log",
-      devMode: false,
-    });
-    Swetrix.trackViews();
-  }, []);
-  // (track views)
-  useEffect(() => {
-    Swetrix.trackViews();
-  }, [location.pathname]);
+  Swetrix.init("CBLOtmpMBXMl", {
+    apiURL: "https://api.analytics.plzhack.me/log",
+    devMode: false,
+  });
+  Swetrix.trackViews();
   // -----------------------------
 
   return (
