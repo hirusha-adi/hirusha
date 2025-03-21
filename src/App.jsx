@@ -1,4 +1,27 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import * as Swetrix from "swetrix";
+
+
 function App() {
+  // tracking (swetrix)
+  // -----------------------------
+  // (site location)
+  const location = useLocation();
+  // (init)
+  useEffect(() => {
+    Swetrix.init("CBLOtmpMBXMl", {
+      apiURL: "https://api.analytics.plzhack.me/log",
+      devMode: false,
+    });
+    Swetrix.trackViews();
+  }, []);
+  // (track views)
+  useEffect(() => {
+    Swetrix.trackViews();
+  }, [location.pathname]);
+  // -----------------------------
+
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="w-[93vw] md:w-[650px] h-[80vh]">
