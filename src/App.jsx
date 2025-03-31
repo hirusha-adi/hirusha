@@ -26,7 +26,7 @@ function App() {
               <li><a href="https://github.com/hirusha-adi" target="_blank" rel="noreferrer">GitHub</a></li>
               <li>Other:</li>
               <ul>
-                <li><a href="https://informati.cc/" target="_blank" rel="noreferrer">High School Study Resources (A/L + O/L)</a></li>
+                <li><a href="https://informati.cc/blog/high-school-study-resources" target="_blank" rel="noreferrer">High School Study Resources (A/L + O/L)</a></li>
               </ul>
               </ul>
             <p>
