@@ -24,7 +24,11 @@ function App() {
               <li><a href="https://informati.cc/" target="_blank" rel="noreferrer">Blog (informati.cc)</a></li>
               <li><a href="https://photos.hirusha.xyz" target="_blank" rel="noreferrer">Photography (photos.hirusha.xyz)</a></li>
               <li><a href="https://github.com/hirusha-adi" target="_blank" rel="noreferrer">GitHub</a></li>
-            </ul>
+              <li>Other:</li>
+              <ul>
+                <li><a href="https://informati.cc/" target="_blank" rel="noreferrer">High School Study Resources (A/L + O/L)</a></li>
+              </ul>
+              </ul>
             <p>
               If you want to contact me, feel free to reach me out via email at <a href="mailto:9lYKo@example.com">hello@hirusha.xyz</a>.
             </p>
