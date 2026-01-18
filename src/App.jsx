@@ -22,15 +22,11 @@ function App() {
             <p>This is my personal domain name. This is where I test stuff. Below are some other websites that you might be here looking for:</p>
             <ul>
               <li><a href="https://informati.cc/" target="_blank" rel="noreferrer">Blog (informati.cc)</a></li>
-              <li><a href="https://photos.hirusha.xyz" target="_blank" rel="noreferrer">Photography (photos.hirusha.xyz)</a></li>
+              <li><a href="https://www.linkedin.com/in/hirusha-adi/" target="_blank" rel="noreferrer">LinkedIn</a></li>
               <li><a href="https://github.com/hirusha-adi" target="_blank" rel="noreferrer">GitHub</a></li>
-              <li>Other:</li>
-              <ul>
-                <li><a href="https://informati.cc/blog/high-school-study-resources" target="_blank" rel="noreferrer">High School Study Resources (A/L + O/L)</a></li>
-              </ul>
               </ul>
             <p>
-              If you want to contact me, feel free to reach me out via email at <a href="mailto:9lYKo@example.com">hello@hirusha.xyz</a>.
+              If you want to contact me, feel free to reach me out via email at <a href="mailto:hello@hirusha.xyz">hello@hirusha.xyz</a> or <a href="mailto:hirusha@adikari.cc">hirusha@adikari.cc</a>.
             </p>
           </div>
         </div>
