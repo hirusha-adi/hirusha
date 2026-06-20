@@ -52,6 +52,10 @@ Delivered a presentation with the **Deakin University Cybersecurity Association 
 
 ## ACUCyS (Australian Council of University Cyber Societies)
 
+#### Organizer - ACUCyS x DSEC Hackathon <br> March 2026
+
+Helped organise and deliver the **ACUCyS Hackathon**, hosted in partnership with the **Deakin Software Engineering Club** and sponsored by **Natural Velocity**. Contributed to event coordination, participant support, and judging, reviewing submissions based on creativity, technical execution, problem-solving, and overall implementation quality. The event brought together students to build practical software solutions, collaborate under time constraints, and showcase their technical skills in a competitive hackathon environment.
+
 #### Lead Infrastructure Engineer - Weekly CTFs Project <br> February 2026 - Present
 
 Lead infrastructure and development work for the **Weekly CTFs Project**, supporting the deployment, maintenance, and operation of challenge environments for recurring cybersecurity competitions. Responsibilities include managing challenge infrastructure, coordinating technical setup, assisting with platform development, and ensuring challenges are delivered reliably and accessibly for participants. The role involves working across both infrastructure and development tasks to support smooth event delivery and continuous improvement of the project.
@@ -62,6 +66,11 @@ Led the technical delivery of the **36-hour ACUCyS Jingle Shells CTF**, taking e
 
 ## Other
 
-### 1. 
+#### 1. TGX (The Game Expo) - Volunteer IT Crew
 
+Volunteered with the **IT crew at The Game Expo (TGX)**, supporting live event infrastructure and tournament system readiness. Assisted during an overnight incident response effort where all tournament machines required a full rebuild before Day 2. Helped prepare a fresh Windows environment, capture it as an **FFU image** with required games, and rapidly redeploy systems using **iPXE**. The experience provided hands-on exposure to high-pressure infrastructure recovery in a live event environment.
+
+#### AISA Member
+
+Active AISA member, regularly attending cybersecurity meetups, professional networking events, and industry-focused sessions. Engages with the broader Australian cybersecurity community to stay informed on current security trends, industry practices, threat landscapes, and professional development opportunities.
 
