@@ -16,7 +16,7 @@ Presented a talk at **BSides Ballarat** titled **“Your PC Has a Virus (It Does
 
 ### 3. DUCA (March 2025) - "Privacy and Operational Security"
 
-Presented on **Privacy and Operational Security** at an in-person **Deakin University Cybersecurity Association (DUCA)** event, covering Linux, Tails OS, Whonix, Qubes OS, and key OPSEC concepts. The session included real-world case studies on **Conor Brian Fitzpatrick / Pompompurin** and **Ross Ulbricht / Dread Pirate Roberts**, showing how poor OPSEC contributed to their identification and arrest. Also hosted a recent online DUCA session on **“Top 10 Ways to Hack Websites”**, covering the OWASP Top 10 with practical browser-based demonstrations.
+Presented on **Privacy and Operational Security** at an in-person Deakin University Cybersecurity Association (DUCA) event, covering Linux, Tails OS, Whonix, Qubes OS, and key OPSEC concepts. The session included real-world case studies on **Conor Brian Fitzpatrick / Pompompurin** and **Ross Ulbricht / Dread Pirate Roberts**, showing how poor OPSEC contributed to their identification and arrest. Also hosted a recent online DUCA session on **“Top 10 Ways to Hack Websites”**, covering the OWASP Top 10 with practical browser-based demonstrations.
 
 ### 2. Deakin University (October 2025) - "Introduction to Ethical Hacking"
 
@@ -24,8 +24,9 @@ Presented on **Ethical Hacking, Password Cracking Techniques, and Password Harve
 
 ### 1. DUCA (September 2025) - “Becoming an Auditor: ISO/IEC 27001:2022”
 
-Delivered a presentation with the **Deakin University Cybersecurity Association (DUCA)** on **“Becoming an Auditor”**, covering **ISO/IEC 27001:2022** and its role in building effective information security management systems. The session explored the ISO 27001 audit process, risk assessment, risk treatment, and key auditor skills, with examples from healthcare, finance, and government. It also included a live demonstration of **Lynis** to show practical system auditing and hardening.
+Delivered a presentation with the Deakin University Cybersecurity Association (DUCA) on **“Becoming an Auditor”**, covering **ISO/IEC 27001:2022** and its role in building effective information security management systems. The session explored the ISO 27001 audit process, risk assessment, risk treatment, and key auditor skills, with examples from healthcare, finance, and government. It also included a live demonstration of **Lynis** to show practical system auditing and hardening.
 
+<br>
 
 # Volunteering
 
@@ -33,13 +34,14 @@ Delivered a presentation with the **Deakin University Cybersecurity Association 
 
 #### Assistant Secretary, Development Team Lead & CTF Team Lead <br> October 2025 – Present
 
-- Elected as Assistant Secretary at the DUCA Annual General Meeting, contributing to executive-level planning, governance, documentation, and operational restructuring.
-- Lead the Development Team, managing a team of 5+ members responsible for DUCA’s technical infrastructure, web presence, and internal digital systems.
-- Led the migration of DUCA’s legacy WordPress website to a modern AstroJS-based static site architecture, improving performance, maintainability, security posture, and long-term scalability.
-- Lead the CTF Team, coordinating challenge infrastructure, deployment workflows, competition operations, and technical support for DUCA-hosted cybersecurity events.
-- Designed and implemented a custom CTF hosting pipeline to standardise challenge deployment, infrastructure setup, operational handover, and event execution for future committee members.
-- Developed a custom DUCA CTF platform tailored to the club’s requirements, including integrated live chat support, event-specific challenge management, and automated post-event write-up release to improve participant engagement and learning outcomes.
-- Assisted the President and Advisory Board in restructuring DUCA’s internal committee model by consolidating redundant divisions, offboarding inactive members, and producing operational documentation to support continuity under future executive teams.
+* Elected as **Assistant Secretary** at the DUCA Annual General Meeting, contributing to executive-level planning, governance, documentation, and operational restructuring.
+* Lead the **Development Team**, managing a team of 5+ members responsible for DUCA’s technical infrastructure, web presence, and internal digital systems.
+* Led the **migration** of DUCA’s legacy **WordPress** website to a modern **AstroJS**-based static site architecture, improving performance, maintainability, security posture, and long-term scalability.
+* Lead the **CTF Team**, coordinating challenge infrastructure, deployment workflows, competition operations, and technical support for DUCA-hosted cybersecurity events.
+* Designed and implemented a custom **CTF hosting pipeline** to standardise challenge deployment, infrastructure setup, operational handover, and event execution for future committee members.
+* Developed a custom **DUCA CTF platform** tailored to the club’s requirements, including integrated live chat support, event-specific challenge management, and automated post-event write-up release to improve participant engagement and learning outcomes.
+* Assisted the President and Advisory Board in **restructuring DUCA’s** internal committee model by consolidating redundant divisions, offboarding inactive members, and producing operational documentation to support continuity under future executive teams.
+
 - Supported the coordination and delivery of the Victorian branch of the **NATO LSPR (Locked Shields Partner Run)** event, hosted at Deakin University’s Burwood Campus in partnership with Adelaide University.
 
 #### Development Team Member & Blog Writer <br> July 2025 – October 2025
@@ -66,11 +68,19 @@ Led the technical delivery of the **36-hour ACUCyS Jingle Shells CTF**, taking e
 
 ## Other
 
-#### 1. TGX (The Game Expo) - Volunteer IT Crew
+#### 2. TGX (The Game Expo) 2025 - Volunteer IT Crew
 
 Volunteered with the **IT crew at The Game Expo (TGX)**, supporting live event infrastructure and tournament system readiness. Assisted during an overnight incident response effort where all tournament machines required a full rebuild before Day 2. Helped prepare a fresh Windows environment, capture it as an **FFU image** with required games, and rapidly redeploy systems using **iPXE**. The experience provided hands-on exposure to high-pressure infrastructure recovery in a live event environment.
 
-#### AISA Member
+<br>
+
+# Other
+
+#### AISA Member <br> October 2025 - Present
 
 Active AISA member, regularly attending cybersecurity meetups, professional networking events, and industry-focused sessions. Engages with the broader Australian cybersecurity community to stay informed on current security trends, industry practices, threat landscapes, and professional development opportunities.
+
+#### Member of IT Student Academy <br> September 2025 - Present
+
+Active member of the IT Student Academy, engaging in professional development opportunities, cybersecurity events, and industry-academic programs. Participated in **AISA CyberCon 2025**, authored blog content, and attended numerous networking, career, and knowledge-sharing sessions to strengthen industry exposure, communication skills, and practical understanding of the cybersecurity ecosystem.
 
