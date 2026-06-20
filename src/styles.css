@@ -221,20 +221,24 @@ body {
 .markdown ul,
 .markdown ol {
   margin: 0;
-  padding-left: 1.4em;
+  padding-left: 1.15em;
+}
+
+.markdown li {
+  line-height: 1.55;
 }
 
 .markdown li + li {
-  margin-top: 8px;
+  margin-top: 3px;
 }
 
 .markdown li.task-list-item {
   list-style: none;
-  margin-left: -1.4em;
+  margin-left: -1.15em;
 }
 
 .markdown input[type="checkbox"] {
-  margin-right: 8px;
+  margin-right: 4px;
   accent-color: #000;
 }
 

@@ -40,17 +40,25 @@ Delivered a presentation with the **Deakin University Cybersecurity Association 
 - Designed and implemented a custom CTF hosting pipeline to standardise challenge deployment, infrastructure setup, operational handover, and event execution for future committee members.
 - Developed a custom DUCA CTF platform tailored to the club’s requirements, including integrated live chat support, event-specific challenge management, and automated post-event write-up release to improve participant engagement and learning outcomes.
 - Assisted the President and Advisory Board in restructuring DUCA’s internal committee model by consolidating redundant divisions, offboarding inactive members, and producing operational documentation to support continuity under future executive teams.
+- Supported the coordination and delivery of the Victorian branch of the **NATO LSPR (Locked Shields Partner Run)** event, hosted at Deakin University’s Burwood Campus in partnership with Adelaide University.
 
 #### Development Team Member & Blog Writer <br> July 2025 – October 2025
-<br>
 
 - Contributed to DUCA’s development team through website updates, technical content, and internal digital initiatives.
 - Authored cybersecurity-related blog content for the club’s online presence.
 - Actively supported DUCA events as a volunteer and event photographer, contributing to event coverage, community engagement, and promotional material.
+- Supported the operational coordination and successful delivery of the Melbourne branch of **Down Under CTF 2025** at Deakin University’s Burwood Campus, assisting with event logistics, participant support, and on-site execution.
+
 
 ## ACUCyS (Australian Council of University Cyber Societies)
 
-### 1. JingleShells CTF (November 2024)
+#### Lead Infrastructure Engineer - Weekly CTFs Project <br> February 2026 - Present
+
+Lead infrastructure and development work for the **Weekly CTFs Project**, supporting the deployment, maintenance, and operation of challenge environments for recurring cybersecurity competitions. Responsibilities include managing challenge infrastructure, coordinating technical setup, assisting with platform development, and ensuring challenges are delivered reliably and accessibly for participants. The role involves working across both infrastructure and development tasks to support smooth event delivery and continuous improvement of the project.
+
+#### Lead Infrastructure Engineer - Jingle Shells CTF 2025 <br> October 2025 - December 2025
+
+Led the technical delivery of the **36-hour ACUCyS Jingle Shells CTF**, taking end-to-end ownership of infrastructure deployment, service hardening, redundancy planning, live monitoring, and operational support. The platform was tested, mirrored, backed up, and monitored throughout the event to ensure reliability at scale. Supported **150+ players** and **100+ support tickets**, maintaining zero infrastructure-related downtime while coordinating post-event write-ups and improvements for future CTF operations.
 
 ## Other
 
