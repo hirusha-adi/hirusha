@@ -1,4 +1,43 @@
-# About
+# Talks presented
 
-This page is loaded from `content/about/index.md` and routed to `/about`.
+## Conferences (2)
+
+### 2. BSides Melbourne (May 2026) - “20,000 Scams Later: From Scam Reports to Takedowns”
+
+Presented a talk at **BSides Melbourne** titled **“20,000 Scams Later: From Scam Reports to Takedowns”**, covering large-scale scam reporting and takedown work.
+
+The talk focused on Team Demurrage’s reporting of **29,500+ scam callback numbers**, the role these numbers play in connecting victims to scammers, and how fast, accurate bulk reporting can disrupt scam campaigns. It also covered our reporting pipeline, live infrastructure challenges, data patterns, and the broader journey behind the project.
+
+
+### 1. BSides Ballarat (February 2026) - “Your PC Has a Virus (It Doesn’t)”
+
+Presented a talk at **BSides Ballarat** titled **“Your PC Has a Virus (It Doesn’t)”**, covering technical support scams, scambaiting, and scam infrastructure.
+
+The session explored how scammers gain remote access, how scam environments operate, and how scambaiters ethically investigate, document activity, and gather intelligence. It included real-world screenshots, case studies, and demonstrations showing how scammers establish and maintain access.
+
+
+## Others (3)
+
+### 3. DUCA (March 2025) - "Privacy and Operational Security"
+
+Presented on **Privacy and Operational Security** at an in-person **Deakin University Cybersecurity Association (DUCA)** event, covering Linux, Tails OS, Whonix, Qubes OS, and key OPSEC concepts. The session included real-world case studies on **Conor Brian Fitzpatrick / Pompompurin** and **Ross Ulbricht / Dread Pirate Roberts**, showing how poor OPSEC contributed to their identification and arrest. Also hosted a recent online DUCA session on **“Top 10 Ways to Hack Websites”**, covering the OWASP Top 10 with practical browser-based demonstrations.
+
+
+### 2. Deakin University (October 2025) - "Introduction to Ethical Hacking"
+
+Presented on **Ethical Hacking, Password Cracking Techniques, and Password Harvesting** on behalf of **Deakin University’s School of IT** for students from the **Blue Marble Study Tour 2025**, alongside **Visal Dam, Casey Wilfling, and Jonathan Kua**. The session covered brute-force attacks, dictionary attacks, and social engineering techniques, with live demonstrations and hands-on activities using Kali Linux and the Social Engineering Toolkit.
+
+### 1. DUCA (September 2025) - “Becoming an Auditor: ISO/IEC 27001:2022”
+
+Delivered a presentation with the **Deakin University Cybersecurity Association (DUCA)** on **“Becoming an Auditor”**, covering **ISO/IEC 27001:2022** and its role in building effective information security management systems. The session explored the ISO 27001 audit process, risk assessment, risk treatment, and key auditor skills, with examples from healthcare, finance, and government. It also included a live demonstration of **Lynis** to show practical system auditing and hardening.
+
+
+# Volunteering
+
+## ACUCyS
+
+### 1. JingleShells CTF (November 2024)
+
+## The Game Expo
+
 
