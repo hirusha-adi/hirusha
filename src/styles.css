@@ -1,0 +1,131 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: rgb(212, 212, 212);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+}
+
+::selection {
+  background: #fff;
+  color: #000;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.shell {
+  min-height: 100vh;
+  padding: 16px 24px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.terminalLine {
+  border-top: 1px dashed rgba(255, 255, 255, 0.65);
+}
+
+.terminalLineBottom {
+  margin-top: 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+  font-size: 14px;
+}
+
+.navLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.contentInner {
+  width: 100%;
+  max-width: none;
+  font-size: 15px;
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  display: grid;
+  gap: 20px;
+}
+
+.metaBlock {
+  display: grid;
+  gap: 12px;
+}
+
+.label {
+  font-weight: 700;
+  color: rgb(245, 245, 245);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+  font-size: 14px;
+}
+
+.footerNav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.underlineLink {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 150ms ease;
+}
+
+.underlineLink:hover {
+  color: #fff;
+}
+
+@media (min-width: 640px) {
+  .header,
+  .footer {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 56px 0;
+  }
+
+  .contentInner {
+    font-size: 16px;
+    line-height: 2;
+  }
+}
+
