@@ -1,8 +1,11 @@
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
-import Home from "./pages/Home.jsx";
+import MarkdownPage from "./pages/MarkdownPage.jsx";
+import { usePathname } from "./router/router.jsx";
 
 export default function App() {
+  const pathname = usePathname();
+
   return (
     <div className="page">
       <main className="shell">
@@ -10,7 +13,7 @@ export default function App() {
           <div className="terminalLine" />
           <Header />
           <div className="terminalLine" />
-          <Home />
+          <MarkdownPage pathname={pathname} />
           <div className="terminalLine terminalLineBottom" />
           <Footer />
         </div>

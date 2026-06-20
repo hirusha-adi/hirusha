@@ -1,10 +1,15 @@
+import { Link } from "../router/router.jsx";
+
 export default function Header() {
   return (
     <header className="header">
       <nav>
-        <a className="navLink" href="/about">
+        <Link className="navLink" href="/">
+          ~/
+        </Link>{" "}
+        <Link className="navLink" href="/about">
           ~/about
-        </a>
+        </Link>
       </nav>
     </header>
   );

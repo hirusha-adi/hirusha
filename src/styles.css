@@ -80,6 +80,56 @@ body {
   gap: 20px;
 }
 
+.markdown {
+  display: block;
+}
+
+.markdown > * {
+  margin: 0;
+}
+
+.markdown > * + * {
+  margin-top: 20px;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  color: rgb(245, 245, 245);
+  line-height: 1.25;
+}
+
+.markdown h1 {
+  font-size: 28px;
+}
+
+.markdown h2 {
+  font-size: 20px;
+}
+
+.markdown a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.markdown code {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+}
+
+.markdown pre {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px 14px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.markdown pre code {
+  background: transparent;
+  padding: 0;
+}
+
 .metaBlock {
   display: grid;
   gap: 12px;
