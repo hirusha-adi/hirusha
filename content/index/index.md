@@ -1,8 +1,10 @@
-# Hello, World!
+# Hey! I'm Hirusha.
 
-**Date:** April 23, 2024
+I'm a second year Bachelor of Cybersecurity student at Deakin University. This is my personal website. My interests are mostly 
 
-Hi,
+My primary blog can be found at: [informati.cc](https://informati.cc).
+
+You can connect with me on other social media platforms:
 
 My name’s João Oliveira, a Software Engineer and Graphic Designer with a keen interest in cybersecurity. Currently based in Portugal.
 

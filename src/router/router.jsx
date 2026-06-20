@@ -7,6 +7,12 @@ function normalizePathname(pathname) {
   return path || "/";
 }
 
+function normalizeLocation(to) {
+  const url = new URL(to, window.location.origin);
+  const pathname = normalizePathname(url.pathname);
+  return `${pathname}${url.hash}`;
+}
+
 function toRouteFromFile(filePath) {
   // filePath: /content/<any...>/index.md
   let route = filePath.replace(/^\/content/, "").replace(/\/index\.md$/, "");
@@ -45,8 +51,11 @@ export function usePathname() {
 }
 
 export function navigate(to) {
-  const next = normalizePathname(to);
-  if (next === normalizePathname(window.location.pathname)) return;
+  const next = normalizeLocation(to);
+  const current = normalizeLocation(
+    `${window.location.pathname}${window.location.hash}`,
+  );
+  if (next === current) return;
   window.history.pushState({}, "", next);
   window.dispatchEvent(new PopStateEvent("popstate"));
 }
@@ -63,7 +72,7 @@ export function Link({ href, className, children }) {
         const url = new URL(href, window.location.href);
         if (url.origin !== window.location.origin) return;
         e.preventDefault();
-        navigate(url.pathname);
+        navigate(url.pathname + url.hash);
       }}
     >
       {children}
