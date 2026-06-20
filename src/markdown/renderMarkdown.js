@@ -20,7 +20,7 @@ import typescript from "highlight.js/lib/languages/typescript";
 import xml from "highlight.js/lib/languages/xml";
 
 import "katex/dist/katex.min.css";
-import "highlight.js/styles/atom-one-dark.min.css";
+import "highlight.js/styles/github.min.css";
 
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("c", c);

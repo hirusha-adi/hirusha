@@ -37,7 +37,7 @@ function useMarkdownEnhancements(containerRef, html) {
     if (mermaidBlocks.length) {
       import("mermaid").then(({ default: mermaid }) => {
         if (cancelled) return;
-        mermaid.initialize({ startOnLoad: false, theme: "dark", securityLevel: "loose" });
+        mermaid.initialize({ startOnLoad: false, theme: "default", securityLevel: "loose" });
         mermaid.run({ nodes: mermaidBlocks });
       });
     }

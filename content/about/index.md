@@ -4,16 +4,12 @@
 
 ### 2. BSides Melbourne (May 2026) - “20,000 Scams Later: From Scam Reports to Takedowns”
 
-Presented a talk at **BSides Melbourne** titled **“20,000 Scams Later: From Scam Reports to Takedowns”**, covering large-scale scam reporting and takedown work.
-
-The talk focused on Team Demurrage’s reporting of **29,500+ scam callback numbers**, the role these numbers play in connecting victims to scammers, and how fast, accurate bulk reporting can disrupt scam campaigns. It also covered our reporting pipeline, live infrastructure challenges, data patterns, and the broader journey behind the project.
+Presented a talk at **BSides Melbourne** titled **“20,000 Scams Later: From Scam Reports to Takedowns”**, covering large-scale scam reporting and takedown work. The talk focused on Team Demurrage’s reporting of **29,500+ scam callback numbers**, the role these numbers play in connecting victims to scammers, and how fast, accurate bulk reporting can disrupt scam campaigns. It also covered our reporting pipeline, live infrastructure challenges, data patterns, and the broader journey behind the project.
 
 
 ### 1. BSides Ballarat (February 2026) - “Your PC Has a Virus (It Doesn’t)”
 
-Presented a talk at **BSides Ballarat** titled **“Your PC Has a Virus (It Doesn’t)”**, covering technical support scams, scambaiting, and scam infrastructure.
-
-The session explored how scammers gain remote access, how scam environments operate, and how scambaiters ethically investigate, document activity, and gather intelligence. It included real-world screenshots, case studies, and demonstrations showing how scammers establish and maintain access.
+Presented a talk at **BSides Ballarat** titled **“Your PC Has a Virus (It Doesn’t)”**, covering technical support scams, scambaiting, and scam infrastructure. The session explored how scammers gain remote access, how scam environments operate, and how scambaiters ethically investigate, document activity, and gather intelligence. It included real-world screenshots, case studies, and demonstrations showing how scammers establish and maintain access.
 
 
 ## Others (3)
@@ -21,7 +17,6 @@ The session explored how scammers gain remote access, how scam environments oper
 ### 3. DUCA (March 2025) - "Privacy and Operational Security"
 
 Presented on **Privacy and Operational Security** at an in-person **Deakin University Cybersecurity Association (DUCA)** event, covering Linux, Tails OS, Whonix, Qubes OS, and key OPSEC concepts. The session included real-world case studies on **Conor Brian Fitzpatrick / Pompompurin** and **Ross Ulbricht / Dread Pirate Roberts**, showing how poor OPSEC contributed to their identification and arrest. Also hosted a recent online DUCA session on **“Top 10 Ways to Hack Websites”**, covering the OWASP Top 10 with practical browser-based demonstrations.
-
 
 ### 2. Deakin University (October 2025) - "Introduction to Ethical Hacking"
 
@@ -34,10 +29,31 @@ Delivered a presentation with the **Deakin University Cybersecurity Association 
 
 # Volunteering
 
-## ACUCyS
+## DUCA (Deakin University Cybersecurity Association)
+
+#### Assistant Secretary, Development Team Lead & CTF Team Lead <br> October 2025 – Present
+
+- Elected as Assistant Secretary at the DUCA Annual General Meeting, contributing to executive-level planning, governance, documentation, and operational restructuring.
+- Lead the Development Team, managing a team of 5+ members responsible for DUCA’s technical infrastructure, web presence, and internal digital systems.
+- Led the migration of DUCA’s legacy WordPress website to a modern AstroJS-based static site architecture, improving performance, maintainability, security posture, and long-term scalability.
+- Lead the CTF Team, coordinating challenge infrastructure, deployment workflows, competition operations, and technical support for DUCA-hosted cybersecurity events.
+- Designed and implemented a custom CTF hosting pipeline to standardise challenge deployment, infrastructure setup, operational handover, and event execution for future committee members.
+- Developed a custom DUCA CTF platform tailored to the club’s requirements, including integrated live chat support, event-specific challenge management, and automated post-event write-up release to improve participant engagement and learning outcomes.
+- Assisted the President and Advisory Board in restructuring DUCA’s internal committee model by consolidating redundant divisions, offboarding inactive members, and producing operational documentation to support continuity under future executive teams.
+
+#### Development Team Member & Blog Writer <br> July 2025 – October 2025
+<br>
+
+- Contributed to DUCA’s development team through website updates, technical content, and internal digital initiatives.
+- Authored cybersecurity-related blog content for the club’s online presence.
+- Actively supported DUCA events as a volunteer and event photographer, contributing to event coverage, community engagement, and promotional material.
+
+## ACUCyS (Australian Council of University Cyber Societies)
 
 ### 1. JingleShells CTF (November 2024)
 
-## The Game Expo
+## Other
+
+### 1. 
 
 
