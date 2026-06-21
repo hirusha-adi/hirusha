@@ -1,20 +1,16 @@
 # Hey! I'm Hirusha.
 
-I'm a second year Bachelor of Cybersecurity student at Deakin University. This is my personal website. My interests are mostly 
+I’m Hirusha Adikari, a second-year Bachelor of Cyber Security student at Deakin University, currently based in Australia. This is my personal website, where I keep track of my projects, talks, events, technical work, and other things I’m involved in.
 
-My primary blog can be found at: [informati.cc](https://informati.cc).
+My main interests are in cybersecurity, infrastructure, networking, embedded security, web development, and machine learning. I enjoy working on practical security projects, building systems, running CTF infrastructure, experimenting with homelab setups, and exploring how different technologies work underneath the surface.
 
-You can connect with me on other social media platforms:
+My primary blog can be found at [informati.cc](https://informati.cc), where I write about cybersecurity, technology, projects, events, and things I learn along the way.
 
-My name’s João Oliveira, a Software Engineer and Graphic Designer with a keen interest in cybersecurity. Currently based in Portugal.
+Outside of university and technical work, I enjoy going to cybersecurity events, volunteering at IT conferences, taking photos, attending live shows, and spending time with friends. I also like working on personal projects, writing, and building small things online, whether that is a website, a blog post, a CTF platform, or some random idea I decided to take too seriously.
 
-My journey began with a degree in Multimedia, which led me into the world of graphic design. For over six years, I worked with prestigious hotel groups like Intercontinental, Ibis, Six Senses, IHG, and more. During this time, I became proficient in Adobe programs and navigated both digital and offset printing processes. However, the design field didn’t fully utilize my potential, so I decided to pivot towards programming.
+You can find more about me, my work, and my social links below.
 
-I am currently studying at 42, where I completed the piscine and am now deeply engaged in the Common Core curriculum. Here, I’ve dived into C/C++, classic algorithms, file system access, UNIX process management, basic network architecture, and client-server projects, expanding my expertise. Alias to that, I developed a big interest in cybersecurity and game engines like Godot.
-
-As a professional, I’m recognized for my strong organizational skills, meticulous documentation practices, efficient time management, and collaborative approach to teamwork. I’m action-oriented and always eager to expand my horizons through continuous learning.
-
-Outside of work and study, I enjoy gaming, watching anime and snowboarding. I’m also passionate about 3D printing and gardening, particularly nurturing trees — an activity that brings me closer to nature and provides a peaceful escape from the digital world.
-
-If you are interested to know more, you can check more information in the links below.
+- [LinkedIn](https://www.linkedin.com/in/hirusha-adi)
+- [GitHub](https://github.com/hirusha-adi)
+- [Blog](https://informati.cc)
 
