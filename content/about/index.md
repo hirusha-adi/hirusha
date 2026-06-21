@@ -68,7 +68,7 @@ Led the technical delivery of the **36-hour ACUCyS Jingle Shells CTF**, taking e
 
 ## Other
 
-#### 2. TGX (The Game Expo) 2025 - Volunteer IT Crew
+#### TGX (The Game Expo) 2025 - Volunteer IT Crew
 
 Volunteered with the **IT crew at The Game Expo (TGX)**, supporting live event infrastructure and tournament system readiness. Assisted during an overnight incident response effort where all tournament machines required a full rebuild before Day 2. Helped prepare a fresh Windows environment, capture it as an **FFU image** with required games, and rapidly redeploy systems using **iPXE**. The experience provided hands-on exposure to high-pressure infrastructure recovery in a live event environment.
 
